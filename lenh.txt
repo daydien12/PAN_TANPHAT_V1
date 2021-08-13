@@ -1,0 +1,26 @@
+pip install pyinstaller
+pyuic5 MQTT_TEST.ui -o MQTT_TEST.py
+
+from pathlib import Path
+from PyQt5 import QAxContainer
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLineEdit, QApplication
+
+
+
+self.Screen_Learn.setObjectName("Screen_Learn")
+self.pushButton = QtWidgets.QPushButton(self.Screen_Learn)
+self.pushButton.setGeometry(QtCore.QRect(470, 540, 71, 61))
+self.pushButton.setText("")
+icon4 = QtGui.QIcon()
+icon4.addPixmap(QtGui.QPixmap("Icon/back_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+self.pushButton.setIcon(icon4)
+self.pushButton.setIconSize(QtCore.QSize(50, 50))
+self.pushButton.setObjectName("pushButton")
+
+self.WebBrowser = QAxContainer.QAxWidget(self.Screen_Learn)
+self.WebBrowser.setGeometry(QtCore.QRect(0, 0, 1024, 540))
+self.WebBrowser.setFocusPolicy(Qt.StrongFocus)
+self.WebBrowser.setControl("{8856F961-340A-11D0-A96B-00C04FD705A2}")
+self.WebBrowser.setObjectName("Browser")
+self.stackedWidget.addWidget(self.Screen_Learn)
