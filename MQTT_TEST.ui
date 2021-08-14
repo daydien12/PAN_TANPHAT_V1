@@ -41,17 +41,17 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>-10</y>
+      <x>10</x>
+      <y>0</y>
       <width>1024</width>
       <height>600</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="HOME">
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -196,28 +196,81 @@
      </widget>
     </widget>
     <widget class="QWidget" name="Screen_Learn">
-     <widget class="QPushButton" name="Learn_Button_Back">
+     <widget class="QLabel" name="show_image_learn">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>540</y>
-        <width>71</width>
-        <height>61</height>
+        <x>0</x>
+        <y>0</y>
+        <width>1024</width>
+        <height>540</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>Icon/back_icon.png</normaloff>Icon/back_icon.png</iconset>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>540</y>
+        <width>421</width>
+        <height>60</height>
+       </rect>
       </property>
-      <property name="iconSize">
-       <size>
-        <width>50</width>
-        <height>50</height>
-       </size>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="Learn_Button_Back">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icon/back_icon.png</normaloff>Icon/back_icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Learn_Button_Exit">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Learn_Button_Next">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icon/next_icon.png</normaloff>Icon/next_icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="screen_Test"/>
