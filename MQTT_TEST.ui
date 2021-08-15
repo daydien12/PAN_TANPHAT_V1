@@ -22,6 +22,12 @@
     <height>600</height>
    </size>
   </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -41,14 +47,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
       <width>1024</width>
       <height>600</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="HOME">
      <widget class="QWidget" name="layoutWidget">
@@ -76,61 +82,6 @@
        <property name="spacing">
         <number>10</number>
        </property>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="Home_Button_Learn">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>280</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(85, 170, 255);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>Icon/LyThuet.png</normaloff>Icon/LyThuet.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="Home_Button_Test">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>280</height>
-          </size>
-         </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 170, 0);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>Icon/test_icon.png</normaloff>Icon/test_icon.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>150</width>
-           <height>150</height>
-          </size>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QPushButton" name="Home_Button_Setting">
          <property name="minimumSize">
@@ -192,6 +143,61 @@
          </property>
         </widget>
        </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="Home_Button_Learn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>280</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 170, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icon/LyThuet.png</normaloff>Icon/LyThuet.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="Home_Button_Test">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>280</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icon/test_icon.png</normaloff>Icon/test_icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </widget>
@@ -221,8 +227,16 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="Learn_Button_Back">
+         <property name="font">
+          <font>
+           <stylestrategy>PreferDefault</stylestrategy>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
          <property name="text">
-          <string/>
+          <string>Trước </string>
          </property>
          <property name="icon">
           <iconset>
@@ -239,7 +253,7 @@
        <item>
         <widget class="QPushButton" name="Learn_Button_Exit">
          <property name="text">
-          <string/>
+          <string> Quay lại</string>
          </property>
          <property name="icon">
           <iconset>
@@ -256,7 +270,7 @@
        <item>
         <widget class="QPushButton" name="Learn_Button_Next">
          <property name="text">
-          <string/>
+          <string> Sau</string>
          </property>
          <property name="icon">
           <iconset>
@@ -273,7 +287,250 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="screen_Test"/>
+    <widget class="QWidget" name="screen_Test">
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1024</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="screen_Test_Display_InputInfor">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1024</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>Icon/aa.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>130</y>
+          <width>641</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(238, 238, 238);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>651</width>
+           <height>241</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="screen_test_Qlineedit_IDclass_3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { 
+background:transparent;
+border : none;
+border-bottom: 3px solid black;
+ }</string>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>50</number>
+            </property>
+            <property name="frame">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Mã lớp học</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="screen_test_Qlineedit_Username_3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { 
+background:transparent;
+border : none;
+border-bottom: 3px solid black;
+ }</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Họ và tên</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLineEdit" name="screen_test_Qlineedit_IDStudent_3">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { 
+background:transparent;
+border : none;
+border-bottom: 3px solid black;
+ }</string>
+            </property>
+            <property name="maxLength">
+             <number>50</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Mã sinh viên</string>
+            </property>
+            <property name="cursorMoveStyle">
+             <enum>Qt::LogicalMoveStyle</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>270</y>
+           <width>421</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Exit">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(238, 238, 238);</string>
+            </property>
+            <property name="text">
+             <string> Quay lại</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Start">
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="tabletTracking">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(238, 238, 238);</string>
+            </property>
+            <property name="text">
+             <string> Vào thi</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icon/icon_play.png</normaloff>Icon/icon_play.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="screen_Test_Display_Exam"/>
+     </widget>
+    </widget>
     <widget class="QWidget" name="screen_Setting"/>
     <widget class="QWidget" name="screen_Information"/>
    </widget>
