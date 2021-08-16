@@ -200,6 +200,7 @@ class Ui_MainWindow(object):
 " }")
         self.screen_test_Qlineedit_IDStudent_3.setMaxLength(50)
         self.screen_test_Qlineedit_IDStudent_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Qlineedit_IDStudent_3.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.screen_test_Qlineedit_IDStudent_3.setObjectName("screen_test_Qlineedit_IDStudent_3")
         self.gridLayout_5.addWidget(self.screen_test_Qlineedit_IDStudent_3, 2, 0, 1, 1)
         self.layoutWidget_5 = QtWidgets.QWidget(self.frame)
@@ -228,7 +229,1321 @@ class Ui_MainWindow(object):
         self.stackedWidget_2.addWidget(self.screen_Test_Display_InputInfor)
         self.screen_Test_Display_Exam = QtWidgets.QWidget()
         self.screen_Test_Display_Exam.setObjectName("screen_Test_Display_Exam")
+        self.layoutWidget_38 = QtWidgets.QWidget(self.screen_Test_Display_Exam)
+        self.layoutWidget_38.setGeometry(QtCore.QRect(300, 520, 421, 60))
+        self.layoutWidget_38.setObjectName("layoutWidget_38")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget_38)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.screen_Test_Display_Exam_Exit = QtWidgets.QPushButton(self.layoutWidget_38)
+        self.screen_Test_Display_Exam_Exit.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.screen_Test_Display_Exam_Exit.setIcon(icon5)
+        self.screen_Test_Display_Exam_Exit.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Test_Display_Exam_Exit.setObjectName("screen_Test_Display_Exam_Exit")
+        self.horizontalLayout_7.addWidget(self.screen_Test_Display_Exam_Exit)
+        self.screen_Test_Display_Exam_Submit = QtWidgets.QPushButton(self.layoutWidget_38)
+        self.screen_Test_Display_Exam_Submit.setMouseTracking(True)
+        self.screen_Test_Display_Exam_Submit.setTabletTracking(True)
+        self.screen_Test_Display_Exam_Submit.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.screen_Test_Display_Exam_Submit.setIcon(icon7)
+        self.screen_Test_Display_Exam_Submit.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Test_Display_Exam_Submit.setCheckable(False)
+        self.screen_Test_Display_Exam_Submit.setObjectName("screen_Test_Display_Exam_Submit")
+        self.horizontalLayout_7.addWidget(self.screen_Test_Display_Exam_Submit)
+        self.widget = QtWidgets.QWidget(self.screen_Test_Display_Exam)
+        self.widget.setGeometry(QtCore.QRect(20, 0, 981, 501))
+        self.widget.setObjectName("widget")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.widget)
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_2 = QtWidgets.QFrame(self.widget)
+        self.frame_2.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.layoutWidget2 = QtWidgets.QWidget(self.frame_2)
+        self.layoutWidget2.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget2.setObjectName("layoutWidget2")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget2)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.SCreen_Test_Button_PAN_1 = QtWidgets.QPushButton(self.layoutWidget2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_1.setFont(font)
+        self.SCreen_Test_Button_PAN_1.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_1.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_1.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_1.setObjectName("SCreen_Test_Button_PAN_1")
+        self.verticalLayout.addWidget(self.SCreen_Test_Button_PAN_1)
+        self.SCreen_Test_Qlabel_PAN_1 = QtWidgets.QLabel(self.layoutWidget2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_1.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_1.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_1.setObjectName("SCreen_Test_Qlabel_PAN_1")
+        self.verticalLayout.addWidget(self.SCreen_Test_Qlabel_PAN_1)
+        self.horizontalLayout_2.addWidget(self.frame_2)
+        self.frame_3 = QtWidgets.QFrame(self.widget)
+        self.frame_3.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.layoutWidget_2 = QtWidgets.QWidget(self.frame_3)
+        self.layoutWidget_2.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_2.setObjectName("layoutWidget_2")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.layoutWidget_2)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.SCreen_Test_Button_PAN_2 = QtWidgets.QPushButton(self.layoutWidget_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_2.setFont(font)
+        self.SCreen_Test_Button_PAN_2.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_2.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_2.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_2.setObjectName("SCreen_Test_Button_PAN_2")
+        self.verticalLayout_2.addWidget(self.SCreen_Test_Button_PAN_2)
+        self.SCreen_Test_Qlabel_PAN_2 = QtWidgets.QLabel(self.layoutWidget_2)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_2.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_2.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_2.setObjectName("SCreen_Test_Qlabel_PAN_2")
+        self.verticalLayout_2.addWidget(self.SCreen_Test_Qlabel_PAN_2)
+        self.horizontalLayout_2.addWidget(self.frame_3)
+        self.frame_4 = QtWidgets.QFrame(self.widget)
+        self.frame_4.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.layoutWidget_14 = QtWidgets.QWidget(self.frame_4)
+        self.layoutWidget_14.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_14.setObjectName("layoutWidget_14")
+        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.layoutWidget_14)
+        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.SCreen_Test_Button_PAN_3 = QtWidgets.QPushButton(self.layoutWidget_14)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_3.setFont(font)
+        self.SCreen_Test_Button_PAN_3.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_3.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_3.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_3.setObjectName("SCreen_Test_Button_PAN_3")
+        self.verticalLayout_12.addWidget(self.SCreen_Test_Button_PAN_3)
+        self.SCreen_Test_Qlabel_PAN_3 = QtWidgets.QLabel(self.layoutWidget_14)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_3.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_3.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_3.setObjectName("SCreen_Test_Qlabel_PAN_3")
+        self.verticalLayout_12.addWidget(self.SCreen_Test_Qlabel_PAN_3)
+        self.horizontalLayout_2.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.widget)
+        self.frame_5.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.layoutWidget_15 = QtWidgets.QWidget(self.frame_5)
+        self.layoutWidget_15.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_15.setObjectName("layoutWidget_15")
+        self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.layoutWidget_15)
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_13.setObjectName("verticalLayout_13")
+        self.SCreen_Test_Button_PAN_4 = QtWidgets.QPushButton(self.layoutWidget_15)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_4.setFont(font)
+        self.SCreen_Test_Button_PAN_4.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_4.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_4.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_4.setObjectName("SCreen_Test_Button_PAN_4")
+        self.verticalLayout_13.addWidget(self.SCreen_Test_Button_PAN_4)
+        self.SCreen_Test_Qlabel_PAN_4 = QtWidgets.QLabel(self.layoutWidget_15)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_4.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_4.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_4.setObjectName("SCreen_Test_Qlabel_PAN_4")
+        self.verticalLayout_13.addWidget(self.SCreen_Test_Qlabel_PAN_4)
+        self.horizontalLayout_2.addWidget(self.frame_5)
+        self.frame_6 = QtWidgets.QFrame(self.widget)
+        self.frame_6.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.layoutWidget_16 = QtWidgets.QWidget(self.frame_6)
+        self.layoutWidget_16.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_16.setObjectName("layoutWidget_16")
+        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.layoutWidget_16)
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_14.setObjectName("verticalLayout_14")
+        self.SCreen_Test_Button_PAN_5 = QtWidgets.QPushButton(self.layoutWidget_16)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_5.setFont(font)
+        self.SCreen_Test_Button_PAN_5.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_5.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_5.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_5.setObjectName("SCreen_Test_Button_PAN_5")
+        self.verticalLayout_14.addWidget(self.SCreen_Test_Button_PAN_5)
+        self.SCreen_Test_Qlabel_PAN_5 = QtWidgets.QLabel(self.layoutWidget_16)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_5.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_5.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_5.setObjectName("SCreen_Test_Qlabel_PAN_5")
+        self.verticalLayout_14.addWidget(self.SCreen_Test_Qlabel_PAN_5)
+        self.horizontalLayout_2.addWidget(self.frame_6)
+        self.frame_7 = QtWidgets.QFrame(self.widget)
+        self.frame_7.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.layoutWidget_17 = QtWidgets.QWidget(self.frame_7)
+        self.layoutWidget_17.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_17.setObjectName("layoutWidget_17")
+        self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.layoutWidget_17)
+        self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_15.setObjectName("verticalLayout_15")
+        self.SCreen_Test_Button_PAN_6 = QtWidgets.QPushButton(self.layoutWidget_17)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_6.setFont(font)
+        self.SCreen_Test_Button_PAN_6.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_6.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_6.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_6.setObjectName("SCreen_Test_Button_PAN_6")
+        self.verticalLayout_15.addWidget(self.SCreen_Test_Button_PAN_6)
+        self.SCreen_Test_Qlabel_PAN_6 = QtWidgets.QLabel(self.layoutWidget_17)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_6.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_6.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_6.setObjectName("SCreen_Test_Qlabel_PAN_6")
+        self.verticalLayout_15.addWidget(self.SCreen_Test_Qlabel_PAN_6)
+        self.horizontalLayout_2.addWidget(self.frame_7)
+        self.gridLayout_2.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.frame_8 = QtWidgets.QFrame(self.widget)
+        self.frame_8.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.layoutWidget_18 = QtWidgets.QWidget(self.frame_8)
+        self.layoutWidget_18.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_18.setObjectName("layoutWidget_18")
+        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.layoutWidget_18)
+        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_16.setObjectName("verticalLayout_16")
+        self.SCreen_Test_Button_PAN_7 = QtWidgets.QPushButton(self.layoutWidget_18)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_7.setFont(font)
+        self.SCreen_Test_Button_PAN_7.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_7.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_7.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_7.setObjectName("SCreen_Test_Button_PAN_7")
+        self.verticalLayout_16.addWidget(self.SCreen_Test_Button_PAN_7)
+        self.SCreen_Test_Qlabel_PAN_7 = QtWidgets.QLabel(self.layoutWidget_18)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_7.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_7.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_7.setObjectName("SCreen_Test_Qlabel_PAN_7")
+        self.verticalLayout_16.addWidget(self.SCreen_Test_Qlabel_PAN_7)
+        self.horizontalLayout_4.addWidget(self.frame_8)
+        self.frame_9 = QtWidgets.QFrame(self.widget)
+        self.frame_9.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.layoutWidget_19 = QtWidgets.QWidget(self.frame_9)
+        self.layoutWidget_19.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_19.setObjectName("layoutWidget_19")
+        self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.layoutWidget_19)
+        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_17.setObjectName("verticalLayout_17")
+        self.SCreen_Test_Button_PAN_8 = QtWidgets.QPushButton(self.layoutWidget_19)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_8.setFont(font)
+        self.SCreen_Test_Button_PAN_8.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_8.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_8.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_8.setObjectName("SCreen_Test_Button_PAN_8")
+        self.verticalLayout_17.addWidget(self.SCreen_Test_Button_PAN_8)
+        self.SCreen_Test_Qlabel_PAN_8 = QtWidgets.QLabel(self.layoutWidget_19)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_8.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_8.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_8.setObjectName("SCreen_Test_Qlabel_PAN_8")
+        self.verticalLayout_17.addWidget(self.SCreen_Test_Qlabel_PAN_8)
+        self.horizontalLayout_4.addWidget(self.frame_9)
+        self.frame_10 = QtWidgets.QFrame(self.widget)
+        self.frame_10.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.layoutWidget_20 = QtWidgets.QWidget(self.frame_10)
+        self.layoutWidget_20.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_20.setObjectName("layoutWidget_20")
+        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.layoutWidget_20)
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_18.setObjectName("verticalLayout_18")
+        self.SCreen_Test_Button_PAN_9 = QtWidgets.QPushButton(self.layoutWidget_20)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_9.setFont(font)
+        self.SCreen_Test_Button_PAN_9.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_9.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_9.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_9.setObjectName("SCreen_Test_Button_PAN_9")
+        self.verticalLayout_18.addWidget(self.SCreen_Test_Button_PAN_9)
+        self.SCreen_Test_Qlabel_PAN_9 = QtWidgets.QLabel(self.layoutWidget_20)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_9.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_9.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_9.setObjectName("SCreen_Test_Qlabel_PAN_9")
+        self.verticalLayout_18.addWidget(self.SCreen_Test_Qlabel_PAN_9)
+        self.horizontalLayout_4.addWidget(self.frame_10)
+        self.frame_11 = QtWidgets.QFrame(self.widget)
+        self.frame_11.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_11.setObjectName("frame_11")
+        self.layoutWidget_21 = QtWidgets.QWidget(self.frame_11)
+        self.layoutWidget_21.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_21.setObjectName("layoutWidget_21")
+        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.layoutWidget_21)
+        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_19.setObjectName("verticalLayout_19")
+        self.SCreen_Test_Button_PAN_10 = QtWidgets.QPushButton(self.layoutWidget_21)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_10.setFont(font)
+        self.SCreen_Test_Button_PAN_10.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_10.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_10.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_10.setObjectName("SCreen_Test_Button_PAN_10")
+        self.verticalLayout_19.addWidget(self.SCreen_Test_Button_PAN_10)
+        self.SCreen_Test_Qlabel_PAN_10 = QtWidgets.QLabel(self.layoutWidget_21)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_10.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_10.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_10.setObjectName("SCreen_Test_Qlabel_PAN_10")
+        self.verticalLayout_19.addWidget(self.SCreen_Test_Qlabel_PAN_10)
+        self.horizontalLayout_4.addWidget(self.frame_11)
+        self.frame_12 = QtWidgets.QFrame(self.widget)
+        self.frame_12.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.layoutWidget_22 = QtWidgets.QWidget(self.frame_12)
+        self.layoutWidget_22.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_22.setObjectName("layoutWidget_22")
+        self.verticalLayout_20 = QtWidgets.QVBoxLayout(self.layoutWidget_22)
+        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_20.setObjectName("verticalLayout_20")
+        self.SCreen_Test_Button_PAN_11 = QtWidgets.QPushButton(self.layoutWidget_22)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_11.setFont(font)
+        self.SCreen_Test_Button_PAN_11.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_11.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_11.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_11.setObjectName("SCreen_Test_Button_PAN_11")
+        self.verticalLayout_20.addWidget(self.SCreen_Test_Button_PAN_11)
+        self.SCreen_Test_Qlabel_PAN_11 = QtWidgets.QLabel(self.layoutWidget_22)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_11.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_11.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_11.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_11.setObjectName("SCreen_Test_Qlabel_PAN_11")
+        self.verticalLayout_20.addWidget(self.SCreen_Test_Qlabel_PAN_11)
+        self.horizontalLayout_4.addWidget(self.frame_12)
+        self.frame_13 = QtWidgets.QFrame(self.widget)
+        self.frame_13.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_13.setObjectName("frame_13")
+        self.layoutWidget_23 = QtWidgets.QWidget(self.frame_13)
+        self.layoutWidget_23.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_23.setObjectName("layoutWidget_23")
+        self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.layoutWidget_23)
+        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_21.setObjectName("verticalLayout_21")
+        self.SCreen_Test_Button_PAN_12 = QtWidgets.QPushButton(self.layoutWidget_23)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_12.setFont(font)
+        self.SCreen_Test_Button_PAN_12.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_12.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_12.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_12.setObjectName("SCreen_Test_Button_PAN_12")
+        self.verticalLayout_21.addWidget(self.SCreen_Test_Button_PAN_12)
+        self.SCreen_Test_Qlabel_PAN_12 = QtWidgets.QLabel(self.layoutWidget_23)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_12.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_12.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_12.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_12.setObjectName("SCreen_Test_Qlabel_PAN_12")
+        self.verticalLayout_21.addWidget(self.SCreen_Test_Qlabel_PAN_12)
+        self.horizontalLayout_4.addWidget(self.frame_13)
+        self.gridLayout_2.addLayout(self.horizontalLayout_4, 1, 0, 1, 1)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.frame_14 = QtWidgets.QFrame(self.widget)
+        self.frame_14.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_14.setObjectName("frame_14")
+        self.layoutWidget_25 = QtWidgets.QWidget(self.frame_14)
+        self.layoutWidget_25.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_25.setObjectName("layoutWidget_25")
+        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.layoutWidget_25)
+        self.verticalLayout_22.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_22.setObjectName("verticalLayout_22")
+        self.SCreen_Test_Button_PAN_13 = QtWidgets.QPushButton(self.layoutWidget_25)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_13.setFont(font)
+        self.SCreen_Test_Button_PAN_13.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_13.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_13.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_13.setObjectName("SCreen_Test_Button_PAN_13")
+        self.verticalLayout_22.addWidget(self.SCreen_Test_Button_PAN_13)
+        self.SCreen_Test_Qlabel_PAN_13 = QtWidgets.QLabel(self.layoutWidget_25)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_13.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_13.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_13.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_13.setObjectName("SCreen_Test_Qlabel_PAN_13")
+        self.verticalLayout_22.addWidget(self.SCreen_Test_Qlabel_PAN_13)
+        self.horizontalLayout_5.addWidget(self.frame_14)
+        self.frame_15 = QtWidgets.QFrame(self.widget)
+        self.frame_15.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_15.setObjectName("frame_15")
+        self.layoutWidget_26 = QtWidgets.QWidget(self.frame_15)
+        self.layoutWidget_26.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_26.setObjectName("layoutWidget_26")
+        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.layoutWidget_26)
+        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_23.setObjectName("verticalLayout_23")
+        self.SCreen_Test_Button_PAN_14 = QtWidgets.QPushButton(self.layoutWidget_26)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_14.setFont(font)
+        self.SCreen_Test_Button_PAN_14.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_14.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_14.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_14.setObjectName("SCreen_Test_Button_PAN_14")
+        self.verticalLayout_23.addWidget(self.SCreen_Test_Button_PAN_14)
+        self.SCreen_Test_Qlabel_PAN_14 = QtWidgets.QLabel(self.layoutWidget_26)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_14.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_14.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_14.setObjectName("SCreen_Test_Qlabel_PAN_14")
+        self.verticalLayout_23.addWidget(self.SCreen_Test_Qlabel_PAN_14)
+        self.horizontalLayout_5.addWidget(self.frame_15)
+        self.frame_16 = QtWidgets.QFrame(self.widget)
+        self.frame_16.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_16.setObjectName("frame_16")
+        self.layoutWidget_27 = QtWidgets.QWidget(self.frame_16)
+        self.layoutWidget_27.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_27.setObjectName("layoutWidget_27")
+        self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.layoutWidget_27)
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_24.setObjectName("verticalLayout_24")
+        self.SCreen_Test_Button_PAN_15 = QtWidgets.QPushButton(self.layoutWidget_27)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_15.setFont(font)
+        self.SCreen_Test_Button_PAN_15.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_15.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_15.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_15.setObjectName("SCreen_Test_Button_PAN_15")
+        self.verticalLayout_24.addWidget(self.SCreen_Test_Button_PAN_15)
+        self.SCreen_Test_Qlabel_PAN_15 = QtWidgets.QLabel(self.layoutWidget_27)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_15.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_15.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_15.setObjectName("SCreen_Test_Qlabel_PAN_15")
+        self.verticalLayout_24.addWidget(self.SCreen_Test_Qlabel_PAN_15)
+        self.horizontalLayout_5.addWidget(self.frame_16)
+        self.frame_17 = QtWidgets.QFrame(self.widget)
+        self.frame_17.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_17.setObjectName("frame_17")
+        self.layoutWidget_28 = QtWidgets.QWidget(self.frame_17)
+        self.layoutWidget_28.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_28.setObjectName("layoutWidget_28")
+        self.verticalLayout_25 = QtWidgets.QVBoxLayout(self.layoutWidget_28)
+        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_25.setObjectName("verticalLayout_25")
+        self.SCreen_Test_Button_PAN_16 = QtWidgets.QPushButton(self.layoutWidget_28)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_16.setFont(font)
+        self.SCreen_Test_Button_PAN_16.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_16.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_16.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_16.setObjectName("SCreen_Test_Button_PAN_16")
+        self.verticalLayout_25.addWidget(self.SCreen_Test_Button_PAN_16)
+        self.SCreen_Test_Qlabel_PAN_16 = QtWidgets.QLabel(self.layoutWidget_28)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_16.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_16.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_16.setObjectName("SCreen_Test_Qlabel_PAN_16")
+        self.verticalLayout_25.addWidget(self.SCreen_Test_Qlabel_PAN_16)
+        self.horizontalLayout_5.addWidget(self.frame_17)
+        self.frame_18 = QtWidgets.QFrame(self.widget)
+        self.frame_18.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_18.setObjectName("frame_18")
+        self.layoutWidget_29 = QtWidgets.QWidget(self.frame_18)
+        self.layoutWidget_29.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_29.setObjectName("layoutWidget_29")
+        self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.layoutWidget_29)
+        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_26.setObjectName("verticalLayout_26")
+        self.SCreen_Test_Button_PAN_17 = QtWidgets.QPushButton(self.layoutWidget_29)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_17.setFont(font)
+        self.SCreen_Test_Button_PAN_17.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_17.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_17.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_17.setObjectName("SCreen_Test_Button_PAN_17")
+        self.verticalLayout_26.addWidget(self.SCreen_Test_Button_PAN_17)
+        self.SCreen_Test_Qlabel_PAN_17 = QtWidgets.QLabel(self.layoutWidget_29)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_17.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_17.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_17.setObjectName("SCreen_Test_Qlabel_PAN_17")
+        self.verticalLayout_26.addWidget(self.SCreen_Test_Qlabel_PAN_17)
+        self.horizontalLayout_5.addWidget(self.frame_18)
+        self.frame_19 = QtWidgets.QFrame(self.widget)
+        self.frame_19.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_19.setObjectName("frame_19")
+        self.layoutWidget_30 = QtWidgets.QWidget(self.frame_19)
+        self.layoutWidget_30.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_30.setObjectName("layoutWidget_30")
+        self.verticalLayout_27 = QtWidgets.QVBoxLayout(self.layoutWidget_30)
+        self.verticalLayout_27.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_27.setObjectName("verticalLayout_27")
+        self.SCreen_Test_Button_PAN_18 = QtWidgets.QPushButton(self.layoutWidget_30)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_18.setFont(font)
+        self.SCreen_Test_Button_PAN_18.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_18.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_18.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_18.setObjectName("SCreen_Test_Button_PAN_18")
+        self.verticalLayout_27.addWidget(self.SCreen_Test_Button_PAN_18)
+        self.SCreen_Test_Qlabel_PAN_18 = QtWidgets.QLabel(self.layoutWidget_30)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_18.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_18.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_18.setObjectName("SCreen_Test_Qlabel_PAN_18")
+        self.verticalLayout_27.addWidget(self.SCreen_Test_Qlabel_PAN_18)
+        self.horizontalLayout_5.addWidget(self.frame_19)
+        self.gridLayout_2.addLayout(self.horizontalLayout_5, 2, 0, 1, 1)
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.frame_20 = QtWidgets.QFrame(self.widget)
+        self.frame_20.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_20.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_20.setObjectName("frame_20")
+        self.layoutWidget_32 = QtWidgets.QWidget(self.frame_20)
+        self.layoutWidget_32.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_32.setObjectName("layoutWidget_32")
+        self.verticalLayout_28 = QtWidgets.QVBoxLayout(self.layoutWidget_32)
+        self.verticalLayout_28.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_28.setObjectName("verticalLayout_28")
+        self.SCreen_Test_Button_PAN_19 = QtWidgets.QPushButton(self.layoutWidget_32)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_19.setFont(font)
+        self.SCreen_Test_Button_PAN_19.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_19.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_19.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_19.setObjectName("SCreen_Test_Button_PAN_19")
+        self.verticalLayout_28.addWidget(self.SCreen_Test_Button_PAN_19)
+        self.SCreen_Test_Qlabel_PAN_19 = QtWidgets.QLabel(self.layoutWidget_32)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_19.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_19.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_19.setObjectName("SCreen_Test_Qlabel_PAN_19")
+        self.verticalLayout_28.addWidget(self.SCreen_Test_Qlabel_PAN_19)
+        self.horizontalLayout_6.addWidget(self.frame_20)
+        self.frame_21 = QtWidgets.QFrame(self.widget)
+        self.frame_21.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_21.setObjectName("frame_21")
+        self.layoutWidget_33 = QtWidgets.QWidget(self.frame_21)
+        self.layoutWidget_33.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_33.setObjectName("layoutWidget_33")
+        self.verticalLayout_29 = QtWidgets.QVBoxLayout(self.layoutWidget_33)
+        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_29.setObjectName("verticalLayout_29")
+        self.SCreen_Test_Button_PAN_20 = QtWidgets.QPushButton(self.layoutWidget_33)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_20.setFont(font)
+        self.SCreen_Test_Button_PAN_20.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_20.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_20.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_20.setObjectName("SCreen_Test_Button_PAN_20")
+        self.verticalLayout_29.addWidget(self.SCreen_Test_Button_PAN_20)
+        self.SCreen_Test_Qlabel_PAN_20 = QtWidgets.QLabel(self.layoutWidget_33)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_20.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_20.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_20.setObjectName("SCreen_Test_Qlabel_PAN_20")
+        self.verticalLayout_29.addWidget(self.SCreen_Test_Qlabel_PAN_20)
+        self.horizontalLayout_6.addWidget(self.frame_21)
+        self.frame_22 = QtWidgets.QFrame(self.widget)
+        self.frame_22.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_22.setObjectName("frame_22")
+        self.layoutWidget_34 = QtWidgets.QWidget(self.frame_22)
+        self.layoutWidget_34.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_34.setObjectName("layoutWidget_34")
+        self.verticalLayout_30 = QtWidgets.QVBoxLayout(self.layoutWidget_34)
+        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_30.setObjectName("verticalLayout_30")
+        self.SCreen_Test_Button_PAN_21 = QtWidgets.QPushButton(self.layoutWidget_34)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_21.setFont(font)
+        self.SCreen_Test_Button_PAN_21.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_21.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_21.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_21.setObjectName("SCreen_Test_Button_PAN_21")
+        self.verticalLayout_30.addWidget(self.SCreen_Test_Button_PAN_21)
+        self.SCreen_Test_Qlabel_PAN_21 = QtWidgets.QLabel(self.layoutWidget_34)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_21.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_21.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_21.setObjectName("SCreen_Test_Qlabel_PAN_21")
+        self.verticalLayout_30.addWidget(self.SCreen_Test_Qlabel_PAN_21)
+        self.horizontalLayout_6.addWidget(self.frame_22)
+        self.frame_23 = QtWidgets.QFrame(self.widget)
+        self.frame_23.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_23.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_23.setObjectName("frame_23")
+        self.layoutWidget_35 = QtWidgets.QWidget(self.frame_23)
+        self.layoutWidget_35.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_35.setObjectName("layoutWidget_35")
+        self.verticalLayout_31 = QtWidgets.QVBoxLayout(self.layoutWidget_35)
+        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_31.setObjectName("verticalLayout_31")
+        self.SCreen_Test_Button_PAN_22 = QtWidgets.QPushButton(self.layoutWidget_35)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_22.setFont(font)
+        self.SCreen_Test_Button_PAN_22.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_22.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_22.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_22.setObjectName("SCreen_Test_Button_PAN_22")
+        self.verticalLayout_31.addWidget(self.SCreen_Test_Button_PAN_22)
+        self.SCreen_Test_Qlabel_PAN_22 = QtWidgets.QLabel(self.layoutWidget_35)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_22.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_22.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_22.setObjectName("SCreen_Test_Qlabel_PAN_22")
+        self.verticalLayout_31.addWidget(self.SCreen_Test_Qlabel_PAN_22)
+        self.horizontalLayout_6.addWidget(self.frame_23)
+        self.frame_24 = QtWidgets.QFrame(self.widget)
+        self.frame_24.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_24.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_24.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_24.setObjectName("frame_24")
+        self.layoutWidget_36 = QtWidgets.QWidget(self.frame_24)
+        self.layoutWidget_36.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_36.setObjectName("layoutWidget_36")
+        self.verticalLayout_32 = QtWidgets.QVBoxLayout(self.layoutWidget_36)
+        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_32.setObjectName("verticalLayout_32")
+        self.SCreen_Test_Button_PAN_23 = QtWidgets.QPushButton(self.layoutWidget_36)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_23.setFont(font)
+        self.SCreen_Test_Button_PAN_23.setStyleSheet("QPushButton {\n"
+"  border: 2px solid  rgb(85, 170, 255);\n"
+"  background-color:  rgb(85, 170, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(255, 170, 0);;\n"
+"    background-color: rgb(255, 170, 0);;\n"
+"}")
+        self.SCreen_Test_Button_PAN_23.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_23.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_23.setObjectName("SCreen_Test_Button_PAN_23")
+        self.verticalLayout_32.addWidget(self.SCreen_Test_Button_PAN_23)
+        self.SCreen_Test_Qlabel_PAN_23 = QtWidgets.QLabel(self.layoutWidget_36)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_23.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_23.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_23.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_23.setObjectName("SCreen_Test_Qlabel_PAN_23")
+        self.verticalLayout_32.addWidget(self.SCreen_Test_Qlabel_PAN_23)
+        self.horizontalLayout_6.addWidget(self.frame_24)
+        self.frame_25 = QtWidgets.QFrame(self.widget)
+        self.frame_25.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_25.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_25.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_25.setObjectName("frame_25")
+        self.layoutWidget_37 = QtWidgets.QWidget(self.frame_25)
+        self.layoutWidget_37.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget_37.setObjectName("layoutWidget_37")
+        self.verticalLayout_33 = QtWidgets.QVBoxLayout(self.layoutWidget_37)
+        self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_33.setObjectName("verticalLayout_33")
+        self.SCreen_Test_Button_PAN_24 = QtWidgets.QPushButton(self.layoutWidget_37)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Button_PAN_24.setFont(font)
+        self.SCreen_Test_Button_PAN_24.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.SCreen_Test_Button_PAN_24.setIcon(icon3)
+        self.SCreen_Test_Button_PAN_24.setIconSize(QtCore.QSize(60, 60))
+        self.SCreen_Test_Button_PAN_24.setObjectName("SCreen_Test_Button_PAN_24")
+        self.verticalLayout_33.addWidget(self.SCreen_Test_Button_PAN_24)
+        self.SCreen_Test_Qlabel_PAN_24 = QtWidgets.QLabel(self.layoutWidget_37)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_24.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_24.setStyleSheet("QLabel {\n"
+"    background-color: rgb(255, 170, 0);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_24.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_24.setObjectName("SCreen_Test_Qlabel_PAN_24")
+        self.verticalLayout_33.addWidget(self.SCreen_Test_Qlabel_PAN_24)
+        self.horizontalLayout_6.addWidget(self.frame_25)
+        self.gridLayout_2.addLayout(self.horizontalLayout_6, 3, 0, 1, 1)
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Exam)
+        self.screen_Test_Display_Choose = QtWidgets.QWidget()
+        self.screen_Test_Display_Choose.setObjectName("screen_Test_Display_Choose")
+        self.stackedWidget_2.addWidget(self.screen_Test_Display_Choose)
         self.stackedWidget.addWidget(self.screen_Test)
         self.screen_Setting = QtWidgets.QWidget()
         self.screen_Setting.setObjectName("screen_Setting")
@@ -256,3 +1571,53 @@ class Ui_MainWindow(object):
         self.screen_test_Qlineedit_IDStudent_3.setPlaceholderText(_translate("MainWindow", "Mã sinh viên"))
         self.screen_Test_Display_InputInfor_Button_Exit.setText(_translate("MainWindow", " Quay lại"))
         self.screen_Test_Display_InputInfor_Button_Start.setText(_translate("MainWindow", " Vào thi"))
+        self.screen_Test_Display_Exam_Exit.setText(_translate("MainWindow", " Quay lại"))
+        self.screen_Test_Display_Exam_Submit.setText(_translate("MainWindow", " Nộp bài"))
+        self.SCreen_Test_Button_PAN_1.setText(_translate("MainWindow", "PAN 01"))
+        self.SCreen_Test_Qlabel_PAN_1.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_2.setText(_translate("MainWindow", "PAN 02"))
+        self.SCreen_Test_Qlabel_PAN_2.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_3.setText(_translate("MainWindow", "PAN 03"))
+        self.SCreen_Test_Qlabel_PAN_3.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_4.setText(_translate("MainWindow", "PAN 04"))
+        self.SCreen_Test_Qlabel_PAN_4.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_5.setText(_translate("MainWindow", "PAN 05"))
+        self.SCreen_Test_Qlabel_PAN_5.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_6.setText(_translate("MainWindow", "PAN 06"))
+        self.SCreen_Test_Qlabel_PAN_6.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_7.setText(_translate("MainWindow", "PAN 07"))
+        self.SCreen_Test_Qlabel_PAN_7.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_8.setText(_translate("MainWindow", "PAN 08"))
+        self.SCreen_Test_Qlabel_PAN_8.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_9.setText(_translate("MainWindow", "PAN 09"))
+        self.SCreen_Test_Qlabel_PAN_9.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_10.setText(_translate("MainWindow", "PAN 10"))
+        self.SCreen_Test_Qlabel_PAN_10.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_11.setText(_translate("MainWindow", "PAN 11"))
+        self.SCreen_Test_Qlabel_PAN_11.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_12.setText(_translate("MainWindow", "PAN 12"))
+        self.SCreen_Test_Qlabel_PAN_12.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_13.setText(_translate("MainWindow", "PAN 13"))
+        self.SCreen_Test_Qlabel_PAN_13.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_14.setText(_translate("MainWindow", "PAN 14"))
+        self.SCreen_Test_Qlabel_PAN_14.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_15.setText(_translate("MainWindow", "PAN 15"))
+        self.SCreen_Test_Qlabel_PAN_15.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_16.setText(_translate("MainWindow", "PAN 16"))
+        self.SCreen_Test_Qlabel_PAN_16.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_17.setText(_translate("MainWindow", "PAN 17"))
+        self.SCreen_Test_Qlabel_PAN_17.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_18.setText(_translate("MainWindow", "PAN 18"))
+        self.SCreen_Test_Qlabel_PAN_18.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_19.setText(_translate("MainWindow", "PAN 19"))
+        self.SCreen_Test_Qlabel_PAN_19.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_20.setText(_translate("MainWindow", "PAN 20"))
+        self.SCreen_Test_Qlabel_PAN_20.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_21.setText(_translate("MainWindow", "PAN 21"))
+        self.SCreen_Test_Qlabel_PAN_21.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_22.setText(_translate("MainWindow", "PAN 22"))
+        self.SCreen_Test_Qlabel_PAN_22.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_23.setText(_translate("MainWindow", "PAN 23"))
+        self.SCreen_Test_Qlabel_PAN_23.setText(_translate("MainWindow", "Chưa chọn"))
+        self.SCreen_Test_Button_PAN_24.setText(_translate("MainWindow", "PAN 24"))
+        self.SCreen_Test_Qlabel_PAN_24.setText(_translate("MainWindow", "Chưa chọn"))

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5430f2a-2599-42ca-95bc-832aafb83ed6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Icon/aa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MQTT_TEST.ui.autosave" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUTTON.py" beforeDir="false" afterPath="$PROJECT_DIR$/BUTTON.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MQTT_TEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/MQTT_TEST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MQTT_TEST.ui" beforeDir="false" afterPath="$PROJECT_DIR$/MQTT_TEST.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
