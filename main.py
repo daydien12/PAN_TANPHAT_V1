@@ -101,7 +101,7 @@ class MainWindow:
         self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam)
 
         self.uic.screen_Test_Display_Exam_Exit.clicked.connect(self.Show_Screen_Test)
-        self.uic.screen_Test_Display_Exam_Submit.clicked.connect(self.Show_Screen_Test)
+        self.uic.screen_Test_Display_Exam_Submit.clicked.connect(self.screen_Test_Show_Display_Choose)
 
         self.uic.SCreen_Test_Button_PAN_1.clicked.connect(self.Screen_Test_EvenButton_PAN_1)
     def show(self):
@@ -175,6 +175,8 @@ class MainWindow:
         print(self.ScreenTest_value_NameITStudent)
         print(self.ScreenTest_value_NameClassStudent)
 
+    def screen_Test_Show_Display_Choose(self):
+        self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Choose)
     def Screen_Test_EvenButton_PAN_1(self):
         self.ScreenTest_value_Qlabel_FlagButtonClick = 1
         if(self.ScreenTest_value_Qlabel_PAN_1 < len(self.ScreenTest_value_Qlabel_ArrayNameChoose)):

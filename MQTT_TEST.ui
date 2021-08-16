@@ -229,11 +229,29 @@
         <widget class="QPushButton" name="Learn_Button_Back">
          <property name="font">
           <font>
+           <pointsize>12</pointsize>
            <stylestrategy>PreferDefault</stylestrategy>
           </font>
          </property>
          <property name="layoutDirection">
           <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
          </property>
          <property name="text">
           <string>Trước </string>
@@ -252,6 +270,28 @@
        </item>
        <item>
         <widget class="QPushButton" name="Learn_Button_Exit">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+         </property>
          <property name="text">
           <string> Quay lại</string>
          </property>
@@ -269,6 +309,28 @@
        </item>
        <item>
         <widget class="QPushButton" name="Learn_Button_Next">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+         </property>
          <property name="text">
           <string> Sau</string>
          </property>
@@ -320,9 +382,9 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>130</y>
-          <width>641</width>
+          <x>172</x>
+          <y>120</y>
+          <width>681</width>
           <height>361</height>
          </rect>
         </property>
@@ -336,7 +398,14 @@
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(238, 238, 238);</string>
+         <string notr="true">
+background-color: rgb(240, 240, 240);
+color: rgb(255, 255, 255);
+ border: 5px solid transparent;
+color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -347,8 +416,8 @@
         <widget class="QWidget" name="layoutWidget_4">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>0</y>
+           <x>10</x>
+           <y>10</y>
            <width>651</width>
            <height>241</height>
           </rect>
@@ -371,7 +440,7 @@
             </property>
             <property name="styleSheet">
              <string notr="true">QLineEdit { 
-background:transparent;
+background:rgb(240, 240, 240);
 border : none;
 border-bottom: 3px solid black;
  }</string>
@@ -417,9 +486,10 @@ border-bottom: 3px solid black;
             </property>
             <property name="styleSheet">
              <string notr="true">QLineEdit { 
-background:transparent;
+background:rgb(240, 240, 240);
 border : none;
 border-bottom: 3px solid black;
+
  }</string>
             </property>
             <property name="alignment">
@@ -444,7 +514,7 @@ border-bottom: 3px solid black;
             </property>
             <property name="styleSheet">
              <string notr="true">QLineEdit { 
-background:transparent;
+background:rgb(240, 240, 240);
 border : none;
 border-bottom: 3px solid black;
  }</string>
@@ -471,14 +541,33 @@ border-bottom: 3px solid black;
            <x>130</x>
            <y>270</y>
            <width>421</width>
-           <height>60</height>
+           <height>82</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Exit">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(238, 238, 238);</string>
+             <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
             </property>
             <property name="text">
              <string> Quay lại</string>
@@ -497,6 +586,11 @@ border-bottom: 3px solid black;
           </item>
           <item>
            <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Start">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="mouseTracking">
              <bool>true</bool>
             </property>
@@ -504,7 +598,21 @@ border-bottom: 3px solid black;
              <bool>true</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(238, 238, 238);</string>
+             <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
             </property>
             <property name="text">
              <string> Vào thi</string>
@@ -542,7 +650,21 @@ border-bottom: 3px solid black;
          <item>
           <widget class="QPushButton" name="screen_Test_Display_Exam_Exit">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(238, 238, 238);</string>
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
            </property>
            <property name="text">
             <string> Quay lại</string>
@@ -568,7 +690,21 @@ border-bottom: 3px solid black;
             <bool>true</bool>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(238, 238, 238);</string>
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
            </property>
            <property name="text">
             <string> Nộp bài</string>
@@ -590,7 +726,7 @@ border-bottom: 3px solid black;
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2827,7 +2963,427 @@ QPushButton:hover {
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="screen_Test_Display_Choose"/>
+      <widget class="QWidget" name="screen_Test_Display_Choose">
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1024</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>Icon/aa.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_26">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>172</x>
+          <y>20</y>
+          <width>681</width>
+          <height>551</height>
+         </rect>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: rgb(240, 240, 240);
+color: rgb(255, 255, 255);
+ border: 5px solid transparent;
+color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>440</y>
+           <width>421</width>
+           <height>82</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Start_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="tabletTracking">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+            </property>
+            <property name="text">
+             <string> Chọn</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icon/icon_play.png</normaloff>Icon/icon_play.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="SCreen_Test_Qlabel_PAN_25">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>681</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+
+	color: rgb(255, 255, 255);
+	background-color: #e2e2e2;
+	color: black;
+ border-style: solid ;
+ border-width: 5px;
+ border-color: #e2e2e2;
+ border-radius: 20px;
+}  
+
+</string>
+         </property>
+         <property name="text">
+          <string>PAN 20</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>400</y>
+           <width>113</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>80</y>
+           <width>421</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_3">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_5">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_8">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QRadioButton {
+  border: 2px solid rgb(255, 170, 0);;
+  background-color: rgb(255, 170, 0);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QRadioButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Hở mạch</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="screen_Setting"/>

@@ -94,9 +94,25 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.Learn_Button_Back = QtWidgets.QPushButton(self.layoutWidget1)
         font = QtGui.QFont()
+        font.setPointSize(12)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.Learn_Button_Back.setFont(font)
         self.Learn_Button_Back.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.Learn_Button_Back.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("Icon/back_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Learn_Button_Back.setIcon(icon4)
@@ -104,6 +120,24 @@ class Ui_MainWindow(object):
         self.Learn_Button_Back.setObjectName("Learn_Button_Back")
         self.horizontalLayout.addWidget(self.Learn_Button_Back)
         self.Learn_Button_Exit = QtWidgets.QPushButton(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.Learn_Button_Exit.setFont(font)
+        self.Learn_Button_Exit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("Icon/exit_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Learn_Button_Exit.setIcon(icon5)
@@ -111,6 +145,24 @@ class Ui_MainWindow(object):
         self.Learn_Button_Exit.setObjectName("Learn_Button_Exit")
         self.horizontalLayout.addWidget(self.Learn_Button_Exit)
         self.Learn_Button_Next = QtWidgets.QPushButton(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.Learn_Button_Next.setFont(font)
+        self.Learn_Button_Next.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("Icon/next_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Learn_Button_Next.setIcon(icon6)
@@ -132,16 +184,23 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.frame = QtWidgets.QFrame(self.screen_Test_Display_InputInfor)
         self.frame.setEnabled(True)
-        self.frame.setGeometry(QtCore.QRect(190, 130, 641, 361))
+        self.frame.setGeometry(QtCore.QRect(172, 120, 681, 361))
         self.frame.setMouseTracking(False)
         self.frame.setAcceptDrops(False)
         self.frame.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.frame.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.frame.setStyleSheet("\n"
+"background-color: rgb(240, 240, 240);\n"
+"color: rgb(255, 255, 255);\n"
+" border: 5px solid transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.layoutWidget_4 = QtWidgets.QWidget(self.frame)
-        self.layoutWidget_4.setGeometry(QtCore.QRect(0, 0, 651, 241))
+        self.layoutWidget_4.setGeometry(QtCore.QRect(10, 10, 651, 241))
         self.layoutWidget_4.setObjectName("layoutWidget_4")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.layoutWidget_4)
         self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -155,7 +214,7 @@ class Ui_MainWindow(object):
         self.screen_test_Qlineedit_IDclass_3.setFont(font)
         self.screen_test_Qlineedit_IDclass_3.setMouseTracking(False)
         self.screen_test_Qlineedit_IDclass_3.setStyleSheet("QLineEdit { \n"
-"background:transparent;\n"
+"background:rgb(240, 240, 240);\n"
 "border : none;\n"
 "border-bottom: 3px solid black;\n"
 " }")
@@ -179,9 +238,10 @@ class Ui_MainWindow(object):
         self.screen_test_Qlineedit_Username_3.setFont(font)
         self.screen_test_Qlineedit_Username_3.setMouseTracking(False)
         self.screen_test_Qlineedit_Username_3.setStyleSheet("QLineEdit { \n"
-"background:transparent;\n"
+"background:rgb(240, 240, 240);\n"
 "border : none;\n"
 "border-bottom: 3px solid black;\n"
+"\n"
 " }")
         self.screen_test_Qlineedit_Username_3.setAlignment(QtCore.Qt.AlignCenter)
         self.screen_test_Qlineedit_Username_3.setObjectName("screen_test_Qlineedit_Username_3")
@@ -194,7 +254,7 @@ class Ui_MainWindow(object):
         self.screen_test_Qlineedit_IDStudent_3.setFont(font)
         self.screen_test_Qlineedit_IDStudent_3.setMouseTracking(False)
         self.screen_test_Qlineedit_IDStudent_3.setStyleSheet("QLineEdit { \n"
-"background:transparent;\n"
+"background:rgb(240, 240, 240);\n"
 "border : none;\n"
 "border-bottom: 3px solid black;\n"
 " }")
@@ -204,21 +264,55 @@ class Ui_MainWindow(object):
         self.screen_test_Qlineedit_IDStudent_3.setObjectName("screen_test_Qlineedit_IDStudent_3")
         self.gridLayout_5.addWidget(self.screen_test_Qlineedit_IDStudent_3, 2, 0, 1, 1)
         self.layoutWidget_5 = QtWidgets.QWidget(self.frame)
-        self.layoutWidget_5.setGeometry(QtCore.QRect(130, 270, 421, 60))
+        self.layoutWidget_5.setGeometry(QtCore.QRect(130, 270, 421, 82))
         self.layoutWidget_5.setObjectName("layoutWidget_5")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget_5)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.screen_Test_Display_InputInfor_Button_Exit = QtWidgets.QPushButton(self.layoutWidget_5)
-        self.screen_Test_Display_InputInfor_Button_Exit.setStyleSheet("background-color: rgb(238, 238, 238);")
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.screen_Test_Display_InputInfor_Button_Exit.setFont(font)
+        self.screen_Test_Display_InputInfor_Button_Exit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         self.screen_Test_Display_InputInfor_Button_Exit.setIcon(icon5)
         self.screen_Test_Display_InputInfor_Button_Exit.setIconSize(QtCore.QSize(50, 50))
         self.screen_Test_Display_InputInfor_Button_Exit.setObjectName("screen_Test_Display_InputInfor_Button_Exit")
         self.horizontalLayout_3.addWidget(self.screen_Test_Display_InputInfor_Button_Exit)
         self.screen_Test_Display_InputInfor_Button_Start = QtWidgets.QPushButton(self.layoutWidget_5)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.screen_Test_Display_InputInfor_Button_Start.setFont(font)
         self.screen_Test_Display_InputInfor_Button_Start.setMouseTracking(True)
         self.screen_Test_Display_InputInfor_Button_Start.setTabletTracking(True)
-        self.screen_Test_Display_InputInfor_Button_Start.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.screen_Test_Display_InputInfor_Button_Start.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("Icon/icon_play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.screen_Test_Display_InputInfor_Button_Start.setIcon(icon7)
@@ -236,7 +330,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.screen_Test_Display_Exam_Exit = QtWidgets.QPushButton(self.layoutWidget_38)
-        self.screen_Test_Display_Exam_Exit.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.screen_Test_Display_Exam_Exit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         self.screen_Test_Display_Exam_Exit.setIcon(icon5)
         self.screen_Test_Display_Exam_Exit.setIconSize(QtCore.QSize(50, 50))
         self.screen_Test_Display_Exam_Exit.setObjectName("screen_Test_Display_Exam_Exit")
@@ -244,32 +352,46 @@ class Ui_MainWindow(object):
         self.screen_Test_Display_Exam_Submit = QtWidgets.QPushButton(self.layoutWidget_38)
         self.screen_Test_Display_Exam_Submit.setMouseTracking(True)
         self.screen_Test_Display_Exam_Submit.setTabletTracking(True)
-        self.screen_Test_Display_Exam_Submit.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.screen_Test_Display_Exam_Submit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
         self.screen_Test_Display_Exam_Submit.setIcon(icon7)
         self.screen_Test_Display_Exam_Submit.setIconSize(QtCore.QSize(50, 50))
         self.screen_Test_Display_Exam_Submit.setCheckable(False)
         self.screen_Test_Display_Exam_Submit.setObjectName("screen_Test_Display_Exam_Submit")
         self.horizontalLayout_7.addWidget(self.screen_Test_Display_Exam_Submit)
-        self.widget = QtWidgets.QWidget(self.screen_Test_Display_Exam)
-        self.widget.setGeometry(QtCore.QRect(20, 0, 981, 501))
-        self.widget.setObjectName("widget")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.widget)
+        self.layoutWidget2 = QtWidgets.QWidget(self.screen_Test_Display_Exam)
+        self.layoutWidget2.setGeometry(QtCore.QRect(20, 0, 981, 501))
+        self.layoutWidget2.setObjectName("layoutWidget2")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget2)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.frame_2 = QtWidgets.QFrame(self.widget)
+        self.frame_2 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_2.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.layoutWidget2 = QtWidgets.QWidget(self.frame_2)
-        self.layoutWidget2.setGeometry(QtCore.QRect(10, 10, 131, 98))
-        self.layoutWidget2.setObjectName("layoutWidget2")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget2)
+        self.layoutWidget3 = QtWidgets.QWidget(self.frame_2)
+        self.layoutWidget3.setGeometry(QtCore.QRect(10, 10, 131, 98))
+        self.layoutWidget3.setObjectName("layoutWidget3")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget3)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.SCreen_Test_Button_PAN_1 = QtWidgets.QPushButton(self.layoutWidget2)
+        self.SCreen_Test_Button_PAN_1 = QtWidgets.QPushButton(self.layoutWidget3)
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -291,7 +413,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Button_PAN_1.setIconSize(QtCore.QSize(60, 60))
         self.SCreen_Test_Button_PAN_1.setObjectName("SCreen_Test_Button_PAN_1")
         self.verticalLayout.addWidget(self.SCreen_Test_Button_PAN_1)
-        self.SCreen_Test_Qlabel_PAN_1 = QtWidgets.QLabel(self.layoutWidget2)
+        self.SCreen_Test_Qlabel_PAN_1 = QtWidgets.QLabel(self.layoutWidget3)
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -311,7 +433,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_1.setObjectName("SCreen_Test_Qlabel_PAN_1")
         self.verticalLayout.addWidget(self.SCreen_Test_Qlabel_PAN_1)
         self.horizontalLayout_2.addWidget(self.frame_2)
-        self.frame_3 = QtWidgets.QFrame(self.widget)
+        self.frame_3 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_3.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -364,7 +486,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_2.setObjectName("SCreen_Test_Qlabel_PAN_2")
         self.verticalLayout_2.addWidget(self.SCreen_Test_Qlabel_PAN_2)
         self.horizontalLayout_2.addWidget(self.frame_3)
-        self.frame_4 = QtWidgets.QFrame(self.widget)
+        self.frame_4 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_4.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -417,7 +539,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_3.setObjectName("SCreen_Test_Qlabel_PAN_3")
         self.verticalLayout_12.addWidget(self.SCreen_Test_Qlabel_PAN_3)
         self.horizontalLayout_2.addWidget(self.frame_4)
-        self.frame_5 = QtWidgets.QFrame(self.widget)
+        self.frame_5 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_5.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -470,7 +592,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_4.setObjectName("SCreen_Test_Qlabel_PAN_4")
         self.verticalLayout_13.addWidget(self.SCreen_Test_Qlabel_PAN_4)
         self.horizontalLayout_2.addWidget(self.frame_5)
-        self.frame_6 = QtWidgets.QFrame(self.widget)
+        self.frame_6 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_6.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -523,7 +645,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_5.setObjectName("SCreen_Test_Qlabel_PAN_5")
         self.verticalLayout_14.addWidget(self.SCreen_Test_Qlabel_PAN_5)
         self.horizontalLayout_2.addWidget(self.frame_6)
-        self.frame_7 = QtWidgets.QFrame(self.widget)
+        self.frame_7 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_7.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -579,7 +701,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.frame_8 = QtWidgets.QFrame(self.widget)
+        self.frame_8 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_8.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -632,7 +754,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_7.setObjectName("SCreen_Test_Qlabel_PAN_7")
         self.verticalLayout_16.addWidget(self.SCreen_Test_Qlabel_PAN_7)
         self.horizontalLayout_4.addWidget(self.frame_8)
-        self.frame_9 = QtWidgets.QFrame(self.widget)
+        self.frame_9 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_9.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -685,7 +807,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_8.setObjectName("SCreen_Test_Qlabel_PAN_8")
         self.verticalLayout_17.addWidget(self.SCreen_Test_Qlabel_PAN_8)
         self.horizontalLayout_4.addWidget(self.frame_9)
-        self.frame_10 = QtWidgets.QFrame(self.widget)
+        self.frame_10 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_10.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -738,7 +860,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_9.setObjectName("SCreen_Test_Qlabel_PAN_9")
         self.verticalLayout_18.addWidget(self.SCreen_Test_Qlabel_PAN_9)
         self.horizontalLayout_4.addWidget(self.frame_10)
-        self.frame_11 = QtWidgets.QFrame(self.widget)
+        self.frame_11 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_11.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -791,7 +913,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_10.setObjectName("SCreen_Test_Qlabel_PAN_10")
         self.verticalLayout_19.addWidget(self.SCreen_Test_Qlabel_PAN_10)
         self.horizontalLayout_4.addWidget(self.frame_11)
-        self.frame_12 = QtWidgets.QFrame(self.widget)
+        self.frame_12 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_12.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -844,7 +966,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_11.setObjectName("SCreen_Test_Qlabel_PAN_11")
         self.verticalLayout_20.addWidget(self.SCreen_Test_Qlabel_PAN_11)
         self.horizontalLayout_4.addWidget(self.frame_12)
-        self.frame_13 = QtWidgets.QFrame(self.widget)
+        self.frame_13 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_13.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -900,7 +1022,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addLayout(self.horizontalLayout_4, 1, 0, 1, 1)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.frame_14 = QtWidgets.QFrame(self.widget)
+        self.frame_14 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_14.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -953,7 +1075,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_13.setObjectName("SCreen_Test_Qlabel_PAN_13")
         self.verticalLayout_22.addWidget(self.SCreen_Test_Qlabel_PAN_13)
         self.horizontalLayout_5.addWidget(self.frame_14)
-        self.frame_15 = QtWidgets.QFrame(self.widget)
+        self.frame_15 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_15.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1006,7 +1128,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_14.setObjectName("SCreen_Test_Qlabel_PAN_14")
         self.verticalLayout_23.addWidget(self.SCreen_Test_Qlabel_PAN_14)
         self.horizontalLayout_5.addWidget(self.frame_15)
-        self.frame_16 = QtWidgets.QFrame(self.widget)
+        self.frame_16 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_16.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1059,7 +1181,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_15.setObjectName("SCreen_Test_Qlabel_PAN_15")
         self.verticalLayout_24.addWidget(self.SCreen_Test_Qlabel_PAN_15)
         self.horizontalLayout_5.addWidget(self.frame_16)
-        self.frame_17 = QtWidgets.QFrame(self.widget)
+        self.frame_17 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_17.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1112,7 +1234,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_16.setObjectName("SCreen_Test_Qlabel_PAN_16")
         self.verticalLayout_25.addWidget(self.SCreen_Test_Qlabel_PAN_16)
         self.horizontalLayout_5.addWidget(self.frame_17)
-        self.frame_18 = QtWidgets.QFrame(self.widget)
+        self.frame_18 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_18.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1165,7 +1287,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_17.setObjectName("SCreen_Test_Qlabel_PAN_17")
         self.verticalLayout_26.addWidget(self.SCreen_Test_Qlabel_PAN_17)
         self.horizontalLayout_5.addWidget(self.frame_18)
-        self.frame_19 = QtWidgets.QFrame(self.widget)
+        self.frame_19 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_19.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1221,7 +1343,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addLayout(self.horizontalLayout_5, 2, 0, 1, 1)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.frame_20 = QtWidgets.QFrame(self.widget)
+        self.frame_20 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_20.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1274,7 +1396,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_19.setObjectName("SCreen_Test_Qlabel_PAN_19")
         self.verticalLayout_28.addWidget(self.SCreen_Test_Qlabel_PAN_19)
         self.horizontalLayout_6.addWidget(self.frame_20)
-        self.frame_21 = QtWidgets.QFrame(self.widget)
+        self.frame_21 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_21.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1327,7 +1449,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_20.setObjectName("SCreen_Test_Qlabel_PAN_20")
         self.verticalLayout_29.addWidget(self.SCreen_Test_Qlabel_PAN_20)
         self.horizontalLayout_6.addWidget(self.frame_21)
-        self.frame_22 = QtWidgets.QFrame(self.widget)
+        self.frame_22 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_22.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1380,7 +1502,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_21.setObjectName("SCreen_Test_Qlabel_PAN_21")
         self.verticalLayout_30.addWidget(self.SCreen_Test_Qlabel_PAN_21)
         self.horizontalLayout_6.addWidget(self.frame_22)
-        self.frame_23 = QtWidgets.QFrame(self.widget)
+        self.frame_23 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_23.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1433,7 +1555,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_22.setObjectName("SCreen_Test_Qlabel_PAN_22")
         self.verticalLayout_31.addWidget(self.SCreen_Test_Qlabel_PAN_22)
         self.horizontalLayout_6.addWidget(self.frame_23)
-        self.frame_24 = QtWidgets.QFrame(self.widget)
+        self.frame_24 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_24.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_24.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_24.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1486,7 +1608,7 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_23.setObjectName("SCreen_Test_Qlabel_PAN_23")
         self.verticalLayout_32.addWidget(self.SCreen_Test_Qlabel_PAN_23)
         self.horizontalLayout_6.addWidget(self.frame_24)
-        self.frame_25 = QtWidgets.QFrame(self.widget)
+        self.frame_25 = QtWidgets.QFrame(self.layoutWidget2)
         self.frame_25.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_25.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_25.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1543,6 +1665,242 @@ class Ui_MainWindow(object):
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Exam)
         self.screen_Test_Display_Choose = QtWidgets.QWidget()
         self.screen_Test_Display_Choose.setObjectName("screen_Test_Display_Choose")
+        self.label_2 = QtWidgets.QLabel(self.screen_Test_Display_Choose)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 1024, 600))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("Icon/aa.jpg"))
+        self.label_2.setObjectName("label_2")
+        self.frame_26 = QtWidgets.QFrame(self.screen_Test_Display_Choose)
+        self.frame_26.setEnabled(True)
+        self.frame_26.setGeometry(QtCore.QRect(172, 20, 681, 551))
+        self.frame_26.setMouseTracking(False)
+        self.frame_26.setAcceptDrops(False)
+        self.frame_26.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.frame_26.setStyleSheet("\n"
+"background-color: rgb(240, 240, 240);\n"
+"color: rgb(255, 255, 255);\n"
+" border: 5px solid transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;")
+        self.frame_26.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_26.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_26.setObjectName("frame_26")
+        self.layoutWidget_7 = QtWidgets.QWidget(self.frame_26)
+        self.layoutWidget_7.setGeometry(QtCore.QRect(130, 440, 421, 82))
+        self.layoutWidget_7.setObjectName("layoutWidget_7")
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.layoutWidget_7)
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.screen_Test_Display_InputInfor_Button_Start_5 = QtWidgets.QPushButton(self.layoutWidget_7)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setFont(font)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setMouseTracking(True)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setTabletTracking(True)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        self.screen_Test_Display_InputInfor_Button_Start_5.setIcon(icon7)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Test_Display_InputInfor_Button_Start_5.setCheckable(False)
+        self.screen_Test_Display_InputInfor_Button_Start_5.setObjectName("screen_Test_Display_InputInfor_Button_Start_5")
+        self.horizontalLayout_11.addWidget(self.screen_Test_Display_InputInfor_Button_Start_5)
+        self.SCreen_Test_Qlabel_PAN_25 = QtWidgets.QLabel(self.frame_26)
+        self.SCreen_Test_Qlabel_PAN_25.setGeometry(QtCore.QRect(0, 0, 681, 61))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_25.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_25.setStyleSheet("QLabel {\n"
+"\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: #e2e2e2;\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color: #e2e2e2;\n"
+" border-radius: 20px;\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_25.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_25.setObjectName("SCreen_Test_Qlabel_PAN_25")
+        self.lineEdit = QtWidgets.QLineEdit(self.frame_26)
+        self.lineEdit.setGeometry(QtCore.QRect(220, 400, 113, 20))
+        self.lineEdit.setObjectName("lineEdit")
+        self.splitter = QtWidgets.QSplitter(self.frame_26)
+        self.splitter.setGeometry(QtCore.QRect(130, 80, 421, 331))
+        self.splitter.setOrientation(QtCore.Qt.Vertical)
+        self.splitter.setObjectName("splitter")
+        self.radioButton_2 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_2.setFont(font)
+        self.radioButton_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_2.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_2.setChecked(False)
+        self.radioButton_2.setAutoRepeat(True)
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.radioButton_3 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_3.setFont(font)
+        self.radioButton_3.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_3.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_3.setChecked(False)
+        self.radioButton_3.setAutoRepeat(True)
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.radioButton_4 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_4.setFont(font)
+        self.radioButton_4.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_4.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_4.setChecked(False)
+        self.radioButton_4.setAutoRepeat(True)
+        self.radioButton_4.setObjectName("radioButton_4")
+        self.radioButton_5 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_5.setFont(font)
+        self.radioButton_5.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_5.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_5.setChecked(False)
+        self.radioButton_5.setAutoRepeat(True)
+        self.radioButton_5.setObjectName("radioButton_5")
+        self.radioButton_6 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_6.setFont(font)
+        self.radioButton_6.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_6.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_6.setChecked(False)
+        self.radioButton_6.setAutoRepeat(True)
+        self.radioButton_6.setObjectName("radioButton_6")
+        self.radioButton_7 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_7.setFont(font)
+        self.radioButton_7.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_7.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_7.setChecked(False)
+        self.radioButton_7.setAutoRepeat(True)
+        self.radioButton_7.setObjectName("radioButton_7")
+        self.radioButton_8 = QtWidgets.QRadioButton(self.splitter)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.radioButton_8.setFont(font)
+        self.radioButton_8.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.radioButton_8.setStyleSheet("\n"
+"QRadioButton {\n"
+"  border: 2px solid rgb(255, 170, 0);;\n"
+"  background-color: rgb(255, 170, 0);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QRadioButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}")
+        self.radioButton_8.setChecked(False)
+        self.radioButton_8.setAutoRepeat(True)
+        self.radioButton_8.setObjectName("radioButton_8")
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Choose)
         self.stackedWidget.addWidget(self.screen_Test)
         self.screen_Setting = QtWidgets.QWidget()
@@ -1621,3 +1979,12 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_23.setText(_translate("MainWindow", "Chưa chọn"))
         self.SCreen_Test_Button_PAN_24.setText(_translate("MainWindow", "PAN 24"))
         self.SCreen_Test_Qlabel_PAN_24.setText(_translate("MainWindow", "Chưa chọn"))
+        self.screen_Test_Display_InputInfor_Button_Start_5.setText(_translate("MainWindow", " Chọn"))
+        self.SCreen_Test_Qlabel_PAN_25.setText(_translate("MainWindow", "PAN 20"))
+        self.radioButton_2.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_3.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_4.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_5.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_6.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_7.setText(_translate("MainWindow", "Hở mạch"))
+        self.radioButton_8.setText(_translate("MainWindow", "Hở mạch"))
