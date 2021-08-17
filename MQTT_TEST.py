@@ -1672,7 +1672,7 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName("label_2")
         self.frame_26 = QtWidgets.QFrame(self.screen_Test_Display_Choose)
         self.frame_26.setEnabled(True)
-        self.frame_26.setGeometry(QtCore.QRect(172, 20, 681, 551))
+        self.frame_26.setGeometry(QtCore.QRect(307, 20, 411, 551))
         self.frame_26.setMouseTracking(False)
         self.frame_26.setAcceptDrops(False)
         self.frame_26.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -1688,18 +1688,18 @@ class Ui_MainWindow(object):
         self.frame_26.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_26.setObjectName("frame_26")
         self.layoutWidget_7 = QtWidgets.QWidget(self.frame_26)
-        self.layoutWidget_7.setGeometry(QtCore.QRect(130, 440, 421, 82))
+        self.layoutWidget_7.setGeometry(QtCore.QRect(40, 460, 331, 61))
         self.layoutWidget_7.setObjectName("layoutWidget_7")
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.layoutWidget_7)
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
-        self.screen_Test_Display_InputInfor_Button_Start_5 = QtWidgets.QPushButton(self.layoutWidget_7)
+        self.screen_Test_Display_Choose_ButtonChoose = QtWidgets.QPushButton(self.layoutWidget_7)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setFont(font)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setMouseTracking(True)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setTabletTracking(True)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_ButtonChoose.setFont(font)
+        self.screen_Test_Display_Choose_ButtonChoose.setMouseTracking(True)
+        self.screen_Test_Display_Choose_ButtonChoose.setTabletTracking(True)
+        self.screen_Test_Display_Choose_ButtonChoose.setStyleSheet("\n"
 "QPushButton {\n"
 "\n"
 "  border: 2px solid rgb(240, 240, 240);\n"
@@ -1714,19 +1714,19 @@ class Ui_MainWindow(object):
 "    background-color: rgb(85, 170, 255);\n"
 "}\n"
 "")
-        self.screen_Test_Display_InputInfor_Button_Start_5.setIcon(icon7)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Test_Display_InputInfor_Button_Start_5.setCheckable(False)
-        self.screen_Test_Display_InputInfor_Button_Start_5.setObjectName("screen_Test_Display_InputInfor_Button_Start_5")
-        self.horizontalLayout_11.addWidget(self.screen_Test_Display_InputInfor_Button_Start_5)
-        self.SCreen_Test_Qlabel_PAN_25 = QtWidgets.QLabel(self.frame_26)
-        self.SCreen_Test_Qlabel_PAN_25.setGeometry(QtCore.QRect(0, 0, 681, 61))
+        self.screen_Test_Display_Choose_ButtonChoose.setIcon(icon7)
+        self.screen_Test_Display_Choose_ButtonChoose.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Test_Display_Choose_ButtonChoose.setCheckable(False)
+        self.screen_Test_Display_Choose_ButtonChoose.setObjectName("screen_Test_Display_Choose_ButtonChoose")
+        self.horizontalLayout_11.addWidget(self.screen_Test_Display_Choose_ButtonChoose)
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number = QtWidgets.QLabel(self.frame_26)
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setGeometry(QtCore.QRect(0, 0, 411, 61))
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_25.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_25.setStyleSheet("QLabel {\n"
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setFont(font)
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setStyleSheet("QLabel {\n"
 "\n"
 "    color: rgb(255, 255, 255);\n"
 "    background-color: #e2e2e2;\n"
@@ -1738,22 +1738,20 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_25.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_25.setObjectName("SCreen_Test_Qlabel_PAN_25")
-        self.lineEdit = QtWidgets.QLineEdit(self.frame_26)
-        self.lineEdit.setGeometry(QtCore.QRect(220, 400, 113, 20))
-        self.lineEdit.setObjectName("lineEdit")
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setObjectName("screen_Test_Display_Choose_Qlabel_PAN_Number")
         self.splitter = QtWidgets.QSplitter(self.frame_26)
-        self.splitter.setGeometry(QtCore.QRect(130, 80, 421, 331))
+        self.splitter.setGeometry(QtCore.QRect(65, 75, 281, 351))
+        self.splitter.setMinimumSize(QtCore.QSize(281, 351))
         self.splitter.setOrientation(QtCore.Qt.Vertical)
         self.splitter.setObjectName("splitter")
-        self.radioButton_2 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_1 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_2.setFont(font)
-        self.radioButton_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_2.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_1.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_1.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_1.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1766,16 +1764,16 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_2.setChecked(False)
-        self.radioButton_2.setAutoRepeat(True)
-        self.radioButton_2.setObjectName("radioButton_2")
-        self.radioButton_3 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_1.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_1.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_1.setObjectName("screen_Test_Display_Choose_radioButton_1")
+        self.screen_Test_Display_Choose_radioButton_2 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_3.setFont(font)
-        self.radioButton_3.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_3.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_2.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_2.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1788,16 +1786,16 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_3.setChecked(False)
-        self.radioButton_3.setAutoRepeat(True)
-        self.radioButton_3.setObjectName("radioButton_3")
-        self.radioButton_4 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_2.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_2.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_2.setObjectName("screen_Test_Display_Choose_radioButton_2")
+        self.screen_Test_Display_Choose_radioButton_3 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_4.setFont(font)
-        self.radioButton_4.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_4.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_3.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_3.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_3.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1810,16 +1808,16 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_4.setChecked(False)
-        self.radioButton_4.setAutoRepeat(True)
-        self.radioButton_4.setObjectName("radioButton_4")
-        self.radioButton_5 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_3.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_3.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_3.setObjectName("screen_Test_Display_Choose_radioButton_3")
+        self.screen_Test_Display_Choose_radioButton_4 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_5.setFont(font)
-        self.radioButton_5.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_5.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_4.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_4.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_4.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1832,16 +1830,17 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_5.setChecked(False)
-        self.radioButton_5.setAutoRepeat(True)
-        self.radioButton_5.setObjectName("radioButton_5")
-        self.radioButton_6 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_4.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_4.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_4.setAutoExclusive(True)
+        self.screen_Test_Display_Choose_radioButton_4.setObjectName("screen_Test_Display_Choose_radioButton_4")
+        self.screen_Test_Display_Choose_radioButton_5 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_6.setFont(font)
-        self.radioButton_6.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_6.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_5.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_5.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_5.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1854,16 +1853,16 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_6.setChecked(False)
-        self.radioButton_6.setAutoRepeat(True)
-        self.radioButton_6.setObjectName("radioButton_6")
-        self.radioButton_7 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_5.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_5.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_5.setObjectName("screen_Test_Display_Choose_radioButton_5")
+        self.screen_Test_Display_Choose_radioButton_6 = QtWidgets.QRadioButton(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_7.setFont(font)
-        self.radioButton_7.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_7.setStyleSheet("\n"
+        self.screen_Test_Display_Choose_radioButton_6.setFont(font)
+        self.screen_Test_Display_Choose_radioButton_6.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.screen_Test_Display_Choose_radioButton_6.setStyleSheet("\n"
 "QRadioButton {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
@@ -1876,31 +1875,28 @@ class Ui_MainWindow(object):
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_7.setChecked(False)
-        self.radioButton_7.setAutoRepeat(True)
-        self.radioButton_7.setObjectName("radioButton_7")
-        self.radioButton_8 = QtWidgets.QRadioButton(self.splitter)
+        self.screen_Test_Display_Choose_radioButton_6.setChecked(False)
+        self.screen_Test_Display_Choose_radioButton_6.setAutoRepeat(True)
+        self.screen_Test_Display_Choose_radioButton_6.setObjectName("screen_Test_Display_Choose_radioButton_6")
+        self.screen_Test_Display_Choose_lineEdit = QtWidgets.QLineEdit(self.splitter)
         font = QtGui.QFont()
         font.setPointSize(15)
-        font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.radioButton_8.setFont(font)
-        self.radioButton_8.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.radioButton_8.setStyleSheet("\n"
-"QRadioButton {\n"
+        self.screen_Test_Display_Choose_lineEdit.setFont(font)
+        self.screen_Test_Display_Choose_lineEdit.setStyleSheet("\n"
+"QLineEdit {\n"
 "  border: 2px solid rgb(255, 170, 0);;\n"
 "  background-color: rgb(255, 170, 0);\n"
 "  border-radius: 20px;\n"
 "  color: black;\n"
 "  transition: .3s;\n"
 "}\n"
-"QRadioButton:hover {\n"
+"QLineEdit:hover {\n"
 " box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
 " border: 3px solid rgb(85, 170, 255);\n"
 "    background-color: rgb(85, 170, 255);\n"
 "}")
-        self.radioButton_8.setChecked(False)
-        self.radioButton_8.setAutoRepeat(True)
-        self.radioButton_8.setObjectName("radioButton_8")
+        self.screen_Test_Display_Choose_lineEdit.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_Test_Display_Choose_lineEdit.setObjectName("screen_Test_Display_Choose_lineEdit")
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Choose)
         self.stackedWidget.addWidget(self.screen_Test)
         self.screen_Setting = QtWidgets.QWidget()
@@ -1979,12 +1975,12 @@ class Ui_MainWindow(object):
         self.SCreen_Test_Qlabel_PAN_23.setText(_translate("MainWindow", "Chưa chọn"))
         self.SCreen_Test_Button_PAN_24.setText(_translate("MainWindow", "PAN 24"))
         self.SCreen_Test_Qlabel_PAN_24.setText(_translate("MainWindow", "Chưa chọn"))
-        self.screen_Test_Display_InputInfor_Button_Start_5.setText(_translate("MainWindow", " Chọn"))
-        self.SCreen_Test_Qlabel_PAN_25.setText(_translate("MainWindow", "PAN 20"))
-        self.radioButton_2.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_3.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_4.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_5.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_6.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_7.setText(_translate("MainWindow", "Hở mạch"))
-        self.radioButton_8.setText(_translate("MainWindow", "Hở mạch"))
+        self.screen_Test_Display_Choose_ButtonChoose.setText(_translate("MainWindow", " Chọn"))
+        self.screen_Test_Display_Choose_Qlabel_PAN_Number.setText(_translate("MainWindow", "PAN 20"))
+        self.screen_Test_Display_Choose_radioButton_1.setText(_translate("MainWindow", "Hở mạch"))
+        self.screen_Test_Display_Choose_radioButton_2.setText(_translate("MainWindow", "Chập chờn"))
+        self.screen_Test_Display_Choose_radioButton_3.setText(_translate("MainWindow", "Chạm đất"))
+        self.screen_Test_Display_Choose_radioButton_4.setText(_translate("MainWindow", "Nối dương"))
+        self.screen_Test_Display_Choose_radioButton_5.setText(_translate("MainWindow", "Bình Thường"))
+        self.screen_Test_Display_Choose_radioButton_6.setText(_translate("MainWindow", "Điện áp"))
+        self.screen_Test_Display_Choose_lineEdit.setPlaceholderText(_translate("MainWindow", "Điện áp đo được"))
