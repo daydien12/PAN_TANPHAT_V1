@@ -552,8 +552,8 @@ class MainWindow:
 #-----------------------------------------(Giao Diện Setting)-----------------------------------------------------------------------------#
 
     def screen_Setting_Show_Display_Practice(self):
-        self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_practice)
-
+        #self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_practice)
+        self.screen_Setting_Get_Select_CreateExercise()
 
     def screen_Setting_RamdomExercise(self):
         #self.screen_Setting_ArrRandomCreateExercise()
@@ -752,7 +752,7 @@ class MainWindow:
             self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
             self.uic.screen_setting_Home_lineEdit_24.clear()
 
-        self.screen_Setting_Get_Select_CreateExercise()
+
 
     def screen_Setting_ArrRandomCreateExercise(self):
         ArrRandom_setCurrentText = random.randint(6, size=(25))
@@ -760,8 +760,28 @@ class MainWindow:
         return ArrRandom_setCurrentText, ArrRandom_voltage
 
     def screen_Setting_Get_Select_CreateExercise(self):
-        self.ScreenSetting_value_ArrayGetCurrentText[1]  = self.uic.screen_setting_Home_ComboBox_1.currentText()
+        value = 6
+
+        if(self.uic.screen_setting_Home_ComboBox_1.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[1] = float(self.uic.screen_setting_Home_lineEdit_1.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[1] = self.uic.screen_setting_Home_ComboBox_1.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[1] = self.uic.screen_setting_Home_ComboBox_1.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_2.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[2] = float(
+                self.uic.screen_setting_Home_lineEdit_2.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[2] = self.uic.screen_setting_Home_ComboBox_2.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[2] = self.uic.screen_setting_Home_ComboBox_2.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[] = float(
+                self.uic.screen_setting_Home_lineEdit_.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[] = self.uic.screen_setting_Home_ComboBox_.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[] = self.uic.screen_setting_Home_ComboBox_.currentIndex()
+
         print(self.ScreenSetting_value_ArrayGetCurrentText)
         print( self.ScreenSetting_value_ArrayGetCurrentIndex)
         #print(self.uic.screen_setting_Home_ComboBox_1.currentIndex(),self.uic.screen_setting_Home_ComboBox_1.currentText())
