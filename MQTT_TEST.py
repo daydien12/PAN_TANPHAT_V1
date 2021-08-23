@@ -1901,40 +1901,19 @@ class Ui_MainWindow(object):
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Choose)
         self.screen_Test_Display_Answer = QtWidgets.QWidget()
         self.screen_Test_Display_Answer.setObjectName("screen_Test_Display_Answer")
-        self.screen_Test_Display_Answer_Exit = QtWidgets.QPushButton(self.screen_Test_Display_Answer)
-        self.screen_Test_Display_Answer_Exit.setEnabled(True)
-        self.screen_Test_Display_Answer_Exit.setGeometry(QtCore.QRect(900, 540, 101, 51))
-        self.screen_Test_Display_Answer_Exit.setStyleSheet("\n"
-"QPushButton {\n"
-"\n"
-"  border: 2px solid rgb(240, 240, 240);\n"
-"  background-color:  rgb(240, 240, 240);\n"
-"  border-radius: 20px;\n"
-"  color: black;\n"
-"  transition: .3s;\n"
-"}\n"
-"QPushButton:hover {\n"
-" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
-" border: 3px solid rgb(85, 170, 255);\n"
-"    background-color: rgb(85, 170, 255);\n"
-"}\n"
-"")
-        self.screen_Test_Display_Answer_Exit.setIcon(icon5)
-        self.screen_Test_Display_Answer_Exit.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Test_Display_Answer_Exit.setObjectName("screen_Test_Display_Answer_Exit")
         self.frame_141 = QtWidgets.QFrame(self.screen_Test_Display_Answer)
-        self.frame_141.setGeometry(QtCore.QRect(880, 110, 151, 251))
+        self.frame_141.setGeometry(QtCore.QRect(10, 540, 1001, 61))
         self.frame_141.setStyleSheet("background-color: rgb(240, 240, 240);")
         self.frame_141.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_141.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_141.setObjectName("frame_141")
-        self.gridLayout_122 = QtWidgets.QGridLayout(self.frame_141)
-        self.gridLayout_122.setObjectName("gridLayout_122")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_141)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.gridLayout_121 = QtWidgets.QGridLayout()
         self.gridLayout_121.setObjectName("gridLayout_121")
         self.pushButton = QtWidgets.QPushButton(self.frame_141)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.pushButton.setFont(font)
@@ -1956,10 +1935,10 @@ class Ui_MainWindow(object):
         self.pushButton.setIcon(icon8)
         self.pushButton.setIconSize(QtCore.QSize(55, 55))
         self.pushButton.setObjectName("pushButton")
-        self.gridLayout_121.addWidget(self.pushButton, 3, 0, 1, 1)
+        self.gridLayout_121.addWidget(self.pushButton, 0, 0, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(self.frame_141)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_2.setFont(font)
@@ -1981,10 +1960,10 @@ class Ui_MainWindow(object):
         self.pushButton_2.setIcon(icon9)
         self.pushButton_2.setIconSize(QtCore.QSize(35, 35))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_121.addWidget(self.pushButton_2, 5, 0, 1, 1)
+        self.gridLayout_121.addWidget(self.pushButton_2, 0, 2, 1, 1)
         self.screen_Test_Display_Answer_label_AnswerFalse = QtWidgets.QLabel(self.frame_141)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.screen_Test_Display_Answer_label_AnswerFalse.setFont(font)
@@ -1998,12 +1977,78 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_Test_Display_Answer_label_AnswerFalse.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.screen_Test_Display_Answer_label_AnswerFalse.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.screen_Test_Display_Answer_label_AnswerFalse.setObjectName("screen_Test_Display_Answer_label_AnswerFalse")
-        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_AnswerFalse, 6, 0, 1, 1)
+        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_AnswerFalse, 0, 3, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(self.frame_141)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_3.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color: rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(240, 240, 240);\n"
+"    background-color: rgb(240, 240, 240);\n"
+"}\n"
+"alternate-background-color: rgb(255, 255, 255);")
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("Icon/No_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_3.setIcon(icon10)
+        self.pushButton_3.setIconSize(QtCore.QSize(35, 35))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout_121.addWidget(self.pushButton_3, 0, 4, 1, 1)
+        self.screen_Test_Display_Answer_label_AnswerNot = QtWidgets.QLabel(self.frame_141)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_Test_Display_Answer_label_AnswerNot.setFont(font)
+        self.screen_Test_Display_Answer_label_AnswerNot.setStyleSheet("QLabel {\n"
+"    background-color: rgb(240, 240, 240);\n"
+"color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:rgb(240, 240, 240);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_Test_Display_Answer_label_AnswerNot.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.screen_Test_Display_Answer_label_AnswerNot.setObjectName("screen_Test_Display_Answer_label_AnswerNot")
+        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_AnswerNot, 0, 5, 1, 1)
+        self.screen_Test_Display_Answer_Exit = QtWidgets.QPushButton(self.frame_141)
+        self.screen_Test_Display_Answer_Exit.setEnabled(True)
+        self.screen_Test_Display_Answer_Exit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        self.screen_Test_Display_Answer_Exit.setIcon(icon5)
+        self.screen_Test_Display_Answer_Exit.setIconSize(QtCore.QSize(38, 38))
+        self.screen_Test_Display_Answer_Exit.setObjectName("screen_Test_Display_Answer_Exit")
+        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_Exit, 0, 6, 1, 1)
         self.screen_Test_Display_Answer_label_AnswerTrue = QtWidgets.QLabel(self.frame_141)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.screen_Test_Display_Answer_label_AnswerTrue.setFont(font)
@@ -2017,12 +2062,48 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_Test_Display_Answer_label_AnswerTrue.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.screen_Test_Display_Answer_label_AnswerTrue.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.screen_Test_Display_Answer_label_AnswerTrue.setObjectName("screen_Test_Display_Answer_label_AnswerTrue")
-        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_AnswerTrue, 4, 0, 1, 1)
-        self.screen_Test_Display_Answer_label_Name = QtWidgets.QLabel(self.frame_141)
+        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_AnswerTrue, 0, 1, 1, 1)
+        self.verticalLayout_3.addLayout(self.gridLayout_121)
+        self.frame_146 = QtWidgets.QFrame(self.screen_Test_Display_Answer)
+        self.frame_146.setGeometry(QtCore.QRect(210, -10, 611, 71))
+        self.frame_146.setStyleSheet("background-color: rgb(240, 240, 240);")
+        self.frame_146.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_146.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_146.setObjectName("frame_146")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_146)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.gridLayout_122 = QtWidgets.QGridLayout()
+        self.gridLayout_122.setObjectName("gridLayout_122")
+        self.pushButton_6 = QtWidgets.QPushButton(self.frame_146)
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_6.setFont(font)
+        self.pushButton_6.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color: rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(240, 240, 240);\n"
+"    background-color:rgb(240, 240, 240);\n"
+"}\n"
+"alternate-background-color: rgb(255, 255, 255);")
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("Icon/Icon_person.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_6.setIcon(icon11)
+        self.pushButton_6.setIconSize(QtCore.QSize(55, 55))
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.gridLayout_122.addWidget(self.pushButton_6, 0, 0, 1, 1)
+        self.screen_Test_Display_Answer_label_Name = QtWidgets.QLabel(self.frame_146)
+        font = QtGui.QFont()
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.screen_Test_Display_Answer_label_Name.setFont(font)
@@ -2036,12 +2117,37 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_Test_Display_Answer_label_Name.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_Test_Display_Answer_label_Name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.screen_Test_Display_Answer_label_Name.setObjectName("screen_Test_Display_Answer_label_Name")
-        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_Name, 1, 0, 1, 1)
-        self.screen_Test_Display_Answer_label_ID = QtWidgets.QLabel(self.frame_141)
+        self.gridLayout_122.addWidget(self.screen_Test_Display_Answer_label_Name, 0, 1, 1, 1)
+        self.pushButton_7 = QtWidgets.QPushButton(self.frame_146)
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_7.setFont(font)
+        self.pushButton_7.setStyleSheet("QPushButton {\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color: rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(240, 240, 240);\n"
+"    background-color: rgb(240, 240, 240);\n"
+"}\n"
+"alternate-background-color: rgb(255, 255, 255);")
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap("Icon/IDCard.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_7.setIcon(icon12)
+        self.pushButton_7.setIconSize(QtCore.QSize(35, 35))
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout_122.addWidget(self.pushButton_7, 0, 3, 1, 1)
+        self.screen_Test_Display_Answer_label_ID = QtWidgets.QLabel(self.frame_146)
+        font = QtGui.QFont()
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.screen_Test_Display_Answer_label_ID.setFont(font)
@@ -2055,30 +2161,2272 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_Test_Display_Answer_label_ID.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_Test_Display_Answer_label_ID.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.screen_Test_Display_Answer_label_ID.setObjectName("screen_Test_Display_Answer_label_ID")
-        self.gridLayout_121.addWidget(self.screen_Test_Display_Answer_label_ID, 2, 0, 1, 1)
-        self.gridLayout_122.addLayout(self.gridLayout_121, 0, 0, 1, 1)
+        self.gridLayout_122.addWidget(self.screen_Test_Display_Answer_label_ID, 0, 4, 1, 1)
+        self.verticalLayout_4.addLayout(self.gridLayout_122)
         self.widget = QtWidgets.QWidget(self.screen_Test_Display_Answer)
-        self.widget.setGeometry(QtCore.QRect(0, 0, 881, 601))
+        self.widget.setGeometry(QtCore.QRect(0, 70, 1031, 461))
         self.widget.setObjectName("widget")
-        self.verticalLayout_105 = QtWidgets.QVBoxLayout(self.widget)
-        self.verticalLayout_105.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_105.setObjectName("verticalLayout_105")
-        self.gridLayout_105 = QtWidgets.QGridLayout()
-        self.gridLayout_105.setObjectName("gridLayout_105")
+        self.gridLayout_142 = QtWidgets.QGridLayout(self.widget)
+        self.gridLayout_142.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_142.setObjectName("gridLayout_142")
+        self.gridLayout_127 = QtWidgets.QGridLayout()
+        self.gridLayout_127.setObjectName("gridLayout_127")
+        self.frame_97 = QtWidgets.QFrame(self.widget)
+        self.frame_97.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_97.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_97.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_97.setObjectName("frame_97")
+        self.gridLayout_118 = QtWidgets.QGridLayout(self.frame_97)
+        self.gridLayout_118.setObjectName("gridLayout_118")
+        self.splitter_84 = QtWidgets.QSplitter(self.frame_97)
+        self.splitter_84.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_84.setObjectName("splitter_84")
+        self.SCreen_Test_Qlabel_PAN_245 = QtWidgets.QLabel(self.splitter_84)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_245.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_245.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_245.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_245.setObjectName("SCreen_Test_Qlabel_PAN_245")
+        self.SCreen_Test_Qlabel_PAN_246 = QtWidgets.QLabel(self.splitter_84)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_246.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_246.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_246.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_246.setObjectName("SCreen_Test_Qlabel_PAN_246")
+        self.SCreen_Test_Qlabel_PAN_247 = QtWidgets.QLabel(self.splitter_84)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_247.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_247.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_247.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_247.setObjectName("SCreen_Test_Qlabel_PAN_247")
+        self.gridLayout_118.addWidget(self.splitter_84, 0, 0, 1, 1)
+        self.splitter_85 = QtWidgets.QSplitter(self.frame_97)
+        self.splitter_85.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_85.setObjectName("splitter_85")
+        self.screen_test_Display_Answer_Qlabel_Answer2_7 = QtWidgets.QLabel(self.splitter_85)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_7.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_7.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_7.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_7")
+        self.screen_test_Display_Answer_Qlabel_Answer0_7 = QtWidgets.QLabel(self.splitter_85)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_7.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_7.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_7.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_7")
+        self.screen_test_Display_Answer_Qlabel_Answer1_7 = QtWidgets.QLabel(self.splitter_85)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_7.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_7.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_7.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_7")
+        self.gridLayout_118.addWidget(self.splitter_85, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_97, 0, 0, 1, 1)
+        self.frame_128 = QtWidgets.QFrame(self.widget)
+        self.frame_128.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_128.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_128.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_128.setObjectName("frame_128")
+        self.gridLayout_119 = QtWidgets.QGridLayout(self.frame_128)
+        self.gridLayout_119.setObjectName("gridLayout_119")
+        self.splitter_86 = QtWidgets.QSplitter(self.frame_128)
+        self.splitter_86.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_86.setObjectName("splitter_86")
+        self.SCreen_Test_Qlabel_PAN_248 = QtWidgets.QLabel(self.splitter_86)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_248.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_248.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_248.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_248.setObjectName("SCreen_Test_Qlabel_PAN_248")
+        self.SCreen_Test_Qlabel_PAN_249 = QtWidgets.QLabel(self.splitter_86)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_249.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_249.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_249.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_249.setObjectName("SCreen_Test_Qlabel_PAN_249")
+        self.SCreen_Test_Qlabel_PAN_250 = QtWidgets.QLabel(self.splitter_86)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_250.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_250.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_250.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_250.setObjectName("SCreen_Test_Qlabel_PAN_250")
+        self.gridLayout_119.addWidget(self.splitter_86, 0, 0, 1, 1)
+        self.splitter_87 = QtWidgets.QSplitter(self.frame_128)
+        self.splitter_87.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_87.setObjectName("splitter_87")
+        self.screen_test_Display_Answer_Qlabel_Answer2_8 = QtWidgets.QLabel(self.splitter_87)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_8.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_8.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_8.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_8")
+        self.screen_test_Display_Answer_Qlabel_Answer0_8 = QtWidgets.QLabel(self.splitter_87)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_8.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_8.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_8.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_8")
+        self.screen_test_Display_Answer_Qlabel_Answer1_8 = QtWidgets.QLabel(self.splitter_87)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_8.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_8.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_8.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_8")
+        self.gridLayout_119.addWidget(self.splitter_87, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_128, 0, 1, 1, 1)
+        self.frame_129 = QtWidgets.QFrame(self.widget)
+        self.frame_129.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_129.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_129.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_129.setObjectName("frame_129")
+        self.gridLayout_120 = QtWidgets.QGridLayout(self.frame_129)
+        self.gridLayout_120.setObjectName("gridLayout_120")
+        self.splitter_88 = QtWidgets.QSplitter(self.frame_129)
+        self.splitter_88.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_88.setObjectName("splitter_88")
+        self.SCreen_Test_Qlabel_PAN_251 = QtWidgets.QLabel(self.splitter_88)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_251.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_251.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_251.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_251.setObjectName("SCreen_Test_Qlabel_PAN_251")
+        self.SCreen_Test_Qlabel_PAN_252 = QtWidgets.QLabel(self.splitter_88)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_252.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_252.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_252.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_252.setObjectName("SCreen_Test_Qlabel_PAN_252")
+        self.SCreen_Test_Qlabel_PAN_253 = QtWidgets.QLabel(self.splitter_88)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_253.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_253.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_253.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_253.setObjectName("SCreen_Test_Qlabel_PAN_253")
+        self.gridLayout_120.addWidget(self.splitter_88, 0, 0, 1, 1)
+        self.splitter_89 = QtWidgets.QSplitter(self.frame_129)
+        self.splitter_89.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_89.setObjectName("splitter_89")
+        self.screen_test_Display_Answer_Qlabel_Answer2_9 = QtWidgets.QLabel(self.splitter_89)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_9.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_9.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_9.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_9")
+        self.screen_test_Display_Answer_Qlabel_Answer0_9 = QtWidgets.QLabel(self.splitter_89)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_9.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_9.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_9.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_9")
+        self.screen_test_Display_Answer_Qlabel_Answer1_9 = QtWidgets.QLabel(self.splitter_89)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_9.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_9.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_9.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_9")
+        self.gridLayout_120.addWidget(self.splitter_89, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_129, 0, 2, 1, 1)
+        self.frame_130 = QtWidgets.QFrame(self.widget)
+        self.frame_130.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_130.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_130.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_130.setObjectName("frame_130")
+        self.gridLayout_123 = QtWidgets.QGridLayout(self.frame_130)
+        self.gridLayout_123.setObjectName("gridLayout_123")
+        self.splitter_90 = QtWidgets.QSplitter(self.frame_130)
+        self.splitter_90.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_90.setObjectName("splitter_90")
+        self.SCreen_Test_Qlabel_PAN_254 = QtWidgets.QLabel(self.splitter_90)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_254.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_254.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_254.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_254.setObjectName("SCreen_Test_Qlabel_PAN_254")
+        self.SCreen_Test_Qlabel_PAN_255 = QtWidgets.QLabel(self.splitter_90)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_255.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_255.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_255.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_255.setObjectName("SCreen_Test_Qlabel_PAN_255")
+        self.SCreen_Test_Qlabel_PAN_256 = QtWidgets.QLabel(self.splitter_90)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_256.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_256.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_256.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_256.setObjectName("SCreen_Test_Qlabel_PAN_256")
+        self.gridLayout_123.addWidget(self.splitter_90, 0, 0, 1, 1)
+        self.splitter_91 = QtWidgets.QSplitter(self.frame_130)
+        self.splitter_91.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_91.setObjectName("splitter_91")
+        self.screen_test_Display_Answer_Qlabel_Answer2_10 = QtWidgets.QLabel(self.splitter_91)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_10.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_10.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_10.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_10")
+        self.screen_test_Display_Answer_Qlabel_Answer0_10 = QtWidgets.QLabel(self.splitter_91)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_10.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_10.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_10.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_10")
+        self.screen_test_Display_Answer_Qlabel_Answer1_10 = QtWidgets.QLabel(self.splitter_91)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_10.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_10.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_10.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_10")
+        self.gridLayout_123.addWidget(self.splitter_91, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_130, 0, 3, 1, 1)
+        self.frame_131 = QtWidgets.QFrame(self.widget)
+        self.frame_131.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_131.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_131.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_131.setObjectName("frame_131")
+        self.gridLayout_124 = QtWidgets.QGridLayout(self.frame_131)
+        self.gridLayout_124.setObjectName("gridLayout_124")
+        self.splitter_92 = QtWidgets.QSplitter(self.frame_131)
+        self.splitter_92.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_92.setObjectName("splitter_92")
+        self.SCreen_Test_Qlabel_PAN_257 = QtWidgets.QLabel(self.splitter_92)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_257.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_257.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_257.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_257.setObjectName("SCreen_Test_Qlabel_PAN_257")
+        self.SCreen_Test_Qlabel_PAN_258 = QtWidgets.QLabel(self.splitter_92)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_258.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_258.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_258.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_258.setObjectName("SCreen_Test_Qlabel_PAN_258")
+        self.SCreen_Test_Qlabel_PAN_259 = QtWidgets.QLabel(self.splitter_92)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_259.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_259.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_259.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_259.setObjectName("SCreen_Test_Qlabel_PAN_259")
+        self.gridLayout_124.addWidget(self.splitter_92, 0, 0, 1, 1)
+        self.splitter_93 = QtWidgets.QSplitter(self.frame_131)
+        self.splitter_93.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_93.setObjectName("splitter_93")
+        self.screen_test_Display_Answer_Qlabel_Answer2_11 = QtWidgets.QLabel(self.splitter_93)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_11.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_11.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_11.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_11.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_11")
+        self.screen_test_Display_Answer_Qlabel_Answer0_11 = QtWidgets.QLabel(self.splitter_93)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_11.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_11.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_11.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_11.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_11")
+        self.screen_test_Display_Answer_Qlabel_Answer1_11 = QtWidgets.QLabel(self.splitter_93)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_11.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_11.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_11.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_11.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_11")
+        self.gridLayout_124.addWidget(self.splitter_93, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_131, 0, 4, 1, 1)
+        self.frame_132 = QtWidgets.QFrame(self.widget)
+        self.frame_132.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_132.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_132.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_132.setObjectName("frame_132")
+        self.gridLayout_125 = QtWidgets.QGridLayout(self.frame_132)
+        self.gridLayout_125.setObjectName("gridLayout_125")
+        self.splitter_94 = QtWidgets.QSplitter(self.frame_132)
+        self.splitter_94.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_94.setObjectName("splitter_94")
+        self.SCreen_Test_Qlabel_PAN_260 = QtWidgets.QLabel(self.splitter_94)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_260.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_260.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_260.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_260.setObjectName("SCreen_Test_Qlabel_PAN_260")
+        self.SCreen_Test_Qlabel_PAN_261 = QtWidgets.QLabel(self.splitter_94)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_261.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_261.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_261.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_261.setObjectName("SCreen_Test_Qlabel_PAN_261")
+        self.SCreen_Test_Qlabel_PAN_262 = QtWidgets.QLabel(self.splitter_94)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_262.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_262.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_262.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_262.setObjectName("SCreen_Test_Qlabel_PAN_262")
+        self.gridLayout_125.addWidget(self.splitter_94, 0, 0, 1, 1)
+        self.splitter_95 = QtWidgets.QSplitter(self.frame_132)
+        self.splitter_95.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_95.setObjectName("splitter_95")
+        self.screen_test_Display_Answer_Qlabel_Answer2_12 = QtWidgets.QLabel(self.splitter_95)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_12.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_12.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_12.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_12.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_12")
+        self.screen_test_Display_Answer_Qlabel_Answer0_12 = QtWidgets.QLabel(self.splitter_95)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_12.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_12.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_12.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_12.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_12")
+        self.screen_test_Display_Answer_Qlabel_Answer1_12 = QtWidgets.QLabel(self.splitter_95)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_12.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_12.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_12.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_12.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_12")
+        self.gridLayout_125.addWidget(self.splitter_95, 0, 1, 1, 1)
+        self.gridLayout_127.addWidget(self.frame_132, 0, 5, 1, 1)
+        self.gridLayout_142.addLayout(self.gridLayout_127, 1, 0, 1, 1)
+        self.gridLayout_128 = QtWidgets.QGridLayout()
+        self.gridLayout_128.setObjectName("gridLayout_128")
+        self.frame_133 = QtWidgets.QFrame(self.widget)
+        self.frame_133.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_133.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_133.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_133.setObjectName("frame_133")
+        self.gridLayout_129 = QtWidgets.QGridLayout(self.frame_133)
+        self.gridLayout_129.setObjectName("gridLayout_129")
+        self.splitter_96 = QtWidgets.QSplitter(self.frame_133)
+        self.splitter_96.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_96.setObjectName("splitter_96")
+        self.SCreen_Test_Qlabel_PAN_263 = QtWidgets.QLabel(self.splitter_96)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_263.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_263.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_263.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_263.setObjectName("SCreen_Test_Qlabel_PAN_263")
+        self.SCreen_Test_Qlabel_PAN_264 = QtWidgets.QLabel(self.splitter_96)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_264.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_264.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_264.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_264.setObjectName("SCreen_Test_Qlabel_PAN_264")
+        self.SCreen_Test_Qlabel_PAN_265 = QtWidgets.QLabel(self.splitter_96)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_265.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_265.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_265.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_265.setObjectName("SCreen_Test_Qlabel_PAN_265")
+        self.gridLayout_129.addWidget(self.splitter_96, 0, 0, 1, 1)
+        self.splitter_97 = QtWidgets.QSplitter(self.frame_133)
+        self.splitter_97.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_97.setObjectName("splitter_97")
+        self.screen_test_Display_Answer_Qlabel_Answer2_13 = QtWidgets.QLabel(self.splitter_97)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_13.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_13.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_13.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_13.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_13")
+        self.screen_test_Display_Answer_Qlabel_Answer0_13 = QtWidgets.QLabel(self.splitter_97)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_13.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_13.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_13.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_13.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_13")
+        self.screen_test_Display_Answer_Qlabel_Answer1_13 = QtWidgets.QLabel(self.splitter_97)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_13.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_13.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_13.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_13.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_13")
+        self.gridLayout_129.addWidget(self.splitter_97, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_133, 0, 0, 1, 1)
+        self.frame_134 = QtWidgets.QFrame(self.widget)
+        self.frame_134.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_134.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_134.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_134.setObjectName("frame_134")
+        self.gridLayout_130 = QtWidgets.QGridLayout(self.frame_134)
+        self.gridLayout_130.setObjectName("gridLayout_130")
+        self.splitter_98 = QtWidgets.QSplitter(self.frame_134)
+        self.splitter_98.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_98.setObjectName("splitter_98")
+        self.SCreen_Test_Qlabel_PAN_266 = QtWidgets.QLabel(self.splitter_98)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_266.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_266.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_266.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_266.setObjectName("SCreen_Test_Qlabel_PAN_266")
+        self.SCreen_Test_Qlabel_PAN_267 = QtWidgets.QLabel(self.splitter_98)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_267.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_267.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_267.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_267.setObjectName("SCreen_Test_Qlabel_PAN_267")
+        self.SCreen_Test_Qlabel_PAN_268 = QtWidgets.QLabel(self.splitter_98)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_268.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_268.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_268.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_268.setObjectName("SCreen_Test_Qlabel_PAN_268")
+        self.gridLayout_130.addWidget(self.splitter_98, 0, 0, 1, 1)
+        self.splitter_99 = QtWidgets.QSplitter(self.frame_134)
+        self.splitter_99.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_99.setObjectName("splitter_99")
+        self.screen_test_Display_Answer_Qlabel_Answer2_14 = QtWidgets.QLabel(self.splitter_99)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_14.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_14.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_14.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_14")
+        self.screen_test_Display_Answer_Qlabel_Answer0_14 = QtWidgets.QLabel(self.splitter_99)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_14.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_14.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_14.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_14")
+        self.screen_test_Display_Answer_Qlabel_Answer1_14 = QtWidgets.QLabel(self.splitter_99)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_14.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_14.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_14.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_14")
+        self.gridLayout_130.addWidget(self.splitter_99, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_134, 0, 1, 1, 1)
+        self.frame_135 = QtWidgets.QFrame(self.widget)
+        self.frame_135.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_135.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_135.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_135.setObjectName("frame_135")
+        self.gridLayout_131 = QtWidgets.QGridLayout(self.frame_135)
+        self.gridLayout_131.setObjectName("gridLayout_131")
+        self.splitter_100 = QtWidgets.QSplitter(self.frame_135)
+        self.splitter_100.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_100.setObjectName("splitter_100")
+        self.SCreen_Test_Qlabel_PAN_269 = QtWidgets.QLabel(self.splitter_100)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_269.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_269.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_269.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_269.setObjectName("SCreen_Test_Qlabel_PAN_269")
+        self.SCreen_Test_Qlabel_PAN_270 = QtWidgets.QLabel(self.splitter_100)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_270.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_270.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_270.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_270.setObjectName("SCreen_Test_Qlabel_PAN_270")
+        self.SCreen_Test_Qlabel_PAN_271 = QtWidgets.QLabel(self.splitter_100)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_271.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_271.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_271.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_271.setObjectName("SCreen_Test_Qlabel_PAN_271")
+        self.gridLayout_131.addWidget(self.splitter_100, 0, 0, 1, 1)
+        self.splitter_101 = QtWidgets.QSplitter(self.frame_135)
+        self.splitter_101.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_101.setObjectName("splitter_101")
+        self.screen_test_Display_Answer_Qlabel_Answer2_15 = QtWidgets.QLabel(self.splitter_101)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_15.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_15.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_15.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_15")
+        self.screen_test_Display_Answer_Qlabel_Answer0_15 = QtWidgets.QLabel(self.splitter_101)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_15.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_15.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_15.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_15")
+        self.screen_test_Display_Answer_Qlabel_Answer1_15 = QtWidgets.QLabel(self.splitter_101)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_15.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_15.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_15.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_15")
+        self.gridLayout_131.addWidget(self.splitter_101, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_135, 0, 2, 1, 1)
+        self.frame_136 = QtWidgets.QFrame(self.widget)
+        self.frame_136.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_136.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_136.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_136.setObjectName("frame_136")
+        self.gridLayout_132 = QtWidgets.QGridLayout(self.frame_136)
+        self.gridLayout_132.setObjectName("gridLayout_132")
+        self.splitter_102 = QtWidgets.QSplitter(self.frame_136)
+        self.splitter_102.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_102.setObjectName("splitter_102")
+        self.SCreen_Test_Qlabel_PAN_272 = QtWidgets.QLabel(self.splitter_102)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_272.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_272.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_272.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_272.setObjectName("SCreen_Test_Qlabel_PAN_272")
+        self.SCreen_Test_Qlabel_PAN_273 = QtWidgets.QLabel(self.splitter_102)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_273.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_273.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_273.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_273.setObjectName("SCreen_Test_Qlabel_PAN_273")
+        self.SCreen_Test_Qlabel_PAN_274 = QtWidgets.QLabel(self.splitter_102)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_274.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_274.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_274.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_274.setObjectName("SCreen_Test_Qlabel_PAN_274")
+        self.gridLayout_132.addWidget(self.splitter_102, 0, 0, 1, 1)
+        self.splitter_103 = QtWidgets.QSplitter(self.frame_136)
+        self.splitter_103.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_103.setObjectName("splitter_103")
+        self.screen_test_Display_Answer_Qlabel_Answer2_16 = QtWidgets.QLabel(self.splitter_103)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_16.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_16.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_16.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_16")
+        self.screen_test_Display_Answer_Qlabel_Answer0_16 = QtWidgets.QLabel(self.splitter_103)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_16.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_16.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_16.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_16")
+        self.screen_test_Display_Answer_Qlabel_Answer1_16 = QtWidgets.QLabel(self.splitter_103)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_16.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_16.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_16.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_16")
+        self.gridLayout_132.addWidget(self.splitter_103, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_136, 0, 3, 1, 1)
+        self.frame_137 = QtWidgets.QFrame(self.widget)
+        self.frame_137.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_137.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_137.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_137.setObjectName("frame_137")
+        self.gridLayout_133 = QtWidgets.QGridLayout(self.frame_137)
+        self.gridLayout_133.setObjectName("gridLayout_133")
+        self.splitter_104 = QtWidgets.QSplitter(self.frame_137)
+        self.splitter_104.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_104.setObjectName("splitter_104")
+        self.SCreen_Test_Qlabel_PAN_275 = QtWidgets.QLabel(self.splitter_104)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_275.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_275.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_275.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_275.setObjectName("SCreen_Test_Qlabel_PAN_275")
+        self.SCreen_Test_Qlabel_PAN_276 = QtWidgets.QLabel(self.splitter_104)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_276.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_276.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_276.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_276.setObjectName("SCreen_Test_Qlabel_PAN_276")
+        self.SCreen_Test_Qlabel_PAN_277 = QtWidgets.QLabel(self.splitter_104)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_277.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_277.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_277.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_277.setObjectName("SCreen_Test_Qlabel_PAN_277")
+        self.gridLayout_133.addWidget(self.splitter_104, 0, 0, 1, 1)
+        self.splitter_105 = QtWidgets.QSplitter(self.frame_137)
+        self.splitter_105.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_105.setObjectName("splitter_105")
+        self.screen_test_Display_Answer_Qlabel_Answer2_17 = QtWidgets.QLabel(self.splitter_105)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_17.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_17.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_17.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_17")
+        self.screen_test_Display_Answer_Qlabel_Answer0_17 = QtWidgets.QLabel(self.splitter_105)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_17.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_17.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_17.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_17")
+        self.screen_test_Display_Answer_Qlabel_Answer1_17 = QtWidgets.QLabel(self.splitter_105)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_17.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_17.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_17.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_17")
+        self.gridLayout_133.addWidget(self.splitter_105, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_137, 0, 4, 1, 1)
+        self.frame_138 = QtWidgets.QFrame(self.widget)
+        self.frame_138.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_138.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_138.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_138.setObjectName("frame_138")
+        self.gridLayout_134 = QtWidgets.QGridLayout(self.frame_138)
+        self.gridLayout_134.setObjectName("gridLayout_134")
+        self.splitter_106 = QtWidgets.QSplitter(self.frame_138)
+        self.splitter_106.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_106.setObjectName("splitter_106")
+        self.SCreen_Test_Qlabel_PAN_278 = QtWidgets.QLabel(self.splitter_106)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_278.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_278.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_278.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_278.setObjectName("SCreen_Test_Qlabel_PAN_278")
+        self.SCreen_Test_Qlabel_PAN_279 = QtWidgets.QLabel(self.splitter_106)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_279.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_279.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_279.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_279.setObjectName("SCreen_Test_Qlabel_PAN_279")
+        self.SCreen_Test_Qlabel_PAN_280 = QtWidgets.QLabel(self.splitter_106)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_280.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_280.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_280.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_280.setObjectName("SCreen_Test_Qlabel_PAN_280")
+        self.gridLayout_134.addWidget(self.splitter_106, 0, 0, 1, 1)
+        self.splitter_107 = QtWidgets.QSplitter(self.frame_138)
+        self.splitter_107.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_107.setObjectName("splitter_107")
+        self.screen_test_Display_Answer_Qlabel_Answer2_18 = QtWidgets.QLabel(self.splitter_107)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_18.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_18.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_18.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_18")
+        self.screen_test_Display_Answer_Qlabel_Answer0_18 = QtWidgets.QLabel(self.splitter_107)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_18.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_18.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_18.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_18")
+        self.screen_test_Display_Answer_Qlabel_Answer1_18 = QtWidgets.QLabel(self.splitter_107)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_18.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_18.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_18.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_18")
+        self.gridLayout_134.addWidget(self.splitter_107, 0, 1, 1, 1)
+        self.gridLayout_128.addWidget(self.frame_138, 0, 5, 1, 1)
+        self.gridLayout_142.addLayout(self.gridLayout_128, 2, 0, 1, 1)
+        self.gridLayout_135 = QtWidgets.QGridLayout()
+        self.gridLayout_135.setObjectName("gridLayout_135")
+        self.frame_139 = QtWidgets.QFrame(self.widget)
+        self.frame_139.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_139.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_139.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_139.setObjectName("frame_139")
+        self.gridLayout_136 = QtWidgets.QGridLayout(self.frame_139)
+        self.gridLayout_136.setObjectName("gridLayout_136")
+        self.splitter_108 = QtWidgets.QSplitter(self.frame_139)
+        self.splitter_108.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_108.setObjectName("splitter_108")
+        self.SCreen_Test_Qlabel_PAN_281 = QtWidgets.QLabel(self.splitter_108)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_281.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_281.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_281.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_281.setObjectName("SCreen_Test_Qlabel_PAN_281")
+        self.SCreen_Test_Qlabel_PAN_282 = QtWidgets.QLabel(self.splitter_108)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_282.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_282.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_282.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_282.setObjectName("SCreen_Test_Qlabel_PAN_282")
+        self.SCreen_Test_Qlabel_PAN_283 = QtWidgets.QLabel(self.splitter_108)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_283.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_283.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_283.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_283.setObjectName("SCreen_Test_Qlabel_PAN_283")
+        self.gridLayout_136.addWidget(self.splitter_108, 0, 0, 1, 1)
+        self.splitter_109 = QtWidgets.QSplitter(self.frame_139)
+        self.splitter_109.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_109.setObjectName("splitter_109")
+        self.screen_test_Display_Answer_Qlabel_Answer2_19 = QtWidgets.QLabel(self.splitter_109)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_19.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_19.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_19.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_19")
+        self.screen_test_Display_Answer_Qlabel_Answer0_19 = QtWidgets.QLabel(self.splitter_109)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_19.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_19.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_19.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_19")
+        self.screen_test_Display_Answer_Qlabel_Answer1_19 = QtWidgets.QLabel(self.splitter_109)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_19.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_19.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_19.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_19")
+        self.gridLayout_136.addWidget(self.splitter_109, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_139, 0, 0, 1, 1)
+        self.frame_140 = QtWidgets.QFrame(self.widget)
+        self.frame_140.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_140.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_140.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_140.setObjectName("frame_140")
+        self.gridLayout_137 = QtWidgets.QGridLayout(self.frame_140)
+        self.gridLayout_137.setObjectName("gridLayout_137")
+        self.splitter_110 = QtWidgets.QSplitter(self.frame_140)
+        self.splitter_110.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_110.setObjectName("splitter_110")
+        self.SCreen_Test_Qlabel_PAN_284 = QtWidgets.QLabel(self.splitter_110)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_284.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_284.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_284.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_284.setObjectName("SCreen_Test_Qlabel_PAN_284")
+        self.SCreen_Test_Qlabel_PAN_285 = QtWidgets.QLabel(self.splitter_110)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_285.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_285.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_285.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_285.setObjectName("SCreen_Test_Qlabel_PAN_285")
+        self.SCreen_Test_Qlabel_PAN_286 = QtWidgets.QLabel(self.splitter_110)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_286.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_286.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_286.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_286.setObjectName("SCreen_Test_Qlabel_PAN_286")
+        self.gridLayout_137.addWidget(self.splitter_110, 0, 0, 1, 1)
+        self.splitter_111 = QtWidgets.QSplitter(self.frame_140)
+        self.splitter_111.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_111.setObjectName("splitter_111")
+        self.screen_test_Display_Answer_Qlabel_Answer2_20 = QtWidgets.QLabel(self.splitter_111)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_20.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_20.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_20.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_20")
+        self.screen_test_Display_Answer_Qlabel_Answer0_20 = QtWidgets.QLabel(self.splitter_111)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_20.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_20.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_20.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_20")
+        self.screen_test_Display_Answer_Qlabel_Answer1_20 = QtWidgets.QLabel(self.splitter_111)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_20.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_20.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_20.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_20.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_20")
+        self.gridLayout_137.addWidget(self.splitter_111, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_140, 0, 1, 1, 1)
+        self.frame_142 = QtWidgets.QFrame(self.widget)
+        self.frame_142.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_142.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_142.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_142.setObjectName("frame_142")
+        self.gridLayout_138 = QtWidgets.QGridLayout(self.frame_142)
+        self.gridLayout_138.setObjectName("gridLayout_138")
+        self.splitter_112 = QtWidgets.QSplitter(self.frame_142)
+        self.splitter_112.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_112.setObjectName("splitter_112")
+        self.SCreen_Test_Qlabel_PAN_287 = QtWidgets.QLabel(self.splitter_112)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_287.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_287.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_287.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_287.setObjectName("SCreen_Test_Qlabel_PAN_287")
+        self.SCreen_Test_Qlabel_PAN_288 = QtWidgets.QLabel(self.splitter_112)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_288.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_288.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_288.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_288.setObjectName("SCreen_Test_Qlabel_PAN_288")
+        self.SCreen_Test_Qlabel_PAN_289 = QtWidgets.QLabel(self.splitter_112)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_289.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_289.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_289.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_289.setObjectName("SCreen_Test_Qlabel_PAN_289")
+        self.gridLayout_138.addWidget(self.splitter_112, 0, 0, 1, 1)
+        self.splitter_113 = QtWidgets.QSplitter(self.frame_142)
+        self.splitter_113.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_113.setObjectName("splitter_113")
+        self.screen_test_Display_Answer_Qlabel_Answer2_21 = QtWidgets.QLabel(self.splitter_113)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_21.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_21.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_21.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_21")
+        self.screen_test_Display_Answer_Qlabel_Answer0_21 = QtWidgets.QLabel(self.splitter_113)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_21.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_21.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_21.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_21")
+        self.screen_test_Display_Answer_Qlabel_Answer1_21 = QtWidgets.QLabel(self.splitter_113)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_21.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_21.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_21.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_21.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_21")
+        self.gridLayout_138.addWidget(self.splitter_113, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_142, 0, 2, 1, 1)
+        self.frame_143 = QtWidgets.QFrame(self.widget)
+        self.frame_143.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_143.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_143.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_143.setObjectName("frame_143")
+        self.gridLayout_139 = QtWidgets.QGridLayout(self.frame_143)
+        self.gridLayout_139.setObjectName("gridLayout_139")
+        self.splitter_114 = QtWidgets.QSplitter(self.frame_143)
+        self.splitter_114.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_114.setObjectName("splitter_114")
+        self.SCreen_Test_Qlabel_PAN_290 = QtWidgets.QLabel(self.splitter_114)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_290.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_290.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_290.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_290.setObjectName("SCreen_Test_Qlabel_PAN_290")
+        self.SCreen_Test_Qlabel_PAN_291 = QtWidgets.QLabel(self.splitter_114)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_291.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_291.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_291.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_291.setObjectName("SCreen_Test_Qlabel_PAN_291")
+        self.SCreen_Test_Qlabel_PAN_292 = QtWidgets.QLabel(self.splitter_114)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_292.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_292.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_292.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_292.setObjectName("SCreen_Test_Qlabel_PAN_292")
+        self.gridLayout_139.addWidget(self.splitter_114, 0, 0, 1, 1)
+        self.splitter_115 = QtWidgets.QSplitter(self.frame_143)
+        self.splitter_115.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_115.setObjectName("splitter_115")
+        self.screen_test_Display_Answer_Qlabel_Answer2_22 = QtWidgets.QLabel(self.splitter_115)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_22.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_22.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_22.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_22")
+        self.screen_test_Display_Answer_Qlabel_Answer0_22 = QtWidgets.QLabel(self.splitter_115)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_22.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_22.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_22.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_22")
+        self.screen_test_Display_Answer_Qlabel_Answer1_22 = QtWidgets.QLabel(self.splitter_115)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_22.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_22.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_22.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_22.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_22")
+        self.gridLayout_139.addWidget(self.splitter_115, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_143, 0, 3, 1, 1)
+        self.frame_144 = QtWidgets.QFrame(self.widget)
+        self.frame_144.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_144.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_144.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_144.setObjectName("frame_144")
+        self.gridLayout_140 = QtWidgets.QGridLayout(self.frame_144)
+        self.gridLayout_140.setObjectName("gridLayout_140")
+        self.splitter_116 = QtWidgets.QSplitter(self.frame_144)
+        self.splitter_116.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_116.setObjectName("splitter_116")
+        self.SCreen_Test_Qlabel_PAN_293 = QtWidgets.QLabel(self.splitter_116)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_293.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_293.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_293.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_293.setObjectName("SCreen_Test_Qlabel_PAN_293")
+        self.SCreen_Test_Qlabel_PAN_294 = QtWidgets.QLabel(self.splitter_116)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_294.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_294.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_294.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_294.setObjectName("SCreen_Test_Qlabel_PAN_294")
+        self.SCreen_Test_Qlabel_PAN_295 = QtWidgets.QLabel(self.splitter_116)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_295.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_295.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_295.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_295.setObjectName("SCreen_Test_Qlabel_PAN_295")
+        self.gridLayout_140.addWidget(self.splitter_116, 0, 0, 1, 1)
+        self.splitter_117 = QtWidgets.QSplitter(self.frame_144)
+        self.splitter_117.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_117.setObjectName("splitter_117")
+        self.screen_test_Display_Answer_Qlabel_Answer2_23 = QtWidgets.QLabel(self.splitter_117)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_23.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_23.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_23.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_23.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_23")
+        self.screen_test_Display_Answer_Qlabel_Answer0_23 = QtWidgets.QLabel(self.splitter_117)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_23.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_23.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_23.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_23.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_23")
+        self.screen_test_Display_Answer_Qlabel_Answer1_23 = QtWidgets.QLabel(self.splitter_117)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_23.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_23.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_23.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_23.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_23")
+        self.gridLayout_140.addWidget(self.splitter_117, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_144, 0, 4, 1, 1)
+        self.frame_145 = QtWidgets.QFrame(self.widget)
+        self.frame_145.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_145.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_145.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_145.setObjectName("frame_145")
+        self.gridLayout_141 = QtWidgets.QGridLayout(self.frame_145)
+        self.gridLayout_141.setObjectName("gridLayout_141")
+        self.splitter_118 = QtWidgets.QSplitter(self.frame_145)
+        self.splitter_118.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_118.setObjectName("splitter_118")
+        self.SCreen_Test_Qlabel_PAN_296 = QtWidgets.QLabel(self.splitter_118)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_296.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_296.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_296.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_296.setObjectName("SCreen_Test_Qlabel_PAN_296")
+        self.SCreen_Test_Qlabel_PAN_297 = QtWidgets.QLabel(self.splitter_118)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_297.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_297.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_297.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_297.setObjectName("SCreen_Test_Qlabel_PAN_297")
+        self.SCreen_Test_Qlabel_PAN_298 = QtWidgets.QLabel(self.splitter_118)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_298.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_298.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_298.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_298.setObjectName("SCreen_Test_Qlabel_PAN_298")
+        self.gridLayout_141.addWidget(self.splitter_118, 0, 0, 1, 1)
+        self.splitter_119 = QtWidgets.QSplitter(self.frame_145)
+        self.splitter_119.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_119.setObjectName("splitter_119")
+        self.screen_test_Display_Answer_Qlabel_Answer2_24 = QtWidgets.QLabel(self.splitter_119)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_24.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_24.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_24.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_24.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_24")
+        self.screen_test_Display_Answer_Qlabel_Answer0_24 = QtWidgets.QLabel(self.splitter_119)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_24.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_24.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_24.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_24.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_24")
+        self.screen_test_Display_Answer_Qlabel_Answer1_24 = QtWidgets.QLabel(self.splitter_119)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_24.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_24.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_24.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_24.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_24")
+        self.gridLayout_141.addWidget(self.splitter_119, 0, 1, 1, 1)
+        self.gridLayout_135.addWidget(self.frame_145, 0, 5, 1, 1)
+        self.gridLayout_142.addLayout(self.gridLayout_135, 3, 0, 1, 1)
+        self.gridLayout_126 = QtWidgets.QGridLayout()
+        self.gridLayout_126.setObjectName("gridLayout_126")
         self.frame_91 = QtWidgets.QFrame(self.widget)
         self.frame_91.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_91.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_91.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_91.setObjectName("frame_91")
-        self.gridLayout_86 = QtWidgets.QGridLayout(self.frame_91)
-        self.gridLayout_86.setObjectName("gridLayout_86")
-        self.verticalLayout_6 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.SCreen_Test_Qlabel_PAN_51 = QtWidgets.QLabel(self.frame_91)
+        self.gridLayout_9 = QtWidgets.QGridLayout(self.frame_91)
+        self.gridLayout_9.setObjectName("gridLayout_9")
+        self.splitter_2 = QtWidgets.QSplitter(self.frame_91)
+        self.splitter_2.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_2.setObjectName("splitter_2")
+        self.SCreen_Test_Qlabel_PAN_51 = QtWidgets.QLabel(self.splitter_2)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.SCreen_Test_Qlabel_PAN_51.setFont(font)
@@ -2094,16 +4442,7 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_51.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_51.setObjectName("SCreen_Test_Qlabel_PAN_51")
-        self.verticalLayout_6.addWidget(self.SCreen_Test_Qlabel_PAN_51)
-        self.splitter_3 = QtWidgets.QSplitter(self.frame_91)
-        self.splitter_3.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_3.setObjectName("splitter_3")
-        self.widget1 = QtWidgets.QWidget(self.splitter_3)
-        self.widget1.setObjectName("widget1")
-        self.horizontalLayout_24 = QtWidgets.QHBoxLayout(self.widget1)
-        self.horizontalLayout_24.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_24.setObjectName("horizontalLayout_24")
-        self.SCreen_Test_Qlabel_PAN_50 = QtWidgets.QLabel(self.widget1)
+        self.SCreen_Test_Qlabel_PAN_50 = QtWidgets.QLabel(self.splitter_2)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
@@ -2121,32 +4460,7 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_50.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_50.setObjectName("SCreen_Test_Qlabel_PAN_50")
-        self.horizontalLayout_24.addWidget(self.SCreen_Test_Qlabel_PAN_50)
-        self.screen_test_Display_Answer_QlabelAnswer1_1 = QtWidgets.QLabel(self.widget1)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_1.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_1.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_1.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_1.setObjectName("screen_test_Display_Answer_QlabelAnswer1_1")
-        self.horizontalLayout_24.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_1)
-        self.layoutWidget_119 = QtWidgets.QWidget(self.splitter_3)
-        self.layoutWidget_119.setObjectName("layoutWidget_119")
-        self.horizontalLayout_88 = QtWidgets.QHBoxLayout(self.layoutWidget_119)
-        self.horizontalLayout_88.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_88.setObjectName("horizontalLayout_88")
-        self.SCreen_Test_Qlabel_PAN_79 = QtWidgets.QLabel(self.layoutWidget_119)
+        self.SCreen_Test_Qlabel_PAN_79 = QtWidgets.QLabel(self.splitter_2)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
@@ -2164,14 +4478,17 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_79.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_79.setObjectName("SCreen_Test_Qlabel_PAN_79")
-        self.horizontalLayout_88.addWidget(self.SCreen_Test_Qlabel_PAN_79)
-        self.screen_test_Display_Answer_QlabelAnswer2_1 = QtWidgets.QLabel(self.layoutWidget_119)
+        self.gridLayout_9.addWidget(self.splitter_2, 0, 0, 1, 1)
+        self.splitter_3 = QtWidgets.QSplitter(self.frame_91)
+        self.splitter_3.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_3.setObjectName("splitter_3")
+        self.screen_test_Display_Answer_Qlabel_Answer2_1 = QtWidgets.QLabel(self.splitter_3)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_1.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_1.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer2_1.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_1.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2181,21 +4498,15 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer2_1.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_1.setObjectName("screen_test_Display_Answer_QlabelAnswer2_1")
-        self.horizontalLayout_88.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_1)
-        self.layoutWidget_120 = QtWidgets.QWidget(self.splitter_3)
-        self.layoutWidget_120.setObjectName("layoutWidget_120")
-        self.horizontalLayout_89 = QtWidgets.QHBoxLayout(self.layoutWidget_120)
-        self.horizontalLayout_89.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_89.setObjectName("horizontalLayout_89")
-        self.SCreen_Test_Qlabel_PAN_81 = QtWidgets.QLabel(self.layoutWidget_120)
+        self.screen_test_Display_Answer_Qlabel_Answer2_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_1.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_1")
+        self.screen_test_Display_Answer_Qlabel_Answer0_1 = QtWidgets.QLabel(self.splitter_3)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_81.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_81.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer0_1.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_1.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2205,16 +4516,15 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_81.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_81.setObjectName("SCreen_Test_Qlabel_PAN_81")
-        self.horizontalLayout_89.addWidget(self.SCreen_Test_Qlabel_PAN_81)
-        self.screen_test_Display_Answer_QlabelAnswer3_1 = QtWidgets.QLabel(self.layoutWidget_120)
+        self.screen_test_Display_Answer_Qlabel_Answer0_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_1.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_1")
+        self.screen_test_Display_Answer_Qlabel_Answer1_1 = QtWidgets.QLabel(self.splitter_3)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_1.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_1.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer1_1.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_1.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2224,188 +4534,147 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer3_1.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_1.setObjectName("screen_test_Display_Answer_QlabelAnswer3_1")
-        self.horizontalLayout_89.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_1)
-        self.verticalLayout_6.addWidget(self.splitter_3)
-        self.gridLayout_86.addLayout(self.verticalLayout_6, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_91, 0, 0, 1, 1)
-        self.frame_118 = QtWidgets.QFrame(self.widget)
-        self.frame_118.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_118.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_118.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_118.setObjectName("frame_118")
-        self.gridLayout_87 = QtWidgets.QGridLayout(self.frame_118)
-        self.gridLayout_87.setObjectName("gridLayout_87")
-        self.verticalLayout_9 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_9.setObjectName("verticalLayout_9")
-        self.SCreen_Test_Qlabel_PAN_144 = QtWidgets.QLabel(self.frame_118)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_144.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_144.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_144.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_144.setObjectName("SCreen_Test_Qlabel_PAN_144")
-        self.verticalLayout_9.addWidget(self.SCreen_Test_Qlabel_PAN_144)
-        self.splitter_4 = QtWidgets.QSplitter(self.frame_118)
-        self.splitter_4.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_4.setObjectName("splitter_4")
-        self.layoutWidget_121 = QtWidgets.QWidget(self.splitter_4)
-        self.layoutWidget_121.setObjectName("layoutWidget_121")
-        self.horizontalLayout_90 = QtWidgets.QHBoxLayout(self.layoutWidget_121)
-        self.horizontalLayout_90.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_90.setObjectName("horizontalLayout_90")
-        self.SCreen_Test_Qlabel_PAN_84 = QtWidgets.QLabel(self.layoutWidget_121)
+        self.screen_test_Display_Answer_Qlabel_Answer1_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_1.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_1")
+        self.gridLayout_9.addWidget(self.splitter_3, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_91, 0, 0, 1, 1)
+        self.frame_93 = QtWidgets.QFrame(self.widget)
+        self.frame_93.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_93.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_93.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_93.setObjectName("frame_93")
+        self.gridLayout_45 = QtWidgets.QGridLayout(self.frame_93)
+        self.gridLayout_45.setObjectName("gridLayout_45")
+        self.splitter_75 = QtWidgets.QSplitter(self.frame_93)
+        self.splitter_75.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_75.setObjectName("splitter_75")
+        self.SCreen_Test_Qlabel_PAN_234 = QtWidgets.QLabel(self.splitter_75)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_84.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_84.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_234.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_234.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_84.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_84.setObjectName("SCreen_Test_Qlabel_PAN_84")
-        self.horizontalLayout_90.addWidget(self.SCreen_Test_Qlabel_PAN_84)
-        self.screen_test_Display_Answer_QlabelAnswer1_2 = QtWidgets.QLabel(self.layoutWidget_121)
+        self.SCreen_Test_Qlabel_PAN_234.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_234.setObjectName("SCreen_Test_Qlabel_PAN_234")
+        self.SCreen_Test_Qlabel_PAN_235 = QtWidgets.QLabel(self.splitter_75)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_2.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_2.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_235.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_235.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer1_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_2.setObjectName("screen_test_Display_Answer_QlabelAnswer1_2")
-        self.horizontalLayout_90.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_2)
-        self.layoutWidget_122 = QtWidgets.QWidget(self.splitter_4)
-        self.layoutWidget_122.setObjectName("layoutWidget_122")
-        self.horizontalLayout_91 = QtWidgets.QHBoxLayout(self.layoutWidget_122)
-        self.horizontalLayout_91.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_91.setObjectName("horizontalLayout_91")
-        self.SCreen_Test_Qlabel_PAN_86 = QtWidgets.QLabel(self.layoutWidget_122)
+        self.SCreen_Test_Qlabel_PAN_235.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_235.setObjectName("SCreen_Test_Qlabel_PAN_235")
+        self.SCreen_Test_Qlabel_PAN_236 = QtWidgets.QLabel(self.splitter_75)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_86.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_86.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_236.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_236.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_86.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_86.setObjectName("SCreen_Test_Qlabel_PAN_86")
-        self.horizontalLayout_91.addWidget(self.SCreen_Test_Qlabel_PAN_86)
-        self.screen_test_Display_Answer_QlabelAnswer2_2 = QtWidgets.QLabel(self.layoutWidget_122)
+        self.SCreen_Test_Qlabel_PAN_236.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_236.setObjectName("SCreen_Test_Qlabel_PAN_236")
+        self.gridLayout_45.addWidget(self.splitter_75, 0, 0, 1, 1)
+        self.splitter_76 = QtWidgets.QSplitter(self.frame_93)
+        self.splitter_76.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_76.setObjectName("splitter_76")
+        self.screen_test_Display_Answer_Qlabel_Answer2_2 = QtWidgets.QLabel(self.splitter_76)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_2.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_2.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer2_2.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_2.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer2_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_2.setObjectName("screen_test_Display_Answer_QlabelAnswer2_2")
-        self.horizontalLayout_91.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_2)
-        self.layoutWidget_123 = QtWidgets.QWidget(self.splitter_4)
-        self.layoutWidget_123.setObjectName("layoutWidget_123")
-        self.horizontalLayout_92 = QtWidgets.QHBoxLayout(self.layoutWidget_123)
-        self.horizontalLayout_92.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_92.setObjectName("horizontalLayout_92")
-        self.SCreen_Test_Qlabel_PAN_88 = QtWidgets.QLabel(self.layoutWidget_123)
+        self.screen_test_Display_Answer_Qlabel_Answer2_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_2.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_2")
+        self.screen_test_Display_Answer_Qlabel_Answer0_2 = QtWidgets.QLabel(self.splitter_76)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_88.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_88.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer0_2.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_2.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_88.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_88.setObjectName("SCreen_Test_Qlabel_PAN_88")
-        self.horizontalLayout_92.addWidget(self.SCreen_Test_Qlabel_PAN_88)
-        self.SCreen_Test_Qlabel_PAN_89 = QtWidgets.QLabel(self.layoutWidget_123)
+        self.screen_test_Display_Answer_Qlabel_Answer0_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_2.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_2")
+        self.screen_test_Display_Answer_Qlabel_Answer1_2 = QtWidgets.QLabel(self.splitter_76)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_89.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_89.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer1_2.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_2.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_89.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_89.setObjectName("SCreen_Test_Qlabel_PAN_89")
-        self.horizontalLayout_92.addWidget(self.SCreen_Test_Qlabel_PAN_89)
-        self.verticalLayout_9.addWidget(self.splitter_4)
-        self.gridLayout_87.addLayout(self.verticalLayout_9, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_118, 0, 1, 1, 1)
-        self.frame_119 = QtWidgets.QFrame(self.widget)
-        self.frame_119.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_119.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_119.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_119.setObjectName("frame_119")
-        self.gridLayout_95 = QtWidgets.QGridLayout(self.frame_119)
-        self.gridLayout_95.setObjectName("gridLayout_95")
-        self.verticalLayout_83 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_83.setObjectName("verticalLayout_83")
-        self.SCreen_Test_Qlabel_PAN_52 = QtWidgets.QLabel(self.frame_119)
+        self.screen_test_Display_Answer_Qlabel_Answer1_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_2.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_2")
+        self.gridLayout_45.addWidget(self.splitter_76, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_93, 0, 1, 1, 1)
+        self.frame_92 = QtWidgets.QFrame(self.widget)
+        self.frame_92.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_92.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_92.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_92.setObjectName("frame_92")
+        self.gridLayout_88 = QtWidgets.QGridLayout(self.frame_92)
+        self.gridLayout_88.setObjectName("gridLayout_88")
+        self.splitter_5 = QtWidgets.QSplitter(self.frame_92)
+        self.splitter_5.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_5.setObjectName("splitter_5")
+        self.SCreen_Test_Qlabel_PAN_52 = QtWidgets.QLabel(self.splitter_5)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.SCreen_Test_Qlabel_PAN_52.setFont(font)
@@ -2421,16 +4690,25 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_52.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_52.setObjectName("SCreen_Test_Qlabel_PAN_52")
-        self.verticalLayout_83.addWidget(self.SCreen_Test_Qlabel_PAN_52)
-        self.splitter_12 = QtWidgets.QSplitter(self.frame_119)
-        self.splitter_12.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_12.setObjectName("splitter_12")
-        self.layoutWidget_145 = QtWidgets.QWidget(self.splitter_12)
-        self.layoutWidget_145.setObjectName("layoutWidget_145")
-        self.horizontalLayout_114 = QtWidgets.QHBoxLayout(self.layoutWidget_145)
-        self.horizontalLayout_114.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_114.setObjectName("horizontalLayout_114")
-        self.SCreen_Test_Qlabel_PAN_80 = QtWidgets.QLabel(self.layoutWidget_145)
+        self.SCreen_Test_Qlabel_PAN_53 = QtWidgets.QLabel(self.splitter_5)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_53.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_53.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_53.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_53.setObjectName("SCreen_Test_Qlabel_PAN_53")
+        self.SCreen_Test_Qlabel_PAN_80 = QtWidgets.QLabel(self.splitter_5)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
@@ -2448,14 +4726,17 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_80.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_80.setObjectName("SCreen_Test_Qlabel_PAN_80")
-        self.horizontalLayout_114.addWidget(self.SCreen_Test_Qlabel_PAN_80)
-        self.screen_test_Display_Answer_QlabelAnswer1_3 = QtWidgets.QLabel(self.layoutWidget_145)
+        self.gridLayout_88.addWidget(self.splitter_5, 0, 0, 1, 1)
+        self.splitter_77 = QtWidgets.QSplitter(self.frame_92)
+        self.splitter_77.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_77.setObjectName("splitter_77")
+        self.screen_test_Display_Answer_Qlabel_Answer2_3 = QtWidgets.QLabel(self.splitter_77)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_3.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_3.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer2_3.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_3.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2465,15 +4746,181 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer1_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_3.setObjectName("screen_test_Display_Answer_QlabelAnswer1_3")
-        self.horizontalLayout_114.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_3)
-        self.layoutWidget_146 = QtWidgets.QWidget(self.splitter_12)
-        self.layoutWidget_146.setObjectName("layoutWidget_146")
-        self.horizontalLayout_115 = QtWidgets.QHBoxLayout(self.layoutWidget_146)
-        self.horizontalLayout_115.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_115.setObjectName("horizontalLayout_115")
-        self.SCreen_Test_Qlabel_PAN_82 = QtWidgets.QLabel(self.layoutWidget_146)
+        self.screen_test_Display_Answer_Qlabel_Answer2_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_3.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_3")
+        self.screen_test_Display_Answer_Qlabel_Answer0_3 = QtWidgets.QLabel(self.splitter_77)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_3.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_3.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_3.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_3")
+        self.screen_test_Display_Answer_Qlabel_Answer1_3 = QtWidgets.QLabel(self.splitter_77)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_3.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_3.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 170, 255);\n"
+"    color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(85, 170, 255);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_3.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_3")
+        self.gridLayout_88.addWidget(self.splitter_77, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_92, 0, 2, 1, 1)
+        self.frame_94 = QtWidgets.QFrame(self.widget)
+        self.frame_94.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_94.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_94.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_94.setObjectName("frame_94")
+        self.gridLayout_115 = QtWidgets.QGridLayout(self.frame_94)
+        self.gridLayout_115.setObjectName("gridLayout_115")
+        self.splitter_78 = QtWidgets.QSplitter(self.frame_94)
+        self.splitter_78.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_78.setObjectName("splitter_78")
+        self.SCreen_Test_Qlabel_PAN_237 = QtWidgets.QLabel(self.splitter_78)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_237.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_237.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_237.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_237.setObjectName("SCreen_Test_Qlabel_PAN_237")
+        self.SCreen_Test_Qlabel_PAN_238 = QtWidgets.QLabel(self.splitter_78)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_238.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_238.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_238.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_238.setObjectName("SCreen_Test_Qlabel_PAN_238")
+        self.SCreen_Test_Qlabel_PAN_239 = QtWidgets.QLabel(self.splitter_78)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SCreen_Test_Qlabel_PAN_239.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_239.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.SCreen_Test_Qlabel_PAN_239.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_239.setObjectName("SCreen_Test_Qlabel_PAN_239")
+        self.gridLayout_115.addWidget(self.splitter_78, 0, 0, 1, 1)
+        self.splitter_79 = QtWidgets.QSplitter(self.frame_94)
+        self.splitter_79.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_79.setObjectName("splitter_79")
+        self.screen_test_Display_Answer_Qlabel_Answer2_4 = QtWidgets.QLabel(self.splitter_79)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer2_4.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_4.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer2_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_4.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_4")
+        self.screen_test_Display_Answer_Qlabel_Answer0_4 = QtWidgets.QLabel(self.splitter_79)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer0_4.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_4.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer0_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_4.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_4")
+        self.screen_test_Display_Answer_Qlabel_Answer1_4 = QtWidgets.QLabel(self.splitter_79)
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.screen_test_Display_Answer_Qlabel_Answer1_4.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_4.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
+" border-style: solid ;\n"
+" border-width: 5px;\n"
+" border-color:  rgb(255, 170, 0);\n"
+" border-radius: 5px\n"
+"}  \n"
+"\n"
+"")
+        self.screen_test_Display_Answer_Qlabel_Answer1_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_4.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_4")
+        self.gridLayout_115.addWidget(self.splitter_79, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_94, 0, 3, 1, 1)
+        self.frame_95 = QtWidgets.QFrame(self.widget)
+        self.frame_95.setStyleSheet("background-color: rgb(85, 170, 255);")
+        self.frame_95.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_95.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_95.setObjectName("frame_95")
+        self.gridLayout_116 = QtWidgets.QGridLayout(self.frame_95)
+        self.gridLayout_116.setObjectName("gridLayout_116")
+        self.splitter_80 = QtWidgets.QSplitter(self.frame_95)
+        self.splitter_80.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_80.setObjectName("splitter_80")
+        self.SCreen_Test_Qlabel_PAN_82 = QtWidgets.QLabel(self.splitter_80)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
@@ -2491,14 +4938,13 @@ class Ui_MainWindow(object):
 "")
         self.SCreen_Test_Qlabel_PAN_82.setAlignment(QtCore.Qt.AlignCenter)
         self.SCreen_Test_Qlabel_PAN_82.setObjectName("SCreen_Test_Qlabel_PAN_82")
-        self.horizontalLayout_115.addWidget(self.SCreen_Test_Qlabel_PAN_82)
-        self.screen_test_Display_Answer_QlabelAnswer2_3 = QtWidgets.QLabel(self.layoutWidget_146)
+        self.SCreen_Test_Qlabel_PAN_240 = QtWidgets.QLabel(self.splitter_80)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_3.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_3.setStyleSheet("QLabel {\n"
+        self.SCreen_Test_Qlabel_PAN_240.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_240.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2508,21 +4954,15 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer2_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_3.setObjectName("screen_test_Display_Answer_QlabelAnswer2_3")
-        self.horizontalLayout_115.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_3)
-        self.layoutWidget_147 = QtWidgets.QWidget(self.splitter_12)
-        self.layoutWidget_147.setObjectName("layoutWidget_147")
-        self.horizontalLayout_116 = QtWidgets.QHBoxLayout(self.layoutWidget_147)
-        self.horizontalLayout_116.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_116.setObjectName("horizontalLayout_116")
-        self.SCreen_Test_Qlabel_PAN_83 = QtWidgets.QLabel(self.layoutWidget_147)
+        self.SCreen_Test_Qlabel_PAN_240.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_240.setObjectName("SCreen_Test_Qlabel_PAN_240")
+        self.SCreen_Test_Qlabel_PAN_241 = QtWidgets.QLabel(self.splitter_80)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_83.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_83.setStyleSheet("QLabel {\n"
+        self.SCreen_Test_Qlabel_PAN_241.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_241.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2532,16 +4972,19 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_83.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_83.setObjectName("SCreen_Test_Qlabel_PAN_83")
-        self.horizontalLayout_116.addWidget(self.SCreen_Test_Qlabel_PAN_83)
-        self.screen_test_Display_Answer_QlabelAnswer3_2 = QtWidgets.QLabel(self.layoutWidget_147)
+        self.SCreen_Test_Qlabel_PAN_241.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_241.setObjectName("SCreen_Test_Qlabel_PAN_241")
+        self.gridLayout_116.addWidget(self.splitter_80, 0, 0, 1, 1)
+        self.splitter_81 = QtWidgets.QSplitter(self.frame_95)
+        self.splitter_81.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_81.setObjectName("splitter_81")
+        self.screen_test_Display_Answer_Qlabel_Answer2_5 = QtWidgets.QLabel(self.splitter_81)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_2.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_2.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer2_5.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_5.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2551,192 +4994,15 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer3_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_2.setObjectName("screen_test_Display_Answer_QlabelAnswer3_2")
-        self.horizontalLayout_116.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_2)
-        self.verticalLayout_83.addWidget(self.splitter_12)
-        self.gridLayout_95.addLayout(self.verticalLayout_83, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_119, 0, 2, 1, 1)
-        self.frame_120 = QtWidgets.QFrame(self.widget)
-        self.frame_120.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_120.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_120.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_120.setObjectName("frame_120")
-        self.gridLayout_96 = QtWidgets.QGridLayout(self.frame_120)
-        self.gridLayout_96.setObjectName("gridLayout_96")
-        self.verticalLayout_84 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_84.setObjectName("verticalLayout_84")
-        self.SCreen_Test_Qlabel_PAN_145 = QtWidgets.QLabel(self.frame_120)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_145.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_145.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_145.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_145.setObjectName("SCreen_Test_Qlabel_PAN_145")
-        self.verticalLayout_84.addWidget(self.SCreen_Test_Qlabel_PAN_145)
-        self.splitter_13 = QtWidgets.QSplitter(self.frame_120)
-        self.splitter_13.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_13.setObjectName("splitter_13")
-        self.layoutWidget_148 = QtWidgets.QWidget(self.splitter_13)
-        self.layoutWidget_148.setObjectName("layoutWidget_148")
-        self.horizontalLayout_117 = QtWidgets.QHBoxLayout(self.layoutWidget_148)
-        self.horizontalLayout_117.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_117.setObjectName("horizontalLayout_117")
-        self.SCreen_Test_Qlabel_PAN_85 = QtWidgets.QLabel(self.layoutWidget_148)
+        self.screen_test_Display_Answer_Qlabel_Answer2_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_5.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_5")
+        self.screen_test_Display_Answer_Qlabel_Answer0_5 = QtWidgets.QLabel(self.splitter_81)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_85.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_85.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_85.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_85.setObjectName("SCreen_Test_Qlabel_PAN_85")
-        self.horizontalLayout_117.addWidget(self.SCreen_Test_Qlabel_PAN_85)
-        self.screen_test_Display_Answer_QlabelAnswer1_4 = QtWidgets.QLabel(self.layoutWidget_148)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_4.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_4.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_4.setObjectName("screen_test_Display_Answer_QlabelAnswer1_4")
-        self.horizontalLayout_117.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_4)
-        self.layoutWidget_149 = QtWidgets.QWidget(self.splitter_13)
-        self.layoutWidget_149.setObjectName("layoutWidget_149")
-        self.horizontalLayout_118 = QtWidgets.QHBoxLayout(self.layoutWidget_149)
-        self.horizontalLayout_118.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_118.setObjectName("horizontalLayout_118")
-        self.SCreen_Test_Qlabel_PAN_87 = QtWidgets.QLabel(self.layoutWidget_149)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_87.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_87.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_87.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_87.setObjectName("SCreen_Test_Qlabel_PAN_87")
-        self.horizontalLayout_118.addWidget(self.SCreen_Test_Qlabel_PAN_87)
-        self.screen_test_Display_Answer_QlabelAnswer2_4 = QtWidgets.QLabel(self.layoutWidget_149)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_4.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_4.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_4.setObjectName("screen_test_Display_Answer_QlabelAnswer2_4")
-        self.horizontalLayout_118.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_4)
-        self.layoutWidget_150 = QtWidgets.QWidget(self.splitter_13)
-        self.layoutWidget_150.setObjectName("layoutWidget_150")
-        self.horizontalLayout_119 = QtWidgets.QHBoxLayout(self.layoutWidget_150)
-        self.horizontalLayout_119.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_119.setObjectName("horizontalLayout_119")
-        self.SCreen_Test_Qlabel_PAN_139 = QtWidgets.QLabel(self.layoutWidget_150)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_139.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_139.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_139.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_139.setObjectName("SCreen_Test_Qlabel_PAN_139")
-        self.horizontalLayout_119.addWidget(self.SCreen_Test_Qlabel_PAN_139)
-        self.SCreen_Test_Qlabel_PAN_140 = QtWidgets.QLabel(self.layoutWidget_150)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_140.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_140.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_140.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_140.setObjectName("SCreen_Test_Qlabel_PAN_140")
-        self.horizontalLayout_119.addWidget(self.SCreen_Test_Qlabel_PAN_140)
-        self.verticalLayout_84.addWidget(self.splitter_13)
-        self.gridLayout_96.addLayout(self.verticalLayout_84, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_120, 0, 3, 1, 1)
-        self.frame_121 = QtWidgets.QFrame(self.widget)
-        self.frame_121.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_121.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_121.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_121.setObjectName("frame_121")
-        self.gridLayout_97 = QtWidgets.QGridLayout(self.frame_121)
-        self.gridLayout_97.setObjectName("gridLayout_97")
-        self.verticalLayout_85 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_85.setObjectName("verticalLayout_85")
-        self.SCreen_Test_Qlabel_PAN_141 = QtWidgets.QLabel(self.frame_121)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_141.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_141.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer0_5.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_5.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2746,24 +5012,15 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_141.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_141.setObjectName("SCreen_Test_Qlabel_PAN_141")
-        self.verticalLayout_85.addWidget(self.SCreen_Test_Qlabel_PAN_141)
-        self.splitter_14 = QtWidgets.QSplitter(self.frame_121)
-        self.splitter_14.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_14.setObjectName("splitter_14")
-        self.layoutWidget_151 = QtWidgets.QWidget(self.splitter_14)
-        self.layoutWidget_151.setObjectName("layoutWidget_151")
-        self.horizontalLayout_120 = QtWidgets.QHBoxLayout(self.layoutWidget_151)
-        self.horizontalLayout_120.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_120.setObjectName("horizontalLayout_120")
-        self.SCreen_Test_Qlabel_PAN_142 = QtWidgets.QLabel(self.layoutWidget_151)
+        self.screen_test_Display_Answer_Qlabel_Answer0_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_5.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_5")
+        self.screen_test_Display_Answer_Qlabel_Answer1_5 = QtWidgets.QLabel(self.splitter_81)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_142.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_142.setStyleSheet("QLabel {\n"
+        self.screen_test_Display_Answer_Qlabel_Answer1_5.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_5.setStyleSheet("QLabel {\n"
 "    background-color: rgb(85, 170, 255);\n"
 "    color: black;\n"
 " border-style: solid ;\n"
@@ -2773,3234 +5030,135 @@ class Ui_MainWindow(object):
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_142.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_142.setObjectName("SCreen_Test_Qlabel_PAN_142")
-        self.horizontalLayout_120.addWidget(self.SCreen_Test_Qlabel_PAN_142)
-        self.screen_test_Display_Answer_QlabelAnswer1_5 = QtWidgets.QLabel(self.layoutWidget_151)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_5.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_5.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_5.setObjectName("screen_test_Display_Answer_QlabelAnswer1_5")
-        self.horizontalLayout_120.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_5)
-        self.layoutWidget_152 = QtWidgets.QWidget(self.splitter_14)
-        self.layoutWidget_152.setObjectName("layoutWidget_152")
-        self.horizontalLayout_121 = QtWidgets.QHBoxLayout(self.layoutWidget_152)
-        self.horizontalLayout_121.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_121.setObjectName("horizontalLayout_121")
-        self.SCreen_Test_Qlabel_PAN_143 = QtWidgets.QLabel(self.layoutWidget_152)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_143.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_143.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_143.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_143.setObjectName("SCreen_Test_Qlabel_PAN_143")
-        self.horizontalLayout_121.addWidget(self.SCreen_Test_Qlabel_PAN_143)
-        self.screen_test_Display_Answer_QlabelAnswer2_5 = QtWidgets.QLabel(self.layoutWidget_152)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_5.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_5.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_5.setObjectName("screen_test_Display_Answer_QlabelAnswer2_5")
-        self.horizontalLayout_121.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_5)
-        self.layoutWidget_153 = QtWidgets.QWidget(self.splitter_14)
-        self.layoutWidget_153.setObjectName("layoutWidget_153")
-        self.horizontalLayout_122 = QtWidgets.QHBoxLayout(self.layoutWidget_153)
-        self.horizontalLayout_122.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_122.setObjectName("horizontalLayout_122")
-        self.SCreen_Test_Qlabel_PAN_146 = QtWidgets.QLabel(self.layoutWidget_153)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_146.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_146.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_146.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_146.setObjectName("SCreen_Test_Qlabel_PAN_146")
-        self.horizontalLayout_122.addWidget(self.SCreen_Test_Qlabel_PAN_146)
-        self.screen_test_Display_Answer_QlabelAnswer3_3 = QtWidgets.QLabel(self.layoutWidget_153)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_3.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_3.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_3.setObjectName("screen_test_Display_Answer_QlabelAnswer3_3")
-        self.horizontalLayout_122.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_3)
-        self.verticalLayout_85.addWidget(self.splitter_14)
-        self.gridLayout_97.addLayout(self.verticalLayout_85, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_121, 0, 4, 1, 1)
-        self.frame_122 = QtWidgets.QFrame(self.widget)
-        self.frame_122.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_122.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_122.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_122.setObjectName("frame_122")
-        self.gridLayout_98 = QtWidgets.QGridLayout(self.frame_122)
-        self.gridLayout_98.setObjectName("gridLayout_98")
-        self.verticalLayout_86 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_86.setObjectName("verticalLayout_86")
-        self.SCreen_Test_Qlabel_PAN_147 = QtWidgets.QLabel(self.frame_122)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_147.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_147.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_147.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_147.setObjectName("SCreen_Test_Qlabel_PAN_147")
-        self.verticalLayout_86.addWidget(self.SCreen_Test_Qlabel_PAN_147)
-        self.splitter_15 = QtWidgets.QSplitter(self.frame_122)
-        self.splitter_15.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_15.setObjectName("splitter_15")
-        self.layoutWidget_154 = QtWidgets.QWidget(self.splitter_15)
-        self.layoutWidget_154.setObjectName("layoutWidget_154")
-        self.horizontalLayout_123 = QtWidgets.QHBoxLayout(self.layoutWidget_154)
-        self.horizontalLayout_123.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_123.setObjectName("horizontalLayout_123")
-        self.SCreen_Test_Qlabel_PAN_148 = QtWidgets.QLabel(self.layoutWidget_154)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_148.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_148.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_148.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_148.setObjectName("SCreen_Test_Qlabel_PAN_148")
-        self.horizontalLayout_123.addWidget(self.SCreen_Test_Qlabel_PAN_148)
-        self.screen_test_Display_Answer_QlabelAnswer1_6 = QtWidgets.QLabel(self.layoutWidget_154)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_6.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_6.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_6.setObjectName("screen_test_Display_Answer_QlabelAnswer1_6")
-        self.horizontalLayout_123.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_6)
-        self.layoutWidget_155 = QtWidgets.QWidget(self.splitter_15)
-        self.layoutWidget_155.setObjectName("layoutWidget_155")
-        self.horizontalLayout_124 = QtWidgets.QHBoxLayout(self.layoutWidget_155)
-        self.horizontalLayout_124.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_124.setObjectName("horizontalLayout_124")
-        self.SCreen_Test_Qlabel_PAN_149 = QtWidgets.QLabel(self.layoutWidget_155)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_149.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_149.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_149.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_149.setObjectName("SCreen_Test_Qlabel_PAN_149")
-        self.horizontalLayout_124.addWidget(self.SCreen_Test_Qlabel_PAN_149)
-        self.screen_test_Display_Answer_QlabelAnswer2_6 = QtWidgets.QLabel(self.layoutWidget_155)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_6.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_6.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_6.setObjectName("screen_test_Display_Answer_QlabelAnswer2_6")
-        self.horizontalLayout_124.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_6)
-        self.layoutWidget_156 = QtWidgets.QWidget(self.splitter_15)
-        self.layoutWidget_156.setObjectName("layoutWidget_156")
-        self.horizontalLayout_125 = QtWidgets.QHBoxLayout(self.layoutWidget_156)
-        self.horizontalLayout_125.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_125.setObjectName("horizontalLayout_125")
-        self.SCreen_Test_Qlabel_PAN_150 = QtWidgets.QLabel(self.layoutWidget_156)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_150.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_150.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_150.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_150.setObjectName("SCreen_Test_Qlabel_PAN_150")
-        self.horizontalLayout_125.addWidget(self.SCreen_Test_Qlabel_PAN_150)
-        self.SCreen_Test_Qlabel_PAN_151 = QtWidgets.QLabel(self.layoutWidget_156)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_151.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_151.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_151.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_151.setObjectName("SCreen_Test_Qlabel_PAN_151")
-        self.horizontalLayout_125.addWidget(self.SCreen_Test_Qlabel_PAN_151)
-        self.verticalLayout_86.addWidget(self.splitter_15)
-        self.gridLayout_98.addLayout(self.verticalLayout_86, 0, 0, 1, 1)
-        self.gridLayout_105.addWidget(self.frame_122, 0, 5, 1, 1)
-        self.verticalLayout_105.addLayout(self.gridLayout_105)
-        self.gridLayout_106 = QtWidgets.QGridLayout()
-        self.gridLayout_106.setObjectName("gridLayout_106")
-        self.frame_123 = QtWidgets.QFrame(self.widget)
-        self.frame_123.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_123.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_123.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_123.setObjectName("frame_123")
-        self.gridLayout_99 = QtWidgets.QGridLayout(self.frame_123)
-        self.gridLayout_99.setObjectName("gridLayout_99")
-        self.verticalLayout_87 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_87.setObjectName("verticalLayout_87")
-        self.SCreen_Test_Qlabel_PAN_152 = QtWidgets.QLabel(self.frame_123)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_152.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_152.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_152.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_152.setObjectName("SCreen_Test_Qlabel_PAN_152")
-        self.verticalLayout_87.addWidget(self.SCreen_Test_Qlabel_PAN_152)
-        self.splitter_16 = QtWidgets.QSplitter(self.frame_123)
-        self.splitter_16.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_16.setObjectName("splitter_16")
-        self.layoutWidget_157 = QtWidgets.QWidget(self.splitter_16)
-        self.layoutWidget_157.setObjectName("layoutWidget_157")
-        self.horizontalLayout_126 = QtWidgets.QHBoxLayout(self.layoutWidget_157)
-        self.horizontalLayout_126.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_126.setObjectName("horizontalLayout_126")
-        self.SCreen_Test_Qlabel_PAN_153 = QtWidgets.QLabel(self.layoutWidget_157)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_153.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_153.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_153.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_153.setObjectName("SCreen_Test_Qlabel_PAN_153")
-        self.horizontalLayout_126.addWidget(self.SCreen_Test_Qlabel_PAN_153)
-        self.screen_test_Display_Answer_QlabelAnswer1_7 = QtWidgets.QLabel(self.layoutWidget_157)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_7.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_7.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_7.setObjectName("screen_test_Display_Answer_QlabelAnswer1_7")
-        self.horizontalLayout_126.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_7)
-        self.layoutWidget_158 = QtWidgets.QWidget(self.splitter_16)
-        self.layoutWidget_158.setObjectName("layoutWidget_158")
-        self.horizontalLayout_127 = QtWidgets.QHBoxLayout(self.layoutWidget_158)
-        self.horizontalLayout_127.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_127.setObjectName("horizontalLayout_127")
-        self.SCreen_Test_Qlabel_PAN_154 = QtWidgets.QLabel(self.layoutWidget_158)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_154.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_154.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_154.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_154.setObjectName("SCreen_Test_Qlabel_PAN_154")
-        self.horizontalLayout_127.addWidget(self.SCreen_Test_Qlabel_PAN_154)
-        self.screen_test_Display_Answer_QlabelAnswer2_7 = QtWidgets.QLabel(self.layoutWidget_158)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_7.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_7.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_7.setObjectName("screen_test_Display_Answer_QlabelAnswer2_7")
-        self.horizontalLayout_127.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_7)
-        self.layoutWidget_159 = QtWidgets.QWidget(self.splitter_16)
-        self.layoutWidget_159.setObjectName("layoutWidget_159")
-        self.horizontalLayout_128 = QtWidgets.QHBoxLayout(self.layoutWidget_159)
-        self.horizontalLayout_128.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_128.setObjectName("horizontalLayout_128")
-        self.SCreen_Test_Qlabel_PAN_155 = QtWidgets.QLabel(self.layoutWidget_159)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_155.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_155.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_155.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_155.setObjectName("SCreen_Test_Qlabel_PAN_155")
-        self.horizontalLayout_128.addWidget(self.SCreen_Test_Qlabel_PAN_155)
-        self.SCreen_Test_Qlabel_PAN_156 = QtWidgets.QLabel(self.layoutWidget_159)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_156.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_156.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_156.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_156.setObjectName("SCreen_Test_Qlabel_PAN_156")
-        self.horizontalLayout_128.addWidget(self.SCreen_Test_Qlabel_PAN_156)
-        self.verticalLayout_87.addWidget(self.splitter_16)
-        self.gridLayout_99.addLayout(self.verticalLayout_87, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_123, 0, 0, 1, 1)
-        self.frame_124 = QtWidgets.QFrame(self.widget)
-        self.frame_124.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_124.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_124.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_124.setObjectName("frame_124")
-        self.gridLayout_100 = QtWidgets.QGridLayout(self.frame_124)
-        self.gridLayout_100.setObjectName("gridLayout_100")
-        self.verticalLayout_88 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_88.setObjectName("verticalLayout_88")
-        self.SCreen_Test_Qlabel_PAN_157 = QtWidgets.QLabel(self.frame_124)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_157.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_157.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_157.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_157.setObjectName("SCreen_Test_Qlabel_PAN_157")
-        self.verticalLayout_88.addWidget(self.SCreen_Test_Qlabel_PAN_157)
-        self.splitter_17 = QtWidgets.QSplitter(self.frame_124)
-        self.splitter_17.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_17.setObjectName("splitter_17")
-        self.layoutWidget_160 = QtWidgets.QWidget(self.splitter_17)
-        self.layoutWidget_160.setObjectName("layoutWidget_160")
-        self.horizontalLayout_129 = QtWidgets.QHBoxLayout(self.layoutWidget_160)
-        self.horizontalLayout_129.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_129.setObjectName("horizontalLayout_129")
-        self.SCreen_Test_Qlabel_PAN_158 = QtWidgets.QLabel(self.layoutWidget_160)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_158.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_158.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_158.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_158.setObjectName("SCreen_Test_Qlabel_PAN_158")
-        self.horizontalLayout_129.addWidget(self.SCreen_Test_Qlabel_PAN_158)
-        self.screen_test_Display_Answer_QlabelAnswer1_8 = QtWidgets.QLabel(self.layoutWidget_160)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_8.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_8.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_8.setObjectName("screen_test_Display_Answer_QlabelAnswer1_8")
-        self.horizontalLayout_129.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_8)
-        self.layoutWidget_161 = QtWidgets.QWidget(self.splitter_17)
-        self.layoutWidget_161.setObjectName("layoutWidget_161")
-        self.horizontalLayout_130 = QtWidgets.QHBoxLayout(self.layoutWidget_161)
-        self.horizontalLayout_130.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_130.setObjectName("horizontalLayout_130")
-        self.SCreen_Test_Qlabel_PAN_159 = QtWidgets.QLabel(self.layoutWidget_161)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_159.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_159.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_159.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_159.setObjectName("SCreen_Test_Qlabel_PAN_159")
-        self.horizontalLayout_130.addWidget(self.SCreen_Test_Qlabel_PAN_159)
-        self.screen_test_Display_Answer_QlabelAnswer2_8 = QtWidgets.QLabel(self.layoutWidget_161)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_8.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_8.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_8.setObjectName("screen_test_Display_Answer_QlabelAnswer2_8")
-        self.horizontalLayout_130.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_8)
-        self.layoutWidget_162 = QtWidgets.QWidget(self.splitter_17)
-        self.layoutWidget_162.setObjectName("layoutWidget_162")
-        self.horizontalLayout_131 = QtWidgets.QHBoxLayout(self.layoutWidget_162)
-        self.horizontalLayout_131.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_131.setObjectName("horizontalLayout_131")
-        self.SCreen_Test_Qlabel_PAN_160 = QtWidgets.QLabel(self.layoutWidget_162)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_160.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_160.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_160.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_160.setObjectName("SCreen_Test_Qlabel_PAN_160")
-        self.horizontalLayout_131.addWidget(self.SCreen_Test_Qlabel_PAN_160)
-        self.screen_test_Display_Answer_QlabelAnswer3_4 = QtWidgets.QLabel(self.layoutWidget_162)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_4.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_4.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_4.setObjectName("screen_test_Display_Answer_QlabelAnswer3_4")
-        self.horizontalLayout_131.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_4)
-        self.verticalLayout_88.addWidget(self.splitter_17)
-        self.gridLayout_100.addLayout(self.verticalLayout_88, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_124, 0, 1, 1, 1)
-        self.frame_125 = QtWidgets.QFrame(self.widget)
-        self.frame_125.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_125.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_125.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_125.setObjectName("frame_125")
-        self.gridLayout_101 = QtWidgets.QGridLayout(self.frame_125)
-        self.gridLayout_101.setObjectName("gridLayout_101")
-        self.verticalLayout_89 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_89.setObjectName("verticalLayout_89")
-        self.SCreen_Test_Qlabel_PAN_161 = QtWidgets.QLabel(self.frame_125)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_161.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_161.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_161.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_161.setObjectName("SCreen_Test_Qlabel_PAN_161")
-        self.verticalLayout_89.addWidget(self.SCreen_Test_Qlabel_PAN_161)
-        self.splitter_18 = QtWidgets.QSplitter(self.frame_125)
-        self.splitter_18.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_18.setObjectName("splitter_18")
-        self.layoutWidget_163 = QtWidgets.QWidget(self.splitter_18)
-        self.layoutWidget_163.setObjectName("layoutWidget_163")
-        self.horizontalLayout_132 = QtWidgets.QHBoxLayout(self.layoutWidget_163)
-        self.horizontalLayout_132.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_132.setObjectName("horizontalLayout_132")
-        self.SCreen_Test_Qlabel_PAN_162 = QtWidgets.QLabel(self.layoutWidget_163)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_162.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_162.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_162.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_162.setObjectName("SCreen_Test_Qlabel_PAN_162")
-        self.horizontalLayout_132.addWidget(self.SCreen_Test_Qlabel_PAN_162)
-        self.screen_test_Display_Answer_QlabelAnswer1_9 = QtWidgets.QLabel(self.layoutWidget_163)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_9.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_9.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_9.setObjectName("screen_test_Display_Answer_QlabelAnswer1_9")
-        self.horizontalLayout_132.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_9)
-        self.layoutWidget_164 = QtWidgets.QWidget(self.splitter_18)
-        self.layoutWidget_164.setObjectName("layoutWidget_164")
-        self.horizontalLayout_133 = QtWidgets.QHBoxLayout(self.layoutWidget_164)
-        self.horizontalLayout_133.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_133.setObjectName("horizontalLayout_133")
-        self.SCreen_Test_Qlabel_PAN_163 = QtWidgets.QLabel(self.layoutWidget_164)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_163.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_163.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_163.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_163.setObjectName("SCreen_Test_Qlabel_PAN_163")
-        self.horizontalLayout_133.addWidget(self.SCreen_Test_Qlabel_PAN_163)
-        self.screen_test_Display_Answer_QlabelAnswer2_9 = QtWidgets.QLabel(self.layoutWidget_164)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_9.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_9.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_9.setObjectName("screen_test_Display_Answer_QlabelAnswer2_9")
-        self.horizontalLayout_133.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_9)
-        self.layoutWidget_165 = QtWidgets.QWidget(self.splitter_18)
-        self.layoutWidget_165.setObjectName("layoutWidget_165")
-        self.horizontalLayout_134 = QtWidgets.QHBoxLayout(self.layoutWidget_165)
-        self.horizontalLayout_134.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_134.setObjectName("horizontalLayout_134")
-        self.SCreen_Test_Qlabel_PAN_164 = QtWidgets.QLabel(self.layoutWidget_165)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_164.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_164.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_164.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_164.setObjectName("SCreen_Test_Qlabel_PAN_164")
-        self.horizontalLayout_134.addWidget(self.SCreen_Test_Qlabel_PAN_164)
-        self.SCreen_Test_Qlabel_PAN_165 = QtWidgets.QLabel(self.layoutWidget_165)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_165.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_165.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_165.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_165.setObjectName("SCreen_Test_Qlabel_PAN_165")
-        self.horizontalLayout_134.addWidget(self.SCreen_Test_Qlabel_PAN_165)
-        self.verticalLayout_89.addWidget(self.splitter_18)
-        self.gridLayout_101.addLayout(self.verticalLayout_89, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_125, 0, 2, 1, 1)
-        self.frame_126 = QtWidgets.QFrame(self.widget)
-        self.frame_126.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_126.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_126.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_126.setObjectName("frame_126")
-        self.gridLayout_102 = QtWidgets.QGridLayout(self.frame_126)
-        self.gridLayout_102.setObjectName("gridLayout_102")
-        self.verticalLayout_90 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_90.setObjectName("verticalLayout_90")
-        self.SCreen_Test_Qlabel_PAN_166 = QtWidgets.QLabel(self.frame_126)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_166.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_166.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_166.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_166.setObjectName("SCreen_Test_Qlabel_PAN_166")
-        self.verticalLayout_90.addWidget(self.SCreen_Test_Qlabel_PAN_166)
-        self.splitter_19 = QtWidgets.QSplitter(self.frame_126)
-        self.splitter_19.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_19.setObjectName("splitter_19")
-        self.layoutWidget_166 = QtWidgets.QWidget(self.splitter_19)
-        self.layoutWidget_166.setObjectName("layoutWidget_166")
-        self.horizontalLayout_135 = QtWidgets.QHBoxLayout(self.layoutWidget_166)
-        self.horizontalLayout_135.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_135.setObjectName("horizontalLayout_135")
-        self.SCreen_Test_Qlabel_PAN_167 = QtWidgets.QLabel(self.layoutWidget_166)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_167.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_167.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_167.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_167.setObjectName("SCreen_Test_Qlabel_PAN_167")
-        self.horizontalLayout_135.addWidget(self.SCreen_Test_Qlabel_PAN_167)
-        self.screen_test_Display_Answer_QlabelAnswer1_10 = QtWidgets.QLabel(self.layoutWidget_166)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_10.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_10.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_10.setObjectName("screen_test_Display_Answer_QlabelAnswer1_10")
-        self.horizontalLayout_135.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_10)
-        self.layoutWidget_167 = QtWidgets.QWidget(self.splitter_19)
-        self.layoutWidget_167.setObjectName("layoutWidget_167")
-        self.horizontalLayout_136 = QtWidgets.QHBoxLayout(self.layoutWidget_167)
-        self.horizontalLayout_136.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_136.setObjectName("horizontalLayout_136")
-        self.SCreen_Test_Qlabel_PAN_168 = QtWidgets.QLabel(self.layoutWidget_167)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_168.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_168.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_168.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_168.setObjectName("SCreen_Test_Qlabel_PAN_168")
-        self.horizontalLayout_136.addWidget(self.SCreen_Test_Qlabel_PAN_168)
-        self.screen_test_Display_Answer_QlabelAnswer2_10 = QtWidgets.QLabel(self.layoutWidget_167)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_10.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_10.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_10.setObjectName("screen_test_Display_Answer_QlabelAnswer2_10")
-        self.horizontalLayout_136.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_10)
-        self.layoutWidget_168 = QtWidgets.QWidget(self.splitter_19)
-        self.layoutWidget_168.setObjectName("layoutWidget_168")
-        self.horizontalLayout_137 = QtWidgets.QHBoxLayout(self.layoutWidget_168)
-        self.horizontalLayout_137.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_137.setObjectName("horizontalLayout_137")
-        self.SCreen_Test_Qlabel_PAN_169 = QtWidgets.QLabel(self.layoutWidget_168)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_169.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_169.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_169.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_169.setObjectName("SCreen_Test_Qlabel_PAN_169")
-        self.horizontalLayout_137.addWidget(self.SCreen_Test_Qlabel_PAN_169)
-        self.screen_test_Display_Answer_QlabelAnswer3_5 = QtWidgets.QLabel(self.layoutWidget_168)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_5.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_5.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_5.setObjectName("screen_test_Display_Answer_QlabelAnswer3_5")
-        self.horizontalLayout_137.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_5)
-        self.verticalLayout_90.addWidget(self.splitter_19)
-        self.gridLayout_102.addLayout(self.verticalLayout_90, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_126, 0, 3, 1, 1)
-        self.frame_127 = QtWidgets.QFrame(self.widget)
-        self.frame_127.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_127.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_127.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_127.setObjectName("frame_127")
-        self.gridLayout_103 = QtWidgets.QGridLayout(self.frame_127)
-        self.gridLayout_103.setObjectName("gridLayout_103")
-        self.verticalLayout_91 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_91.setObjectName("verticalLayout_91")
-        self.SCreen_Test_Qlabel_PAN_170 = QtWidgets.QLabel(self.frame_127)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_170.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_170.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_170.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_170.setObjectName("SCreen_Test_Qlabel_PAN_170")
-        self.verticalLayout_91.addWidget(self.SCreen_Test_Qlabel_PAN_170)
-        self.splitter_20 = QtWidgets.QSplitter(self.frame_127)
-        self.splitter_20.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_20.setObjectName("splitter_20")
-        self.layoutWidget_169 = QtWidgets.QWidget(self.splitter_20)
-        self.layoutWidget_169.setObjectName("layoutWidget_169")
-        self.horizontalLayout_138 = QtWidgets.QHBoxLayout(self.layoutWidget_169)
-        self.horizontalLayout_138.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_138.setObjectName("horizontalLayout_138")
-        self.SCreen_Test_Qlabel_PAN_171 = QtWidgets.QLabel(self.layoutWidget_169)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_171.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_171.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_171.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_171.setObjectName("SCreen_Test_Qlabel_PAN_171")
-        self.horizontalLayout_138.addWidget(self.SCreen_Test_Qlabel_PAN_171)
-        self.screen_test_Display_Answer_QlabelAnswer1_11 = QtWidgets.QLabel(self.layoutWidget_169)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_11.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_11.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_11.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_11.setObjectName("screen_test_Display_Answer_QlabelAnswer1_11")
-        self.horizontalLayout_138.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_11)
-        self.layoutWidget_170 = QtWidgets.QWidget(self.splitter_20)
-        self.layoutWidget_170.setObjectName("layoutWidget_170")
-        self.horizontalLayout_139 = QtWidgets.QHBoxLayout(self.layoutWidget_170)
-        self.horizontalLayout_139.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_139.setObjectName("horizontalLayout_139")
-        self.SCreen_Test_Qlabel_PAN_172 = QtWidgets.QLabel(self.layoutWidget_170)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_172.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_172.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_172.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_172.setObjectName("SCreen_Test_Qlabel_PAN_172")
-        self.horizontalLayout_139.addWidget(self.SCreen_Test_Qlabel_PAN_172)
-        self.screen_test_Display_Answer_QlabelAnswer2_11 = QtWidgets.QLabel(self.layoutWidget_170)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_11.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_11.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_11.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_11.setObjectName("screen_test_Display_Answer_QlabelAnswer2_11")
-        self.horizontalLayout_139.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_11)
-        self.layoutWidget_171 = QtWidgets.QWidget(self.splitter_20)
-        self.layoutWidget_171.setObjectName("layoutWidget_171")
-        self.horizontalLayout_140 = QtWidgets.QHBoxLayout(self.layoutWidget_171)
-        self.horizontalLayout_140.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_140.setObjectName("horizontalLayout_140")
-        self.SCreen_Test_Qlabel_PAN_173 = QtWidgets.QLabel(self.layoutWidget_171)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_173.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_173.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_173.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_173.setObjectName("SCreen_Test_Qlabel_PAN_173")
-        self.horizontalLayout_140.addWidget(self.SCreen_Test_Qlabel_PAN_173)
-        self.SCreen_Test_Qlabel_PAN_174 = QtWidgets.QLabel(self.layoutWidget_171)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_174.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_174.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_174.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_174.setObjectName("SCreen_Test_Qlabel_PAN_174")
-        self.horizontalLayout_140.addWidget(self.SCreen_Test_Qlabel_PAN_174)
-        self.verticalLayout_91.addWidget(self.splitter_20)
-        self.gridLayout_103.addLayout(self.verticalLayout_91, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_127, 0, 4, 1, 1)
-        self.frame_128 = QtWidgets.QFrame(self.widget)
-        self.frame_128.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_128.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_128.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_128.setObjectName("frame_128")
-        self.gridLayout_104 = QtWidgets.QGridLayout(self.frame_128)
-        self.gridLayout_104.setObjectName("gridLayout_104")
-        self.verticalLayout_92 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_92.setObjectName("verticalLayout_92")
-        self.SCreen_Test_Qlabel_PAN_175 = QtWidgets.QLabel(self.frame_128)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_175.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_175.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_175.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_175.setObjectName("SCreen_Test_Qlabel_PAN_175")
-        self.verticalLayout_92.addWidget(self.SCreen_Test_Qlabel_PAN_175)
-        self.splitter_21 = QtWidgets.QSplitter(self.frame_128)
-        self.splitter_21.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_21.setObjectName("splitter_21")
-        self.layoutWidget_172 = QtWidgets.QWidget(self.splitter_21)
-        self.layoutWidget_172.setObjectName("layoutWidget_172")
-        self.horizontalLayout_141 = QtWidgets.QHBoxLayout(self.layoutWidget_172)
-        self.horizontalLayout_141.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_141.setObjectName("horizontalLayout_141")
-        self.SCreen_Test_Qlabel_PAN_176 = QtWidgets.QLabel(self.layoutWidget_172)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_176.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_176.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_176.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_176.setObjectName("SCreen_Test_Qlabel_PAN_176")
-        self.horizontalLayout_141.addWidget(self.SCreen_Test_Qlabel_PAN_176)
-        self.screen_test_Display_Answer_QlabelAnswer1_12 = QtWidgets.QLabel(self.layoutWidget_172)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_12.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_12.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_12.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_12.setObjectName("screen_test_Display_Answer_QlabelAnswer1_12")
-        self.horizontalLayout_141.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_12)
-        self.layoutWidget_173 = QtWidgets.QWidget(self.splitter_21)
-        self.layoutWidget_173.setObjectName("layoutWidget_173")
-        self.horizontalLayout_142 = QtWidgets.QHBoxLayout(self.layoutWidget_173)
-        self.horizontalLayout_142.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_142.setObjectName("horizontalLayout_142")
-        self.SCreen_Test_Qlabel_PAN_177 = QtWidgets.QLabel(self.layoutWidget_173)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_177.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_177.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_177.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_177.setObjectName("SCreen_Test_Qlabel_PAN_177")
-        self.horizontalLayout_142.addWidget(self.SCreen_Test_Qlabel_PAN_177)
-        self.screen_test_Display_Answer_QlabelAnswer2_12 = QtWidgets.QLabel(self.layoutWidget_173)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_12.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_12.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_12.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_12.setObjectName("screen_test_Display_Answer_QlabelAnswer2_12")
-        self.horizontalLayout_142.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_12)
-        self.layoutWidget_174 = QtWidgets.QWidget(self.splitter_21)
-        self.layoutWidget_174.setObjectName("layoutWidget_174")
-        self.horizontalLayout_143 = QtWidgets.QHBoxLayout(self.layoutWidget_174)
-        self.horizontalLayout_143.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_143.setObjectName("horizontalLayout_143")
-        self.SCreen_Test_Qlabel_PAN_178 = QtWidgets.QLabel(self.layoutWidget_174)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_178.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_178.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_178.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_178.setObjectName("SCreen_Test_Qlabel_PAN_178")
-        self.horizontalLayout_143.addWidget(self.SCreen_Test_Qlabel_PAN_178)
-        self.screen_test_Display_Answer_QlabelAnswer3_6 = QtWidgets.QLabel(self.layoutWidget_174)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_6.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_6.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_6.setObjectName("screen_test_Display_Answer_QlabelAnswer3_6")
-        self.horizontalLayout_143.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_6)
-        self.verticalLayout_92.addWidget(self.splitter_21)
-        self.gridLayout_104.addLayout(self.verticalLayout_92, 0, 0, 1, 1)
-        self.gridLayout_106.addWidget(self.frame_128, 0, 5, 1, 1)
-        self.verticalLayout_105.addLayout(self.gridLayout_106)
-        self.gridLayout_107 = QtWidgets.QGridLayout()
-        self.gridLayout_107.setObjectName("gridLayout_107")
-        self.frame_129 = QtWidgets.QFrame(self.widget)
-        self.frame_129.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_129.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_129.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_129.setObjectName("frame_129")
-        self.gridLayout_108 = QtWidgets.QGridLayout(self.frame_129)
-        self.gridLayout_108.setObjectName("gridLayout_108")
-        self.verticalLayout_93 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_93.setObjectName("verticalLayout_93")
-        self.SCreen_Test_Qlabel_PAN_179 = QtWidgets.QLabel(self.frame_129)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_179.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_179.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_179.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_179.setObjectName("SCreen_Test_Qlabel_PAN_179")
-        self.verticalLayout_93.addWidget(self.SCreen_Test_Qlabel_PAN_179)
-        self.splitter_22 = QtWidgets.QSplitter(self.frame_129)
-        self.splitter_22.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_22.setObjectName("splitter_22")
-        self.layoutWidget_176 = QtWidgets.QWidget(self.splitter_22)
-        self.layoutWidget_176.setObjectName("layoutWidget_176")
-        self.horizontalLayout_144 = QtWidgets.QHBoxLayout(self.layoutWidget_176)
-        self.horizontalLayout_144.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_144.setObjectName("horizontalLayout_144")
-        self.SCreen_Test_Qlabel_PAN_180 = QtWidgets.QLabel(self.layoutWidget_176)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_180.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_180.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_180.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_180.setObjectName("SCreen_Test_Qlabel_PAN_180")
-        self.horizontalLayout_144.addWidget(self.SCreen_Test_Qlabel_PAN_180)
-        self.screen_test_Display_Answer_QlabelAnswer1_13 = QtWidgets.QLabel(self.layoutWidget_176)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_13.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_13.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_13.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_13.setObjectName("screen_test_Display_Answer_QlabelAnswer1_13")
-        self.horizontalLayout_144.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_13)
-        self.layoutWidget_177 = QtWidgets.QWidget(self.splitter_22)
-        self.layoutWidget_177.setObjectName("layoutWidget_177")
-        self.horizontalLayout_145 = QtWidgets.QHBoxLayout(self.layoutWidget_177)
-        self.horizontalLayout_145.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_145.setObjectName("horizontalLayout_145")
-        self.SCreen_Test_Qlabel_PAN_181 = QtWidgets.QLabel(self.layoutWidget_177)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_181.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_181.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_181.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_181.setObjectName("SCreen_Test_Qlabel_PAN_181")
-        self.horizontalLayout_145.addWidget(self.SCreen_Test_Qlabel_PAN_181)
-        self.screen_test_Display_Answer_QlabelAnswer2_13 = QtWidgets.QLabel(self.layoutWidget_177)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_13.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_13.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_13.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_13.setObjectName("screen_test_Display_Answer_QlabelAnswer2_13")
-        self.horizontalLayout_145.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_13)
-        self.layoutWidget_178 = QtWidgets.QWidget(self.splitter_22)
-        self.layoutWidget_178.setObjectName("layoutWidget_178")
-        self.horizontalLayout_146 = QtWidgets.QHBoxLayout(self.layoutWidget_178)
-        self.horizontalLayout_146.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_146.setObjectName("horizontalLayout_146")
-        self.SCreen_Test_Qlabel_PAN_182 = QtWidgets.QLabel(self.layoutWidget_178)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_182.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_182.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_182.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_182.setObjectName("SCreen_Test_Qlabel_PAN_182")
-        self.horizontalLayout_146.addWidget(self.SCreen_Test_Qlabel_PAN_182)
-        self.screen_test_Display_Answer_QlabelAnswer3_7 = QtWidgets.QLabel(self.layoutWidget_178)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_7.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_7.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_7.setObjectName("screen_test_Display_Answer_QlabelAnswer3_7")
-        self.horizontalLayout_146.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_7)
-        self.verticalLayout_93.addWidget(self.splitter_22)
-        self.gridLayout_108.addLayout(self.verticalLayout_93, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_129, 0, 0, 1, 1)
-        self.frame_130 = QtWidgets.QFrame(self.widget)
-        self.frame_130.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_130.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_130.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_130.setObjectName("frame_130")
-        self.gridLayout_109 = QtWidgets.QGridLayout(self.frame_130)
-        self.gridLayout_109.setObjectName("gridLayout_109")
-        self.verticalLayout_94 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_94.setObjectName("verticalLayout_94")
-        self.SCreen_Test_Qlabel_PAN_183 = QtWidgets.QLabel(self.frame_130)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_183.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_183.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_183.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_183.setObjectName("SCreen_Test_Qlabel_PAN_183")
-        self.verticalLayout_94.addWidget(self.SCreen_Test_Qlabel_PAN_183)
-        self.splitter_23 = QtWidgets.QSplitter(self.frame_130)
-        self.splitter_23.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_23.setObjectName("splitter_23")
-        self.layoutWidget_179 = QtWidgets.QWidget(self.splitter_23)
-        self.layoutWidget_179.setObjectName("layoutWidget_179")
-        self.horizontalLayout_147 = QtWidgets.QHBoxLayout(self.layoutWidget_179)
-        self.horizontalLayout_147.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_147.setObjectName("horizontalLayout_147")
-        self.SCreen_Test_Qlabel_PAN_184 = QtWidgets.QLabel(self.layoutWidget_179)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_184.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_184.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_184.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_184.setObjectName("SCreen_Test_Qlabel_PAN_184")
-        self.horizontalLayout_147.addWidget(self.SCreen_Test_Qlabel_PAN_184)
-        self.screen_test_Display_Answer_QlabelAnswer1_14 = QtWidgets.QLabel(self.layoutWidget_179)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_14.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_14.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_14.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_14.setObjectName("screen_test_Display_Answer_QlabelAnswer1_14")
-        self.horizontalLayout_147.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_14)
-        self.layoutWidget_180 = QtWidgets.QWidget(self.splitter_23)
-        self.layoutWidget_180.setObjectName("layoutWidget_180")
-        self.horizontalLayout_148 = QtWidgets.QHBoxLayout(self.layoutWidget_180)
-        self.horizontalLayout_148.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_148.setObjectName("horizontalLayout_148")
-        self.SCreen_Test_Qlabel_PAN_185 = QtWidgets.QLabel(self.layoutWidget_180)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_185.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_185.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_185.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_185.setObjectName("SCreen_Test_Qlabel_PAN_185")
-        self.horizontalLayout_148.addWidget(self.SCreen_Test_Qlabel_PAN_185)
-        self.screen_test_Display_Answer_QlabelAnswer2_14 = QtWidgets.QLabel(self.layoutWidget_180)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_14.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_14.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_14.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_14.setObjectName("screen_test_Display_Answer_QlabelAnswer2_14")
-        self.horizontalLayout_148.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_14)
-        self.layoutWidget_181 = QtWidgets.QWidget(self.splitter_23)
-        self.layoutWidget_181.setObjectName("layoutWidget_181")
-        self.horizontalLayout_149 = QtWidgets.QHBoxLayout(self.layoutWidget_181)
-        self.horizontalLayout_149.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_149.setObjectName("horizontalLayout_149")
-        self.SCreen_Test_Qlabel_PAN_186 = QtWidgets.QLabel(self.layoutWidget_181)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_186.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_186.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_186.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_186.setObjectName("SCreen_Test_Qlabel_PAN_186")
-        self.horizontalLayout_149.addWidget(self.SCreen_Test_Qlabel_PAN_186)
-        self.SCreen_Test_Qlabel_PAN_187 = QtWidgets.QLabel(self.layoutWidget_181)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_187.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_187.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_187.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_187.setObjectName("SCreen_Test_Qlabel_PAN_187")
-        self.horizontalLayout_149.addWidget(self.SCreen_Test_Qlabel_PAN_187)
-        self.verticalLayout_94.addWidget(self.splitter_23)
-        self.gridLayout_109.addLayout(self.verticalLayout_94, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_130, 0, 1, 1, 1)
-        self.frame_131 = QtWidgets.QFrame(self.widget)
-        self.frame_131.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_131.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_131.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_131.setObjectName("frame_131")
-        self.gridLayout_110 = QtWidgets.QGridLayout(self.frame_131)
-        self.gridLayout_110.setObjectName("gridLayout_110")
-        self.verticalLayout_95 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_95.setObjectName("verticalLayout_95")
-        self.SCreen_Test_Qlabel_PAN_188 = QtWidgets.QLabel(self.frame_131)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_188.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_188.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_188.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_188.setObjectName("SCreen_Test_Qlabel_PAN_188")
-        self.verticalLayout_95.addWidget(self.SCreen_Test_Qlabel_PAN_188)
-        self.splitter_24 = QtWidgets.QSplitter(self.frame_131)
-        self.splitter_24.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_24.setObjectName("splitter_24")
-        self.layoutWidget_182 = QtWidgets.QWidget(self.splitter_24)
-        self.layoutWidget_182.setObjectName("layoutWidget_182")
-        self.horizontalLayout_150 = QtWidgets.QHBoxLayout(self.layoutWidget_182)
-        self.horizontalLayout_150.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_150.setObjectName("horizontalLayout_150")
-        self.SCreen_Test_Qlabel_PAN_189 = QtWidgets.QLabel(self.layoutWidget_182)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_189.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_189.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_189.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_189.setObjectName("SCreen_Test_Qlabel_PAN_189")
-        self.horizontalLayout_150.addWidget(self.SCreen_Test_Qlabel_PAN_189)
-        self.screen_test_Display_Answer_QlabelAnswer1_15 = QtWidgets.QLabel(self.layoutWidget_182)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_15.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_15.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_15.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_15.setObjectName("screen_test_Display_Answer_QlabelAnswer1_15")
-        self.horizontalLayout_150.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_15)
-        self.layoutWidget_183 = QtWidgets.QWidget(self.splitter_24)
-        self.layoutWidget_183.setObjectName("layoutWidget_183")
-        self.horizontalLayout_151 = QtWidgets.QHBoxLayout(self.layoutWidget_183)
-        self.horizontalLayout_151.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_151.setObjectName("horizontalLayout_151")
-        self.SCreen_Test_Qlabel_PAN_190 = QtWidgets.QLabel(self.layoutWidget_183)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_190.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_190.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_190.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_190.setObjectName("SCreen_Test_Qlabel_PAN_190")
-        self.horizontalLayout_151.addWidget(self.SCreen_Test_Qlabel_PAN_190)
-        self.screen_test_Display_Answer_QlabelAnswer2_15 = QtWidgets.QLabel(self.layoutWidget_183)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_15.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_15.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_15.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_15.setObjectName("screen_test_Display_Answer_QlabelAnswer2_15")
-        self.horizontalLayout_151.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_15)
-        self.layoutWidget_184 = QtWidgets.QWidget(self.splitter_24)
-        self.layoutWidget_184.setObjectName("layoutWidget_184")
-        self.horizontalLayout_152 = QtWidgets.QHBoxLayout(self.layoutWidget_184)
-        self.horizontalLayout_152.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_152.setObjectName("horizontalLayout_152")
-        self.SCreen_Test_Qlabel_PAN_191 = QtWidgets.QLabel(self.layoutWidget_184)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_191.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_191.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_191.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_191.setObjectName("SCreen_Test_Qlabel_PAN_191")
-        self.horizontalLayout_152.addWidget(self.SCreen_Test_Qlabel_PAN_191)
-        self.screen_test_Display_Answer_QlabelAnswer3_8 = QtWidgets.QLabel(self.layoutWidget_184)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_8.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_8.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_8.setObjectName("screen_test_Display_Answer_QlabelAnswer3_8")
-        self.horizontalLayout_152.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_8)
-        self.verticalLayout_95.addWidget(self.splitter_24)
-        self.gridLayout_110.addLayout(self.verticalLayout_95, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_131, 0, 2, 1, 1)
-        self.frame_132 = QtWidgets.QFrame(self.widget)
-        self.frame_132.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_132.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_132.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_132.setObjectName("frame_132")
-        self.gridLayout_111 = QtWidgets.QGridLayout(self.frame_132)
-        self.gridLayout_111.setObjectName("gridLayout_111")
-        self.verticalLayout_96 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_96.setObjectName("verticalLayout_96")
-        self.SCreen_Test_Qlabel_PAN_192 = QtWidgets.QLabel(self.frame_132)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_192.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_192.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_192.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_192.setObjectName("SCreen_Test_Qlabel_PAN_192")
-        self.verticalLayout_96.addWidget(self.SCreen_Test_Qlabel_PAN_192)
-        self.splitter_25 = QtWidgets.QSplitter(self.frame_132)
-        self.splitter_25.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_25.setObjectName("splitter_25")
-        self.layoutWidget_185 = QtWidgets.QWidget(self.splitter_25)
-        self.layoutWidget_185.setObjectName("layoutWidget_185")
-        self.horizontalLayout_153 = QtWidgets.QHBoxLayout(self.layoutWidget_185)
-        self.horizontalLayout_153.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_153.setObjectName("horizontalLayout_153")
-        self.SCreen_Test_Qlabel_PAN_193 = QtWidgets.QLabel(self.layoutWidget_185)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_193.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_193.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_193.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_193.setObjectName("SCreen_Test_Qlabel_PAN_193")
-        self.horizontalLayout_153.addWidget(self.SCreen_Test_Qlabel_PAN_193)
-        self.screen_test_Display_Answer_QlabelAnswer1_16 = QtWidgets.QLabel(self.layoutWidget_185)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_16.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_16.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_16.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_16.setObjectName("screen_test_Display_Answer_QlabelAnswer1_16")
-        self.horizontalLayout_153.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_16)
-        self.layoutWidget_186 = QtWidgets.QWidget(self.splitter_25)
-        self.layoutWidget_186.setObjectName("layoutWidget_186")
-        self.horizontalLayout_154 = QtWidgets.QHBoxLayout(self.layoutWidget_186)
-        self.horizontalLayout_154.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_154.setObjectName("horizontalLayout_154")
-        self.SCreen_Test_Qlabel_PAN_194 = QtWidgets.QLabel(self.layoutWidget_186)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_194.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_194.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_194.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_194.setObjectName("SCreen_Test_Qlabel_PAN_194")
-        self.horizontalLayout_154.addWidget(self.SCreen_Test_Qlabel_PAN_194)
-        self.screen_test_Display_Answer_QlabelAnswer2_16 = QtWidgets.QLabel(self.layoutWidget_186)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_16.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_16.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_16.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_16.setObjectName("screen_test_Display_Answer_QlabelAnswer2_16")
-        self.horizontalLayout_154.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_16)
-        self.layoutWidget_187 = QtWidgets.QWidget(self.splitter_25)
-        self.layoutWidget_187.setObjectName("layoutWidget_187")
-        self.horizontalLayout_155 = QtWidgets.QHBoxLayout(self.layoutWidget_187)
-        self.horizontalLayout_155.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_155.setObjectName("horizontalLayout_155")
-        self.SCreen_Test_Qlabel_PAN_195 = QtWidgets.QLabel(self.layoutWidget_187)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_195.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_195.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_195.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_195.setObjectName("SCreen_Test_Qlabel_PAN_195")
-        self.horizontalLayout_155.addWidget(self.SCreen_Test_Qlabel_PAN_195)
-        self.SCreen_Test_Qlabel_PAN_196 = QtWidgets.QLabel(self.layoutWidget_187)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_196.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_196.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_196.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_196.setObjectName("SCreen_Test_Qlabel_PAN_196")
-        self.horizontalLayout_155.addWidget(self.SCreen_Test_Qlabel_PAN_196)
-        self.verticalLayout_96.addWidget(self.splitter_25)
-        self.gridLayout_111.addLayout(self.verticalLayout_96, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_132, 0, 3, 1, 1)
-        self.frame_133 = QtWidgets.QFrame(self.widget)
-        self.frame_133.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_133.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_133.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_133.setObjectName("frame_133")
-        self.gridLayout_112 = QtWidgets.QGridLayout(self.frame_133)
-        self.gridLayout_112.setObjectName("gridLayout_112")
-        self.verticalLayout_97 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_97.setObjectName("verticalLayout_97")
-        self.SCreen_Test_Qlabel_PAN_197 = QtWidgets.QLabel(self.frame_133)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_197.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_197.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_197.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_197.setObjectName("SCreen_Test_Qlabel_PAN_197")
-        self.verticalLayout_97.addWidget(self.SCreen_Test_Qlabel_PAN_197)
-        self.splitter_26 = QtWidgets.QSplitter(self.frame_133)
-        self.splitter_26.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_26.setObjectName("splitter_26")
-        self.layoutWidget_188 = QtWidgets.QWidget(self.splitter_26)
-        self.layoutWidget_188.setObjectName("layoutWidget_188")
-        self.horizontalLayout_156 = QtWidgets.QHBoxLayout(self.layoutWidget_188)
-        self.horizontalLayout_156.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_156.setObjectName("horizontalLayout_156")
-        self.SCreen_Test_Qlabel_PAN_198 = QtWidgets.QLabel(self.layoutWidget_188)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_198.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_198.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_198.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_198.setObjectName("SCreen_Test_Qlabel_PAN_198")
-        self.horizontalLayout_156.addWidget(self.SCreen_Test_Qlabel_PAN_198)
-        self.screen_test_Display_Answer_QlabelAnswer1_17 = QtWidgets.QLabel(self.layoutWidget_188)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_17.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_17.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_17.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_17.setObjectName("screen_test_Display_Answer_QlabelAnswer1_17")
-        self.horizontalLayout_156.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_17)
-        self.layoutWidget_189 = QtWidgets.QWidget(self.splitter_26)
-        self.layoutWidget_189.setObjectName("layoutWidget_189")
-        self.horizontalLayout_157 = QtWidgets.QHBoxLayout(self.layoutWidget_189)
-        self.horizontalLayout_157.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_157.setObjectName("horizontalLayout_157")
-        self.SCreen_Test_Qlabel_PAN_199 = QtWidgets.QLabel(self.layoutWidget_189)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_199.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_199.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_199.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_199.setObjectName("SCreen_Test_Qlabel_PAN_199")
-        self.horizontalLayout_157.addWidget(self.SCreen_Test_Qlabel_PAN_199)
-        self.screen_test_Display_Answer_QlabelAnswer2_17 = QtWidgets.QLabel(self.layoutWidget_189)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_17.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_17.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_17.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_17.setObjectName("screen_test_Display_Answer_QlabelAnswer2_17")
-        self.horizontalLayout_157.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_17)
-        self.layoutWidget_190 = QtWidgets.QWidget(self.splitter_26)
-        self.layoutWidget_190.setObjectName("layoutWidget_190")
-        self.horizontalLayout_158 = QtWidgets.QHBoxLayout(self.layoutWidget_190)
-        self.horizontalLayout_158.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_158.setObjectName("horizontalLayout_158")
-        self.SCreen_Test_Qlabel_PAN_200 = QtWidgets.QLabel(self.layoutWidget_190)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_200.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_200.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_200.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_200.setObjectName("SCreen_Test_Qlabel_PAN_200")
-        self.horizontalLayout_158.addWidget(self.SCreen_Test_Qlabel_PAN_200)
-        self.screen_test_Display_Answer_QlabelAnswer3_9 = QtWidgets.QLabel(self.layoutWidget_190)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_9.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_9.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_9.setObjectName("screen_test_Display_Answer_QlabelAnswer3_9")
-        self.horizontalLayout_158.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_9)
-        self.verticalLayout_97.addWidget(self.splitter_26)
-        self.gridLayout_112.addLayout(self.verticalLayout_97, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_133, 0, 4, 1, 1)
-        self.frame_134 = QtWidgets.QFrame(self.widget)
-        self.frame_134.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_134.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_134.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_134.setObjectName("frame_134")
-        self.gridLayout_113 = QtWidgets.QGridLayout(self.frame_134)
-        self.gridLayout_113.setObjectName("gridLayout_113")
-        self.verticalLayout_98 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_98.setObjectName("verticalLayout_98")
-        self.SCreen_Test_Qlabel_PAN_201 = QtWidgets.QLabel(self.frame_134)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_201.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_201.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_201.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_201.setObjectName("SCreen_Test_Qlabel_PAN_201")
-        self.verticalLayout_98.addWidget(self.SCreen_Test_Qlabel_PAN_201)
-        self.splitter_27 = QtWidgets.QSplitter(self.frame_134)
-        self.splitter_27.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_27.setObjectName("splitter_27")
-        self.layoutWidget_191 = QtWidgets.QWidget(self.splitter_27)
-        self.layoutWidget_191.setObjectName("layoutWidget_191")
-        self.horizontalLayout_159 = QtWidgets.QHBoxLayout(self.layoutWidget_191)
-        self.horizontalLayout_159.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_159.setObjectName("horizontalLayout_159")
-        self.SCreen_Test_Qlabel_PAN_202 = QtWidgets.QLabel(self.layoutWidget_191)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_202.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_202.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_202.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_202.setObjectName("SCreen_Test_Qlabel_PAN_202")
-        self.horizontalLayout_159.addWidget(self.SCreen_Test_Qlabel_PAN_202)
-        self.screen_test_Display_Answer_QlabelAnswer1_18 = QtWidgets.QLabel(self.layoutWidget_191)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_18.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_18.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_18.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_18.setObjectName("screen_test_Display_Answer_QlabelAnswer1_18")
-        self.horizontalLayout_159.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_18)
-        self.layoutWidget_192 = QtWidgets.QWidget(self.splitter_27)
-        self.layoutWidget_192.setObjectName("layoutWidget_192")
-        self.horizontalLayout_160 = QtWidgets.QHBoxLayout(self.layoutWidget_192)
-        self.horizontalLayout_160.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_160.setObjectName("horizontalLayout_160")
-        self.SCreen_Test_Qlabel_PAN_203 = QtWidgets.QLabel(self.layoutWidget_192)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_203.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_203.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_203.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_203.setObjectName("SCreen_Test_Qlabel_PAN_203")
-        self.horizontalLayout_160.addWidget(self.SCreen_Test_Qlabel_PAN_203)
-        self.screen_test_Display_Answer_QlabelAnswer2_18 = QtWidgets.QLabel(self.layoutWidget_192)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_18.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_18.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_18.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_18.setObjectName("screen_test_Display_Answer_QlabelAnswer2_18")
-        self.horizontalLayout_160.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_18)
-        self.layoutWidget_193 = QtWidgets.QWidget(self.splitter_27)
-        self.layoutWidget_193.setObjectName("layoutWidget_193")
-        self.horizontalLayout_161 = QtWidgets.QHBoxLayout(self.layoutWidget_193)
-        self.horizontalLayout_161.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_161.setObjectName("horizontalLayout_161")
-        self.SCreen_Test_Qlabel_PAN_204 = QtWidgets.QLabel(self.layoutWidget_193)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_204.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_204.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_204.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_204.setObjectName("SCreen_Test_Qlabel_PAN_204")
-        self.horizontalLayout_161.addWidget(self.SCreen_Test_Qlabel_PAN_204)
-        self.SCreen_Test_Qlabel_PAN_205 = QtWidgets.QLabel(self.layoutWidget_193)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_205.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_205.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_205.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_205.setObjectName("SCreen_Test_Qlabel_PAN_205")
-        self.horizontalLayout_161.addWidget(self.SCreen_Test_Qlabel_PAN_205)
-        self.verticalLayout_98.addWidget(self.splitter_27)
-        self.gridLayout_113.addLayout(self.verticalLayout_98, 0, 0, 1, 1)
-        self.gridLayout_107.addWidget(self.frame_134, 0, 5, 1, 1)
-        self.verticalLayout_105.addLayout(self.gridLayout_107)
-        self.gridLayout_114 = QtWidgets.QGridLayout()
-        self.gridLayout_114.setObjectName("gridLayout_114")
-        self.frame_135 = QtWidgets.QFrame(self.widget)
-        self.frame_135.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_135.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_135.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_135.setObjectName("frame_135")
-        self.gridLayout_115 = QtWidgets.QGridLayout(self.frame_135)
-        self.gridLayout_115.setObjectName("gridLayout_115")
-        self.verticalLayout_99 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_99.setObjectName("verticalLayout_99")
-        self.SCreen_Test_Qlabel_PAN_206 = QtWidgets.QLabel(self.frame_135)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_206.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_206.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_206.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_206.setObjectName("SCreen_Test_Qlabel_PAN_206")
-        self.verticalLayout_99.addWidget(self.SCreen_Test_Qlabel_PAN_206)
-        self.splitter_28 = QtWidgets.QSplitter(self.frame_135)
-        self.splitter_28.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_28.setObjectName("splitter_28")
-        self.layoutWidget_195 = QtWidgets.QWidget(self.splitter_28)
-        self.layoutWidget_195.setObjectName("layoutWidget_195")
-        self.horizontalLayout_162 = QtWidgets.QHBoxLayout(self.layoutWidget_195)
-        self.horizontalLayout_162.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_162.setObjectName("horizontalLayout_162")
-        self.SCreen_Test_Qlabel_PAN_207 = QtWidgets.QLabel(self.layoutWidget_195)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_207.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_207.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_207.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_207.setObjectName("SCreen_Test_Qlabel_PAN_207")
-        self.horizontalLayout_162.addWidget(self.SCreen_Test_Qlabel_PAN_207)
-        self.screen_test_Display_Answer_QlabelAnswer1_19 = QtWidgets.QLabel(self.layoutWidget_195)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_19.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_19.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_19.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_19.setObjectName("screen_test_Display_Answer_QlabelAnswer1_19")
-        self.horizontalLayout_162.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_19)
-        self.layoutWidget_196 = QtWidgets.QWidget(self.splitter_28)
-        self.layoutWidget_196.setObjectName("layoutWidget_196")
-        self.horizontalLayout_163 = QtWidgets.QHBoxLayout(self.layoutWidget_196)
-        self.horizontalLayout_163.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_163.setObjectName("horizontalLayout_163")
-        self.SCreen_Test_Qlabel_PAN_208 = QtWidgets.QLabel(self.layoutWidget_196)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_208.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_208.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_208.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_208.setObjectName("SCreen_Test_Qlabel_PAN_208")
-        self.horizontalLayout_163.addWidget(self.SCreen_Test_Qlabel_PAN_208)
-        self.screen_test_Display_Answer_QlabelAnswer2_19 = QtWidgets.QLabel(self.layoutWidget_196)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_19.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_19.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_19.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_19.setObjectName("screen_test_Display_Answer_QlabelAnswer2_19")
-        self.horizontalLayout_163.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_19)
-        self.layoutWidget_197 = QtWidgets.QWidget(self.splitter_28)
-        self.layoutWidget_197.setObjectName("layoutWidget_197")
-        self.horizontalLayout_164 = QtWidgets.QHBoxLayout(self.layoutWidget_197)
-        self.horizontalLayout_164.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_164.setObjectName("horizontalLayout_164")
-        self.SCreen_Test_Qlabel_PAN_209 = QtWidgets.QLabel(self.layoutWidget_197)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_209.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_209.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_209.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_209.setObjectName("SCreen_Test_Qlabel_PAN_209")
-        self.horizontalLayout_164.addWidget(self.SCreen_Test_Qlabel_PAN_209)
-        self.SCreen_Test_Qlabel_PAN_210 = QtWidgets.QLabel(self.layoutWidget_197)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_210.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_210.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_210.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_210.setObjectName("SCreen_Test_Qlabel_PAN_210")
-        self.horizontalLayout_164.addWidget(self.SCreen_Test_Qlabel_PAN_210)
-        self.verticalLayout_99.addWidget(self.splitter_28)
-        self.gridLayout_115.addLayout(self.verticalLayout_99, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_135, 0, 0, 1, 1)
-        self.frame_136 = QtWidgets.QFrame(self.widget)
-        self.frame_136.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_136.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_136.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_136.setObjectName("frame_136")
-        self.gridLayout_116 = QtWidgets.QGridLayout(self.frame_136)
-        self.gridLayout_116.setObjectName("gridLayout_116")
-        self.verticalLayout_100 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_100.setObjectName("verticalLayout_100")
-        self.SCreen_Test_Qlabel_PAN_211 = QtWidgets.QLabel(self.frame_136)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_211.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_211.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_211.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_211.setObjectName("SCreen_Test_Qlabel_PAN_211")
-        self.verticalLayout_100.addWidget(self.SCreen_Test_Qlabel_PAN_211)
-        self.splitter_29 = QtWidgets.QSplitter(self.frame_136)
-        self.splitter_29.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_29.setObjectName("splitter_29")
-        self.layoutWidget_198 = QtWidgets.QWidget(self.splitter_29)
-        self.layoutWidget_198.setObjectName("layoutWidget_198")
-        self.horizontalLayout_165 = QtWidgets.QHBoxLayout(self.layoutWidget_198)
-        self.horizontalLayout_165.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_165.setObjectName("horizontalLayout_165")
-        self.SCreen_Test_Qlabel_PAN_212 = QtWidgets.QLabel(self.layoutWidget_198)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_212.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_212.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_212.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_212.setObjectName("SCreen_Test_Qlabel_PAN_212")
-        self.horizontalLayout_165.addWidget(self.SCreen_Test_Qlabel_PAN_212)
-        self.screen_test_Display_Answer_QlabelAnswer1_20 = QtWidgets.QLabel(self.layoutWidget_198)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_20.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_20.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_20.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_20.setObjectName("screen_test_Display_Answer_QlabelAnswer1_20")
-        self.horizontalLayout_165.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_20)
-        self.layoutWidget_199 = QtWidgets.QWidget(self.splitter_29)
-        self.layoutWidget_199.setObjectName("layoutWidget_199")
-        self.horizontalLayout_166 = QtWidgets.QHBoxLayout(self.layoutWidget_199)
-        self.horizontalLayout_166.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_166.setObjectName("horizontalLayout_166")
-        self.SCreen_Test_Qlabel_PAN_213 = QtWidgets.QLabel(self.layoutWidget_199)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_213.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_213.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_213.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_213.setObjectName("SCreen_Test_Qlabel_PAN_213")
-        self.horizontalLayout_166.addWidget(self.SCreen_Test_Qlabel_PAN_213)
-        self.screen_test_Display_Answer_QlabelAnswer2_20 = QtWidgets.QLabel(self.layoutWidget_199)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_20.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_20.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_20.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_20.setObjectName("screen_test_Display_Answer_QlabelAnswer2_20")
-        self.horizontalLayout_166.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_20)
-        self.layoutWidget_200 = QtWidgets.QWidget(self.splitter_29)
-        self.layoutWidget_200.setObjectName("layoutWidget_200")
-        self.horizontalLayout_167 = QtWidgets.QHBoxLayout(self.layoutWidget_200)
-        self.horizontalLayout_167.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_167.setObjectName("horizontalLayout_167")
-        self.SCreen_Test_Qlabel_PAN_214 = QtWidgets.QLabel(self.layoutWidget_200)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_214.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_214.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_214.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_214.setObjectName("SCreen_Test_Qlabel_PAN_214")
-        self.horizontalLayout_167.addWidget(self.SCreen_Test_Qlabel_PAN_214)
-        self.screen_test_Display_Answer_QlabelAnswer3_10 = QtWidgets.QLabel(self.layoutWidget_200)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_10.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_10.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_10.setObjectName("screen_test_Display_Answer_QlabelAnswer3_10")
-        self.horizontalLayout_167.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_10)
-        self.verticalLayout_100.addWidget(self.splitter_29)
-        self.gridLayout_116.addLayout(self.verticalLayout_100, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_136, 0, 1, 1, 1)
-        self.frame_137 = QtWidgets.QFrame(self.widget)
-        self.frame_137.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_137.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_137.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_137.setObjectName("frame_137")
-        self.gridLayout_117 = QtWidgets.QGridLayout(self.frame_137)
+        self.screen_test_Display_Answer_Qlabel_Answer1_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_5.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_5")
+        self.gridLayout_116.addWidget(self.splitter_81, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_95, 0, 4, 1, 1)
+        self.frame_96 = QtWidgets.QFrame(self.widget)
+        self.frame_96.setStyleSheet("background-color: rgb(255, 170, 0);")
+        self.frame_96.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_96.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_96.setObjectName("frame_96")
+        self.gridLayout_117 = QtWidgets.QGridLayout(self.frame_96)
         self.gridLayout_117.setObjectName("gridLayout_117")
-        self.verticalLayout_101 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_101.setObjectName("verticalLayout_101")
-        self.SCreen_Test_Qlabel_PAN_215 = QtWidgets.QLabel(self.frame_137)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_215.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_215.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_215.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_215.setObjectName("SCreen_Test_Qlabel_PAN_215")
-        self.verticalLayout_101.addWidget(self.SCreen_Test_Qlabel_PAN_215)
-        self.splitter_30 = QtWidgets.QSplitter(self.frame_137)
-        self.splitter_30.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_30.setObjectName("splitter_30")
-        self.layoutWidget_201 = QtWidgets.QWidget(self.splitter_30)
-        self.layoutWidget_201.setObjectName("layoutWidget_201")
-        self.horizontalLayout_168 = QtWidgets.QHBoxLayout(self.layoutWidget_201)
-        self.horizontalLayout_168.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_168.setObjectName("horizontalLayout_168")
-        self.SCreen_Test_Qlabel_PAN_216 = QtWidgets.QLabel(self.layoutWidget_201)
+        self.splitter_82 = QtWidgets.QSplitter(self.frame_96)
+        self.splitter_82.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_82.setObjectName("splitter_82")
+        self.SCreen_Test_Qlabel_PAN_242 = QtWidgets.QLabel(self.splitter_82)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_216.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_216.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_242.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_242.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_216.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_216.setObjectName("SCreen_Test_Qlabel_PAN_216")
-        self.horizontalLayout_168.addWidget(self.SCreen_Test_Qlabel_PAN_216)
-        self.screen_test_Display_Answer_QlabelAnswer1_21 = QtWidgets.QLabel(self.layoutWidget_201)
+        self.SCreen_Test_Qlabel_PAN_242.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_242.setObjectName("SCreen_Test_Qlabel_PAN_242")
+        self.SCreen_Test_Qlabel_PAN_243 = QtWidgets.QLabel(self.splitter_82)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_21.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_21.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_243.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_243.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer1_21.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_21.setObjectName("screen_test_Display_Answer_QlabelAnswer1_21")
-        self.horizontalLayout_168.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_21)
-        self.layoutWidget_202 = QtWidgets.QWidget(self.splitter_30)
-        self.layoutWidget_202.setObjectName("layoutWidget_202")
-        self.horizontalLayout_169 = QtWidgets.QHBoxLayout(self.layoutWidget_202)
-        self.horizontalLayout_169.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_169.setObjectName("horizontalLayout_169")
-        self.SCreen_Test_Qlabel_PAN_217 = QtWidgets.QLabel(self.layoutWidget_202)
+        self.SCreen_Test_Qlabel_PAN_243.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_243.setObjectName("SCreen_Test_Qlabel_PAN_243")
+        self.SCreen_Test_Qlabel_PAN_244 = QtWidgets.QLabel(self.splitter_82)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_217.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_217.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.SCreen_Test_Qlabel_PAN_244.setFont(font)
+        self.SCreen_Test_Qlabel_PAN_244.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_217.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_217.setObjectName("SCreen_Test_Qlabel_PAN_217")
-        self.horizontalLayout_169.addWidget(self.SCreen_Test_Qlabel_PAN_217)
-        self.screen_test_Display_Answer_QlabelAnswer2_21 = QtWidgets.QLabel(self.layoutWidget_202)
+        self.SCreen_Test_Qlabel_PAN_244.setAlignment(QtCore.Qt.AlignCenter)
+        self.SCreen_Test_Qlabel_PAN_244.setObjectName("SCreen_Test_Qlabel_PAN_244")
+        self.gridLayout_117.addWidget(self.splitter_82, 0, 0, 1, 1)
+        self.splitter_83 = QtWidgets.QSplitter(self.frame_96)
+        self.splitter_83.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_83.setObjectName("splitter_83")
+        self.screen_test_Display_Answer_Qlabel_Answer2_6 = QtWidgets.QLabel(self.splitter_83)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_21.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_21.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer2_6.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer2_6.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.screen_test_Display_Answer_QlabelAnswer2_21.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_21.setObjectName("screen_test_Display_Answer_QlabelAnswer2_21")
-        self.horizontalLayout_169.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_21)
-        self.layoutWidget_203 = QtWidgets.QWidget(self.splitter_30)
-        self.layoutWidget_203.setObjectName("layoutWidget_203")
-        self.horizontalLayout_170 = QtWidgets.QHBoxLayout(self.layoutWidget_203)
-        self.horizontalLayout_170.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_170.setObjectName("horizontalLayout_170")
-        self.SCreen_Test_Qlabel_PAN_218 = QtWidgets.QLabel(self.layoutWidget_203)
+        self.screen_test_Display_Answer_Qlabel_Answer2_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer2_6.setObjectName("screen_test_Display_Answer_Qlabel_Answer2_6")
+        self.screen_test_Display_Answer_Qlabel_Answer0_6 = QtWidgets.QLabel(self.splitter_83)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_218.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_218.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer0_6.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer0_6.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_218.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_218.setObjectName("SCreen_Test_Qlabel_PAN_218")
-        self.horizontalLayout_170.addWidget(self.SCreen_Test_Qlabel_PAN_218)
-        self.SCreen_Test_Qlabel_PAN_219 = QtWidgets.QLabel(self.layoutWidget_203)
+        self.screen_test_Display_Answer_Qlabel_Answer0_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer0_6.setObjectName("screen_test_Display_Answer_Qlabel_Answer0_6")
+        self.screen_test_Display_Answer_Qlabel_Answer1_6 = QtWidgets.QLabel(self.splitter_83)
         font = QtGui.QFont()
         font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_219.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_219.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
+        self.screen_test_Display_Answer_Qlabel_Answer1_6.setFont(font)
+        self.screen_test_Display_Answer_Qlabel_Answer1_6.setStyleSheet("QLabel {\n"
+" background-color: rgb(255, 170, 0);\n"
+" color: black;\n"
 " border-style: solid ;\n"
 " border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
+" border-color:  rgb(255, 170, 0);\n"
 " border-radius: 5px\n"
 "}  \n"
 "\n"
 "")
-        self.SCreen_Test_Qlabel_PAN_219.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_219.setObjectName("SCreen_Test_Qlabel_PAN_219")
-        self.horizontalLayout_170.addWidget(self.SCreen_Test_Qlabel_PAN_219)
-        self.verticalLayout_101.addWidget(self.splitter_30)
-        self.gridLayout_117.addLayout(self.verticalLayout_101, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_137, 0, 2, 1, 1)
-        self.frame_138 = QtWidgets.QFrame(self.widget)
-        self.frame_138.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_138.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_138.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_138.setObjectName("frame_138")
-        self.gridLayout_118 = QtWidgets.QGridLayout(self.frame_138)
-        self.gridLayout_118.setObjectName("gridLayout_118")
-        self.verticalLayout_102 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_102.setObjectName("verticalLayout_102")
-        self.SCreen_Test_Qlabel_PAN_220 = QtWidgets.QLabel(self.frame_138)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_220.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_220.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_220.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_220.setObjectName("SCreen_Test_Qlabel_PAN_220")
-        self.verticalLayout_102.addWidget(self.SCreen_Test_Qlabel_PAN_220)
-        self.splitter_31 = QtWidgets.QSplitter(self.frame_138)
-        self.splitter_31.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_31.setObjectName("splitter_31")
-        self.layoutWidget_204 = QtWidgets.QWidget(self.splitter_31)
-        self.layoutWidget_204.setObjectName("layoutWidget_204")
-        self.horizontalLayout_171 = QtWidgets.QHBoxLayout(self.layoutWidget_204)
-        self.horizontalLayout_171.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_171.setObjectName("horizontalLayout_171")
-        self.SCreen_Test_Qlabel_PAN_221 = QtWidgets.QLabel(self.layoutWidget_204)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_221.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_221.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_221.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_221.setObjectName("SCreen_Test_Qlabel_PAN_221")
-        self.horizontalLayout_171.addWidget(self.SCreen_Test_Qlabel_PAN_221)
-        self.screen_test_Display_Answer_QlabelAnswer1_22 = QtWidgets.QLabel(self.layoutWidget_204)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_22.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_22.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_22.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_22.setObjectName("screen_test_Display_Answer_QlabelAnswer1_22")
-        self.horizontalLayout_171.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_22)
-        self.layoutWidget_205 = QtWidgets.QWidget(self.splitter_31)
-        self.layoutWidget_205.setObjectName("layoutWidget_205")
-        self.horizontalLayout_172 = QtWidgets.QHBoxLayout(self.layoutWidget_205)
-        self.horizontalLayout_172.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_172.setObjectName("horizontalLayout_172")
-        self.SCreen_Test_Qlabel_PAN_222 = QtWidgets.QLabel(self.layoutWidget_205)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_222.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_222.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_222.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_222.setObjectName("SCreen_Test_Qlabel_PAN_222")
-        self.horizontalLayout_172.addWidget(self.SCreen_Test_Qlabel_PAN_222)
-        self.screen_test_Display_Answer_QlabelAnswer2_22 = QtWidgets.QLabel(self.layoutWidget_205)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_22.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_22.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_22.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_22.setObjectName("screen_test_Display_Answer_QlabelAnswer2_22")
-        self.horizontalLayout_172.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_22)
-        self.layoutWidget_206 = QtWidgets.QWidget(self.splitter_31)
-        self.layoutWidget_206.setObjectName("layoutWidget_206")
-        self.horizontalLayout_173 = QtWidgets.QHBoxLayout(self.layoutWidget_206)
-        self.horizontalLayout_173.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_173.setObjectName("horizontalLayout_173")
-        self.SCreen_Test_Qlabel_PAN_223 = QtWidgets.QLabel(self.layoutWidget_206)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_223.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_223.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_223.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_223.setObjectName("SCreen_Test_Qlabel_PAN_223")
-        self.horizontalLayout_173.addWidget(self.SCreen_Test_Qlabel_PAN_223)
-        self.screen_test_Display_Answer_QlabelAnswer3_11 = QtWidgets.QLabel(self.layoutWidget_206)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_11.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_11.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_11.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_11.setObjectName("screen_test_Display_Answer_QlabelAnswer3_11")
-        self.horizontalLayout_173.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_11)
-        self.verticalLayout_102.addWidget(self.splitter_31)
-        self.gridLayout_118.addLayout(self.verticalLayout_102, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_138, 0, 3, 1, 1)
-        self.frame_139 = QtWidgets.QFrame(self.widget)
-        self.frame_139.setStyleSheet("background-color: rgb(255, 170, 0);")
-        self.frame_139.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_139.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_139.setObjectName("frame_139")
-        self.gridLayout_119 = QtWidgets.QGridLayout(self.frame_139)
-        self.gridLayout_119.setObjectName("gridLayout_119")
-        self.verticalLayout_103 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_103.setObjectName("verticalLayout_103")
-        self.SCreen_Test_Qlabel_PAN_224 = QtWidgets.QLabel(self.frame_139)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_224.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_224.setStyleSheet("QLabel {\n"
-"    background-color:  rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:   rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_224.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_224.setObjectName("SCreen_Test_Qlabel_PAN_224")
-        self.verticalLayout_103.addWidget(self.SCreen_Test_Qlabel_PAN_224)
-        self.splitter_32 = QtWidgets.QSplitter(self.frame_139)
-        self.splitter_32.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_32.setObjectName("splitter_32")
-        self.layoutWidget_207 = QtWidgets.QWidget(self.splitter_32)
-        self.layoutWidget_207.setObjectName("layoutWidget_207")
-        self.horizontalLayout_174 = QtWidgets.QHBoxLayout(self.layoutWidget_207)
-        self.horizontalLayout_174.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_174.setObjectName("horizontalLayout_174")
-        self.SCreen_Test_Qlabel_PAN_225 = QtWidgets.QLabel(self.layoutWidget_207)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_225.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_225.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_225.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_225.setObjectName("SCreen_Test_Qlabel_PAN_225")
-        self.horizontalLayout_174.addWidget(self.SCreen_Test_Qlabel_PAN_225)
-        self.screen_test_Display_Answer_QlabelAnswer1_23 = QtWidgets.QLabel(self.layoutWidget_207)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_23.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_23.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_23.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_23.setObjectName("screen_test_Display_Answer_QlabelAnswer1_23")
-        self.horizontalLayout_174.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_23)
-        self.layoutWidget_208 = QtWidgets.QWidget(self.splitter_32)
-        self.layoutWidget_208.setObjectName("layoutWidget_208")
-        self.horizontalLayout_175 = QtWidgets.QHBoxLayout(self.layoutWidget_208)
-        self.horizontalLayout_175.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_175.setObjectName("horizontalLayout_175")
-        self.SCreen_Test_Qlabel_PAN_226 = QtWidgets.QLabel(self.layoutWidget_208)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_226.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_226.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_226.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_226.setObjectName("SCreen_Test_Qlabel_PAN_226")
-        self.horizontalLayout_175.addWidget(self.SCreen_Test_Qlabel_PAN_226)
-        self.screen_test_Display_Answer_QlabelAnswer2_23 = QtWidgets.QLabel(self.layoutWidget_208)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_23.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_23.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_23.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_23.setObjectName("screen_test_Display_Answer_QlabelAnswer2_23")
-        self.horizontalLayout_175.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_23)
-        self.layoutWidget_209 = QtWidgets.QWidget(self.splitter_32)
-        self.layoutWidget_209.setObjectName("layoutWidget_209")
-        self.horizontalLayout_176 = QtWidgets.QHBoxLayout(self.layoutWidget_209)
-        self.horizontalLayout_176.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_176.setObjectName("horizontalLayout_176")
-        self.SCreen_Test_Qlabel_PAN_227 = QtWidgets.QLabel(self.layoutWidget_209)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_227.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_227.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_227.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_227.setObjectName("SCreen_Test_Qlabel_PAN_227")
-        self.horizontalLayout_176.addWidget(self.SCreen_Test_Qlabel_PAN_227)
-        self.SCreen_Test_Qlabel_PAN_228 = QtWidgets.QLabel(self.layoutWidget_209)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_228.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_228.setStyleSheet("QLabel {\n"
-"    background-color:background-color: rgb(255, 170, 0);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color: background-color: rgb(255, 170, 0);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_228.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_228.setObjectName("SCreen_Test_Qlabel_PAN_228")
-        self.horizontalLayout_176.addWidget(self.SCreen_Test_Qlabel_PAN_228)
-        self.verticalLayout_103.addWidget(self.splitter_32)
-        self.gridLayout_119.addLayout(self.verticalLayout_103, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_139, 0, 4, 1, 1)
-        self.frame_140 = QtWidgets.QFrame(self.widget)
-        self.frame_140.setStyleSheet("background-color: rgb(85, 170, 255);")
-        self.frame_140.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_140.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_140.setObjectName("frame_140")
-        self.gridLayout_120 = QtWidgets.QGridLayout(self.frame_140)
-        self.gridLayout_120.setObjectName("gridLayout_120")
-        self.verticalLayout_104 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_104.setObjectName("verticalLayout_104")
-        self.SCreen_Test_Qlabel_PAN_229 = QtWidgets.QLabel(self.frame_140)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_229.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_229.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_229.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_229.setObjectName("SCreen_Test_Qlabel_PAN_229")
-        self.verticalLayout_104.addWidget(self.SCreen_Test_Qlabel_PAN_229)
-        self.splitter_33 = QtWidgets.QSplitter(self.frame_140)
-        self.splitter_33.setOrientation(QtCore.Qt.Vertical)
-        self.splitter_33.setObjectName("splitter_33")
-        self.layoutWidget_210 = QtWidgets.QWidget(self.splitter_33)
-        self.layoutWidget_210.setObjectName("layoutWidget_210")
-        self.horizontalLayout_177 = QtWidgets.QHBoxLayout(self.layoutWidget_210)
-        self.horizontalLayout_177.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_177.setObjectName("horizontalLayout_177")
-        self.SCreen_Test_Qlabel_PAN_230 = QtWidgets.QLabel(self.layoutWidget_210)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_230.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_230.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_230.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_230.setObjectName("SCreen_Test_Qlabel_PAN_230")
-        self.horizontalLayout_177.addWidget(self.SCreen_Test_Qlabel_PAN_230)
-        self.screen_test_Display_Answer_QlabelAnswer1_24 = QtWidgets.QLabel(self.layoutWidget_210)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer1_24.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer1_24.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer1_24.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer1_24.setObjectName("screen_test_Display_Answer_QlabelAnswer1_24")
-        self.horizontalLayout_177.addWidget(self.screen_test_Display_Answer_QlabelAnswer1_24)
-        self.layoutWidget_211 = QtWidgets.QWidget(self.splitter_33)
-        self.layoutWidget_211.setObjectName("layoutWidget_211")
-        self.horizontalLayout_178 = QtWidgets.QHBoxLayout(self.layoutWidget_211)
-        self.horizontalLayout_178.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_178.setObjectName("horizontalLayout_178")
-        self.SCreen_Test_Qlabel_PAN_231 = QtWidgets.QLabel(self.layoutWidget_211)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_231.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_231.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_231.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_231.setObjectName("SCreen_Test_Qlabel_PAN_231")
-        self.horizontalLayout_178.addWidget(self.SCreen_Test_Qlabel_PAN_231)
-        self.screen_test_Display_Answer_QlabelAnswer2_24 = QtWidgets.QLabel(self.layoutWidget_211)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer2_24.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer2_24.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer2_24.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer2_24.setObjectName("screen_test_Display_Answer_QlabelAnswer2_24")
-        self.horizontalLayout_178.addWidget(self.screen_test_Display_Answer_QlabelAnswer2_24)
-        self.layoutWidget_212 = QtWidgets.QWidget(self.splitter_33)
-        self.layoutWidget_212.setObjectName("layoutWidget_212")
-        self.horizontalLayout_179 = QtWidgets.QHBoxLayout(self.layoutWidget_212)
-        self.horizontalLayout_179.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_179.setObjectName("horizontalLayout_179")
-        self.SCreen_Test_Qlabel_PAN_232 = QtWidgets.QLabel(self.layoutWidget_212)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.SCreen_Test_Qlabel_PAN_232.setFont(font)
-        self.SCreen_Test_Qlabel_PAN_232.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.SCreen_Test_Qlabel_PAN_232.setAlignment(QtCore.Qt.AlignCenter)
-        self.SCreen_Test_Qlabel_PAN_232.setObjectName("SCreen_Test_Qlabel_PAN_232")
-        self.horizontalLayout_179.addWidget(self.SCreen_Test_Qlabel_PAN_232)
-        self.screen_test_Display_Answer_QlabelAnswer3_12 = QtWidgets.QLabel(self.layoutWidget_212)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.screen_test_Display_Answer_QlabelAnswer3_12.setFont(font)
-        self.screen_test_Display_Answer_QlabelAnswer3_12.setStyleSheet("QLabel {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    color: black;\n"
-" border-style: solid ;\n"
-" border-width: 5px;\n"
-" border-color:  rgb(85, 170, 255);\n"
-" border-radius: 5px\n"
-"}  \n"
-"\n"
-"")
-        self.screen_test_Display_Answer_QlabelAnswer3_12.setAlignment(QtCore.Qt.AlignCenter)
-        self.screen_test_Display_Answer_QlabelAnswer3_12.setObjectName("screen_test_Display_Answer_QlabelAnswer3_12")
-        self.horizontalLayout_179.addWidget(self.screen_test_Display_Answer_QlabelAnswer3_12)
-        self.verticalLayout_104.addWidget(self.splitter_33)
-        self.gridLayout_120.addLayout(self.verticalLayout_104, 0, 0, 1, 1)
-        self.gridLayout_114.addWidget(self.frame_140, 0, 5, 1, 1)
-        self.verticalLayout_105.addLayout(self.gridLayout_114)
+        self.screen_test_Display_Answer_Qlabel_Answer1_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.screen_test_Display_Answer_Qlabel_Answer1_6.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_6")
+        self.gridLayout_117.addWidget(self.splitter_83, 0, 1, 1, 1)
+        self.gridLayout_126.addWidget(self.frame_96, 0, 5, 1, 1)
+        self.gridLayout_142.addLayout(self.gridLayout_126, 0, 0, 1, 1)
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Answer)
         self.stackedWidget.addWidget(self.screen_Test)
         self.screen_Setting = QtWidgets.QWidget()
@@ -6015,9 +5173,9 @@ class Ui_MainWindow(object):
         self.tabWidget = QtWidgets.QTabWidget(self.screen_Setting_Home)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1024, 600))
         self.tabWidget.setObjectName("tabWidget")
-        self.widget2 = QtWidgets.QWidget()
-        self.widget2.setObjectName("widget2")
-        self.layoutWidget_59 = QtWidgets.QWidget(self.widget2)
+        self.widget1 = QtWidgets.QWidget()
+        self.widget1.setObjectName("widget1")
+        self.layoutWidget_59 = QtWidgets.QWidget(self.widget1)
         self.layoutWidget_59.setGeometry(QtCore.QRect(230, 510, 569, 61))
         self.layoutWidget_59.setObjectName("layoutWidget_59")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget_59)
@@ -6041,9 +5199,9 @@ class Ui_MainWindow(object):
 "    background-color: rgb(85, 170, 255);\n"
 "}\n"
 "")
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("Icon/thực hành1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonCreatePractice.setIcon(icon10)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap("Icon/thực hành1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonCreatePractice.setIcon(icon13)
         self.screen_Setting_Home_ButtonCreatePractice.setIconSize(QtCore.QSize(50, 50))
         self.screen_Setting_Home_ButtonCreatePractice.setCheckable(False)
         self.screen_Setting_Home_ButtonCreatePractice.setObjectName("screen_Setting_Home_ButtonCreatePractice")
@@ -6066,9 +5224,9 @@ class Ui_MainWindow(object):
 "    background-color: rgb(85, 170, 255);\n"
 "}\n"
 "")
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("Icon/test1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonCreateTest.setIcon(icon11)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("Icon/test1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonCreateTest.setIcon(icon14)
         self.screen_Setting_Home_ButtonCreateTest.setIconSize(QtCore.QSize(50, 50))
         self.screen_Setting_Home_ButtonCreateTest.setCheckable(False)
         self.screen_Setting_Home_ButtonCreateTest.setObjectName("screen_Setting_Home_ButtonCreateTest")
@@ -6089,9 +5247,9 @@ class Ui_MainWindow(object):
 "    background-color: rgb(85, 170, 255);\n"
 "}\n"
 "")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("Icon/dice_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonRamdom.setIcon(icon12)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("Icon/dice_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonRamdom.setIcon(icon15)
         self.screen_Setting_Home_ButtonRamdom.setIconSize(QtCore.QSize(50, 50))
         self.screen_Setting_Home_ButtonRamdom.setObjectName("screen_Setting_Home_ButtonRamdom")
         self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonRamdom)
@@ -6115,8 +5273,8 @@ class Ui_MainWindow(object):
         self.screen_Setting_Home_ButtonExit.setIconSize(QtCore.QSize(50, 50))
         self.screen_Setting_Home_ButtonExit.setObjectName("screen_Setting_Home_ButtonExit")
         self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonExit)
-        self.layoutWidget4 = QtWidgets.QWidget(self.widget2)
-        self.layoutWidget4.setGeometry(QtCore.QRect(20, 10, 981, 491))
+        self.layoutWidget4 = QtWidgets.QWidget(self.widget1)
+        self.layoutWidget4.setGeometry(QtCore.QRect(10, 0, 1001, 501))
         self.layoutWidget4.setObjectName("layoutWidget4")
         self.gridLayout_37 = QtWidgets.QGridLayout(self.layoutWidget4)
         self.gridLayout_37.setContentsMargins(0, 0, 0, 0)
@@ -7549,7 +6707,7 @@ class Ui_MainWindow(object):
         self.gridLayout_12.addWidget(self.label_10, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_3, 0, 2, 1, 1)
         self.gridLayout_37.addLayout(self.gridLayout_3, 0, 0, 1, 1)
-        self.tabWidget.addTab(self.widget2, "")
+        self.tabWidget.addTab(self.widget1, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.tabWidget.addTab(self.tab_2, "")
@@ -7591,15 +6749,15 @@ class Ui_MainWindow(object):
         self.screen_Setting_practice_ButtonExit.setCheckable(False)
         self.screen_Setting_practice_ButtonExit.setObjectName("screen_Setting_practice_ButtonExit")
         self.horizontalLayout_18.addWidget(self.screen_Setting_practice_ButtonExit)
-        self.widget3 = QtWidgets.QWidget(self.screen_Setting_practice)
-        self.widget3.setGeometry(QtCore.QRect(10, 10, 1001, 511))
-        self.widget3.setObjectName("widget3")
-        self.gridLayout_82 = QtWidgets.QGridLayout(self.widget3)
+        self.layoutWidget5 = QtWidgets.QWidget(self.screen_Setting_practice)
+        self.layoutWidget5.setGeometry(QtCore.QRect(10, 10, 1001, 511))
+        self.layoutWidget5.setObjectName("layoutWidget5")
+        self.gridLayout_82 = QtWidgets.QGridLayout(self.layoutWidget5)
         self.gridLayout_82.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_82.setObjectName("gridLayout_82")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.frame_1 = QtWidgets.QFrame(self.widget3)
+        self.frame_1 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_1.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_1.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_1.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7624,7 +6782,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_32.addWidget(self.screen_Setting_practice_label_1)
         self.gridLayout_4.addLayout(self.horizontalLayout_32, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_1)
-        self.frame_27 = QtWidgets.QFrame(self.widget3)
+        self.frame_27 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_27.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_27.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_27.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7649,7 +6807,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_33.addWidget(self.screen_Setting_practice_label_2)
         self.gridLayout_8.addLayout(self.horizontalLayout_33, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_27)
-        self.frame_28 = QtWidgets.QFrame(self.widget3)
+        self.frame_28 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_28.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_28.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_28.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7674,7 +6832,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_62.addWidget(self.screen_Setting_practice_label_3)
         self.gridLayout_46.addLayout(self.horizontalLayout_62, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_28)
-        self.frame_29 = QtWidgets.QFrame(self.widget3)
+        self.frame_29 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_29.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_29.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_29.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7702,7 +6860,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_9, 0, 0, 1, 1)
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
-        self.frame_30 = QtWidgets.QFrame(self.widget3)
+        self.frame_30 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_30.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_30.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_30.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7727,7 +6885,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_64.addWidget(self.screen_Setting_practice_label_5)
         self.gridLayout_62.addLayout(self.horizontalLayout_64, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_30)
-        self.frame_32 = QtWidgets.QFrame(self.widget3)
+        self.frame_32 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_32.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_32.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_32.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7752,7 +6910,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_66.addWidget(self.screen_Setting_practice_label_7)
         self.gridLayout_64.addLayout(self.horizontalLayout_66, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_32)
-        self.frame_31 = QtWidgets.QFrame(self.widget3)
+        self.frame_31 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_31.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7777,7 +6935,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_65.addWidget(self.screen_Setting_practice_label_6)
         self.gridLayout_63.addLayout(self.horizontalLayout_65, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_31)
-        self.frame_33 = QtWidgets.QFrame(self.widget3)
+        self.frame_33 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_33.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_33.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_33.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7805,7 +6963,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_13, 1, 0, 1, 1)
         self.horizontalLayout_14 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
-        self.frame_34 = QtWidgets.QFrame(self.widget3)
+        self.frame_34 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_34.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_34.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_34.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7830,7 +6988,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_68.addWidget(self.screen_Setting_practice_label_9)
         self.gridLayout_66.addLayout(self.horizontalLayout_68, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_34)
-        self.frame_35 = QtWidgets.QFrame(self.widget3)
+        self.frame_35 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_35.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7855,7 +7013,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_69.addWidget(self.screen_Setting_practice_label_10)
         self.gridLayout_67.addLayout(self.horizontalLayout_69, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_35)
-        self.frame_36 = QtWidgets.QFrame(self.widget3)
+        self.frame_36 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_36.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7880,7 +7038,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_70.addWidget(self.screen_Setting_practice_label_11)
         self.gridLayout_68.addLayout(self.horizontalLayout_70, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_36)
-        self.frame_37 = QtWidgets.QFrame(self.widget3)
+        self.frame_37 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_37.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_37.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_37.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7908,7 +7066,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_14, 2, 0, 1, 1)
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        self.frame_38 = QtWidgets.QFrame(self.widget3)
+        self.frame_38 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_38.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_38.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_38.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7933,7 +7091,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_72.addWidget(self.screen_Setting_practice_label_13)
         self.gridLayout_70.addLayout(self.horizontalLayout_72, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_38)
-        self.frame_39 = QtWidgets.QFrame(self.widget3)
+        self.frame_39 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_39.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_39.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_39.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7958,7 +7116,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_73.addWidget(self.screen_Setting_practice_label_14)
         self.gridLayout_71.addLayout(self.horizontalLayout_73, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_39)
-        self.frame_40 = QtWidgets.QFrame(self.widget3)
+        self.frame_40 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_40.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_40.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_40.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7983,7 +7141,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_74.addWidget(self.screen_Setting_practice_label_15)
         self.gridLayout_72.addLayout(self.horizontalLayout_74, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_40)
-        self.frame_41 = QtWidgets.QFrame(self.widget3)
+        self.frame_41 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_41.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_41.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_41.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8011,7 +7169,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_15, 3, 0, 1, 1)
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
-        self.frame_42 = QtWidgets.QFrame(self.widget3)
+        self.frame_42 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_42.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_42.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_42.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8036,7 +7194,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_76.addWidget(self.screen_Setting_practice_label_17)
         self.gridLayout_74.addLayout(self.horizontalLayout_76, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_42)
-        self.frame_43 = QtWidgets.QFrame(self.widget3)
+        self.frame_43 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_43.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8061,7 +7219,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_77.addWidget(self.screen_Setting_practice_label_18)
         self.gridLayout_75.addLayout(self.horizontalLayout_77, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_43)
-        self.frame_44 = QtWidgets.QFrame(self.widget3)
+        self.frame_44 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_44.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_44.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8086,7 +7244,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_78.addWidget(self.screen_Setting_practice_label_19)
         self.gridLayout_76.addLayout(self.horizontalLayout_78, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_44)
-        self.frame_45 = QtWidgets.QFrame(self.widget3)
+        self.frame_45 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_45.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_45.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_45.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8114,7 +7272,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_16, 4, 0, 1, 1)
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
-        self.frame_46 = QtWidgets.QFrame(self.widget3)
+        self.frame_46 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_46.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_46.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_46.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8139,7 +7297,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_80.addWidget(self.screen_Setting_practice_label_21)
         self.gridLayout_78.addLayout(self.horizontalLayout_80, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_46)
-        self.frame_47 = QtWidgets.QFrame(self.widget3)
+        self.frame_47 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_47.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_47.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8164,7 +7322,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_81.addWidget(self.screen_Setting_practice_label_22)
         self.gridLayout_79.addLayout(self.horizontalLayout_81, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_47)
-        self.frame_48 = QtWidgets.QFrame(self.widget3)
+        self.frame_48 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_48.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_48.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8189,7 +7347,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_82.addWidget(self.screen_Setting_practice_label_23)
         self.gridLayout_80.addLayout(self.horizontalLayout_82, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_48)
-        self.frame_49 = QtWidgets.QFrame(self.widget3)
+        self.frame_49 = QtWidgets.QFrame(self.layoutWidget5)
         self.frame_49.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_49.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_49.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -8230,6 +7388,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget_2.setCurrentIndex(3)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -8303,181 +7462,161 @@ class Ui_MainWindow(object):
         self.screen_Test_Display_Choose_radioButton_5.setText(_translate("MainWindow", "Bình Thường"))
         self.screen_Test_Display_Choose_radioButton_6.setText(_translate("MainWindow", "Điện áp"))
         self.screen_Test_Display_Choose_lineEdit.setPlaceholderText(_translate("MainWindow", "Điện áp đo được"))
-        self.screen_Test_Display_Answer_Exit.setText(_translate("MainWindow", "Kết thúc"))
-        self.pushButton.setText(_translate("MainWindow", "Số câu đúng"))
-        self.pushButton_2.setText(_translate("MainWindow", "  Số câu sai"))
+        self.pushButton.setText(_translate("MainWindow", "Số câu đúng:"))
+        self.pushButton_2.setText(_translate("MainWindow", " Số câu sai:"))
         self.screen_Test_Display_Answer_label_AnswerFalse.setText(_translate("MainWindow", "Chưa có"))
+        self.pushButton_3.setText(_translate("MainWindow", " Số chưa chọn"))
+        self.screen_Test_Display_Answer_label_AnswerNot.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_Test_Display_Answer_Exit.setText(_translate("MainWindow", "Kết thúc"))
         self.screen_Test_Display_Answer_label_AnswerTrue.setText(_translate("MainWindow", "Chưa có"))
-        self.screen_Test_Display_Answer_label_Name.setText(_translate("MainWindow", "Nguyễn Quang Biên"))
-        self.screen_Test_Display_Answer_label_ID.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_51.setText(_translate("MainWindow", "PAN 1"))
+        self.pushButton_6.setText(_translate("MainWindow", "Sinh viên:"))
+        self.screen_Test_Display_Answer_label_Name.setText(_translate("MainWindow", "Chưa điền thông tin"))
+        self.pushButton_7.setText(_translate("MainWindow", "Mã sinh viên:"))
+        self.screen_Test_Display_Answer_label_ID.setText(_translate("MainWindow", "Chưa điền thông tin"))
+        self.SCreen_Test_Qlabel_PAN_245.setText(_translate("MainWindow", "PAN 07:"))
+        self.SCreen_Test_Qlabel_PAN_246.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_247.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_7.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_7.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_7.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_248.setText(_translate("MainWindow", "PAN 08:"))
+        self.SCreen_Test_Qlabel_PAN_249.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_250.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_8.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_8.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_8.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_251.setText(_translate("MainWindow", "PAN 09:"))
+        self.SCreen_Test_Qlabel_PAN_252.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_253.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_9.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_9.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_9.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_254.setText(_translate("MainWindow", "PAN 10:"))
+        self.SCreen_Test_Qlabel_PAN_255.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_256.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_10.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_10.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_10.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_257.setText(_translate("MainWindow", "PAN 11:"))
+        self.SCreen_Test_Qlabel_PAN_258.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_259.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_11.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_11.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_11.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_260.setText(_translate("MainWindow", "PAN 12:"))
+        self.SCreen_Test_Qlabel_PAN_261.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_262.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_12.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_12.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_12.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_263.setText(_translate("MainWindow", "PAN 13:"))
+        self.SCreen_Test_Qlabel_PAN_264.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_265.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_13.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_13.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_13.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_266.setText(_translate("MainWindow", "PAN 14:"))
+        self.SCreen_Test_Qlabel_PAN_267.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_268.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_14.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_14.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_14.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_269.setText(_translate("MainWindow", "PAN 15:"))
+        self.SCreen_Test_Qlabel_PAN_270.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_271.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_15.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_15.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_15.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_272.setText(_translate("MainWindow", "PAN 16:"))
+        self.SCreen_Test_Qlabel_PAN_273.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_274.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_16.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_16.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_16.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_275.setText(_translate("MainWindow", "PAN 17:"))
+        self.SCreen_Test_Qlabel_PAN_276.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_277.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_17.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_17.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_17.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_278.setText(_translate("MainWindow", "PAN 18:"))
+        self.SCreen_Test_Qlabel_PAN_279.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_280.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_18.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_18.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_18.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_281.setText(_translate("MainWindow", "PAN 19:"))
+        self.SCreen_Test_Qlabel_PAN_282.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_283.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_19.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_19.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_19.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_284.setText(_translate("MainWindow", "PAN 20:"))
+        self.SCreen_Test_Qlabel_PAN_285.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_286.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_20.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_20.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_20.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_287.setText(_translate("MainWindow", "PAN 21:"))
+        self.SCreen_Test_Qlabel_PAN_288.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_289.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_21.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_21.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_21.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_290.setText(_translate("MainWindow", "PAN 22:"))
+        self.SCreen_Test_Qlabel_PAN_291.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_292.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_22.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_22.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_22.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_293.setText(_translate("MainWindow", "PAN 23:"))
+        self.SCreen_Test_Qlabel_PAN_294.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_295.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_23.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_23.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_23.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_296.setText(_translate("MainWindow", "PAN 24:"))
+        self.SCreen_Test_Qlabel_PAN_297.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_298.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_24.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_24.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_24.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_51.setText(_translate("MainWindow", "PAN 01:"))
         self.SCreen_Test_Qlabel_PAN_50.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_1.setText(_translate("MainWindow", "Chưa có"))
         self.SCreen_Test_Qlabel_PAN_79.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_1.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_81.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_1.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_144.setText(_translate("MainWindow", "PAN 2"))
-        self.SCreen_Test_Qlabel_PAN_84.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_2.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_86.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_2.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_88.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_89.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_52.setText(_translate("MainWindow", "PAN 3"))
-        self.SCreen_Test_Qlabel_PAN_80.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_3.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_82.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_3.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_83.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_2.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_145.setText(_translate("MainWindow", "PAN 4"))
-        self.SCreen_Test_Qlabel_PAN_85.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_4.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_87.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_4.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_139.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_140.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_141.setText(_translate("MainWindow", "PAN 5"))
-        self.SCreen_Test_Qlabel_PAN_142.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_5.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_143.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_5.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_146.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_3.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_147.setText(_translate("MainWindow", "PAN 6"))
-        self.SCreen_Test_Qlabel_PAN_148.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_6.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_149.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_6.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_150.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_151.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_152.setText(_translate("MainWindow", "PAN 7"))
-        self.SCreen_Test_Qlabel_PAN_153.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_7.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_154.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_7.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_155.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_156.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_157.setText(_translate("MainWindow", "PAN 8"))
-        self.SCreen_Test_Qlabel_PAN_158.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_8.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_159.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_8.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_160.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_4.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_161.setText(_translate("MainWindow", "PAN 9"))
-        self.SCreen_Test_Qlabel_PAN_162.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_9.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_163.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_9.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_164.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_165.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_166.setText(_translate("MainWindow", "PAN 10"))
-        self.SCreen_Test_Qlabel_PAN_167.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_10.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_168.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_10.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_169.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_5.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_170.setText(_translate("MainWindow", "PAN 11"))
-        self.SCreen_Test_Qlabel_PAN_171.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_11.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_172.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_11.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_173.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_174.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_175.setText(_translate("MainWindow", "PAN 12"))
-        self.SCreen_Test_Qlabel_PAN_176.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_12.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_177.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_12.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_178.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_6.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_179.setText(_translate("MainWindow", "PAN 13"))
-        self.SCreen_Test_Qlabel_PAN_180.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_13.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_181.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_13.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_182.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_7.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_183.setText(_translate("MainWindow", "PAN 14"))
-        self.SCreen_Test_Qlabel_PAN_184.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_14.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_185.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_14.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_186.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_187.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_188.setText(_translate("MainWindow", "PAN 15"))
-        self.SCreen_Test_Qlabel_PAN_189.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_15.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_190.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_15.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_191.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_8.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_192.setText(_translate("MainWindow", "PAN 16"))
-        self.SCreen_Test_Qlabel_PAN_193.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_16.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_194.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_16.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_195.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_196.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_197.setText(_translate("MainWindow", "PAN 17"))
-        self.SCreen_Test_Qlabel_PAN_198.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_17.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_199.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_17.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_200.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_9.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_201.setText(_translate("MainWindow", "PAN 18"))
-        self.SCreen_Test_Qlabel_PAN_202.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_18.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_203.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_18.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_204.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_205.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_206.setText(_translate("MainWindow", "PAN 19"))
-        self.SCreen_Test_Qlabel_PAN_207.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_19.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_208.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_19.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_209.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_210.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_211.setText(_translate("MainWindow", "PAN 20"))
-        self.SCreen_Test_Qlabel_PAN_212.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_20.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_213.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_20.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_214.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_10.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_215.setText(_translate("MainWindow", "PAN 21"))
-        self.SCreen_Test_Qlabel_PAN_216.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_21.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_217.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_21.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_218.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_219.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_220.setText(_translate("MainWindow", "PAN 22"))
-        self.SCreen_Test_Qlabel_PAN_221.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_22.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_222.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_22.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_223.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_11.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_224.setText(_translate("MainWindow", "PAN 23"))
-        self.SCreen_Test_Qlabel_PAN_225.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_23.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_226.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_23.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_227.setText(_translate("MainWindow", "Kết quả:"))
-        self.SCreen_Test_Qlabel_PAN_228.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_229.setText(_translate("MainWindow", "PAN 24"))
-        self.SCreen_Test_Qlabel_PAN_230.setText(_translate("MainWindow", "Đáp án:"))
-        self.screen_test_Display_Answer_QlabelAnswer1_24.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_231.setText(_translate("MainWindow", "Bài làm:"))
-        self.screen_test_Display_Answer_QlabelAnswer2_24.setText(_translate("MainWindow", "Chưa có"))
-        self.SCreen_Test_Qlabel_PAN_232.setText(_translate("MainWindow", "Kết quả:"))
-        self.screen_test_Display_Answer_QlabelAnswer3_12.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_1.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_1.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_1.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_234.setText(_translate("MainWindow", "PAN 02:"))
+        self.SCreen_Test_Qlabel_PAN_235.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_236.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_2.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_2.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_2.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_52.setText(_translate("MainWindow", "PAN 03:"))
+        self.SCreen_Test_Qlabel_PAN_53.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_80.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_3.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_3.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_3.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_237.setText(_translate("MainWindow", "PAN 04:"))
+        self.SCreen_Test_Qlabel_PAN_238.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_239.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_4.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_4.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_4.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_82.setText(_translate("MainWindow", "PAN 05:"))
+        self.SCreen_Test_Qlabel_PAN_240.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_241.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_5.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_5.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_5.setText(_translate("MainWindow", "Chưa có"))
+        self.SCreen_Test_Qlabel_PAN_242.setText(_translate("MainWindow", "PAN 06:"))
+        self.SCreen_Test_Qlabel_PAN_243.setText(_translate("MainWindow", "Đáp án:"))
+        self.SCreen_Test_Qlabel_PAN_244.setText(_translate("MainWindow", "Bài làm:"))
+        self.screen_test_Display_Answer_Qlabel_Answer2_6.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer0_6.setText(_translate("MainWindow", "Chưa có"))
+        self.screen_test_Display_Answer_Qlabel_Answer1_6.setText(_translate("MainWindow", "Chưa có"))
         self.screen_Setting_Home_ButtonCreatePractice.setText(_translate("MainWindow", " Tạo bài thực hành"))
         self.screen_Setting_Home_ButtonCreateTest.setText(_translate("MainWindow", " Tạo bài kiểm tra"))
         self.screen_Setting_Home_ButtonRamdom.setText(_translate("MainWindow", "Tạo bài ngẫu nhiên"))
@@ -8674,7 +7813,7 @@ class Ui_MainWindow(object):
         self.screen_setting_Home_ComboBox_3.setItemText(5, _translate("MainWindow", "Điện áp"))
         self.screen_setting_Home_lineEdit_3.setPlaceholderText(_translate("MainWindow", "Nhập điện áp"))
         self.label_10.setText(_translate("MainWindow", "PAN 3"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget2), _translate("MainWindow", "Tạo bài"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget1), _translate("MainWindow", "Tạo bài"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Server"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Thiết bị"))
         self.screen_Setting_practice_ButtonExit.setText(_translate("MainWindow", "Quay lại"))

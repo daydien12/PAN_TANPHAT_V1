@@ -3,14 +3,17 @@ import os
 import glob
 import json
 import socket
+
 from pdf2image import convert_from_path
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QSettings, QPoint
 from MQTT_TEST import Ui_MainWindow
-import paho.mqtt.client as mqtt  # pip install paho-mqtt
+
+import paho.mqtt.client as mqtt
 from numpy import random
+import numpy as ArrayAnswer
 class MainWindow:
     def __init__(self, parent=None):
         super().__init__()
@@ -42,15 +45,18 @@ class MainWindow:
 
         # -----------(Biến tên giao diện Test)-----------------#
         self.ScreenTest_value_Qlabel_ArrayNameChoose = ["Chưa chọn","Hở mạch", "Chập chờn", "Chạm đất","Nối dương", "Bình thường"]
-        self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_Qlabel_ArrayGetNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_ArrayInforAnswer = ["Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có"]
+        self.ScreenTest_value_ArrayShowText = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
         self.ScreenTest_value_Qlabel_FlagButtonClick = 0
         self.ScreenTest_value_NameStudent = ""
         self.ScreenTest_value_NameITStudent = ""
         self.ScreenTest_value_NameClassStudent = ""
         self.uic.screen_Test_Display_Choose_lineEdit.setEnabled(0)
         # -----------(Biến tên giao diện setting)-----------------#
-        self.ScreenSetting_value_ArrayGetCurrentText = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        self.ScreenSetting_value_ArrayGetCurrentIndex = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenSetting_value_ArrayGetCurrentText = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+        self.ScreenSetting_value_ArrayGetCurrentIndex = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 
 
         # Khối button của màn hình Home
@@ -62,7 +68,7 @@ class MainWindow:
         self.uic.Learn_Button_Back.clicked.connect(self.Learn_Button_Back)
         self.uic.Learn_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.Learn_Button_Next.clicked.connect(self.Learn_Button_Next)
-        self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
+        #self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
         # Khối button của màn hình Test
         self.uic.screen_Test_Display_InputInfor_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam)
@@ -105,7 +111,7 @@ class MainWindow:
         self.uic.screen_Setting_Home_ButtonRamdom.clicked.connect(self.screen_Setting_RamdomExercise)
         self.uic.screen_Setting_Home_ButtonExit.clicked.connect(self.Show_Screen_Home)
 
-        self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Setting)
+        self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Home)
 
         self.uic.screen_setting_Home_ComboBox_1.activated.connect(self.screen_Setting_Check_selectVoltage_1)
         self.uic.screen_setting_Home_ComboBox_2.activated.connect(self.screen_Setting_Check_selectVoltage_2)
@@ -133,8 +139,6 @@ class MainWindow:
         self.uic.screen_setting_Home_ComboBox_24.activated.connect(self.screen_Setting_Check_selectVoltage_24)
 
         #self.Mqtt_Run()
-
-
 
     def show(self):
         self.main_win.show()
@@ -181,6 +185,7 @@ class MainWindow:
     def Show_Screen_Home(self):
         Count_next_image = 1
         self.uic.stackedWidget.setCurrentWidget(self.uic.HOME)
+
     def Show_Screen_Learn(self):
         self.Learn_Get_Number_File()
         self.Learn_Show_Imgae_Learn()
@@ -188,7 +193,9 @@ class MainWindow:
 
     def Show_Screen_Test(self, stt):
         self.Sys_value_ChooseScreenTest = stt
-        self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_Qlabel_ArrayGetNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.screen_Setting_Get_Select_CreateExercise()
         self.screen_Test_Display_ClearChoose()
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Test)
         self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_InputInfor)
@@ -199,18 +206,15 @@ class MainWindow:
             self.uic.screen_test_Qlineedit_IDclass_3.setEnabled(1)
             self.uic.screen_test_Qlineedit_IDclass_3.clear()
         else:
-            print("vao")
             self.uic.screen_Test_Display_InputInfor_Button_Exit.setEnabled(False)
             self.uic.screen_test_Qlineedit_IDclass_3.setPlaceholderText("")
             self.uic.screen_test_Qlineedit_IDclass_3.setEnabled(0)
             self.uic.screen_test_Qlineedit_IDclass_3.clear()
 
-
-
     def Show_Screen_Setting(self):
+        self.screen_Setting_Clear_CreateExercise(4)
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Setting)
         self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_Home)
-        self.screen_Setting_Clear_CreateExercise(4)
 
     def Show_Screen_Information(self):
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Information)
@@ -253,18 +257,25 @@ class MainWindow:
 
 #-----------------------------------------(Giao Diện kiểm tra)-----------------------------------------------------------------------------#
     def screen_Test_Show_Display_Exam(self):
-        self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username_3.text()
-        self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent_3.text()
+        #self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username_3.text()
+        #self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent_3.text()
         self.ScreenTest_value_NameClassStudent = self.uic.screen_test_Qlineedit_IDclass_3.text()
+
+        if(len(self.uic.screen_test_Qlineedit_Username_3.text()) > 0):
+            self.ScreenTest_value_ArrayInforAnswer[0] = self.uic.screen_test_Qlineedit_Username_3.text()
+        else:
+            self.ScreenTest_value_ArrayInforAnswer[0] = "Chưa điền thông tin"
+        if (len(self.uic.screen_test_Qlineedit_IDStudent_3.text()) > 0):
+            self.ScreenTest_value_ArrayInforAnswer[1] = self.uic.screen_test_Qlineedit_IDStudent_3.text()
+        else:
+            self.ScreenTest_value_ArrayInforAnswer[1] = "Chưa điền thông tin"
+
 
         if(self.Sys_value_ChooseScreenTest == 1):
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
             self.Mqtt_Run(self.ScreenTest_value_NameClassStudent)
         else:
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
-
-
-
 
     def screen_Test_Show_Display_Choose(self, Number):
         self.uic.screen_Test_Display_Choose_Qlabel_PAN_Number.setText("PAN "+str(Number))
@@ -372,139 +383,189 @@ class MainWindow:
         self.screen_Test_Display_Choose_radio_onClicked(Number_Button)
 
         if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] >= 6):
-            self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] + float(self.uic.screen_Test_Display_Choose_lineEdit.text())
-            print( self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button])
+            if(len(self.uic.screen_Test_Display_Choose_lineEdit.text()) > 0):
+                self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] + float(self.uic.screen_Test_Display_Choose_lineEdit.text())
+                self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[Number_Button] = self.uic.screen_Test_Display_Choose_lineEdit.text()
+            else:
+                self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = 20
+        print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button])
         self.screen_Test_Display_Choose_radio_SelectChoose(Number_Button)
 
     def screen_Test_Display_Choose_radio_SelectChoose(self, Number_Button):
-        if(Number_Button == 1):
-            if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
+        value = 6
+        if (Number_Button == 1):
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
                 self.uic.SCreen_Test_Qlabel_PAN_1.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
-                self.uic.SCreen_Test_Qlabel_PAN_1.setText(self.uic.screen_Test_Display_Choose_lineEdit.text()+' V')
+                self.uic.SCreen_Test_Qlabel_PAN_1.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 2):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 3):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 4):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 5):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
-        if (Number_Button == 6):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+        if (Number_Button == value):
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 7):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 8):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 9):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                  Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 10):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 11):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 12):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 13):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 14):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 15):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 16):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[ self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 17):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 18):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 19):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 20):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 21):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 22):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 23):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
         if (Number_Button == 24):
-            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < 6):
-                self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
+                self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
+                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
+                                                                   Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
-
 
     def screen_Test_Display_Choose_radio_onClicked(self, Number_Button):
 
@@ -531,29 +592,194 @@ class MainWindow:
             self.uic.screen_Test_Display_Choose_lineEdit.clear()
 
     def screen_Test_Display_Choose_ButtonSubmit(self):
-
         if(self.Sys_value_ChooseScreenTest == 1):
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
-
             for x in range(1,25):
                 if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
                     print(str(format(float(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 6), '.1f'))+' V')
                 else:
                     print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x])
         else:
+
+            #print(self.screen_Test_AnswerCountNotChoose())
+            print(self.ScreenSetting_value_ArrayGetCurrentText)
+            print(self.ScreenSetting_value_ArrayGetCurrentIndex)
+            print(self.ScreenTest_value_Qlabel_ArrayNumberChoose)
+            self.screen_Test_ShowText_QlabelAnswer1(1)
+            self.screen_Test_ShowText_QlabelAnswer2(1)
+            self.screen_Test_ShowText_QlabelAnswer3(1)
+            self.screen_Test_Answer_Infor()
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
-            print("da noi bai")
+
     def screen_Test_Display_ClearChoose(self):
         for x in range(1, 25):
             self.screen_Test_Display_Choose_radio_SelectChoose(x)
 
-#-----------------------------------------(END)-----------------------------------------------------------------------------#
+    def screen_Test_Answer_Infor(self):
+        self.uic.screen_Test_Display_Answer_label_Name.setText(self.ScreenTest_value_ArrayInforAnswer[0])
+        self.uic.screen_Test_Display_Answer_label_ID.setText(self.ScreenTest_value_ArrayInforAnswer[1])
+        self.uic.screen_Test_Display_Answer_label_AnswerTrue.setText(str(self.ScreenTest_value_ArrayInforAnswer[2]))
+        self.uic.screen_Test_Display_Answer_label_AnswerFalse.setText(str(self.ScreenTest_value_ArrayInforAnswer[3]))
+        self.uic.screen_Test_Display_Answer_label_AnswerNot.setText(str(self.ScreenTest_value_ArrayInforAnswer[4]))
+
+    def screen_Test_AnswerCountNotChoose(self):
+        return self.ScreenTest_value_Qlabel_ArrayNumberChoose.count(0)-1
+
+    def screen_Test_ShowText_QlabelAnswer1(self, stt):
+        if(stt == 1):
+            for x in range(1, 25):
+                if(self.ScreenSetting_value_ArrayGetCurrentIndex[x] >= 5):
+                    self.ScreenTest_value_ArrayShowText[x][0] = str(self.ScreenSetting_value_ArrayGetCurrentText[x]) + ' V'
+                else:
+                    self.ScreenTest_value_ArrayShowText[x][0] = self.ScreenSetting_value_ArrayGetCurrentText[x]
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_1.setText(self.ScreenTest_value_ArrayShowText[1][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_2.setText(self.ScreenTest_value_ArrayShowText[2][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_3.setText(self.ScreenTest_value_ArrayShowText[3][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_4.setText(self.ScreenTest_value_ArrayShowText[4][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_5.setText(self.ScreenTest_value_ArrayShowText[5][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_6.setText(self.ScreenTest_value_ArrayShowText[6][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_7.setText(self.ScreenTest_value_ArrayShowText[7][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_8.setText(self.ScreenTest_value_ArrayShowText[8][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_9.setText(self.ScreenTest_value_ArrayShowText[9][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_10.setText(self.ScreenTest_value_ArrayShowText[10][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_11.setText(self.ScreenTest_value_ArrayShowText[11][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_12.setText(self.ScreenTest_value_ArrayShowText[12][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_13.setText(self.ScreenTest_value_ArrayShowText[13][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_14.setText(self.ScreenTest_value_ArrayShowText[14][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_15.setText(self.ScreenTest_value_ArrayShowText[15][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_16.setText(self.ScreenTest_value_ArrayShowText[16][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_17.setText(self.ScreenTest_value_ArrayShowText[17][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_18.setText(self.ScreenTest_value_ArrayShowText[18][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_19.setText(self.ScreenTest_value_ArrayShowText[19][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_20.setText(self.ScreenTest_value_ArrayShowText[20][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_21.setText(self.ScreenTest_value_ArrayShowText[21][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_22.setText(self.ScreenTest_value_ArrayShowText[22][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_23.setText(self.ScreenTest_value_ArrayShowText[23][0])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer0_24.setText(self.ScreenTest_value_ArrayShowText[24][0])
+
+    def screen_Test_ShowText_QlabelAnswer2(self, stt):
+        if (stt == 1):
+            for x in range(1, 25):
+                if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
+                    self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x] + ' V'
+                else:
+                    self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[x]]
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_1.setText(self.ScreenTest_value_ArrayShowText[1][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_2.setText(self.ScreenTest_value_ArrayShowText[2][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_3.setText(self.ScreenTest_value_ArrayShowText[3][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_4.setText(self.ScreenTest_value_ArrayShowText[4][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_5.setText(self.ScreenTest_value_ArrayShowText[5][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_6.setText(self.ScreenTest_value_ArrayShowText[6][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_7.setText(self.ScreenTest_value_ArrayShowText[7][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_8.setText(self.ScreenTest_value_ArrayShowText[8][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_9.setText(self.ScreenTest_value_ArrayShowText[9][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_10.setText(self.ScreenTest_value_ArrayShowText[10][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_11.setText(self.ScreenTest_value_ArrayShowText[11][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_12.setText(self.ScreenTest_value_ArrayShowText[12][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_13.setText(self.ScreenTest_value_ArrayShowText[13][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_14.setText(self.ScreenTest_value_ArrayShowText[14][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_15.setText(self.ScreenTest_value_ArrayShowText[15][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_16.setText(self.ScreenTest_value_ArrayShowText[16][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_17.setText(self.ScreenTest_value_ArrayShowText[17][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_18.setText(self.ScreenTest_value_ArrayShowText[18][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_19.setText(self.ScreenTest_value_ArrayShowText[19][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_20.setText(self.ScreenTest_value_ArrayShowText[20][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_21.setText(self.ScreenTest_value_ArrayShowText[21][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_22.setText(self.ScreenTest_value_ArrayShowText[22][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_23.setText(self.ScreenTest_value_ArrayShowText[23][1])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer1_24.setText(self.ScreenTest_value_ArrayShowText[24][1])
+
+    def screen_Test_ShowText_QlabelAnswer3(self, stt):
+        Count_True = 0
+        Count_False = 0
+        Count_NotChoose = 0
+        if (stt == 1):
+            for x in range(1, 25):
+                if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] != 0):
+                    if (self.ScreenSetting_value_ArrayGetCurrentIndex[x] >= 5):
+                        if (str(self.ScreenSetting_value_ArrayGetCurrentText[x]) == self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x]):
+                            self.ScreenTest_value_ArrayShowText[x][2] = "Đúng"
+                            Count_True = Count_True + 1
+                        else:
+                            self.ScreenTest_value_ArrayShowText[x][2] = "sai"
+                            Count_False = Count_False + 1
+                    else:
+                        if (self.ScreenSetting_value_ArrayGetCurrentIndex[x] == (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 1)):
+                            self.ScreenTest_value_ArrayShowText[x][2] = "Đúng"
+                            Count_True = Count_True + 1
+                        else:
+                            self.ScreenTest_value_ArrayShowText[x][2] = "sai"
+                            Count_False = Count_False + 1
+                else:
+                    self.ScreenTest_value_ArrayShowText[x][2] = "Chưa chọn"
+                    Count_NotChoose = Count_NotChoose + 1
+
+        self.ScreenTest_value_ArrayInforAnswer[2] = Count_True
+        self.ScreenTest_value_ArrayInforAnswer[3] = Count_False
+        self.ScreenTest_value_ArrayInforAnswer[4] = Count_NotChoose
+
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_1.setText(self.ScreenTest_value_ArrayShowText[1][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_2.setText(self.ScreenTest_value_ArrayShowText[2][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_3.setText(self.ScreenTest_value_ArrayShowText[3][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_4.setText(self.ScreenTest_value_ArrayShowText[4][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_5.setText(self.ScreenTest_value_ArrayShowText[5][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_6.setText(self.ScreenTest_value_ArrayShowText[6][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_7.setText(self.ScreenTest_value_ArrayShowText[7][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_8.setText(self.ScreenTest_value_ArrayShowText[8][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_9.setText(self.ScreenTest_value_ArrayShowText[9][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_10.setText(self.ScreenTest_value_ArrayShowText[10][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_11.setText(self.ScreenTest_value_ArrayShowText[11][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_12.setText(self.ScreenTest_value_ArrayShowText[12][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_13.setText(self.ScreenTest_value_ArrayShowText[13][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_14.setText(self.ScreenTest_value_ArrayShowText[14][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_15.setText(self.ScreenTest_value_ArrayShowText[15][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_16.setText(self.ScreenTest_value_ArrayShowText[16][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_17.setText(self.ScreenTest_value_ArrayShowText[17][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_18.setText(self.ScreenTest_value_ArrayShowText[18][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_19.setText(self.ScreenTest_value_ArrayShowText[19][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_20.setText(self.ScreenTest_value_ArrayShowText[20][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_21.setText(self.ScreenTest_value_ArrayShowText[21][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_22.setText(self.ScreenTest_value_ArrayShowText[22][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_23.setText(self.ScreenTest_value_ArrayShowText[23][2])
+        self.uic.screen_test_Display_Answer_Qlabel_Answer2_24.setText(self.ScreenTest_value_ArrayShowText[24][2])
+
+
+
+
+
+        #-----------------------------------------(END)-----------------------------------------------------------------------------#
 
 #-----------------------------------------(Giao Diện Setting)-----------------------------------------------------------------------------#
-
     def screen_Setting_Show_Display_Practice(self):
-        #self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_practice)
         self.screen_Setting_Get_Select_CreateExercise()
+        self.screen_Setting_Show_NameText_Practice()
+        self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_practice)
+
+    def screen_Setting_Show_NameText_Practice(self):
+        self.uic.screen_Setting_practice_label_1.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[1]))
+        self.uic.screen_Setting_practice_label_2.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[2]))
+        self.uic.screen_Setting_practice_label_3.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[3]))
+        self.uic.screen_Setting_practice_label_4.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[4]))
+        self.uic.screen_Setting_practice_label_5.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[5]))
+        self.uic.screen_Setting_practice_label_6.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[6]))
+        self.uic.screen_Setting_practice_label_7.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[7]))
+        self.uic.screen_Setting_practice_label_8.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[8]))
+        self.uic.screen_Setting_practice_label_9.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[9]))
+        self.uic.screen_Setting_practice_label_10.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[10]))
+        self.uic.screen_Setting_practice_label_11.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[11]))
+        self.uic.screen_Setting_practice_label_12.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[12]))
+        self.uic.screen_Setting_practice_label_13.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[13]))
+        self.uic.screen_Setting_practice_label_14.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[14]))
+        self.uic.screen_Setting_practice_label_15.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[15]))
+        self.uic.screen_Setting_practice_label_16.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[16]))
+        self.uic.screen_Setting_practice_label_17.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[17]))
+        self.uic.screen_Setting_practice_label_18.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[18]))
+        self.uic.screen_Setting_practice_label_19.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[19]))
+        self.uic.screen_Setting_practice_label_20.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[20]))
+        self.uic.screen_Setting_practice_label_21.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[21]))
+        self.uic.screen_Setting_practice_label_22.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[22]))
+        self.uic.screen_Setting_practice_label_23.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[23]))
+        self.uic.screen_Setting_practice_label_24.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[24]))
 
     def screen_Setting_RamdomExercise(self):
         #self.screen_Setting_ArrRandomCreateExercise()
@@ -752,16 +978,13 @@ class MainWindow:
             self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
             self.uic.screen_setting_Home_lineEdit_24.clear()
 
-
-
     def screen_Setting_ArrRandomCreateExercise(self):
         ArrRandom_setCurrentText = random.randint(6, size=(25))
         ArrRandom_voltage = random.uniform(0.0, 12.0, 25)
         return ArrRandom_setCurrentText, ArrRandom_voltage
 
     def screen_Setting_Get_Select_CreateExercise(self):
-        value = 6
-
+        value = 0
         if(self.uic.screen_setting_Home_ComboBox_1.currentIndex() >= 5):
             self.ScreenSetting_value_ArrayGetCurrentText[1] = float(self.uic.screen_setting_Home_lineEdit_1.text()) + value
         else:
@@ -769,23 +992,170 @@ class MainWindow:
         self.ScreenSetting_value_ArrayGetCurrentIndex[1] = self.uic.screen_setting_Home_ComboBox_1.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_2.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[2] = float(
-                self.uic.screen_setting_Home_lineEdit_2.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[2] = float(self.uic.screen_setting_Home_lineEdit_2.text()) + value
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[2] = self.uic.screen_setting_Home_ComboBox_2.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[2] = self.uic.screen_setting_Home_ComboBox_2.currentIndex()
 
-        if (self.uic.screen_setting_Home_ComboBox_.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[] = float(
-                self.uic.screen_setting_Home_lineEdit_.text()) + value
+        if (self.uic.screen_setting_Home_ComboBox_3.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[3] = float(self.uic.screen_setting_Home_lineEdit_3.text()) + value
         else:
-            self.ScreenSetting_value_ArrayGetCurrentText[] = self.uic.screen_setting_Home_ComboBox_.currentText()
-        self.ScreenSetting_value_ArrayGetCurrentIndex[] = self.uic.screen_setting_Home_ComboBox_.currentIndex()
+            self.ScreenSetting_value_ArrayGetCurrentText[3] = self.uic.screen_setting_Home_ComboBox_3.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[3] = self.uic.screen_setting_Home_ComboBox_3.currentIndex()
 
-        print(self.ScreenSetting_value_ArrayGetCurrentText)
-        print( self.ScreenSetting_value_ArrayGetCurrentIndex)
-        #print(self.uic.screen_setting_Home_ComboBox_1.currentIndex(),self.uic.screen_setting_Home_ComboBox_1.currentText())
+        if (self.uic.screen_setting_Home_ComboBox_4.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[4] = float(self.uic.screen_setting_Home_lineEdit_4.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[4] = self.uic.screen_setting_Home_ComboBox_4.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[4] = self.uic.screen_setting_Home_ComboBox_4.currentIndex()
 
+        if (self.uic.screen_setting_Home_ComboBox_5.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[5] = float(
+                self.uic.screen_setting_Home_lineEdit_5.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[5] = self.uic.screen_setting_Home_ComboBox_5.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[5] = self.uic.screen_setting_Home_ComboBox_5.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_6.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[6] = float(
+                self.uic.screen_setting_Home_lineEdit_6.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[6] = self.uic.screen_setting_Home_ComboBox_6.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[6] = self.uic.screen_setting_Home_ComboBox_6.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_7.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[7] = float(
+                self.uic.screen_setting_Home_lineEdit_7.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[7] = self.uic.screen_setting_Home_ComboBox_7.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[7] = self.uic.screen_setting_Home_ComboBox_7.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_8.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[8] = float(
+                self.uic.screen_setting_Home_lineEdit_8.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[8] = self.uic.screen_setting_Home_ComboBox_8.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[8] = self.uic.screen_setting_Home_ComboBox_8.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_9.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[9] = float(
+                self.uic.screen_setting_Home_lineEdit_9.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[9] = self.uic.screen_setting_Home_ComboBox_9.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[9] = self.uic.screen_setting_Home_ComboBox_9.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_10.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[10] = float(
+                self.uic.screen_setting_Home_lineEdit_10.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[10] = self.uic.screen_setting_Home_ComboBox_10.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[10] = self.uic.screen_setting_Home_ComboBox_10.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_11.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[11] = float(
+                self.uic.screen_setting_Home_lineEdit_11.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[11] = self.uic.screen_setting_Home_ComboBox_11.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[11] = self.uic.screen_setting_Home_ComboBox_11.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_12.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[12] = float(
+                self.uic.screen_setting_Home_lineEdit_12.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[12] = self.uic.screen_setting_Home_ComboBox_12.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[12] = self.uic.screen_setting_Home_ComboBox_12.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_13.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[13] = float(
+                self.uic.screen_setting_Home_lineEdit_13.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[13] = self.uic.screen_setting_Home_ComboBox_13.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[13] = self.uic.screen_setting_Home_ComboBox_13.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_14.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[14] = float(
+                self.uic.screen_setting_Home_lineEdit_14.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[14] = self.uic.screen_setting_Home_ComboBox_14.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[14] = self.uic.screen_setting_Home_ComboBox_14.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_15.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[15] = float(
+                self.uic.screen_setting_Home_lineEdit_15.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[15] = self.uic.screen_setting_Home_ComboBox_15.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[15] = self.uic.screen_setting_Home_ComboBox_15.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_16.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[16] = float(
+                self.uic.screen_setting_Home_lineEdit_16.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[16] = self.uic.screen_setting_Home_ComboBox_16.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[16] = self.uic.screen_setting_Home_ComboBox_16.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_17.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[17] = float(
+                self.uic.screen_setting_Home_lineEdit_17.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[17] = self.uic.screen_setting_Home_ComboBox_17.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[17] = self.uic.screen_setting_Home_ComboBox_17.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_18.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[18] = float(
+                self.uic.screen_setting_Home_lineEdit_18.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[18] = self.uic.screen_setting_Home_ComboBox_18.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[18] = self.uic.screen_setting_Home_ComboBox_18.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_19.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[19] = float(
+                self.uic.screen_setting_Home_lineEdit_19.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[19] = self.uic.screen_setting_Home_ComboBox_19.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[19] = self.uic.screen_setting_Home_ComboBox_19.currentIndex()
+
+        if (self.uic.screen_setting_Home_ComboBox_20.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[20] = float(
+                self.uic.screen_setting_Home_lineEdit_20.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[20] = self.uic.screen_setting_Home_ComboBox_20.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[20] = self.uic.screen_setting_Home_ComboBox_20.currentIndex()
+
+
+        if (self.uic.screen_setting_Home_ComboBox_21.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[21] = float(
+                self.uic.screen_setting_Home_lineEdit_21.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[21] = self.uic.screen_setting_Home_ComboBox_21.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[21] = self.uic.screen_setting_Home_ComboBox_21.currentIndex()
+
+
+        if (self.uic.screen_setting_Home_ComboBox_22.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[22] = float(
+                self.uic.screen_setting_Home_lineEdit_22.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[22] = self.uic.screen_setting_Home_ComboBox_22.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[22] = self.uic.screen_setting_Home_ComboBox_22.currentIndex()
+
+
+        if (self.uic.screen_setting_Home_ComboBox_23.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[23] = float(
+                self.uic.screen_setting_Home_lineEdit_23.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[23] = self.uic.screen_setting_Home_ComboBox_23.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[23] = self.uic.screen_setting_Home_ComboBox_23.currentIndex()
+
+
+        if (self.uic.screen_setting_Home_ComboBox_24.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[24] = float(
+                self.uic.screen_setting_Home_lineEdit_24.text()) + value
+        else:
+            self.ScreenSetting_value_ArrayGetCurrentText[24] = self.uic.screen_setting_Home_ComboBox_24.currentText()
+        self.ScreenSetting_value_ArrayGetCurrentIndex[24] = self.uic.screen_setting_Home_ComboBox_24.currentIndex()
+
+
+        #print(self.ScreenSetting_value_ArrayGetCurrentText)
+        #print( self.ScreenSetting_value_ArrayGetCurrentIndex)
 
     def screen_Setting_Check_selectVoltage_1(self, i):
         if i >= 5:
@@ -959,80 +1329,99 @@ class MainWindow:
         items = ['Hở mạch', 'Chập chờn', 'Chạm đất', 'Nối dương', 'Bình thường', 'Điện áp']
         self.uic.screen_setting_Home_ComboBox_1.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_1.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_1.clear()
 
         self.uic.screen_setting_Home_ComboBox_2.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_2.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_2.clear()
 
         self.uic.screen_setting_Home_ComboBox_3.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_3.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_3.clear()
 
         self.uic.screen_setting_Home_ComboBox_4.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_4.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_4.clear()
 
         self.uic.screen_setting_Home_ComboBox_5.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_5.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_5.clear()
 
         self.uic.screen_setting_Home_ComboBox_6.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_6.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_6.clear()
 
         self.uic.screen_setting_Home_ComboBox_7.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_7.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_7.clear()
 
         self.uic.screen_setting_Home_ComboBox_8.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_8.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_8.clear()
 
         self.uic.screen_setting_Home_ComboBox_9.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_9.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_9.clear()
 
         self.uic.screen_setting_Home_ComboBox_10.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_10.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_10.clear()
 
         self.uic.screen_setting_Home_ComboBox_11.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_11.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_11.clear()
 
         self.uic.screen_setting_Home_ComboBox_12.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_12.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_12.clear()
 
         self.uic.screen_setting_Home_ComboBox_13.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_13.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_13.clear()
 
         self.uic.screen_setting_Home_ComboBox_14.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_14.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_14.clear()
 
         self.uic.screen_setting_Home_ComboBox_15.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_15.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_15.clear()
 
         self.uic.screen_setting_Home_ComboBox_16.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_16.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_16.clear()
 
         self.uic.screen_setting_Home_ComboBox_17.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_17.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_17.clear()
 
         self.uic.screen_setting_Home_ComboBox_18.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_18.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_18.clear()
 
         self.uic.screen_setting_Home_ComboBox_19.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_19.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_19.clear()
 
         self.uic.screen_setting_Home_ComboBox_20.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_20.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_20.clear()
 
         self.uic.screen_setting_Home_ComboBox_21.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_21.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_21.clear()
 
         self.uic.screen_setting_Home_ComboBox_22.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_22.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_22.clear()
 
         self.uic.screen_setting_Home_ComboBox_23.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_23.setEnabled(0)
+        self.uic.screen_setting_Home_lineEdit_23.clear()
 
         self.uic.screen_setting_Home_ComboBox_24.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
-
-
-
-
-
+        self.uic.screen_setting_Home_lineEdit_24.clear()
 
 
 #-----------------------------------------(END)-----------------------------------------------------------------------------#
