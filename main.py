@@ -6,18 +6,21 @@ import socket
 
 from pdf2image import convert_from_path
 from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QFileDialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QSettings, QPoint
 from MQTT_TEST import Ui_MainWindow
 
 import paho.mqtt.client as mqtt
 from numpy import random
-import numpy as ArrayAnswer
+import shutil
+import pyautogui
+
 class MainWindow:
     def __init__(self, parent=None):
         super().__init__()
         # -----------(Khởi tao Class)-----------------#
+
         self.main_win = QMainWindow()
         self.uic = Ui_MainWindow()
         self.uic.setupUi(self.main_win)
@@ -26,9 +29,10 @@ class MainWindow:
         self.Sys_value_ChooseScreenTest = 0
         # -----------(Lưu mật khẩu)-----------------#
         self.settings = QSettings('PAN','PAN')
-        #settings.setValue('list_value', "25")
+       # settings.setValue('list_value', "25")
         #settings.setValue('dict_value', {'one': 1, 'two': 2})
 
+        #print()
         #-----------(Biến đếm chuyển ảnh và biến lưu số lượng ảnh có trong file giao diện learn)-----------------#
         self.Count_next_image = 1
         self.Number_Image_Learn = 1
@@ -36,6 +40,11 @@ class MainWindow:
         self.Mqtt_Port = 1883
         self.TopicSub = "test"
         self.TopicPub = "IP"
+        self.TopicPingMQTT = "check"
+        self.TopicPingMQTT = "check"
+        self.TopicCkeckConnect = "res_check"
+        self.TopicGetTest = "send/id1"
+        self.TopicSendAnswer = "res_answer"
         # -----------(Biến tên và đường dẫn giao diện learn)-----------------#
         self.Path_Image_Screen_Learn = 'Image_Learn'
         self.Name_image_Screen_Learn = 'output'
@@ -47,6 +56,7 @@ class MainWindow:
         self.ScreenTest_value_Qlabel_ArrayNameChoose = ["Chưa chọn","Hở mạch", "Chập chờn", "Chạm đất","Nối dương", "Bình thường"]
         self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.ScreenTest_value_Qlabel_ArrayGetNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.ScreenTest_value_Qlabel_ArrayAnswerMqtt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.ScreenTest_value_ArrayInforAnswer = ["Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có"]
         self.ScreenTest_value_ArrayShowText = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
         self.ScreenTest_value_Qlabel_FlagButtonClick = 0
@@ -68,7 +78,7 @@ class MainWindow:
         self.uic.Learn_Button_Back.clicked.connect(self.Learn_Button_Back)
         self.uic.Learn_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.Learn_Button_Next.clicked.connect(self.Learn_Button_Next)
-        #self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
+        # self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
         # Khối button của màn hình Test
         self.uic.screen_Test_Display_InputInfor_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam)
@@ -110,8 +120,10 @@ class MainWindow:
         self.uic.screen_Setting_Home_ButtonCreateTest.clicked.connect(lambda:self.Show_Screen_Test(2))
         self.uic.screen_Setting_Home_ButtonRamdom.clicked.connect(self.screen_Setting_RamdomExercise)
         self.uic.screen_Setting_Home_ButtonExit.clicked.connect(self.Show_Screen_Home)
-
+        self.uic.screen_Setting_Home_ButtonLogin.clicked.connect(self.screen_Setting_Show_Login)
+        self.uic.screen_Setting_SettingSys_Button_LoginSYS.clicked.connect(self.screen_Setting_Show_SettingSYS)
         self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Home)
+        self.uic.screen_Setting_SettingSys_Button_Exit.clicked.connect(self.Show_Screen_Home)
 
         self.uic.screen_setting_Home_ComboBox_1.activated.connect(self.screen_Setting_Check_selectVoltage_1)
         self.uic.screen_setting_Home_ComboBox_2.activated.connect(self.screen_Setting_Check_selectVoltage_2)
@@ -138,11 +150,32 @@ class MainWindow:
         self.uic.screen_setting_Home_ComboBox_23.activated.connect(self.screen_Setting_Check_selectVoltage_23)
         self.uic.screen_setting_Home_ComboBox_24.activated.connect(self.screen_Setting_Check_selectVoltage_24)
 
+       # myScreenshot = pyautogui.screenshot(region=(0,0, 300, 400))
+        #print(myScreenshot)
+        #path = os.path.abspath('Icon')+"\\" + 'bien.png'
+        #print(path)
+        #myScreenshot.save(path)
+
+        #self.uic.BT.clicked.connect(self.getfile)
+
         #self.Mqtt_Run()
+
+    def getfile(self):
+        fname= QFileDialog.getOpenFileName()
+        if(fname != ('', '')):
+            if((fname[0].rfind('.pdf')) != -1 or (fname[0].rfind('.PDF')) != -1):
+                print('The file name is...', fname)
+                self.uic.LB.setText(fname[0])
+                self.Learn_convert_PDF_TO_IMAGE(fname[0])
+            else:
+                self.uic.LB.setText("FIle bạn chọn không phải .pdf")
+        else:
+            self.uic.LB.setText("Bạn chưa chọn File")
 
     def show(self):
         self.main_win.show()
-
+        #fname = QFileDialog.getOpenFileName(self, 'Open file', 'D:\codefirst.io\PyQt5 tutorials\Browse Files','Images (*.png, *.xmp *.jpg)')
+        #self.filename.setText(fname[0])
     # -----------------------------------------(Cấu hình MQTT)-----------------------------------------------------------------------------#
 
 
@@ -155,7 +188,7 @@ class MainWindow:
         try:
             self.mqtt_client.on_connect = self.Mqtt_connect
             self.mqtt_client.on_message = self.Mqtt_message
-            self.mqtt_client.connect(Mqtt_Host, self.Mqtt_Port, 60)
+            self.mqtt_client.connect('Mqtt.mysignage.vn', self.Mqtt_Port, 60)
             Flag = 1
         except Exception as e:
             Flag = 0
@@ -168,15 +201,40 @@ class MainWindow:
         print("Connected with result code: " +str(rc))
         if(rc == 0):
             hostname,IPAddr  = self.Mqtt_Get_IPAddr()
+            self.mqtt_client.subscribe(self.TopicGetTest)
             self.mqtt_client.subscribe(self.TopicSub)
-            self.mqtt_client.publish(self.TopicPub, IPAddr)
+            self.mqtt_client.subscribe(self.TopicPingMQTT)
 
     def Mqtt_message(self, client, userdata, message):
+        if(message.topic == self.TopicPingMQTT):
+            print(message.topic + " " + str(message.payload))
+            #print(self.ScreenTest_value_NameStudent)
+            #print(self.ScreenTest_value_NameITStudent)
+            self.Mqtt_PingServer(self.ScreenTest_value_NameStudent, self.ScreenTest_value_NameITStudent)
 
-        print(message.topic + " " + str(message.payload))
-
+        if (message.topic == self.TopicGetTest):
+            print(message.topic + " " + str(message.payload))
     def Mqtt_publish(self):
         self.mqtt_client.publish(self.TopicPub, "xin chao")
+
+    def Mqtt_PingServer(self, Name, IDStuden):
+        id_device = 1
+        TempJson = { "id": id_device, "received":'false', "name":Name, "msv":IDStuden}
+        self.mqtt_client.publish(self.TopicCkeckConnect, json.dumps(TempJson))
+
+    def Mqtt_SendAnswer(self, Time_end):
+        id_device = 1
+        arrAnswe = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt
+        arrJson = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        for x in range(1, 25):
+            if (arrAnswe[x] == 0):
+                arrJson[x-1] = 250
+            else:
+                arrJson[x - 1] = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[x] - 1
+        TempJson = {"id": id_device, "received": 'true', "answer": arrJson, "Time_end": Time_end}
+        temp = json.dumps(TempJson)
+        print(temp)
+        self.mqtt_client.publish(self.TopicSendAnswer, temp)
 
 
     # ---------------------------------------------------(END)-----------------------------------------------------------------------------#
@@ -187,6 +245,7 @@ class MainWindow:
         self.uic.stackedWidget.setCurrentWidget(self.uic.HOME)
 
     def Show_Screen_Learn(self):
+        self.Count_next_image = 1
         self.Learn_Get_Number_File()
         self.Learn_Show_Imgae_Learn()
         self.uic.stackedWidget.setCurrentWidget(self.uic.Screen_Learn)
@@ -244,8 +303,14 @@ class MainWindow:
         self.Number_Image_Learn = len(files)
 
     def Learn_convert_PDF_TO_IMAGE(self, name):
+        #path = os.path.abspath(outputDir)
+        #if (os.path.exists(path) != False):
+            #shutil.rmtree(path)
         outputDir = self.Path_Image_Screen_Learn + '/'
         if not os.path.exists(outputDir):
+            os.makedirs(outputDir)
+        else:
+            shutil.rmtree(outputDir)
             os.makedirs(outputDir)
         pages = convert_from_path(name, 500, size=(self.Learn_Size_X_Image_PDF, self.Learn_Size_Y_Image_PDF))
         counter = 1
@@ -257,23 +322,25 @@ class MainWindow:
 
 #-----------------------------------------(Giao Diện kiểm tra)-----------------------------------------------------------------------------#
     def screen_Test_Show_Display_Exam(self):
-        #self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username_3.text()
-        #self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent_3.text()
+        self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username_3.text()
+        self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent_3.text()
         self.ScreenTest_value_NameClassStudent = self.uic.screen_test_Qlineedit_IDclass_3.text()
 
+
         if(len(self.uic.screen_test_Qlineedit_Username_3.text()) > 0):
-            self.ScreenTest_value_ArrayInforAnswer[0] = self.uic.screen_test_Qlineedit_Username_3.text()
+            self.ScreenTest_value_ArrayInforAnswer[0] = self.ScreenTest_value_NameStudent
         else:
             self.ScreenTest_value_ArrayInforAnswer[0] = "Chưa điền thông tin"
         if (len(self.uic.screen_test_Qlineedit_IDStudent_3.text()) > 0):
-            self.ScreenTest_value_ArrayInforAnswer[1] = self.uic.screen_test_Qlineedit_IDStudent_3.text()
+            self.ScreenTest_value_ArrayInforAnswer[1] = self.ScreenTest_value_NameITStudent
         else:
             self.ScreenTest_value_ArrayInforAnswer[1] = "Chưa điền thông tin"
 
 
         if(self.Sys_value_ChooseScreenTest == 1):
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
-            self.Mqtt_Run(self.ScreenTest_value_NameClassStudent)
+            #self.Mqtt_Run(self.ScreenTest_value_NameClassStudent)
+            self.Mqtt_Run('Mqtt.mysignage.vn')
         else:
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
 
@@ -386,8 +453,13 @@ class MainWindow:
             if(len(self.uic.screen_Test_Display_Choose_lineEdit.text()) > 0):
                 self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] + float(self.uic.screen_Test_Display_Choose_lineEdit.text())
                 self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[Number_Button] = self.uic.screen_Test_Display_Choose_lineEdit.text()
+                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = int((float(self.uic.screen_Test_Display_Choose_lineEdit.text()) * 10) + 4)
+
             else:
                 self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = 20
+        else:
+                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button];
+
         print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button])
         self.screen_Test_Display_Choose_radio_SelectChoose(Number_Button)
 
@@ -594,13 +666,13 @@ class MainWindow:
     def screen_Test_Display_Choose_ButtonSubmit(self):
         if(self.Sys_value_ChooseScreenTest == 1):
             self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
-            for x in range(1,25):
-                if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
-                    print(str(format(float(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 6), '.1f'))+' V')
-                else:
-                    print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x])
+            self.Mqtt_SendAnswer(20)
+           # for x in range(1,25):
+           #     if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
+           #         print(str(format(float(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 6), '.1f'))+' V')
+           #     else:
+           #         print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x])
         else:
-
             #print(self.screen_Test_AnswerCountNotChoose())
             print(self.ScreenSetting_value_ArrayGetCurrentText)
             print(self.ScreenSetting_value_ArrayGetCurrentIndex)
@@ -1422,6 +1494,14 @@ class MainWindow:
         self.uic.screen_setting_Home_ComboBox_24.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
         self.uic.screen_setting_Home_lineEdit_24.clear()
+
+    def screen_Setting_Show_Login(self):
+        self.uic.screen_Setting_SettingSys_Qlineedit_Password.clear()
+        self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_Login)
+
+    def screen_Setting_Show_SettingSYS(self):
+        self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_SettingSys)
+
 
 
 #-----------------------------------------(END)-----------------------------------------------------------------------------#

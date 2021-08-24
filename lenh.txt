@@ -6,6 +6,7 @@ from PyQt5 import QAxContainer
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLineEdit, QApplication
 
+Mqtt.mysignage.vn
 
 
 self.Screen_Learn.setObjectName("Screen_Learn")

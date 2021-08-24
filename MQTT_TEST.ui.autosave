@@ -54,7 +54,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="HOME">
      <widget class="QWidget" name="layoutWidget">
@@ -360,7 +360,7 @@ QPushButton:hover {
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="screen_Test_Display_InputInfor">
        <widget class="QLabel" name="label">
@@ -729,6 +729,46 @@ QPushButton:hover {
             <bool>false</bool>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="screen_Test_Display_Exam_Exit_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Connext</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Icon/connect1_icon.png</normaloff>Icon/connect1_icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcdNumber"/>
          </item>
         </layout>
        </widget>
@@ -2967,16 +3007,6 @@ QPushButton:hover {
           </layout>
          </item>
         </layout>
-       </widget>
-       <widget class="QLCDNumber" name="lcdNumber">
-        <property name="geometry">
-         <rect>
-          <x>870</x>
-          <y>540</y>
-          <width>64</width>
-          <height>23</height>
-         </rect>
-        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="screen_Test_Display_Choose">
@@ -11383,7 +11413,7 @@ QPushButton:hover {
 </string>
              </property>
              <property name="text">
-              <string>Thời gian làm bà kiểm tra(Phút)</string>
+              <string>Thời gian làm bài kiểm tra(Phút)</string>
              </property>
              <property name="icon">
               <iconset>

@@ -324,7 +324,7 @@ class Ui_MainWindow(object):
         self.screen_Test_Display_Exam = QtWidgets.QWidget()
         self.screen_Test_Display_Exam.setObjectName("screen_Test_Display_Exam")
         self.layoutWidget_38 = QtWidgets.QWidget(self.screen_Test_Display_Exam)
-        self.layoutWidget_38.setGeometry(QtCore.QRect(300, 520, 421, 60))
+        self.layoutWidget_38.setGeometry(QtCore.QRect(300, 540, 421, 60))
         self.layoutWidget_38.setObjectName("layoutWidget_38")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget_38)
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -374,7 +374,7 @@ class Ui_MainWindow(object):
         self.screen_Test_Display_Exam_Submit.setObjectName("screen_Test_Display_Exam_Submit")
         self.horizontalLayout_7.addWidget(self.screen_Test_Display_Exam_Submit)
         self.layoutWidget2 = QtWidgets.QWidget(self.screen_Test_Display_Exam)
-        self.layoutWidget2.setGeometry(QtCore.QRect(20, 0, 981, 501))
+        self.layoutWidget2.setGeometry(QtCore.QRect(20, 0, 981, 531))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget2)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -1663,6 +1663,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_33.addWidget(self.SCreen_Test_Qlabel_PAN_24)
         self.horizontalLayout_6.addWidget(self.frame_25)
         self.gridLayout_2.addLayout(self.horizontalLayout_6, 3, 0, 1, 1)
+        self.lcdNumber = QtWidgets.QLCDNumber(self.screen_Test_Display_Exam)
+        self.lcdNumber.setGeometry(QtCore.QRect(870, 540, 64, 23))
+        self.lcdNumber.setObjectName("lcdNumber")
         self.stackedWidget_2.addWidget(self.screen_Test_Display_Exam)
         self.screen_Test_Display_Choose = QtWidgets.QWidget()
         self.screen_Test_Display_Choose.setObjectName("screen_Test_Display_Choose")
@@ -2165,15 +2168,15 @@ class Ui_MainWindow(object):
         self.screen_Test_Display_Answer_label_ID.setObjectName("screen_Test_Display_Answer_label_ID")
         self.gridLayout_122.addWidget(self.screen_Test_Display_Answer_label_ID, 0, 4, 1, 1)
         self.verticalLayout_4.addLayout(self.gridLayout_122)
-        self.widget = QtWidgets.QWidget(self.screen_Test_Display_Answer)
-        self.widget.setGeometry(QtCore.QRect(0, 70, 1031, 461))
-        self.widget.setObjectName("widget")
-        self.gridLayout_142 = QtWidgets.QGridLayout(self.widget)
+        self.layoutWidget4 = QtWidgets.QWidget(self.screen_Test_Display_Answer)
+        self.layoutWidget4.setGeometry(QtCore.QRect(0, 70, 1031, 461))
+        self.layoutWidget4.setObjectName("layoutWidget4")
+        self.gridLayout_142 = QtWidgets.QGridLayout(self.layoutWidget4)
         self.gridLayout_142.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_142.setObjectName("gridLayout_142")
         self.gridLayout_127 = QtWidgets.QGridLayout()
         self.gridLayout_127.setObjectName("gridLayout_127")
-        self.frame_97 = QtWidgets.QFrame(self.widget)
+        self.frame_97 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_97.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_97.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_97.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2297,7 +2300,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_7.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_7")
         self.gridLayout_118.addWidget(self.splitter_85, 0, 1, 1, 1)
         self.gridLayout_127.addWidget(self.frame_97, 0, 0, 1, 1)
-        self.frame_128 = QtWidgets.QFrame(self.widget)
+        self.frame_128 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_128.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_128.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_128.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2421,7 +2424,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_8.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_8")
         self.gridLayout_119.addWidget(self.splitter_87, 0, 1, 1, 1)
         self.gridLayout_127.addWidget(self.frame_128, 0, 1, 1, 1)
-        self.frame_129 = QtWidgets.QFrame(self.widget)
+        self.frame_129 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_129.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_129.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_129.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2545,7 +2548,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_9.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_9")
         self.gridLayout_120.addWidget(self.splitter_89, 0, 1, 1, 1)
         self.gridLayout_127.addWidget(self.frame_129, 0, 2, 1, 1)
-        self.frame_130 = QtWidgets.QFrame(self.widget)
+        self.frame_130 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_130.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_130.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_130.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2669,7 +2672,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_10.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_10")
         self.gridLayout_123.addWidget(self.splitter_91, 0, 1, 1, 1)
         self.gridLayout_127.addWidget(self.frame_130, 0, 3, 1, 1)
-        self.frame_131 = QtWidgets.QFrame(self.widget)
+        self.frame_131 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_131.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_131.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_131.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2793,7 +2796,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_11.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_11")
         self.gridLayout_124.addWidget(self.splitter_93, 0, 1, 1, 1)
         self.gridLayout_127.addWidget(self.frame_131, 0, 4, 1, 1)
-        self.frame_132 = QtWidgets.QFrame(self.widget)
+        self.frame_132 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_132.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_132.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_132.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2920,7 +2923,7 @@ class Ui_MainWindow(object):
         self.gridLayout_142.addLayout(self.gridLayout_127, 1, 0, 1, 1)
         self.gridLayout_128 = QtWidgets.QGridLayout()
         self.gridLayout_128.setObjectName("gridLayout_128")
-        self.frame_133 = QtWidgets.QFrame(self.widget)
+        self.frame_133 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_133.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_133.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_133.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3044,7 +3047,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_13.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_13")
         self.gridLayout_129.addWidget(self.splitter_97, 0, 1, 1, 1)
         self.gridLayout_128.addWidget(self.frame_133, 0, 0, 1, 1)
-        self.frame_134 = QtWidgets.QFrame(self.widget)
+        self.frame_134 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_134.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_134.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_134.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3168,7 +3171,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_14.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_14")
         self.gridLayout_130.addWidget(self.splitter_99, 0, 1, 1, 1)
         self.gridLayout_128.addWidget(self.frame_134, 0, 1, 1, 1)
-        self.frame_135 = QtWidgets.QFrame(self.widget)
+        self.frame_135 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_135.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_135.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_135.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3292,7 +3295,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_15.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_15")
         self.gridLayout_131.addWidget(self.splitter_101, 0, 1, 1, 1)
         self.gridLayout_128.addWidget(self.frame_135, 0, 2, 1, 1)
-        self.frame_136 = QtWidgets.QFrame(self.widget)
+        self.frame_136 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_136.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_136.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_136.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3416,7 +3419,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_16.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_16")
         self.gridLayout_132.addWidget(self.splitter_103, 0, 1, 1, 1)
         self.gridLayout_128.addWidget(self.frame_136, 0, 3, 1, 1)
-        self.frame_137 = QtWidgets.QFrame(self.widget)
+        self.frame_137 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_137.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_137.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_137.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3540,7 +3543,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_17.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_17")
         self.gridLayout_133.addWidget(self.splitter_105, 0, 1, 1, 1)
         self.gridLayout_128.addWidget(self.frame_137, 0, 4, 1, 1)
-        self.frame_138 = QtWidgets.QFrame(self.widget)
+        self.frame_138 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_138.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_138.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_138.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3667,7 +3670,7 @@ class Ui_MainWindow(object):
         self.gridLayout_142.addLayout(self.gridLayout_128, 2, 0, 1, 1)
         self.gridLayout_135 = QtWidgets.QGridLayout()
         self.gridLayout_135.setObjectName("gridLayout_135")
-        self.frame_139 = QtWidgets.QFrame(self.widget)
+        self.frame_139 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_139.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_139.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_139.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3791,7 +3794,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_19.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_19")
         self.gridLayout_136.addWidget(self.splitter_109, 0, 1, 1, 1)
         self.gridLayout_135.addWidget(self.frame_139, 0, 0, 1, 1)
-        self.frame_140 = QtWidgets.QFrame(self.widget)
+        self.frame_140 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_140.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_140.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_140.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -3915,7 +3918,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_20.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_20")
         self.gridLayout_137.addWidget(self.splitter_111, 0, 1, 1, 1)
         self.gridLayout_135.addWidget(self.frame_140, 0, 1, 1, 1)
-        self.frame_142 = QtWidgets.QFrame(self.widget)
+        self.frame_142 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_142.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_142.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_142.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4039,7 +4042,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_21.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_21")
         self.gridLayout_138.addWidget(self.splitter_113, 0, 1, 1, 1)
         self.gridLayout_135.addWidget(self.frame_142, 0, 2, 1, 1)
-        self.frame_143 = QtWidgets.QFrame(self.widget)
+        self.frame_143 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_143.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_143.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_143.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4163,7 +4166,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_22.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_22")
         self.gridLayout_139.addWidget(self.splitter_115, 0, 1, 1, 1)
         self.gridLayout_135.addWidget(self.frame_143, 0, 3, 1, 1)
-        self.frame_144 = QtWidgets.QFrame(self.widget)
+        self.frame_144 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_144.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_144.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_144.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4287,7 +4290,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_23.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_23")
         self.gridLayout_140.addWidget(self.splitter_117, 0, 1, 1, 1)
         self.gridLayout_135.addWidget(self.frame_144, 0, 4, 1, 1)
-        self.frame_145 = QtWidgets.QFrame(self.widget)
+        self.frame_145 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_145.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_145.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_145.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4414,7 +4417,7 @@ class Ui_MainWindow(object):
         self.gridLayout_142.addLayout(self.gridLayout_135, 3, 0, 1, 1)
         self.gridLayout_126 = QtWidgets.QGridLayout()
         self.gridLayout_126.setObjectName("gridLayout_126")
-        self.frame_91 = QtWidgets.QFrame(self.widget)
+        self.frame_91 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_91.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_91.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_91.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4538,7 +4541,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_1.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_1")
         self.gridLayout_9.addWidget(self.splitter_3, 0, 1, 1, 1)
         self.gridLayout_126.addWidget(self.frame_91, 0, 0, 1, 1)
-        self.frame_93 = QtWidgets.QFrame(self.widget)
+        self.frame_93 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_93.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_93.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_93.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4662,7 +4665,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_2.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_2")
         self.gridLayout_45.addWidget(self.splitter_76, 0, 1, 1, 1)
         self.gridLayout_126.addWidget(self.frame_93, 0, 1, 1, 1)
-        self.frame_92 = QtWidgets.QFrame(self.widget)
+        self.frame_92 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_92.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_92.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_92.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4786,7 +4789,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_3.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_3")
         self.gridLayout_88.addWidget(self.splitter_77, 0, 1, 1, 1)
         self.gridLayout_126.addWidget(self.frame_92, 0, 2, 1, 1)
-        self.frame_94 = QtWidgets.QFrame(self.widget)
+        self.frame_94 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_94.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_94.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_94.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -4910,7 +4913,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_4.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_4")
         self.gridLayout_115.addWidget(self.splitter_79, 0, 1, 1, 1)
         self.gridLayout_126.addWidget(self.frame_94, 0, 3, 1, 1)
-        self.frame_95 = QtWidgets.QFrame(self.widget)
+        self.frame_95 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_95.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_95.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_95.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5034,7 +5037,7 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer1_5.setObjectName("screen_test_Display_Answer_Qlabel_Answer1_5")
         self.gridLayout_116.addWidget(self.splitter_81, 0, 1, 1, 1)
         self.gridLayout_126.addWidget(self.frame_95, 0, 4, 1, 1)
-        self.frame_96 = QtWidgets.QFrame(self.widget)
+        self.frame_96 = QtWidgets.QFrame(self.layoutWidget4)
         self.frame_96.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_96.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_96.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5170,118 +5173,15 @@ class Ui_MainWindow(object):
         self.stackedWidget_3.setObjectName("stackedWidget_3")
         self.screen_Setting_Home = QtWidgets.QWidget()
         self.screen_Setting_Home.setObjectName("screen_Setting_Home")
-        self.tabWidget = QtWidgets.QTabWidget(self.screen_Setting_Home)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1024, 600))
-        self.tabWidget.setObjectName("tabWidget")
-        self.widget1 = QtWidgets.QWidget()
-        self.widget1.setObjectName("widget1")
-        self.layoutWidget_59 = QtWidgets.QWidget(self.widget1)
-        self.layoutWidget_59.setGeometry(QtCore.QRect(230, 510, 569, 61))
-        self.layoutWidget_59.setObjectName("layoutWidget_59")
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget_59)
-        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        self.screen_Setting_Home_ButtonCreatePractice = QtWidgets.QPushButton(self.layoutWidget_59)
-        self.screen_Setting_Home_ButtonCreatePractice.setMouseTracking(True)
-        self.screen_Setting_Home_ButtonCreatePractice.setTabletTracking(True)
-        self.screen_Setting_Home_ButtonCreatePractice.setStyleSheet("\n"
-"QPushButton {\n"
-"\n"
-"  border: 2px solid rgb(240, 240, 240);\n"
-"  background-color:  rgb(240, 240, 240);\n"
-"  border-radius: 20px;\n"
-"  color: black;\n"
-"  transition: .3s;\n"
-"}\n"
-"QPushButton:hover {\n"
-" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
-" border: 3px solid rgb(85, 170, 255);\n"
-"    background-color: rgb(85, 170, 255);\n"
-"}\n"
-"")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("Icon/thực hành1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonCreatePractice.setIcon(icon13)
-        self.screen_Setting_Home_ButtonCreatePractice.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Setting_Home_ButtonCreatePractice.setCheckable(False)
-        self.screen_Setting_Home_ButtonCreatePractice.setObjectName("screen_Setting_Home_ButtonCreatePractice")
-        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonCreatePractice)
-        self.screen_Setting_Home_ButtonCreateTest = QtWidgets.QPushButton(self.layoutWidget_59)
-        self.screen_Setting_Home_ButtonCreateTest.setMouseTracking(True)
-        self.screen_Setting_Home_ButtonCreateTest.setTabletTracking(True)
-        self.screen_Setting_Home_ButtonCreateTest.setStyleSheet("\n"
-"QPushButton {\n"
-"\n"
-"  border: 2px solid rgb(240, 240, 240);\n"
-"  background-color:  rgb(240, 240, 240);\n"
-"  border-radius: 20px;\n"
-"  color: black;\n"
-"  transition: .3s;\n"
-"}\n"
-"QPushButton:hover {\n"
-" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
-" border: 3px solid rgb(85, 170, 255);\n"
-"    background-color: rgb(85, 170, 255);\n"
-"}\n"
-"")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("Icon/test1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonCreateTest.setIcon(icon14)
-        self.screen_Setting_Home_ButtonCreateTest.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Setting_Home_ButtonCreateTest.setCheckable(False)
-        self.screen_Setting_Home_ButtonCreateTest.setObjectName("screen_Setting_Home_ButtonCreateTest")
-        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonCreateTest)
-        self.screen_Setting_Home_ButtonRamdom = QtWidgets.QPushButton(self.layoutWidget_59)
-        self.screen_Setting_Home_ButtonRamdom.setStyleSheet("\n"
-"QPushButton {\n"
-"\n"
-"  border: 2px solid rgb(240, 240, 240);\n"
-"  background-color:  rgb(240, 240, 240);\n"
-"  border-radius: 20px;\n"
-"  color: black;\n"
-"  transition: .3s;\n"
-"}\n"
-"QPushButton:hover {\n"
-" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
-" border: 3px solid rgb(85, 170, 255);\n"
-"    background-color: rgb(85, 170, 255);\n"
-"}\n"
-"")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("Icon/dice_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.screen_Setting_Home_ButtonRamdom.setIcon(icon15)
-        self.screen_Setting_Home_ButtonRamdom.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Setting_Home_ButtonRamdom.setObjectName("screen_Setting_Home_ButtonRamdom")
-        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonRamdom)
-        self.screen_Setting_Home_ButtonExit = QtWidgets.QPushButton(self.layoutWidget_59)
-        self.screen_Setting_Home_ButtonExit.setStyleSheet("\n"
-"QPushButton {\n"
-"\n"
-"  border: 2px solid rgb(240, 240, 240);\n"
-"  background-color:  rgb(240, 240, 240);\n"
-"  border-radius: 20px;\n"
-"  color: black;\n"
-"  transition: .3s;\n"
-"}\n"
-"QPushButton:hover {\n"
-" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
-" border: 3px solid rgb(85, 170, 255);\n"
-"    background-color: rgb(85, 170, 255);\n"
-"}\n"
-"")
-        self.screen_Setting_Home_ButtonExit.setIcon(icon5)
-        self.screen_Setting_Home_ButtonExit.setIconSize(QtCore.QSize(50, 50))
-        self.screen_Setting_Home_ButtonExit.setObjectName("screen_Setting_Home_ButtonExit")
-        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonExit)
-        self.layoutWidget4 = QtWidgets.QWidget(self.widget1)
-        self.layoutWidget4.setGeometry(QtCore.QRect(10, 0, 1001, 501))
-        self.layoutWidget4.setObjectName("layoutWidget4")
-        self.gridLayout_37 = QtWidgets.QGridLayout(self.layoutWidget4)
+        self.layoutWidget5 = QtWidgets.QWidget(self.screen_Setting_Home)
+        self.layoutWidget5.setGeometry(QtCore.QRect(10, 10, 1001, 521))
+        self.layoutWidget5.setObjectName("layoutWidget5")
+        self.gridLayout_37 = QtWidgets.QGridLayout(self.layoutWidget5)
         self.gridLayout_37.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_37.setObjectName("gridLayout_37")
         self.gridLayout_22 = QtWidgets.QGridLayout()
         self.gridLayout_22.setObjectName("gridLayout_22")
-        self.frames_11 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_11 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_11.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_11.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5340,7 +5240,7 @@ class Ui_MainWindow(object):
         self.label_19.setObjectName("label_19")
         self.gridLayout_20.addWidget(self.label_19, 0, 0, 1, 1)
         self.gridLayout_22.addWidget(self.frames_11, 0, 4, 1, 1)
-        self.frames_7 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_7 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_7.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_7.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5399,7 +5299,7 @@ class Ui_MainWindow(object):
         self.label_15.setObjectName("label_15")
         self.gridLayout_16.addWidget(self.label_15, 0, 0, 1, 1)
         self.gridLayout_22.addWidget(self.frames_7, 0, 0, 1, 1)
-        self.frames_10 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_10 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_10.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_10.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5458,7 +5358,7 @@ class Ui_MainWindow(object):
         self.label_18.setObjectName("label_18")
         self.gridLayout_19.addWidget(self.label_18, 0, 0, 1, 1)
         self.gridLayout_22.addWidget(self.frames_10, 0, 3, 1, 1)
-        self.frames_9 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_9 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_9.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_9.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5517,7 +5417,7 @@ class Ui_MainWindow(object):
         self.label_17.setObjectName("label_17")
         self.gridLayout_18.addWidget(self.label_17, 0, 0, 1, 1)
         self.gridLayout_22.addWidget(self.frames_9, 0, 2, 1, 1)
-        self.frames_12 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_12 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_12.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_12.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5576,7 +5476,7 @@ class Ui_MainWindow(object):
         self.label_20.setObjectName("label_20")
         self.gridLayout_21.addWidget(self.label_20, 0, 0, 1, 1)
         self.gridLayout_22.addWidget(self.frames_12, 0, 5, 1, 1)
-        self.frames_8 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_8 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_8.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_8.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5638,7 +5538,7 @@ class Ui_MainWindow(object):
         self.gridLayout_37.addLayout(self.gridLayout_22, 1, 0, 1, 1)
         self.gridLayout_23 = QtWidgets.QGridLayout()
         self.gridLayout_23.setObjectName("gridLayout_23")
-        self.frames_17 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_17 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_17.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_17.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5697,7 +5597,7 @@ class Ui_MainWindow(object):
         self.label_25.setObjectName("label_25")
         self.gridLayout_28.addWidget(self.label_25, 0, 0, 1, 1)
         self.gridLayout_23.addWidget(self.frames_17, 0, 4, 1, 1)
-        self.frames_16 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_16 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_16.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_16.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5756,7 +5656,7 @@ class Ui_MainWindow(object):
         self.label_24.setObjectName("label_24")
         self.gridLayout_27.addWidget(self.label_24, 0, 0, 1, 1)
         self.gridLayout_23.addWidget(self.frames_16, 0, 3, 1, 1)
-        self.frames_15 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_15 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_15.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_15.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5815,7 +5715,7 @@ class Ui_MainWindow(object):
         self.label_23.setObjectName("label_23")
         self.gridLayout_26.addWidget(self.label_23, 0, 0, 1, 1)
         self.gridLayout_23.addWidget(self.frames_15, 0, 2, 1, 1)
-        self.frames_18 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_18 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_18.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_18.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5874,7 +5774,7 @@ class Ui_MainWindow(object):
         self.label_26.setObjectName("label_26")
         self.gridLayout_29.addWidget(self.label_26, 0, 0, 1, 1)
         self.gridLayout_23.addWidget(self.frames_18, 0, 5, 1, 1)
-        self.frames_14 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_14 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_14.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_14.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5933,7 +5833,7 @@ class Ui_MainWindow(object):
         self.label_22.setObjectName("label_22")
         self.gridLayout_25.addWidget(self.label_22, 0, 0, 1, 1)
         self.gridLayout_23.addWidget(self.frames_14, 0, 1, 1, 1)
-        self.frames_13 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_13 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_13.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_13.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -5995,7 +5895,7 @@ class Ui_MainWindow(object):
         self.gridLayout_37.addLayout(self.gridLayout_23, 2, 0, 1, 1)
         self.gridLayout_30 = QtWidgets.QGridLayout()
         self.gridLayout_30.setObjectName("gridLayout_30")
-        self.frames_19 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_19 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_19.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_19.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6054,7 +5954,7 @@ class Ui_MainWindow(object):
         self.label_27.setObjectName("label_27")
         self.gridLayout_31.addWidget(self.label_27, 0, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frames_19, 0, 0, 1, 1)
-        self.frames_20 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_20 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_20.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_20.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6113,7 +6013,7 @@ class Ui_MainWindow(object):
         self.label_28.setObjectName("label_28")
         self.gridLayout_32.addWidget(self.label_28, 0, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frames_20, 0, 1, 1, 1)
-        self.frames_24 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_24 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_24.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_24.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_24.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6172,7 +6072,7 @@ class Ui_MainWindow(object):
         self.label_32.setObjectName("label_32")
         self.gridLayout_36.addWidget(self.label_32, 0, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frames_24, 0, 5, 1, 1)
-        self.frames_22 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_22 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_22.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_22.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6231,7 +6131,7 @@ class Ui_MainWindow(object):
         self.label_30.setObjectName("label_30")
         self.gridLayout_34.addWidget(self.label_30, 0, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frames_22, 0, 3, 1, 1)
-        self.frames_23 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_23 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_23.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_23.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6290,7 +6190,7 @@ class Ui_MainWindow(object):
         self.label_31.setObjectName("label_31")
         self.gridLayout_35.addWidget(self.label_31, 0, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frames_23, 0, 4, 1, 1)
-        self.frames_21 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_21 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_21.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_21.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6352,7 +6252,7 @@ class Ui_MainWindow(object):
         self.gridLayout_37.addLayout(self.gridLayout_30, 3, 0, 1, 1)
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.frames_4 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_4 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_4.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_4.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6411,7 +6311,7 @@ class Ui_MainWindow(object):
         self.label_11.setObjectName("label_11")
         self.gridLayout_13.addWidget(self.label_11, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_4, 0, 3, 1, 1)
-        self.frames_6 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_6 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_6.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_6.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6470,7 +6370,7 @@ class Ui_MainWindow(object):
         self.label_14.setObjectName("label_14")
         self.gridLayout_15.addWidget(self.label_14, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_6, 0, 5, 1, 1)
-        self.frames_5 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_5 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_5.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_5.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6529,7 +6429,7 @@ class Ui_MainWindow(object):
         self.label_12.setObjectName("label_12")
         self.gridLayout_14.addWidget(self.label_12, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_5, 0, 4, 1, 1)
-        self.frames_1 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_1 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_1.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frames_1.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_1.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6588,7 +6488,7 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.gridLayout_6.addWidget(self.label_5, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_1, 0, 1, 1, 1)
-        self.frames_2 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_2 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_2.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_2.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6647,7 +6547,7 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.gridLayout_7.addWidget(self.label_6, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_2, 0, 0, 1, 1)
-        self.frames_3 = QtWidgets.QFrame(self.layoutWidget4)
+        self.frames_3 = QtWidgets.QFrame(self.layoutWidget5)
         self.frames_3.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frames_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frames_3.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6707,13 +6607,159 @@ class Ui_MainWindow(object):
         self.gridLayout_12.addWidget(self.label_10, 0, 0, 1, 1)
         self.gridLayout_3.addWidget(self.frames_3, 0, 2, 1, 1)
         self.gridLayout_37.addLayout(self.gridLayout_3, 0, 0, 1, 1)
-        self.tabWidget.addTab(self.widget1, "")
-        self.tab_2 = QtWidgets.QWidget()
-        self.tab_2.setObjectName("tab_2")
-        self.tabWidget.addTab(self.tab_2, "")
-        self.tab_3 = QtWidgets.QWidget()
-        self.tab_3.setObjectName("tab_3")
-        self.tabWidget.addTab(self.tab_3, "")
+        self.layoutWidget_59 = QtWidgets.QWidget(self.screen_Setting_Home)
+        self.layoutWidget_59.setGeometry(QtCore.QRect(10, 540, 1001, 61))
+        self.layoutWidget_59.setObjectName("layoutWidget_59")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget_59)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.horizontalLayout_20 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_20.setObjectName("horizontalLayout_20")
+        self.screen_Setting_Home_ButtonCreateTest_2 = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonCreateTest_2.setMouseTracking(True)
+        self.screen_Setting_Home_ButtonCreateTest_2.setTabletTracking(True)
+        self.screen_Setting_Home_ButtonCreateTest_2.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(240, 240, 240);\n"
+"    background-color: rgb(240, 240, 240);\n"
+"}\n"
+"")
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap("Icon/test_time.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonCreateTest_2.setIcon(icon13)
+        self.screen_Setting_Home_ButtonCreateTest_2.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonCreateTest_2.setCheckable(False)
+        self.screen_Setting_Home_ButtonCreateTest_2.setObjectName("screen_Setting_Home_ButtonCreateTest_2")
+        self.horizontalLayout_20.addWidget(self.screen_Setting_Home_ButtonCreateTest_2)
+        self.spinBox = QtWidgets.QSpinBox(self.layoutWidget_59)
+        self.spinBox.setMinimumSize(QtCore.QSize(50, 30))
+        self.spinBox.setMaximumSize(QtCore.QSize(80, 16777215))
+        self.spinBox.setAlignment(QtCore.Qt.AlignCenter)
+        self.spinBox.setMaximum(180)
+        self.spinBox.setObjectName("spinBox")
+        self.horizontalLayout_20.addWidget(self.spinBox)
+        self.horizontalLayout_8.addLayout(self.horizontalLayout_20)
+        self.screen_Setting_Home_ButtonCreatePractice = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonCreatePractice.setMouseTracking(True)
+        self.screen_Setting_Home_ButtonCreatePractice.setTabletTracking(True)
+        self.screen_Setting_Home_ButtonCreatePractice.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("Icon/thực hành1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonCreatePractice.setIcon(icon14)
+        self.screen_Setting_Home_ButtonCreatePractice.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonCreatePractice.setCheckable(False)
+        self.screen_Setting_Home_ButtonCreatePractice.setObjectName("screen_Setting_Home_ButtonCreatePractice")
+        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonCreatePractice)
+        self.screen_Setting_Home_ButtonCreateTest = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonCreateTest.setMouseTracking(True)
+        self.screen_Setting_Home_ButtonCreateTest.setTabletTracking(True)
+        self.screen_Setting_Home_ButtonCreateTest.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("Icon/test1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonCreateTest.setIcon(icon15)
+        self.screen_Setting_Home_ButtonCreateTest.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonCreateTest.setCheckable(False)
+        self.screen_Setting_Home_ButtonCreateTest.setObjectName("screen_Setting_Home_ButtonCreateTest")
+        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonCreateTest)
+        self.screen_Setting_Home_ButtonRamdom = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonRamdom.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap("Icon/dice_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_Home_ButtonRamdom.setIcon(icon16)
+        self.screen_Setting_Home_ButtonRamdom.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonRamdom.setObjectName("screen_Setting_Home_ButtonRamdom")
+        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonRamdom)
+        self.screen_Setting_Home_ButtonLogin = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonLogin.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        self.screen_Setting_Home_ButtonLogin.setIcon(icon)
+        self.screen_Setting_Home_ButtonLogin.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonLogin.setObjectName("screen_Setting_Home_ButtonLogin")
+        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonLogin)
+        self.screen_Setting_Home_ButtonExit = QtWidgets.QPushButton(self.layoutWidget_59)
+        self.screen_Setting_Home_ButtonExit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        self.screen_Setting_Home_ButtonExit.setIcon(icon5)
+        self.screen_Setting_Home_ButtonExit.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_Home_ButtonExit.setObjectName("screen_Setting_Home_ButtonExit")
+        self.horizontalLayout_8.addWidget(self.screen_Setting_Home_ButtonExit)
         self.stackedWidget_3.addWidget(self.screen_Setting_Home)
         self.screen_Setting_practice = QtWidgets.QWidget()
         self.screen_Setting_practice.setObjectName("screen_Setting_practice")
@@ -6749,15 +6795,15 @@ class Ui_MainWindow(object):
         self.screen_Setting_practice_ButtonExit.setCheckable(False)
         self.screen_Setting_practice_ButtonExit.setObjectName("screen_Setting_practice_ButtonExit")
         self.horizontalLayout_18.addWidget(self.screen_Setting_practice_ButtonExit)
-        self.layoutWidget5 = QtWidgets.QWidget(self.screen_Setting_practice)
-        self.layoutWidget5.setGeometry(QtCore.QRect(10, 10, 1001, 511))
-        self.layoutWidget5.setObjectName("layoutWidget5")
-        self.gridLayout_82 = QtWidgets.QGridLayout(self.layoutWidget5)
+        self.layoutWidget6 = QtWidgets.QWidget(self.screen_Setting_practice)
+        self.layoutWidget6.setGeometry(QtCore.QRect(10, 10, 1001, 511))
+        self.layoutWidget6.setObjectName("layoutWidget6")
+        self.gridLayout_82 = QtWidgets.QGridLayout(self.layoutWidget6)
         self.gridLayout_82.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_82.setObjectName("gridLayout_82")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.frame_1 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_1 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_1.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_1.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_1.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6782,7 +6828,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_32.addWidget(self.screen_Setting_practice_label_1)
         self.gridLayout_4.addLayout(self.horizontalLayout_32, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_1)
-        self.frame_27 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_27 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_27.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_27.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_27.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6807,7 +6853,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_33.addWidget(self.screen_Setting_practice_label_2)
         self.gridLayout_8.addLayout(self.horizontalLayout_33, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_27)
-        self.frame_28 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_28 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_28.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_28.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_28.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6832,7 +6878,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_62.addWidget(self.screen_Setting_practice_label_3)
         self.gridLayout_46.addLayout(self.horizontalLayout_62, 0, 0, 1, 1)
         self.horizontalLayout_9.addWidget(self.frame_28)
-        self.frame_29 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_29 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_29.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_29.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_29.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6860,7 +6906,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_9, 0, 0, 1, 1)
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
-        self.frame_30 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_30 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_30.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_30.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_30.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6885,7 +6931,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_64.addWidget(self.screen_Setting_practice_label_5)
         self.gridLayout_62.addLayout(self.horizontalLayout_64, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_30)
-        self.frame_32 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_32 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_32.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_32.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_32.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6910,7 +6956,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_66.addWidget(self.screen_Setting_practice_label_7)
         self.gridLayout_64.addLayout(self.horizontalLayout_66, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_32)
-        self.frame_31 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_31 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_31.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6935,7 +6981,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_65.addWidget(self.screen_Setting_practice_label_6)
         self.gridLayout_63.addLayout(self.horizontalLayout_65, 0, 0, 1, 1)
         self.horizontalLayout_13.addWidget(self.frame_31)
-        self.frame_33 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_33 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_33.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_33.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_33.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6963,7 +7009,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_13, 1, 0, 1, 1)
         self.horizontalLayout_14 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
-        self.frame_34 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_34 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_34.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_34.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_34.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -6988,7 +7034,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_68.addWidget(self.screen_Setting_practice_label_9)
         self.gridLayout_66.addLayout(self.horizontalLayout_68, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_34)
-        self.frame_35 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_35 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_35.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7013,7 +7059,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_69.addWidget(self.screen_Setting_practice_label_10)
         self.gridLayout_67.addLayout(self.horizontalLayout_69, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_35)
-        self.frame_36 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_36 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_36.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7038,7 +7084,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_70.addWidget(self.screen_Setting_practice_label_11)
         self.gridLayout_68.addLayout(self.horizontalLayout_70, 0, 0, 1, 1)
         self.horizontalLayout_14.addWidget(self.frame_36)
-        self.frame_37 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_37 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_37.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_37.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_37.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7066,7 +7112,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_14, 2, 0, 1, 1)
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        self.frame_38 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_38 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_38.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_38.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_38.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7091,7 +7137,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_72.addWidget(self.screen_Setting_practice_label_13)
         self.gridLayout_70.addLayout(self.horizontalLayout_72, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_38)
-        self.frame_39 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_39 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_39.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_39.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_39.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7116,7 +7162,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_73.addWidget(self.screen_Setting_practice_label_14)
         self.gridLayout_71.addLayout(self.horizontalLayout_73, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_39)
-        self.frame_40 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_40 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_40.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_40.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_40.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7141,7 +7187,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_74.addWidget(self.screen_Setting_practice_label_15)
         self.gridLayout_72.addLayout(self.horizontalLayout_74, 0, 0, 1, 1)
         self.horizontalLayout_15.addWidget(self.frame_40)
-        self.frame_41 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_41 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_41.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_41.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_41.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7169,7 +7215,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_15, 3, 0, 1, 1)
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
-        self.frame_42 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_42 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_42.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_42.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_42.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7194,7 +7240,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_76.addWidget(self.screen_Setting_practice_label_17)
         self.gridLayout_74.addLayout(self.horizontalLayout_76, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_42)
-        self.frame_43 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_43 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_43.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7219,7 +7265,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_77.addWidget(self.screen_Setting_practice_label_18)
         self.gridLayout_75.addLayout(self.horizontalLayout_77, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_43)
-        self.frame_44 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_44 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_44.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_44.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7244,7 +7290,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_78.addWidget(self.screen_Setting_practice_label_19)
         self.gridLayout_76.addLayout(self.horizontalLayout_78, 0, 0, 1, 1)
         self.horizontalLayout_16.addWidget(self.frame_44)
-        self.frame_45 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_45 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_45.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_45.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_45.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7272,7 +7318,7 @@ class Ui_MainWindow(object):
         self.gridLayout_82.addLayout(self.horizontalLayout_16, 4, 0, 1, 1)
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
-        self.frame_46 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_46 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_46.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_46.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_46.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7297,7 +7343,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_80.addWidget(self.screen_Setting_practice_label_21)
         self.gridLayout_78.addLayout(self.horizontalLayout_80, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_46)
-        self.frame_47 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_47 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_47.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_47.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7322,7 +7368,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_81.addWidget(self.screen_Setting_practice_label_22)
         self.gridLayout_79.addLayout(self.horizontalLayout_81, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_47)
-        self.frame_48 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_48 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_48.setStyleSheet("background-color: rgb(255, 170, 0);")
         self.frame_48.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7347,7 +7393,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_82.addWidget(self.screen_Setting_practice_label_23)
         self.gridLayout_80.addLayout(self.horizontalLayout_82, 0, 0, 1, 1)
         self.horizontalLayout_17.addWidget(self.frame_48)
-        self.frame_49 = QtWidgets.QFrame(self.layoutWidget5)
+        self.frame_49 = QtWidgets.QFrame(self.layoutWidget6)
         self.frame_49.setStyleSheet("background-color: rgb(85, 170, 255);")
         self.frame_49.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_49.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -7374,9 +7420,129 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.addWidget(self.frame_49)
         self.gridLayout_82.addLayout(self.horizontalLayout_17, 5, 0, 1, 1)
         self.stackedWidget_3.addWidget(self.screen_Setting_practice)
-        self.screen_Setting_Test = QtWidgets.QWidget()
-        self.screen_Setting_Test.setObjectName("screen_Setting_Test")
-        self.stackedWidget_3.addWidget(self.screen_Setting_Test)
+        self.screen_Setting_Login = QtWidgets.QWidget()
+        self.screen_Setting_Login.setObjectName("screen_Setting_Login")
+        self.label_3 = QtWidgets.QLabel(self.screen_Setting_Login)
+        self.label_3.setGeometry(QtCore.QRect(0, 0, 1031, 600))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("Icon/aa.jpg"))
+        self.label_3.setObjectName("label_3")
+        self.frame_50 = QtWidgets.QFrame(self.screen_Setting_Login)
+        self.frame_50.setEnabled(True)
+        self.frame_50.setGeometry(QtCore.QRect(172, 130, 681, 281))
+        self.frame_50.setMouseTracking(False)
+        self.frame_50.setAcceptDrops(False)
+        self.frame_50.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.frame_50.setStyleSheet("\n"
+"background-color: rgb(240, 240, 240);\n"
+"color: rgb(255, 255, 255);\n"
+" border: 5px solid transparent;\n"
+"color: rgb(255, 255, 255);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;")
+        self.frame_50.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_50.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_50.setObjectName("frame_50")
+        self.layoutWidget_9 = QtWidgets.QWidget(self.frame_50)
+        self.layoutWidget_9.setGeometry(QtCore.QRect(10, 10, 651, 141))
+        self.layoutWidget_9.setObjectName("layoutWidget_9")
+        self.gridLayout_10 = QtWidgets.QGridLayout(self.layoutWidget_9)
+        self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_10.setObjectName("gridLayout_10")
+        self.screen_Setting_SettingSys_Qlineedit_Password = QtWidgets.QLineEdit(self.layoutWidget_9)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setEnabled(True)
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        font.setKerning(True)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setFont(font)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setMouseTracking(False)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setStyleSheet("QLineEdit { \n"
+"background:rgb(240, 240, 240);\n"
+"border : none;\n"
+"border-bottom: 3px solid black;\n"
+"\n"
+" }")
+        self.screen_Setting_SettingSys_Qlineedit_Password.setText("")
+        self.screen_Setting_SettingSys_Qlineedit_Password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.screen_Setting_SettingSys_Qlineedit_Password.setObjectName("screen_Setting_SettingSys_Qlineedit_Password")
+        self.gridLayout_10.addWidget(self.screen_Setting_SettingSys_Qlineedit_Password, 1, 0, 1, 1)
+        self.layoutWidget_10 = QtWidgets.QWidget(self.frame_50)
+        self.layoutWidget_10.setGeometry(QtCore.QRect(130, 170, 421, 82))
+        self.layoutWidget_10.setObjectName("layoutWidget_10")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.layoutWidget_10)
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.screen_Setting_SettingSys_Button_Exit = QtWidgets.QPushButton(self.layoutWidget_10)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.screen_Setting_SettingSys_Button_Exit.setFont(font)
+        self.screen_Setting_SettingSys_Button_Exit.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        self.screen_Setting_SettingSys_Button_Exit.setIcon(icon5)
+        self.screen_Setting_SettingSys_Button_Exit.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_SettingSys_Button_Exit.setObjectName("screen_Setting_SettingSys_Button_Exit")
+        self.horizontalLayout_10.addWidget(self.screen_Setting_SettingSys_Button_Exit)
+        self.screen_Setting_SettingSys_Button_LoginSYS = QtWidgets.QPushButton(self.layoutWidget_10)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setFont(font)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setMouseTracking(True)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setTabletTracking(True)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setStyleSheet("\n"
+"QPushButton {\n"
+"\n"
+"  border: 2px solid rgb(240, 240, 240);\n"
+"  background-color:  rgb(240, 240, 240);\n"
+"  border-radius: 20px;\n"
+"  color: black;\n"
+"  transition: .3s;\n"
+"}\n"
+"QPushButton:hover {\n"
+" box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;\n"
+" border: 3px solid rgb(85, 170, 255);\n"
+"    background-color: rgb(85, 170, 255);\n"
+"}\n"
+"")
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap("Icon/login_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setIcon(icon17)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setIconSize(QtCore.QSize(50, 50))
+        self.screen_Setting_SettingSys_Button_LoginSYS.setCheckable(False)
+        self.screen_Setting_SettingSys_Button_LoginSYS.setObjectName("screen_Setting_SettingSys_Button_LoginSYS")
+        self.horizontalLayout_10.addWidget(self.screen_Setting_SettingSys_Button_LoginSYS)
+        self.stackedWidget_3.addWidget(self.screen_Setting_Login)
+        self.screen_Setting_SettingSys = QtWidgets.QWidget()
+        self.screen_Setting_SettingSys.setObjectName("screen_Setting_SettingSys")
+        self.tabWidget = QtWidgets.QTabWidget(self.screen_Setting_SettingSys)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1024, 600))
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.tabWidget.addTab(self.tab_2, "")
+        self.stackedWidget_3.addWidget(self.screen_Setting_SettingSys)
         self.stackedWidget.addWidget(self.screen_Setting)
         self.screen_Information = QtWidgets.QWidget()
         self.screen_Information.setObjectName("screen_Information")
@@ -7388,7 +7554,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(3)
-        self.stackedWidget_2.setCurrentIndex(3)
+        self.stackedWidget_2.setCurrentIndex(1)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -7617,10 +7783,6 @@ class Ui_MainWindow(object):
         self.screen_test_Display_Answer_Qlabel_Answer2_6.setText(_translate("MainWindow", "Chưa có"))
         self.screen_test_Display_Answer_Qlabel_Answer0_6.setText(_translate("MainWindow", "Chưa có"))
         self.screen_test_Display_Answer_Qlabel_Answer1_6.setText(_translate("MainWindow", "Chưa có"))
-        self.screen_Setting_Home_ButtonCreatePractice.setText(_translate("MainWindow", " Tạo bài thực hành"))
-        self.screen_Setting_Home_ButtonCreateTest.setText(_translate("MainWindow", " Tạo bài kiểm tra"))
-        self.screen_Setting_Home_ButtonRamdom.setText(_translate("MainWindow", "Tạo bài ngẫu nhiên"))
-        self.screen_Setting_Home_ButtonExit.setText(_translate("MainWindow", " Quay lại"))
         self.screen_setting_Home_ComboBox_11.setItemText(0, _translate("MainWindow", "Hở mạch"))
         self.screen_setting_Home_ComboBox_11.setItemText(1, _translate("MainWindow", "Chập chờn"))
         self.screen_setting_Home_ComboBox_11.setItemText(2, _translate("MainWindow", "Chạm đất"))
@@ -7813,9 +7975,12 @@ class Ui_MainWindow(object):
         self.screen_setting_Home_ComboBox_3.setItemText(5, _translate("MainWindow", "Điện áp"))
         self.screen_setting_Home_lineEdit_3.setPlaceholderText(_translate("MainWindow", "Nhập điện áp"))
         self.label_10.setText(_translate("MainWindow", "PAN 3"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.widget1), _translate("MainWindow", "Tạo bài"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Server"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Thiết bị"))
+        self.screen_Setting_Home_ButtonCreateTest_2.setText(_translate("MainWindow", "Thời gian làm bà kiểm tra(Phút)"))
+        self.screen_Setting_Home_ButtonCreatePractice.setText(_translate("MainWindow", " Tạo bài thực hành"))
+        self.screen_Setting_Home_ButtonCreateTest.setText(_translate("MainWindow", " Tạo bài kiểm tra"))
+        self.screen_Setting_Home_ButtonRamdom.setText(_translate("MainWindow", "Tạo bài ngẫu nhiên"))
+        self.screen_Setting_Home_ButtonLogin.setText(_translate("MainWindow", "Cài đặt hệ thống"))
+        self.screen_Setting_Home_ButtonExit.setText(_translate("MainWindow", " Quay lại"))
         self.screen_Setting_practice_ButtonExit.setText(_translate("MainWindow", "Quay lại"))
         self.label_71.setText(_translate("MainWindow", "PAN 1"))
         self.screen_Setting_practice_label_1.setText(_translate("MainWindow", "Bình thường"))
@@ -7865,3 +8030,8 @@ class Ui_MainWindow(object):
         self.screen_Setting_practice_label_23.setText(_translate("MainWindow", "Bình thường"))
         self.label_150.setText(_translate("MainWindow", "PAN 24"))
         self.screen_Setting_practice_label_24.setText(_translate("MainWindow", "Bình thường"))
+        self.screen_Setting_SettingSys_Qlineedit_Password.setPlaceholderText(_translate("MainWindow", "Nhập mật khẩu"))
+        self.screen_Setting_SettingSys_Button_Exit.setText(_translate("MainWindow", " Quay lại"))
+        self.screen_Setting_SettingSys_Button_LoginSYS.setText(_translate("MainWindow", " Đăng nhập"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Cài đặt hệ thống"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Server_MQTT"))
