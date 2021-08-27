@@ -5,31 +5,42 @@ import json
 import socket
 
 from pdf2image import convert_from_path
+from PyQt5.QtGui import QMovie
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow, QFileDialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QSettings, QPoint
 from MQTT_TEST import Ui_MainWindow
-
+from PyQt5.QtCore import QTime, QTimer
 import paho.mqtt.client as mqtt
 from numpy import random
 import shutil
 import pyautogui
+import time
 
 class MainWindow:
     def __init__(self, parent=None):
         super().__init__()
         # -----------(Khởi tao Class)-----------------#
-
+        self.timer = QTimer()
         self.main_win = QMainWindow()
         self.uic = Ui_MainWindow()
         self.uic.setupUi(self.main_win)
         self.uic.stackedWidget.setCurrentWidget(self.uic.HOME)
         self.mqtt_client = mqtt.Client()
         self.Sys_value_ChooseScreenTest = 0
-        # -----------(Lưu mật khẩu)-----------------#
+        self.Sys_valute_TimeCountClearRemind = 0
+        self.Sys_valute_FlagClearRemind_Learn = 0
+        self.Sys_valute_FlagClearRemind_ChooseTest = 0
+        # -----------(Lưu thông tin)-----------------#
+        self.QSettingsSave_StrJsonAnswer = 'Json_Answer_Mqtt'
+        self.QSettingsSave_StrPassword = 'Str_Password'
+        self.QSettingsSave_StrIDDivice = 'Str_IDDivice'
         self.settings = QSettings('PAN','PAN')
-       # settings.setValue('list_value', "25")
+
+        #self.settings.setValue(self.QSettingsSave_StrPassword, "1")
+        print(self.settings.value(self.QSettingsSave_StrPassword))
+        #settings.setValue('list_value', "25")
         #settings.setValue('dict_value', {'one': 1, 'two': 2})
 
         #print()
@@ -38,19 +49,18 @@ class MainWindow:
         self.Number_Image_Learn = 1
         # -----------(Biến MQTT)-----------------#
         self.Mqtt_Port = 1883
-        self.TopicSub = "test"
-        self.TopicPub = "IP"
-        self.TopicPingMQTT = "check"
-        self.TopicPingMQTT = "check"
-        self.TopicCkeckConnect = "res_check"
-        self.TopicGetTest = "send/id1"
-        self.TopicSendAnswer = "res_answer"
+
+        self.TopicSub_PingMQTT = "check"
+        self.TopicSub_GetTest = "send/id1"
+
+        self.TopicPub_CkeckConnect = "res_check"
+        self.TopicPub_SendAnswer = "res_answer"
         # -----------(Biến tên và đường dẫn giao diện learn)-----------------#
         self.Path_Image_Screen_Learn = 'Image_Learn'
         self.Name_image_Screen_Learn = 'output'
         self.Name_File_PDF = 'sample.pdf'
         self.Learn_Size_X_Image_PDF = 1024
-        self.Learn_Size_Y_Image_PDF = 500
+        self.Learn_Size_Y_Image_PDF = 600
 
         # -----------(Biến tên giao diện Test)-----------------#
         self.ScreenTest_value_Qlabel_ArrayNameChoose = ["Chưa chọn","Hở mạch", "Chập chờn", "Chạm đất","Nối dương", "Bình thường"]
@@ -63,7 +73,14 @@ class MainWindow:
         self.ScreenTest_value_NameStudent = ""
         self.ScreenTest_value_NameITStudent = ""
         self.ScreenTest_value_NameClassStudent = ""
+        self.ScreenTest_value_TimeOut_M = 0
+        self.ScreenTest_value_TimeOut_S = 0
+        self.ScreenTest_value_Time_first = 0
+
+        self.FlagStartTimeOut = 0
+        self.FlagStopTimeOut = 0
         self.uic.screen_Test_Display_Choose_lineEdit.setEnabled(0)
+
         # -----------(Biến tên giao diện setting)-----------------#
         self.ScreenSetting_value_ArrayGetCurrentText = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
         self.ScreenSetting_value_ArrayGetCurrentIndex = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
@@ -78,16 +95,18 @@ class MainWindow:
         self.uic.Learn_Button_Back.clicked.connect(self.Learn_Button_Back)
         self.uic.Learn_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.Learn_Button_Next.clicked.connect(self.Learn_Button_Next)
+        self.uic.Learn_Button_ChooseFile.clicked.connect(self.getfile)
+
         # self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
+
         # Khối button của màn hình Test
-        self.uic.screen_Test_Display_InputInfor_Button_Exit.clicked.connect(self.Show_Screen_Home)
-        self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam)
+        self.uic.screen_Test_Display_InputInfor_Button_Exit.clicked.connect(self.Show_Screen_Home) # nút quay lại(screen_Test)
+        self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam) # nút vào thi (screen_Test)
 
-        self.uic.screen_Test_Display_Answer_Exit.clicked.connect(self.Show_Screen_Home)
-        self.uic.screen_Test_Display_Exam_Exit.clicked.connect(self.Show_Screen_Test)
-        self.uic.screen_Test_Display_Exam_Submit.clicked.connect(self.screen_Test_Display_Choose_ButtonSubmit)
+        #self.uic.screen_Test_Display_Exam_Exit.clicked.connect(lambda:self.Show_Screen_Test(self.Sys_value_ChooseScreenTest)) # nút quay lại(screen_Test_Display_Exam)
+        self.uic.screen_Test_Display_Exam_Submit.clicked.connect(self.screen_Test_Display_Choose_ButtonSubmit) # nút Nộp bài (screen_Test_Display_Exam)
 
-
+        #--------------------------------------------(Cụm nút PAN_01 -> PAN_24 (screen_Test_Display_Exam))---------------------------------------#
         self.uic.SCreen_Test_Button_PAN_1.clicked.connect(self.Screen_Test_EvenButton_PAN_1)
         self.uic.SCreen_Test_Button_PAN_2.clicked.connect(self.Screen_Test_EvenButton_PAN_2)
         self.uic.SCreen_Test_Button_PAN_3.clicked.connect(self.Screen_Test_EvenButton_PAN_3)
@@ -113,18 +132,20 @@ class MainWindow:
         self.uic.SCreen_Test_Button_PAN_23.clicked.connect(self.Screen_Test_EvenButton_PAN_23)
         self.uic.SCreen_Test_Button_PAN_24.clicked.connect(self.Screen_Test_EvenButton_PAN_24)
 
-        self.uic.screen_Test_Display_Choose_ButtonChoose.clicked.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked_and_Show_Display(self.ScreenTest_value_Qlabel_FlagButtonClick))
-        self.uic.screen_Test_Display_Choose_radioButton_6.toggled.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked(self.ScreenTest_value_Qlabel_FlagButtonClick))
-        # Khối button của màn hình Setting
-        self.uic.screen_Setting_Home_ButtonCreatePractice.clicked.connect(self.screen_Setting_Show_Display_Practice)
-        self.uic.screen_Setting_Home_ButtonCreateTest.clicked.connect(lambda:self.Show_Screen_Test(2))
-        self.uic.screen_Setting_Home_ButtonRamdom.clicked.connect(self.screen_Setting_RamdomExercise)
-        self.uic.screen_Setting_Home_ButtonExit.clicked.connect(self.Show_Screen_Home)
-        self.uic.screen_Setting_Home_ButtonLogin.clicked.connect(self.screen_Setting_Show_Login)
-        self.uic.screen_Setting_SettingSys_Button_LoginSYS.clicked.connect(self.screen_Setting_Show_SettingSYS)
-        self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Home)
-        self.uic.screen_Setting_SettingSys_Button_Exit.clicked.connect(self.Show_Screen_Home)
+        self.uic.screen_Test_Display_Choose_ButtonChoose.clicked.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked_and_Show_Display(self.ScreenTest_value_Qlabel_FlagButtonClick)) # nút Chọn (screen_Test_Display_Choose)
+        self.uic.screen_Test_Display_Choose_radioButton_6.toggled.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked(self.ScreenTest_value_Qlabel_FlagButtonClick)) #QRadioButton điện áp: đóng, Mở ô điền điện áp (screen_Test_Display_Choose)
 
+        self.uic.screen_Test_Display_Answer_Exit.clicked.connect(self.screen_Test_SaveImageResult) # nút kết thúc (screen_Test_Display_Answer)
+
+        # Khối button của màn hình Setting
+
+        self.uic.screen_Setting_Home_ButtonCreatePractice.clicked.connect(self.screen_Setting_Show_Display_Practice) # Nút tạo bài thực hành (screen_Setting_Home)
+        self.uic.screen_Setting_Home_ButtonCreateTest.clicked.connect(lambda:self.Show_Screen_Test(2)) # Nút tạo bài kiểm tra (screen_Setting_Home)
+        self.uic.screen_Setting_Home_ButtonRamdom.clicked.connect(self.screen_Setting_RamdomExercise) # Nút tạo bài Ngẫu nhiên (screen_Setting_Home)
+        self.uic.screen_Setting_Home_ButtonExit.clicked.connect(self.Show_Screen_Home) # Nút Quay lại (screen_Setting_Home)
+        self.uic.screen_Setting_Home_ButtonLogin.clicked.connect(self.screen_Setting_Show_Login) # Cài đặt hệ thống: vào giao điện đặng nhập (screen_Setting_Home)
+
+        # --------------------------------------------(Cụm ComboBox PAN_01 -> PAN_24 (screen_Setting_Home))---------------------------------------#
         self.uic.screen_setting_Home_ComboBox_1.activated.connect(self.screen_Setting_Check_selectVoltage_1)
         self.uic.screen_setting_Home_ComboBox_2.activated.connect(self.screen_Setting_Check_selectVoltage_2)
         self.uic.screen_setting_Home_ComboBox_3.activated.connect(self.screen_Setting_Check_selectVoltage_3)
@@ -150,45 +171,56 @@ class MainWindow:
         self.uic.screen_setting_Home_ComboBox_23.activated.connect(self.screen_Setting_Check_selectVoltage_23)
         self.uic.screen_setting_Home_ComboBox_24.activated.connect(self.screen_Setting_Check_selectVoltage_24)
 
-       # myScreenshot = pyautogui.screenshot(region=(0,0, 300, 400))
-        #print(myScreenshot)
-        #path = os.path.abspath('Icon')+"\\" + 'bien.png'
-        #print(path)
-        #myScreenshot.save(path)
+        self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Home) # Nút Quay lại (screen_Setting_practice)
 
-        #self.uic.BT.clicked.connect(self.getfile)
+        self.uic.screen_Setting_SettingSys_Button_LoginSYS.clicked.connect(self.screen_Setting_Show_SettingSYS) # Nút Đăng nhập (screen_Setting_Login)
+        self.uic.screen_Setting_SettingSys_Button_Exit.clicked.connect(self.Show_Screen_Home) # Nút Quay lại (screen_Setting_Login)
 
-        #self.Mqtt_Run()
+        self.timer.timeout.connect(self.Time)
+        self.timer.start(1000)
 
-    def getfile(self):
-        fname= QFileDialog.getOpenFileName()
-        if(fname != ('', '')):
-            if((fname[0].rfind('.pdf')) != -1 or (fname[0].rfind('.PDF')) != -1):
-                print('The file name is...', fname)
-                self.uic.LB.setText(fname[0])
-                self.Learn_convert_PDF_TO_IMAGE(fname[0])
+    def Sys_Clear_Remind(self):
+        self.uic.screen_Test_Display_Exam_label_Remind.setStyleSheet(" background-color: transparent;")
+        self.uic.screen_Test_Display_Exam_label_Remind.setText("")
+
+        self.uic.Screen_Learn_label_Remind.setStyleSheet("background-color: transparent;")
+        self.uic.Screen_Learn_label_Remind.setText("")
+
+    def Time(self):
+        if(self.Sys_valute_FlagClearRemind_ChooseTest == 1 or self.Sys_valute_FlagClearRemind_Learn == 1):
+            self.Sys_valute_TimeCountClearRemind = self.Sys_valute_TimeCountClearRemind + 1
+            if(self.Sys_valute_TimeCountClearRemind >= 5): #chỉnh thời gian hiện thông báo
+                self.Sys_valute_TimeCountClearRemind = 0
+                self.Sys_valute_FlagClearRemind_Learn = 0
+                self.Sys_valute_FlagClearRemind_ChooseTest = 0
+                self.Sys_Clear_Remind()
+
+        if (self.FlagStartTimeOut == 1):
+            if self.ScreenTest_value_TimeOut_S > 0:
+                self.ScreenTest_value_TimeOut_S -= 1
             else:
-                self.uic.LB.setText("FIle bạn chọn không phải .pdf")
-        else:
-            self.uic.LB.setText("Bạn chưa chọn File")
+                if self.ScreenTest_value_TimeOut_M > 0:
+                    self.ScreenTest_value_TimeOut_M = self.ScreenTest_value_TimeOut_M - 1
+                    self.ScreenTest_value_TimeOut_S = 59
+            min_sec_format = '{:02d}:{:02d}'.format(self.ScreenTest_value_TimeOut_M, self.ScreenTest_value_TimeOut_S)
+            self.uic.screen_Test_Display_lcdNumber_TimeOut.display(min_sec_format)
+
 
     def show(self):
         self.main_win.show()
-        #fname = QFileDialog.getOpenFileName(self, 'Open file', 'D:\codefirst.io\PyQt5 tutorials\Browse Files','Images (*.png, *.xmp *.jpg)')
-        #self.filename.setText(fname[0])
+
     # -----------------------------------------(Cấu hình MQTT)-----------------------------------------------------------------------------#
-
-
-    def Mqtt_Get_IPAddr(self):
+    def Mqtt_Get_IPAddr(self): # hàm lấy địa chỉ IP và địa chỉ MAC của máy, return: địa chỉ mac, địa chỉ IP
         hostname = socket.gethostname()
         IPAddr = socket.gethostbyname(hostname)
         return hostname, IPAddr;
 
-    def Mqtt_Run(self, Mqtt_Host):
-        try:
+    def Mqtt_Run(self, Mqtt_Host): # Hàm chạy của mqtt, truyền tham số Mqtt_Host: địa chỉ host mqtt, địa chỉ IP server mqtt
+        try: # kiểm tra kết nối với server nếu không kết nối được tránh bị treo(cần xem lại)
             self.mqtt_client.on_connect = self.Mqtt_connect
             self.mqtt_client.on_message = self.Mqtt_message
             self.mqtt_client.connect('Mqtt.mysignage.vn', self.Mqtt_Port, 60)
+            #self.mqtt_client.connect('192.168.110.129', self.Mqtt_Port, 60)
             Flag = 1
         except Exception as e:
             Flag = 0
@@ -196,35 +228,31 @@ class MainWindow:
         if(Flag == 1):
             self.mqtt_client.loop_start()
 
-
-    def Mqtt_connect(self, client, userdata, flags, rc):
+    def Mqtt_connect(self, client, userdata, flags, rc): # hàm cài đặt Sub topic
         print("Connected with result code: " +str(rc))
         if(rc == 0):
             hostname,IPAddr  = self.Mqtt_Get_IPAddr()
-            self.mqtt_client.subscribe(self.TopicGetTest)
-            self.mqtt_client.subscribe(self.TopicSub)
-            self.mqtt_client.subscribe(self.TopicPingMQTT)
+            self.mqtt_client.subscribe(self.TopicSub_PingMQTT)
+            self.mqtt_client.subscribe(self.TopicSub_GetTest)
 
-    def Mqtt_message(self, client, userdata, message):
-        if(message.topic == self.TopicPingMQTT):
+    def Mqtt_message(self, client, userdata, message):# hàm nhận bản tin từ máy giao viên
+        if(message.topic == self.TopicSub_PingMQTT):
             print(message.topic + " " + str(message.payload))
-            #print(self.ScreenTest_value_NameStudent)
-            #print(self.ScreenTest_value_NameITStudent)
-            self.Mqtt_PingServer(self.ScreenTest_value_NameStudent, self.ScreenTest_value_NameITStudent)
+            if(len(self.ScreenTest_value_NameStudent) > 0 and len(self.ScreenTest_value_NameITStudent) > 0): # Kiểm tra xem sinh viên đã điền thông tin chưa
+                self.Mqtt_PingServer(self.ScreenTest_value_NameStudent, self.ScreenTest_value_NameITStudent)
+        if (message.topic == self.TopicSub_GetTest):
+            if (self.Sys_value_ChooseScreenTest == 1):  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
+                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
+                print(message.topic + " " + str(message.payload))
 
-        if (message.topic == self.TopicGetTest):
-            print(message.topic + " " + str(message.payload))
-    def Mqtt_publish(self):
-        self.mqtt_client.publish(self.TopicPub, "xin chao")
-
-    def Mqtt_PingServer(self, Name, IDStuden):
+    def Mqtt_PingServer(self, Name, IDStudent): # hàm ping kết nối khi máy giao viên gửi yêu cầu, truyền tham số name, IDIDStuden: tên sinh viên và Mã sinh viên
         id_device = 1
-        TempJson = { "id": id_device, "received":'false', "name":Name, "msv":IDStuden}
-        self.mqtt_client.publish(self.TopicCkeckConnect, json.dumps(TempJson))
+        TempJson = { "id": id_device, "received":'false', "name":Name, "msv":IDStudent}
+        self.mqtt_client.publish(self.TopicPub_CkeckConnect, json.dumps(TempJson))
 
-    def Mqtt_SendAnswer(self, Time_end):
+    def Mqtt_SendAnswer(self, Time_end): #Hàm gửi câu trả lời khi nhấn nộp bài hoặc hết thời gian, Tham số Time: thời gian làm bài
         id_device = 1
-        arrAnswe = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt
+        arrAnswe = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt # Mảng của 24 câu trả lời
         arrJson = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for x in range(1, 25):
             if (arrAnswe[x] == 0):
@@ -234,44 +262,47 @@ class MainWindow:
         TempJson = {"id": id_device, "received": 'true', "answer": arrJson, "Time_end": Time_end}
         temp = json.dumps(TempJson)
         print(temp)
-        self.mqtt_client.publish(self.TopicSendAnswer, temp)
+        self.mqtt_client.publish(self.TopicPub_SendAnswer, temp)
 
 
     # ---------------------------------------------------(END)-----------------------------------------------------------------------------#
 
     # -----------------------------------------(Giao Diện HOME)-----------------------------------------------------------------------------#
-    def Show_Screen_Home(self):
-        Count_next_image = 1
+    def Show_Screen_Home(self): # Hàm hiên thị giao diện đầu tiên
+        self.FlagStartTimeOut = 0  #đặt biến cờ Start về 0
+        self.FlagStopTimeOut = 0 #đặt biến cờ Stop về 0
+        self.ScreenTest_value_Time_first = 0
+        self.ScreenTest_value_TimeOut_M = 0 #đặt biên đếm phút về 0
+        self.ScreenTest_value_TimeOut_S = 0 #đặt biên đếm giây về 0
+        self.Sys_value_ChooseScreenTest = 0 #Đặt biến chọn thi online hay offline về 0
+        min_sec_format = '{:02d}:{:02d}'.format(self.ScreenTest_value_TimeOut_M, self.ScreenTest_value_TimeOut_S)
+        self.uic.screen_Test_Display_Answer_label_TimeOut.setText(min_sec_format)
+        self.uic.screen_Test_Display_lcdNumber_TimeOut.display(min_sec_format)
         self.uic.stackedWidget.setCurrentWidget(self.uic.HOME)
 
-    def Show_Screen_Learn(self):
-        self.Count_next_image = 1
+    def Show_Screen_Learn(self): #hàm hiển thị giao diện học
+        self.Count_next_image = 1 # (khởi tạo học) lại bộ đếm, Bộ đếm này để next hoặc back ảnh
         self.Learn_Get_Number_File()
         self.Learn_Show_Imgae_Learn()
         self.uic.stackedWidget.setCurrentWidget(self.uic.Screen_Learn)
 
-    def Show_Screen_Test(self, stt):
-        self.Sys_value_ChooseScreenTest = stt
+    def Show_Screen_Test(self, stt): #hàm hiển thị giao diện điền thông tin của sinh viên khi bắt đầu vào bài kiểm tra, Tham số stt: 1 hoặc 2, 1 là kiểm tra online, 2 là tự tạo bài kiểm tra
+        self.Sys_value_ChooseScreenTest = stt # lấy giá trị 1 hoặc 2, 1=online, 2=offline
+        self.uic.screen_test_Qlineedit_Username.clear()
+        self.uic.screen_test_Qlineedit_IDStudent.clear()
+        self.uic.screen_Test_Display_InputInfor_label_Remind.setText("")
+        #--------------------------------------------( (Khởi tạo kiểm tra) ) ------------------------------------------#
         self.ScreenTest_value_Qlabel_ArrayNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.ScreenTest_value_Qlabel_ArrayGetNumberChoose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.screen_Setting_Get_Select_CreateExercise()
         self.screen_Test_Display_ClearChoose()
+        if (self.Sys_value_ChooseScreenTest == 1):  # Nếu là kiểm tra online thì cho nhập mã lớp học
+            self.Mqtt_Run('Mqtt.mysignage.vn')  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Test)
         self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_InputInfor)
 
-        if(self.Sys_value_ChooseScreenTest == 1):
-            self.uic.screen_Test_Display_InputInfor_Button_Exit.setEnabled(True)
-            self.uic.screen_test_Qlineedit_IDclass_3.setPlaceholderText("Mã lớp học")
-            self.uic.screen_test_Qlineedit_IDclass_3.setEnabled(1)
-            self.uic.screen_test_Qlineedit_IDclass_3.clear()
-        else:
-            self.uic.screen_Test_Display_InputInfor_Button_Exit.setEnabled(False)
-            self.uic.screen_test_Qlineedit_IDclass_3.setPlaceholderText("")
-            self.uic.screen_test_Qlineedit_IDclass_3.setEnabled(0)
-            self.uic.screen_test_Qlineedit_IDclass_3.clear()
-
-    def Show_Screen_Setting(self):
-        self.screen_Setting_Clear_CreateExercise(4)
+    def Show_Screen_Setting(self): # hiển thị giao diện cài đặt
+        self.screen_Setting_Clear_CreateExercise(4) # (Khởi tạo cài đặt)
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Setting)
         self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_Home)
 
@@ -280,32 +311,45 @@ class MainWindow:
 
 
 #-----------------------------------------(Giao Diện học lý thuyết)-----------------------------------------------------------------------------#
-    def Learn_Button_Next(self):
-        if( self.Count_next_image < self.Number_Image_Learn):
+    def Learn_Button_Next(self): # Hàm chuyển ảnh tiếp theo
+        if (self.Count_next_image < self.Number_Image_Learn):
             self.Count_next_image = self.Count_next_image + 1
         else:
             self.Count_next_image = 1
         self.Learn_Show_Imgae_Learn()
 
-    def Learn_Button_Back(self):
+    def Learn_Button_Back(self): # Hàm quay lại ảnh trước
         if (self.Count_next_image > 1):
             self.Count_next_image = self.Count_next_image - 1
         else:
             self.Count_next_image = self.Number_Image_Learn
         self.Learn_Show_Imgae_Learn()
 
-    def Learn_Show_Imgae_Learn(self):
+    def Learn_Show_Imgae_Learn(self): # Hàm Hiển thị ảnh
         str_name = self.Path_Image_Screen_Learn + '/' + self.Name_image_Screen_Learn + str(self.Count_next_image) + '.jpg'
         self.uic.show_image_learn.setPixmap(QtGui.QPixmap(str_name))
 
-    def Learn_Get_Number_File(self):
+    def Learn_Get_Number_File(self): # hàm đếm số lượng file ảnh có trong thử mục chưa
         files = [f for f in glob.glob(self.Path_Image_Screen_Learn + '/' + "**/*.jpg", recursive=True)]
         self.Number_Image_Learn = len(files)
 
-    def Learn_convert_PDF_TO_IMAGE(self, name):
+    def getfile(self):
+        self.uic.Screen_Learn_label_Remind.setStyleSheet("background-color: #ffab03;")
+        self.uic.Screen_Learn_label_Remind.setText("Đang xử lý file ....")
+        fname = QFileDialog.getOpenFileName()
+        if (fname != ('', '')):
+            if ((fname[0].rfind('.pdf')) != -1 or (fname[0].rfind('.PDF')) != -1):
+                self.Sys_valute_FlagClearRemind_Learn = 1
+                self.Learn_convert_PDF_TO_IMAGE(fname[0])
+            else:
+                self.uic.Screen_Learn_label_Remind.setStyleSheet("background-color: red;")
+                self.uic.Screen_Learn_label_Remind.setText("File bạn chọn không phải .pdf")
+
+    def Learn_convert_PDF_TO_IMAGE(self, name): #hàm chuyển pdf-> image, tham số Name: là đường dẫn và tên file pdf
         #path = os.path.abspath(outputDir)
         #if (os.path.exists(path) != False):
             #shutil.rmtree(path)
+
         outputDir = self.Path_Image_Screen_Learn + '/'
         if not os.path.exists(outputDir):
             os.makedirs(outputDir)
@@ -318,36 +362,51 @@ class MainWindow:
             myfile = outputDir + self.Name_image_Screen_Learn + str(counter) + '.jpg'
             counter = counter + 1
             page.save(myfile, "JPEG")
+        self.Learn_Get_Number_File()
+
+        self.Count_next_image = 1
+        self.Learn_Show_Imgae_Learn()
 #-----------------------------------------(END)-----------------------------------------------------------------------------#
 
 #-----------------------------------------(Giao Diện kiểm tra)-----------------------------------------------------------------------------#
-    def screen_Test_Show_Display_Exam(self):
-        self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username_3.text()
-        self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent_3.text()
-        self.ScreenTest_value_NameClassStudent = self.uic.screen_test_Qlineedit_IDclass_3.text()
+    def screen_Test_Show_Display_Exam(self): #hàm này để hiển thị giao diện chọn đáp án
+        if (self.Sys_value_ChooseScreenTest == 2):
+            if(self.FlagStartTimeOut == 0):
+                self.FlagStartTimeOut = 1
+        #----------------------------(Cụm lấy thông tin của sinh viên)----------------------------
+        #self.ScreenTest_value_NameClassStudent = self.uic.screen_test_Qlineedit_IDclass_3.text()
 
+        if(len(self.uic.screen_test_Qlineedit_Username.text()) > 0): #kiểm tra xem thí sinh đã nhập tên chưa
+            self.ScreenTest_value_ArrayInforAnswer[0] = self.uic.screen_test_Qlineedit_Username.text()
+            self.ScreenTest_value_NameStudent = self.uic.screen_test_Qlineedit_Username.text()
 
-        if(len(self.uic.screen_test_Qlineedit_Username_3.text()) > 0):
-            self.ScreenTest_value_ArrayInforAnswer[0] = self.ScreenTest_value_NameStudent
+        if (len(self.uic.screen_test_Qlineedit_IDStudent.text()) > 0): #kiểm tra xem thí sinh đã nhập mã sinh viên chưa
+            self.ScreenTest_value_ArrayInforAnswer[1] = self.uic.screen_test_Qlineedit_IDStudent.text()
+            self.ScreenTest_value_NameITStudent = self.uic.screen_test_Qlineedit_IDStudent.text()
+
+        if(len(self.uic.screen_test_Qlineedit_Username.text()) > 0 and len(self.uic.screen_test_Qlineedit_IDStudent.text()) > 0):
+            self.uic.screen_Test_Display_InputInfor_label_Remind.setStyleSheet(" background-color: transparent;")
+            self.uic.screen_Test_Display_InputInfor_label_Remind.setText("")
+            if(self.Sys_value_ChooseScreenTest == 1):
+                self.screen_Test_connectWait()
+            elif(self.Sys_value_ChooseScreenTest == 2): #kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
+                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
+
         else:
-            self.ScreenTest_value_ArrayInforAnswer[0] = "Chưa điền thông tin"
-        if (len(self.uic.screen_test_Qlineedit_IDStudent_3.text()) > 0):
-            self.ScreenTest_value_ArrayInforAnswer[1] = self.ScreenTest_value_NameITStudent
-        else:
-            self.ScreenTest_value_ArrayInforAnswer[1] = "Chưa điền thông tin"
+            self.uic.screen_Test_Display_InputInfor_label_Remind.setStyleSheet("background-color: red;")
+            self.uic.screen_Test_Display_InputInfor_label_Remind.setText("Chưa điền thông tin")
 
 
-        if(self.Sys_value_ChooseScreenTest == 1):
-            self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
-            #self.Mqtt_Run(self.ScreenTest_value_NameClassStudent)
-            self.Mqtt_Run('Mqtt.mysignage.vn')
-        else:
-            self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
+    def screen_Test_connectWait(self):
+        self.movie = QMovie("Icon/loading-animation_sand-timer.gif")
+        self.uic.label_7.setMovie(self.movie)
+        self.movie.start()
+        self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Connect)
 
-    def screen_Test_Show_Display_Choose(self, Number):
+    def screen_Test_Show_Display_Choose(self, Number): # Hiển hị giao diện chọn câu trả lời, hiển thị chọn câu trả lời cho Pan nào, Tham số Number: truyền PAN số mấy đang chọn
         self.uic.screen_Test_Display_Choose_Qlabel_PAN_Number.setText("PAN "+str(Number))
         self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Choose)
-
+    #--------------------------(Cụm hàm sự kiện khi nhấn nút của PAN_01 -> PAN_24)--------------------------
     def Screen_Test_EvenButton_PAN_1(self):
         self.ScreenTest_value_Qlabel_FlagButtonClick = 1
         self.screen_Test_Show_Display_Choose(self.ScreenTest_value_Qlabel_FlagButtonClick)
@@ -444,202 +503,187 @@ class MainWindow:
         self.ScreenTest_value_Qlabel_FlagButtonClick = 24
         self.screen_Test_Show_Display_Choose(self.ScreenTest_value_Qlabel_FlagButtonClick)
 
+    def Screen_Test_CheckInputString(self, StrNumber): #kiểm tra xem chuỗi đầu vào có phải là số int hay float hay không, Tham số StrNumber: truyền chuỗi số vào vd:"3.5"
+        flag = 0
+        try:
+            int(StrNumber)
+            flag = 1
+        except ValueError:
+            flag = 0
+
+        try:
+            float(StrNumber)
+            flag = 1
+        except ValueError:
+            flag = 0
+
+        return flag
+
     def screen_Test_Display_Choose_radio_onClicked_and_Show_Display(self, Number_Button):
-
-        self.screen_Test_Show_Display_Exam()
-        self.screen_Test_Display_Choose_radio_onClicked(Number_Button)
-
-        if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] >= 6):
-            if(len(self.uic.screen_Test_Display_Choose_lineEdit.text()) > 0):
-                self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] + float(self.uic.screen_Test_Display_Choose_lineEdit.text())
-                self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[Number_Button] = self.uic.screen_Test_Display_Choose_lineEdit.text()
-                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = int((float(self.uic.screen_Test_Display_Choose_lineEdit.text()) * 10) + 4)
-
-            else:
-                self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = 20
+        Flag = 0
+        self.screen_Test_Display_Choose_radio_onClicked(Number_Button) # lấy đáp án từ 1->6  đã chọn của PAN đó
+        if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] >= 6): # kiểm tra Nếu lớn hơn 6 là chọn điện áp
+            if((self.Screen_Test_CheckInputString(self.uic.screen_Test_Display_Choose_lineEdit.text()) == 1) and (len(self.uic.screen_Test_Display_Choose_lineEdit.text()) > 0)): # kiểm tra xem đã nhập đúng là số hay chưa , kiểm tra xem có điền giá trị điển áp không
+                Flag = 1
+                self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[Number_Button] = self.uic.screen_Test_Display_Choose_lineEdit.text() #mảng lấy giá trị điện áp học sinh điền
+                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = int((float(self.uic.screen_Test_Display_Choose_lineEdit.text()) * 10) + 4) # mảng kết quả đê gửi cho máy giáo viên
+            else: # nếu chưa điền hoặc điền sai thì sẽ xóa chuỗi đã điền
+                self.uic.screen_Test_Display_Choose_lineEdit.clear()
         else:
-                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button];
-
+            Flag = 1
+            self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]
+        if(Flag == 1): #nếu thoải mã hết các điểu kiện thì chuyển về giao diện chọn
+            self.screen_Test_Show_Display_Exam()  # quay lại giao diện chọn PAN
+            self.screen_Test_Display_Choose_radio_SelectChoose(Number_Button)
         print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button])
-        self.screen_Test_Display_Choose_radio_SelectChoose(Number_Button)
 
-    def screen_Test_Display_Choose_radio_SelectChoose(self, Number_Button):
+    def screen_Test_Display_Choose_radio_SelectChoose(self, Number_Button): # hiển thị đáp án đã chọn ở bên dưới button PAN
         value = 6
         if (Number_Button == 1):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
                 self.uic.SCreen_Test_Qlabel_PAN_1.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_1.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 2):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_2.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 3):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_3.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 4):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_4.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 5):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_5.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == value):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_6.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 7):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[ self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_7.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 8):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_8.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 9):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                              self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                  Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_9.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 10):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_10.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 11):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[ self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_11.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 12):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_12.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 13):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_13.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 14):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_14.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 15):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_15.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 16):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_16.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 17):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[ self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_17.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 18):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_18.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 19):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_19.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 20):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_20.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
         if (Number_Button == 21):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_21.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 22):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_22.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 23):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_23.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
+
         if (Number_Button == 24):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] < value):
-                self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[
-                                                               self.ScreenTest_value_Qlabel_ArrayNumberChoose[
-                                                                   Number_Button]])
+                self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button]])
             else:
                 self.uic.SCreen_Test_Qlabel_PAN_24.setText(self.uic.screen_Test_Display_Choose_lineEdit.text() + ' V')
 
-    def screen_Test_Display_Choose_radio_onClicked(self, Number_Button):
+    def screen_Test_Display_Choose_radio_onClicked(self, Number_Button): # Hàm gán giá trị đã chọn (từ 1-6) vào mảng
 
         if self.uic.screen_Test_Display_Choose_radioButton_1.isChecked():
             self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button] = 1
@@ -663,47 +707,53 @@ class MainWindow:
             self.uic.screen_Test_Display_Choose_lineEdit.setEnabled(0)
             self.uic.screen_Test_Display_Choose_lineEdit.clear()
 
-    def screen_Test_Display_Choose_ButtonSubmit(self):
-        if(self.Sys_value_ChooseScreenTest == 1):
-            self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
-            self.Mqtt_SendAnswer(20)
-           # for x in range(1,25):
-           #     if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
-           #         print(str(format(float(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 6), '.1f'))+' V')
-           #     else:
-           #         print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x])
+    def screen_Test_Display_Choose_ButtonSubmit(self): # hàm Nộp bài và chấm điểm
+        Flag = 0
+        for x in range(1, 25):
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] == 0):
+                Flag = 1
+        if(Flag == 0):
+            if(self.Sys_value_ChooseScreenTest == 1): #nếu là thi online thì gửi bài lên máy tính giáo viên
+                self.Mqtt_SendAnswer(20)
+                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
+            elif (self.Sys_value_ChooseScreenTest == 2): #nếu là thi offline hiển thị giao diện kết quả
+                #print(self.ScreenSetting_value_ArrayGetCurrentText)
+                #print(self.ScreenSetting_value_ArrayGetCurrentIndex)
+                #print(self.ScreenTest_value_Qlabel_ArrayNumberChoose)
+                self.screen_Test_ShowText_QlabelAnswer1(self.Sys_value_ChooseScreenTest)
+                self.screen_Test_ShowText_QlabelAnswer2(self.Sys_value_ChooseScreenTest)
+                self.screen_Test_ShowText_QlabelAnswer3(self.Sys_value_ChooseScreenTest)
+                self.screen_Test_Answer_Infor()
+                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
         else:
-            #print(self.screen_Test_AnswerCountNotChoose())
-            print(self.ScreenSetting_value_ArrayGetCurrentText)
-            print(self.ScreenSetting_value_ArrayGetCurrentIndex)
-            print(self.ScreenTest_value_Qlabel_ArrayNumberChoose)
-            self.screen_Test_ShowText_QlabelAnswer1(1)
-            self.screen_Test_ShowText_QlabelAnswer2(1)
-            self.screen_Test_ShowText_QlabelAnswer3(1)
-            self.screen_Test_Answer_Infor()
-            self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
+            self.Sys_valute_FlagClearRemind_ChooseTest = 1
+            self.uic.screen_Test_Display_Exam_label_Remind.setStyleSheet("background-color: red;")
+            self.uic.screen_Test_Display_Exam_label_Remind.setText("Chưa chọn hết đáp án")
 
-    def screen_Test_Display_ClearChoose(self):
+    def screen_Test_Display_ClearChoose(self): # hàm xóa giao diện chọn PAN về chưa chọn
         for x in range(1, 25):
             self.screen_Test_Display_Choose_radio_SelectChoose(x)
 
-    def screen_Test_Answer_Infor(self):
+    def screen_Test_Answer_Infor(self): # hàm hiển thị câu trả lời
         self.uic.screen_Test_Display_Answer_label_Name.setText(self.ScreenTest_value_ArrayInforAnswer[0])
         self.uic.screen_Test_Display_Answer_label_ID.setText(self.ScreenTest_value_ArrayInforAnswer[1])
         self.uic.screen_Test_Display_Answer_label_AnswerTrue.setText(str(self.ScreenTest_value_ArrayInforAnswer[2]))
         self.uic.screen_Test_Display_Answer_label_AnswerFalse.setText(str(self.ScreenTest_value_ArrayInforAnswer[3]))
         self.uic.screen_Test_Display_Answer_label_AnswerNot.setText(str(self.ScreenTest_value_ArrayInforAnswer[4]))
+        self.FlagStartTimeOut == 0
 
-    def screen_Test_AnswerCountNotChoose(self):
-        return self.ScreenTest_value_Qlabel_ArrayNumberChoose.count(0)-1
-
-    def screen_Test_ShowText_QlabelAnswer1(self, stt):
+        min_sec_format = '{:02d}:{:02d}'.format((self.ScreenTest_value_Time_first - self.ScreenTest_value_TimeOut_M), (59 - self.ScreenTest_value_TimeOut_S))
+        self.uic.screen_Test_Display_Answer_label_TimeOut.setText(min_sec_format)
+    def screen_Test_ShowText_QlabelAnswer1(self, stt): # hàm hiển thị đề bài, tham số stt: truyền vào là làm bài online hay offline
         if(stt == 1):
+            print("11")
+        else:
             for x in range(1, 25):
                 if(self.ScreenSetting_value_ArrayGetCurrentIndex[x] >= 5):
                     self.ScreenTest_value_ArrayShowText[x][0] = str(self.ScreenSetting_value_ArrayGetCurrentText[x]) + ' V'
                 else:
                     self.ScreenTest_value_ArrayShowText[x][0] = self.ScreenSetting_value_ArrayGetCurrentText[x]
+
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_1.setText(self.ScreenTest_value_ArrayShowText[1][0])
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_2.setText(self.ScreenTest_value_ArrayShowText[2][0])
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_3.setText(self.ScreenTest_value_ArrayShowText[3][0])
@@ -729,8 +779,10 @@ class MainWindow:
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_23.setText(self.ScreenTest_value_ArrayShowText[23][0])
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_24.setText(self.ScreenTest_value_ArrayShowText[24][0])
 
-    def screen_Test_ShowText_QlabelAnswer2(self, stt):
+    def screen_Test_ShowText_QlabelAnswer2(self, stt): #hàm hiển thị bài làm đã chọn của Học sinh, tham số stt: truyền vào là làm bài online hay offline
         if (stt == 1):
+            print("11")
+        else:
             for x in range(1, 25):
                 if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
                     self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x] + ' V'
@@ -761,11 +813,13 @@ class MainWindow:
         self.uic.screen_test_Display_Answer_Qlabel_Answer1_23.setText(self.ScreenTest_value_ArrayShowText[23][1])
         self.uic.screen_test_Display_Answer_Qlabel_Answer1_24.setText(self.ScreenTest_value_ArrayShowText[24][1])
 
-    def screen_Test_ShowText_QlabelAnswer3(self, stt):
+    def screen_Test_ShowText_QlabelAnswer3(self, stt): # hàm hiển thị PAN đó chọn đúng hay sai, tham số stt: truyền vào là làm bài online hay offline
         Count_True = 0
         Count_False = 0
         Count_NotChoose = 0
         if (stt == 1):
+            print("11")
+        else:
             for x in range(1, 25):
                 if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] != 0):
                     if (self.ScreenSetting_value_ArrayGetCurrentIndex[x] >= 5):
@@ -816,18 +870,22 @@ class MainWindow:
         self.uic.screen_test_Display_Answer_Qlabel_Answer2_24.setText(self.ScreenTest_value_ArrayShowText[24][2])
 
 
+    def screen_Test_SaveImageResult(self):
+        #myScreenshot = pyautogui.screenshot(region=(0, 0, 300, 400))
+        myScreenshot = pyautogui.screenshot()
+        path = os.path.abspath('Icon') + "\\" + str(self.ScreenTest_value_NameStudent) + '_' + self.ScreenTest_value_NameITStudent + '.png'
+        myScreenshot.save(path)
+        self.Show_Screen_Home()
 
-
-
-        #-----------------------------------------(END)-----------------------------------------------------------------------------#
+#-----------------------------------------(END)-----------------------------------------------------------------------------#
 
 #-----------------------------------------(Giao Diện Setting)-----------------------------------------------------------------------------#
-    def screen_Setting_Show_Display_Practice(self):
+    def screen_Setting_Show_Display_Practice(self): #Hàm Hiển thị giao diện tao bài thực hành
         self.screen_Setting_Get_Select_CreateExercise()
         self.screen_Setting_Show_NameText_Practice()
         self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_practice)
 
-    def screen_Setting_Show_NameText_Practice(self):
+    def screen_Setting_Show_NameText_Practice(self): #hiển thị giá trị PAN của bài thực hành
         self.uic.screen_Setting_practice_label_1.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[1]))
         self.uic.screen_Setting_practice_label_2.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[2]))
         self.uic.screen_Setting_practice_label_3.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[3]))
@@ -853,8 +911,7 @@ class MainWindow:
         self.uic.screen_Setting_practice_label_23.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[23]))
         self.uic.screen_Setting_practice_label_24.setText(str(self.ScreenSetting_value_ArrayGetCurrentText[24]))
 
-    def screen_Setting_RamdomExercise(self):
-        #self.screen_Setting_ArrRandomCreateExercise()
+    def screen_Setting_RamdomExercise(self): #Hàm tạo bài ngẫu nhiên
         items = ['Hở mạch', 'Chập chờn', 'Chạm đất', 'Nối dương', 'Bình thường', 'Điện áp']
         ArrRandom_setCurrentText,ArrRandom_voltage = self.screen_Setting_ArrRandomCreateExercise()
 
@@ -1050,185 +1107,163 @@ class MainWindow:
             self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
             self.uic.screen_setting_Home_lineEdit_24.clear()
 
-    def screen_Setting_ArrRandomCreateExercise(self):
+    def screen_Setting_ArrRandomCreateExercise(self): #hàm tạo giá trị ngẫu nhiên
         ArrRandom_setCurrentText = random.randint(6, size=(25))
         ArrRandom_voltage = random.uniform(0.0, 12.0, 25)
         return ArrRandom_setCurrentText, ArrRandom_voltage
 
-    def screen_Setting_Get_Select_CreateExercise(self):
-        value = 0
-        if(self.uic.screen_setting_Home_ComboBox_1.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[1] = float(self.uic.screen_setting_Home_lineEdit_1.text()) + value
+    def screen_Setting_Get_Select_CreateExercise(self):# hàm lấy bài đã tạo đưa vào mảng, mảng ScreenSetting_value_ArrayGetCurrentText: là mảng lấy text, ScreenSetting_value_ArrayGetCurrentIndex: mảng lấy vị trí
+
+        if (self.Sys_value_ChooseScreenTest == 2):
+            if(self.FlagStartTimeOut == 0):
+                self.ScreenTest_value_TimeOut_M = self.uic.screen_Setting_Home_spinBox_TimeOut.value()
+                self.ScreenTest_value_TimeOut_S = 0
+                self.ScreenTest_value_Time_first = self.uic.screen_Setting_Home_spinBox_TimeOut.value() - 1
+        if (self.uic.screen_setting_Home_ComboBox_1.currentIndex() >= 5):
+            self.ScreenSetting_value_ArrayGetCurrentText[1] = (self.uic.screen_setting_Home_lineEdit_1.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[1] = self.uic.screen_setting_Home_ComboBox_1.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[1] = self.uic.screen_setting_Home_ComboBox_1.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_2.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[2] = float(self.uic.screen_setting_Home_lineEdit_2.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[2] = (self.uic.screen_setting_Home_lineEdit_2.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[2] = self.uic.screen_setting_Home_ComboBox_2.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[2] = self.uic.screen_setting_Home_ComboBox_2.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_3.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[3] = float(self.uic.screen_setting_Home_lineEdit_3.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[3] = (self.uic.screen_setting_Home_lineEdit_3.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[3] = self.uic.screen_setting_Home_ComboBox_3.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[3] = self.uic.screen_setting_Home_ComboBox_3.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_4.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[4] = float(self.uic.screen_setting_Home_lineEdit_4.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[4] = (self.uic.screen_setting_Home_lineEdit_4.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[4] = self.uic.screen_setting_Home_ComboBox_4.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[4] = self.uic.screen_setting_Home_ComboBox_4.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_5.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[5] = float(
-                self.uic.screen_setting_Home_lineEdit_5.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[5] = (self.uic.screen_setting_Home_lineEdit_5.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[5] = self.uic.screen_setting_Home_ComboBox_5.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[5] = self.uic.screen_setting_Home_ComboBox_5.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_6.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[6] = float(
-                self.uic.screen_setting_Home_lineEdit_6.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[6] = (self.uic.screen_setting_Home_lineEdit_6.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[6] = self.uic.screen_setting_Home_ComboBox_6.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[6] = self.uic.screen_setting_Home_ComboBox_6.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_7.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[7] = float(
-                self.uic.screen_setting_Home_lineEdit_7.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[7] = (self.uic.screen_setting_Home_lineEdit_7.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[7] = self.uic.screen_setting_Home_ComboBox_7.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[7] = self.uic.screen_setting_Home_ComboBox_7.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_8.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[8] = float(
-                self.uic.screen_setting_Home_lineEdit_8.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[8] = (self.uic.screen_setting_Home_lineEdit_8.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[8] = self.uic.screen_setting_Home_ComboBox_8.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[8] = self.uic.screen_setting_Home_ComboBox_8.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_9.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[9] = float(
-                self.uic.screen_setting_Home_lineEdit_9.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[9] = (self.uic.screen_setting_Home_lineEdit_9.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[9] = self.uic.screen_setting_Home_ComboBox_9.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[9] = self.uic.screen_setting_Home_ComboBox_9.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_10.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[10] = float(
-                self.uic.screen_setting_Home_lineEdit_10.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[10] = (self.uic.screen_setting_Home_lineEdit_10.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[10] = self.uic.screen_setting_Home_ComboBox_10.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[10] = self.uic.screen_setting_Home_ComboBox_10.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_11.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[11] = float(
-                self.uic.screen_setting_Home_lineEdit_11.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[11] = (self.uic.screen_setting_Home_lineEdit_11.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[11] = self.uic.screen_setting_Home_ComboBox_11.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[11] = self.uic.screen_setting_Home_ComboBox_11.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_12.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[12] = float(
-                self.uic.screen_setting_Home_lineEdit_12.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[12] = (self.uic.screen_setting_Home_lineEdit_12.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[12] = self.uic.screen_setting_Home_ComboBox_12.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[12] = self.uic.screen_setting_Home_ComboBox_12.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_13.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[13] = float(
-                self.uic.screen_setting_Home_lineEdit_13.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[13] = (self.uic.screen_setting_Home_lineEdit_13.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[13] = self.uic.screen_setting_Home_ComboBox_13.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[13] = self.uic.screen_setting_Home_ComboBox_13.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_14.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[14] = float(
-                self.uic.screen_setting_Home_lineEdit_14.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[14] = (self.uic.screen_setting_Home_lineEdit_14.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[14] = self.uic.screen_setting_Home_ComboBox_14.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[14] = self.uic.screen_setting_Home_ComboBox_14.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_15.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[15] = float(
-                self.uic.screen_setting_Home_lineEdit_15.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[15] = (self.uic.screen_setting_Home_lineEdit_15.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[15] = self.uic.screen_setting_Home_ComboBox_15.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[15] = self.uic.screen_setting_Home_ComboBox_15.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_16.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[16] = float(
-                self.uic.screen_setting_Home_lineEdit_16.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[16] = (self.uic.screen_setting_Home_lineEdit_16.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[16] = self.uic.screen_setting_Home_ComboBox_16.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[16] = self.uic.screen_setting_Home_ComboBox_16.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_17.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[17] = float(
-                self.uic.screen_setting_Home_lineEdit_17.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[17] = (self.uic.screen_setting_Home_lineEdit_17.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[17] = self.uic.screen_setting_Home_ComboBox_17.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[17] = self.uic.screen_setting_Home_ComboBox_17.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_18.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[18] = float(
-                self.uic.screen_setting_Home_lineEdit_18.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[18] = (self.uic.screen_setting_Home_lineEdit_18.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[18] = self.uic.screen_setting_Home_ComboBox_18.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[18] = self.uic.screen_setting_Home_ComboBox_18.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_19.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[19] = float(
-                self.uic.screen_setting_Home_lineEdit_19.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[19] = (self.uic.screen_setting_Home_lineEdit_19.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[19] = self.uic.screen_setting_Home_ComboBox_19.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[19] = self.uic.screen_setting_Home_ComboBox_19.currentIndex()
 
         if (self.uic.screen_setting_Home_ComboBox_20.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[20] = float(
-                self.uic.screen_setting_Home_lineEdit_20.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[20] = (self.uic.screen_setting_Home_lineEdit_20.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[20] = self.uic.screen_setting_Home_ComboBox_20.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[20] = self.uic.screen_setting_Home_ComboBox_20.currentIndex()
 
-
         if (self.uic.screen_setting_Home_ComboBox_21.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[21] = float(
-                self.uic.screen_setting_Home_lineEdit_21.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[21] = (self.uic.screen_setting_Home_lineEdit_21.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[21] = self.uic.screen_setting_Home_ComboBox_21.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[21] = self.uic.screen_setting_Home_ComboBox_21.currentIndex()
 
-
         if (self.uic.screen_setting_Home_ComboBox_22.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[22] = float(
-                self.uic.screen_setting_Home_lineEdit_22.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[22] = (self.uic.screen_setting_Home_lineEdit_22.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[22] = self.uic.screen_setting_Home_ComboBox_22.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[22] = self.uic.screen_setting_Home_ComboBox_22.currentIndex()
 
-
         if (self.uic.screen_setting_Home_ComboBox_23.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[23] = float(
-                self.uic.screen_setting_Home_lineEdit_23.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[23] = (self.uic.screen_setting_Home_lineEdit_23.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[23] = self.uic.screen_setting_Home_ComboBox_23.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[23] = self.uic.screen_setting_Home_ComboBox_23.currentIndex()
 
-
         if (self.uic.screen_setting_Home_ComboBox_24.currentIndex() >= 5):
-            self.ScreenSetting_value_ArrayGetCurrentText[24] = float(
-                self.uic.screen_setting_Home_lineEdit_24.text()) + value
+            self.ScreenSetting_value_ArrayGetCurrentText[24] = (self.uic.screen_setting_Home_lineEdit_24.text())
         else:
             self.ScreenSetting_value_ArrayGetCurrentText[24] = self.uic.screen_setting_Home_ComboBox_24.currentText()
         self.ScreenSetting_value_ArrayGetCurrentIndex[24] = self.uic.screen_setting_Home_ComboBox_24.currentIndex()
 
-
-        #print(self.ScreenSetting_value_ArrayGetCurrentText)
-        #print( self.ScreenSetting_value_ArrayGetCurrentIndex)
-
+    #--------------(cụm hàm kiểm tra nếu chọn điện áp thì mở ô điền thông tin)
     def screen_Setting_Check_selectVoltage_1(self, i):
         if i >= 5:
             self.uic.screen_setting_Home_lineEdit_1.setEnabled(1)
@@ -1397,8 +1432,9 @@ class MainWindow:
             self.uic.screen_setting_Home_lineEdit_24.setEnabled(0)
             self.uic.screen_setting_Home_lineEdit_24.clear()
 
-    def screen_Setting_Clear_CreateExercise(self, i):
+    def screen_Setting_Clear_CreateExercise(self, i): # hàm xóa  giao diện tạo bài về bình thường
         items = ['Hở mạch', 'Chập chờn', 'Chạm đất', 'Nối dương', 'Bình thường', 'Điện áp']
+        self.uic.screen_Setting_Home_spinBox_TimeOut.setValue(30)
         self.uic.screen_setting_Home_ComboBox_1.setCurrentText(items[i])
         self.uic.screen_setting_Home_lineEdit_1.setEnabled(0)
         self.uic.screen_setting_Home_lineEdit_1.clear()
@@ -1500,7 +1536,15 @@ class MainWindow:
         self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_Login)
 
     def screen_Setting_Show_SettingSYS(self):
-        self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_SettingSys)
+        if(len(self.uic.screen_Setting_SettingSys_Qlineedit_Password.text()) > 0):
+            if(self.settings.value(self.QSettingsSave_StrPassword) == self.uic.screen_Setting_SettingSys_Qlineedit_Password.text()):
+                self.uic.screen_Setting_SettingSys_label_Remind.setStyleSheet("background-color: transparent;")
+                self.uic.screen_Setting_SettingSys_label_Remind.setText("")
+                self.uic.stackedWidget_3.setCurrentWidget(self.uic.screen_Setting_SettingSys)
+            else:
+                self.uic.screen_Setting_SettingSys_Qlineedit_Password.clear()
+                self.uic.screen_Setting_SettingSys_label_Remind.setStyleSheet("background-color: red;")
+                self.uic.screen_Setting_SettingSys_label_Remind.setText("Sai mật khẩu")
 
 
 

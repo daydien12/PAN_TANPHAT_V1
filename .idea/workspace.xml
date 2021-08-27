@@ -5,21 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5430f2a-2599-42ca-95bc-832aafb83ed6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Icon/bien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icon/icon_Time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icon/test_time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Iconbien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MQTT_TEST.ui.autosave" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Diagram_MQTT.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icon/_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icon/loading-animation_sand-timer.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icon/pdf_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icon/s_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icon/ty_y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/en.CD00190271.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icon/Capture.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icon/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icon/thực hành.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icon/thực hành.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icon/bien.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iconbien.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output26.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output27.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output29.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output34.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output35.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output36.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output37.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output37.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output39.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output39.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output40.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output40.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Learn/output9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Learn/output9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MQTT_TEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/MQTT_TEST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MQTT_TEST.ui" beforeDir="false" afterPath="$PROJECT_DIR$/MQTT_TEST.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lenh.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lenh.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQTT_TEST.ui.autosave" beforeDir="false" afterPath="$PROJECT_DIR$/MQTT_TEST.ui.autosave" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/name.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +100,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2021/Thang8/1.PAN_Tan_phat/Py_QT_MQTT_TEST" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="BT" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -113,5 +155,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MQTT_TEST.py</url>
+          <line>7940</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

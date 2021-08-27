@@ -205,10 +205,10 @@
      <widget class="QLabel" name="show_image_learn">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>0</y>
         <width>1024</width>
-        <height>540</height>
+        <height>600</height>
        </rect>
       </property>
       <property name="text">
@@ -218,442 +218,142 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>540</y>
-        <width>421</width>
-        <height>60</height>
+        <x>290</x>
+        <y>500</y>
+        <width>458</width>
+        <height>93</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="Learn_Button_Back">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <stylestrategy>PreferDefault</stylestrategy>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::RightToLeft</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-         </property>
-         <property name="text">
-          <string>Trước </string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>Icon/back_icon.png</normaloff>Icon/back_icon.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="Learn_Button_Exit">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-         </property>
-         <property name="text">
-          <string> Quay lại</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="Learn_Button_Next">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-         </property>
-         <property name="text">
-          <string> Sau</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>Icon/next_icon.png</normaloff>Icon/next_icon.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="screen_Test">
-     <widget class="QStackedWidget" name="stackedWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1024</width>
-        <height>600</height>
-       </rect>
-      </property>
-      <property name="currentIndex">
-       <number>1</number>
-      </property>
-      <widget class="QWidget" name="screen_Test_Display_InputInfor">
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>1024</width>
-          <height>600</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>Icon/aa.jpg</pixmap>
-        </property>
-       </widget>
-       <widget class="QFrame" name="frame">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>172</x>
-          <y>120</y>
-          <width>681</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="mouseTracking">
-         <bool>false</bool>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
-background-color: rgb(240, 240, 240);
-color: rgb(255, 255, 255);
- border: 5px solid transparent;
-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <widget class="QWidget" name="layoutWidget_4">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>651</width>
-           <height>241</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="3" column="0">
-           <widget class="QLineEdit" name="screen_test_Qlineedit_IDclass_3">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>20</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="mouseTracking">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit { 
-background:rgb(240, 240, 240);
-border : none;
-border-bottom: 3px solid black;
- }</string>
-            </property>
-            <property name="inputMask">
-             <string/>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="maxLength">
-             <number>50</number>
-            </property>
-            <property name="frame">
-             <bool>false</bool>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="placeholderText">
-             <string>Mã lớp học</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="screen_test_Qlineedit_Username_3">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>20</pointsize>
-              <weight>75</weight>
-              <italic>false</italic>
-              <bold>true</bold>
-              <underline>false</underline>
-              <strikeout>false</strikeout>
-              <kerning>true</kerning>
-             </font>
-            </property>
-            <property name="mouseTracking">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit { 
-background:rgb(240, 240, 240);
-border : none;
-border-bottom: 3px solid black;
-
- }</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="placeholderText">
-             <string>Họ và tên</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLineEdit" name="screen_test_Qlineedit_IDStudent_3">
-            <property name="font">
-             <font>
-              <pointsize>20</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="mouseTracking">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit { 
-background:rgb(240, 240, 240);
-border : none;
-border-bottom: 3px solid black;
- }</string>
-            </property>
-            <property name="maxLength">
-             <number>50</number>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="placeholderText">
-             <string>Mã sinh viên</string>
-            </property>
-            <property name="cursorMoveStyle">
-             <enum>Qt::LogicalMoveStyle</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="layoutWidget_5">
-         <property name="geometry">
-          <rect>
-           <x>130</x>
-           <y>270</y>
-           <width>421</width>
-           <height>82</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Exit">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-            </property>
-            <property name="text">
-             <string> Quay lại</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Start">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="mouseTracking">
-             <bool>true</bool>
-            </property>
-            <property name="tabletTracking">
-             <bool>true</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-            </property>
-            <property name="text">
-             <string> Vào thi</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>Icon/icon_play.png</normaloff>Icon/icon_play.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="screen_Test_Display_Exam">
-       <widget class="QWidget" name="layoutWidget_38">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>540</y>
-          <width>421</width>
-          <height>60</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <layout class="QGridLayout" name="gridLayout_40">
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QPushButton" name="screen_Test_Display_Exam_Exit">
-           <property name="enabled">
-            <bool>true</bool>
+          <widget class="QPushButton" name="Learn_Button_ChooseFile">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Chọn file</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Icon/pdf_icon.png</normaloff>Icon/pdf_icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Learn_Button_Back">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <stylestrategy>PreferDefault</stylestrategy>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Trước </string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Icon/back_icon.png</normaloff>Icon/back_icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Learn_Button_Next">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string> Sau</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Icon/next_icon.png</normaloff>Icon/next_icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Learn_Button_Exit">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -687,6 +387,395 @@ QPushButton:hover {
            </property>
           </widget>
          </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="Screen_Learn_label_Remind">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="screen_Test">
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1024</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="screen_Test_Display_InputInfor">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1061</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>Icon/aa.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>172</x>
+          <y>130</y>
+          <width>681</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: rgb(240, 240, 240);
+color: rgb(255, 255, 255);
+ border: 5px solid transparent;
+color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>200</y>
+           <width>341</width>
+           <height>113</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_38">
+          <item row="0" column="0">
+           <widget class="QLabel" name="screen_Test_Display_InputInfor_label_Remind">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="1">
+             <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Start">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>true</bool>
+              </property>
+              <property name="tabletTracking">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+  background-color:  rgb(240, 240, 240);
+}
+
+QPushButton:hover 
+{
+ background-color: rgb(85, 170, 255);
+}
+</string>
+              </property>
+              <property name="text">
+               <string> Vào thi</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Icon/icon_play.png</normaloff>Icon/icon_play.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="screen_Test_Display_InputInfor_Button_Exit">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+              </property>
+              <property name="text">
+               <string> Quay lại</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>661</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="screen_test_Qlineedit_Username">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+
+ }</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Họ và tên</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="screen_test_Qlineedit_IDStudent">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+ }</string>
+            </property>
+            <property name="maxLength">
+             <number>50</number>
+            </property>
+            <property name="frame">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Mã sinh viên</string>
+            </property>
+            <property name="cursorMoveStyle">
+             <enum>Qt::LogicalMoveStyle</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="screen_Test_Connect">
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1061</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>Icon/aa.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_51">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>172</x>
+          <y>60</y>
+          <width>681</width>
+          <height>401</height>
+         </rect>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>-60</x>
+           <y>-50</y>
+           <width>800</width>
+           <height>421</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>Icon/loading-animation_sand-timer.gif</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>300</y>
+           <width>271</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Kết nối hệ thống</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="screen_Test_Display_Exam">
+       <widget class="QWidget" name="layoutWidget_38">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>540</y>
+          <width>601</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
           <widget class="QPushButton" name="screen_Test_Display_Exam_Submit">
            <property name="mouseTracking">
@@ -730,14 +819,40 @@ QPushButton:hover {
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QLCDNumber" name="screen_Test_Display_lcdNumber_TimeOut"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="screen_Test_Display_Exam_label_Remind">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>10</x>
           <y>0</y>
-          <width>981</width>
+          <width>1001</width>
           <height>531</height>
          </rect>
         </property>
@@ -814,8 +929,8 @@ QPushButton:hover {
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QLabel {
-	background-color: rgb(255, 170, 0);
-	color: black;
+ color: rgb(0, 0, 0);
+ background-color:  rgb(255, 170, 0);
  border-style: solid ;
  border-width: 5px;
  border-color: rgb(255, 170, 0);
@@ -2968,16 +3083,6 @@ QPushButton:hover {
          </item>
         </layout>
        </widget>
-       <widget class="QLCDNumber" name="lcdNumber">
-        <property name="geometry">
-         <rect>
-          <x>870</x>
-          <y>540</y>
-          <width>64</width>
-          <height>23</height>
-         </rect>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="screen_Test_Display_Choose">
        <widget class="QLabel" name="label_2">
@@ -3382,6 +3487,9 @@ QLineEdit:hover {
 	background-color: rgb(85, 170, 255);
 }</string>
           </property>
+          <property name="maxLength">
+           <number>4</number>
+          </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
@@ -3665,9 +3773,9 @@ color: black;
        <widget class="QFrame" name="frame_146">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>20</x>
           <y>-10</y>
-          <width>611</width>
+          <width>1001</width>
           <height>71</height>
          </rect>
         </property>
@@ -3683,45 +3791,6 @@ color: black;
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
           <layout class="QGridLayout" name="gridLayout_122">
-           <item row="0" column="0">
-            <widget class="QPushButton" name="pushButton_6">
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-  border: 2px solid rgb(240, 240, 240);
-  background-color: rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(240, 240, 240);
-	background-color:rgb(240, 240, 240);
-}
-alternate-background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Sinh viên:</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>Icon/Icon_person.png</normaloff>Icon/Icon_person.png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>55</width>
-               <height>55</height>
-              </size>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="1">
             <widget class="QLabel" name="screen_Test_Display_Answer_label_Name">
              <property name="font">
@@ -3745,6 +3814,64 @@ color: black;
              </property>
              <property name="text">
               <string>Chưa điền thông tin</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="screen_Test_Display_Answer_label_ID">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+	background-color: rgb(240, 240, 240);
+color: black;
+ border-style: solid ;
+ border-width: 5px;
+ border-color:rgb(240, 240, 240);
+ border-radius: 5px
+}  
+
+</string>
+             </property>
+             <property name="text">
+              <string>Chưa điền thông tin</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="6">
+            <widget class="QLabel" name="screen_Test_Display_Answer_label_TimeOut">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+	background-color: rgb(240, 240, 240);
+color: black;
+ border-style: solid ;
+ border-width: 5px;
+ border-color:rgb(240, 240, 240);
+ border-radius: 5px
+}  
+
+</string>
+             </property>
+             <property name="text">
+              <string>Chưa có</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3790,32 +3917,81 @@ alternate-background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="screen_Test_Display_Answer_label_ID">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_6">
              <property name="font">
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>12</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">QLabel {
-	background-color: rgb(240, 240, 240);
-color: black;
- border-style: solid ;
- border-width: 5px;
- border-color:rgb(240, 240, 240);
- border-radius: 5px
-}  
-
-</string>
+              <string notr="true">QPushButton {
+  border: 2px solid rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(240, 240, 240);
+	background-color:rgb(240, 240, 240);
+}
+alternate-background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>Chưa điền thông tin</string>
+              <string>Sinh viên:</string>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <property name="icon">
+              <iconset>
+               <normaloff>Icon/Icon_person.png</normaloff>Icon/Icon_person.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>55</width>
+               <height>55</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+  border: 2px solid rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(240, 240, 240);
+	background-color: rgb(240, 240, 240);
+}
+alternate-background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Thời gian làm bài</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>Icon/test_time.png</normaloff>Icon/test_time.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>35</width>
+               <height>35</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -7400,8 +7576,8 @@ color: black;
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QLabel {
+	color:black;
 	background-color: rgb(85, 170, 255);
-	color: black;
  border-style: solid ;
  border-width: 5px;
  border-color:  rgb(85, 170, 255);
@@ -8465,9 +8641,9 @@ color: black;
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>0</y>
           <width>1001</width>
-          <height>521</height>
+          <height>541</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_37">
@@ -11401,7 +11577,7 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox">
+            <widget class="QSpinBox" name="screen_Setting_Home_spinBox_TimeOut">
              <property name="minimumSize">
               <size>
                <width>50</width>
@@ -11619,7 +11795,7 @@ QPushButton:hover {
        <widget class="QWidget" name="layoutWidget_45">
         <property name="geometry">
          <rect>
-          <x>340</x>
+          <x>350</x>
           <y>530</y>
           <width>321</width>
           <height>61</height>
@@ -13080,10 +13256,10 @@ QPushButton:hover {
         </property>
         <property name="geometry">
          <rect>
-          <x>172</x>
-          <y>130</y>
+          <x>170</x>
+          <y>140</y>
           <width>681</width>
-          <height>281</height>
+          <height>261</height>
          </rect>
         </property>
         <property name="mouseTracking">
@@ -13164,70 +13340,44 @@ border-bottom: 3px solid black;
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="layoutWidget_10">
+        <widget class="QWidget" name="">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>170</y>
-           <width>421</width>
-           <height>82</height>
+           <x>190</x>
+           <y>150</y>
+           <width>291</width>
+           <height>95</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
-          <item>
-           <widget class="QPushButton" name="screen_Setting_SettingSys_Button_Exit">
+         <layout class="QGridLayout" name="gridLayout_39">
+          <item row="0" column="0">
+           <widget class="QLabel" name="screen_Setting_SettingSys_label_Remind">
             <property name="font">
              <font>
-              <pointsize>12</pointsize>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">
-QPushButton {
-
-  border: 2px solid rgb(240, 240, 240);
-  background-color:  rgb(240, 240, 240);
-  border-radius: 20px;
-  color: black;
-  transition: .3s;
-}
-QPushButton:hover {
- box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
- border: 3px solid rgb(85, 170, 255);
-	background-color: rgb(85, 170, 255);
-}
-</string>
-            </property>
             <property name="text">
-             <string> Quay lại</string>
+             <string/>
             </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QPushButton" name="screen_Setting_SettingSys_Button_LoginSYS">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="mouseTracking">
-             <bool>true</bool>
-            </property>
-            <property name="tabletTracking">
-             <bool>true</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QPushButton" name="screen_Setting_SettingSys_Button_Exit">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
 QPushButton {
 
   border: 2px solid rgb(240, 240, 240);
@@ -13242,24 +13392,71 @@ QPushButton:hover {
 	background-color: rgb(85, 170, 255);
 }
 </string>
-            </property>
-            <property name="text">
-             <string> Đăng nhập</string>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>Icon/login_icon.png</normaloff>Icon/login_icon.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-           </widget>
+              </property>
+              <property name="text">
+               <string> Quay lại</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="screen_Setting_SettingSys_Button_LoginSYS">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>true</bool>
+              </property>
+              <property name="tabletTracking">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+              </property>
+              <property name="text">
+               <string> Đăng nhập</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>Icon/login_icon.png</normaloff>Icon/login_icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>
@@ -13280,13 +13477,551 @@ QPushButton:hover {
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
-          <string>Cài đặt hệ thống</string>
+          <string>Đổi mật khẩu</string>
          </attribute>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1031</width>
+            <height>600</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>Icon/aa.jpg</pixmap>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_52">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>172</x>
+            <y>70</y>
+            <width>681</width>
+            <height>361</height>
+           </rect>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+background-color: rgb(240, 240, 240);
+color: rgb(255, 255, 255);
+ border: 5px solid transparent;
+color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QWidget" name="layoutWidget_10">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>651</width>
+             <height>221</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_41">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="screen_Setting_SettingSys_Qlineedit_Password_2">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+
+ }</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <property name="placeholderText">
+               <string>Nhập mật khẩu mới</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="screen_Setting_SettingSys_Qlineedit_Password_3">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+
+ }</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <property name="placeholderText">
+               <string>Nhập lại mật khẩu mới</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>230</y>
+             <width>401</width>
+             <height>107</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_42">
+            <item row="0" column="0">
+             <widget class="QLabel" name="screen_Setting_SettingSys_label_Remind_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QPushButton" name="screen_Setting_SettingSys_Button_Exit_2">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+                </property>
+                <property name="text">
+                 <string> Quay lại</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="screen_Setting_SettingSys_Button_LoginSYS_2">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="tabletTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Lưu mật khẩu</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Icon/save_icon.png</normaloff>Icon/save_icon.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
         </widget>
         <widget class="QWidget" name="tab_2">
          <attribute name="title">
           <string>Server_MQTT</string>
          </attribute>
+         <widget class="QFrame" name="frame_53">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>172</x>
+            <y>20</y>
+            <width>681</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+background-color: rgb(240, 240, 240);
+color: rgb(255, 255, 255);
+ border: 5px solid transparent;
+color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QWidget" name="layoutWidget_52">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>651</width>
+             <height>201</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_47">
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="screen_Setting_SettingSys_Qlineedit_Password_6">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+
+ }</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <property name="placeholderText">
+               <string>Nhập mã thiết bị</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLineEdit" name="screen_Setting_SettingSys_Qlineedit_Password_7">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="mouseTracking">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit { 
+background:rgb(240, 240, 240);
+border : none;
+border-bottom: 3px solid black;
+
+ }</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <property name="placeholderText">
+               <string>Nhập địa chỉ host MQTT</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget_5">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>360</y>
+             <width>401</width>
+             <height>107</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_48">
+            <item row="0" column="0">
+             <widget class="QLabel" name="screen_Setting_SettingSys_label_Remind_4">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_21">
+              <item>
+               <widget class="QPushButton" name="screen_Setting_SettingSys_Button_Exit_4">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+                </property>
+                <property name="text">
+                 <string> Quay lại</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Icon/exit_icon.png</normaloff>Icon/exit_icon.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="screen_Setting_SettingSys_Button_LoginSYS_4">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="tabletTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+QPushButton {
+
+  border: 2px solid rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
+  border-radius: 20px;
+  color: black;
+  transition: .3s;
+}
+QPushButton:hover {
+ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+ border: 3px solid rgb(85, 170, 255);
+	background-color: rgb(85, 170, 255);
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Lưu mật khẩu</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>Icon/save_icon.png</normaloff>Icon/save_icon.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1031</width>
+            <height>600</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>Icon/aa.jpg</pixmap>
+          </property>
+         </widget>
+         <zorder>label_13</zorder>
+         <zorder>frame_53</zorder>
         </widget>
        </widget>
       </widget>
