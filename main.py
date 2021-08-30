@@ -21,6 +21,7 @@ import time
 class MainWindow:
     def __init__(self, parent=None):
         super().__init__()
+
         # -----------(Khởi tao Class)-----------------#
         self.timer = QTimer()
         self.main_win = QMainWindow()
@@ -32,6 +33,8 @@ class MainWindow:
         self.Sys_valute_TimeCountClearRemind = 0
         self.Sys_valute_FlagClearRemind_Learn = 0
         self.Sys_valute_FlagClearRemind_ChooseTest = 0
+        self.Sys_valute_FlagCheckSendAnswerDone = 0
+
         # -----------(Lưu thông tin)-----------------#
         self.QSettingsSave_StrJsonAnswer = 'Json_Answer_Mqtt'
         self.QSettingsSave_StrPassword = 'Str_Password'
@@ -40,21 +43,19 @@ class MainWindow:
 
         #self.settings.setValue(self.QSettingsSave_StrPassword, "1")
         print(self.settings.value(self.QSettingsSave_StrPassword))
-        #settings.setValue('list_value', "25")
-        #settings.setValue('dict_value', {'one': 1, 'two': 2})
 
-        #print()
         #-----------(Biến đếm chuyển ảnh và biến lưu số lượng ảnh có trong file giao diện learn)-----------------#
         self.Count_next_image = 1
         self.Number_Image_Learn = 1
+
         # -----------(Biến MQTT)-----------------#
         self.Mqtt_Port = 1883
-
         self.TopicSub_PingMQTT = "check"
-        self.TopicSub_GetTest = "send/id1"
-
+        self.TopicSub_GetTest = "test/id1"
+        self.TopicSub_StartTest = "process"
         self.TopicPub_CkeckConnect = "res_check"
         self.TopicPub_SendAnswer = "res_answer"
+        self.ArrayGetTestJson = [[1],[1],[1]]
         # -----------(Biến tên và đường dẫn giao diện learn)-----------------#
         self.Path_Image_Screen_Learn = 'Image_Learn'
         self.Name_image_Screen_Learn = 'output'
@@ -76,34 +77,30 @@ class MainWindow:
         self.ScreenTest_value_TimeOut_M = 0
         self.ScreenTest_value_TimeOut_S = 0
         self.ScreenTest_value_Time_first = 0
-
         self.FlagStartTimeOut = 0
         self.FlagStopTimeOut = 0
+        self.ScreenTest_value_StatusStart_Stop = 0
         self.uic.screen_Test_Display_Choose_lineEdit.setEnabled(0)
 
         # -----------(Biến tên giao diện setting)-----------------#
         self.ScreenSetting_value_ArrayGetCurrentText = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
         self.ScreenSetting_value_ArrayGetCurrentIndex = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 
-
         # Khối button của màn hình Home
         self.uic.Home_Button_Learn.clicked.connect(self.Show_Screen_Learn)
         self.uic.Home_Button_Test.clicked.connect(lambda:self.Show_Screen_Test(1))
         self.uic.Home_Button_Setting.clicked.connect(self.Show_Screen_Setting)
         self.uic.Home_Button_Information.clicked.connect(self.Show_Screen_Information)
+
         # Khối button của màn hình Learn
         self.uic.Learn_Button_Back.clicked.connect(self.Learn_Button_Back)
         self.uic.Learn_Button_Exit.clicked.connect(self.Show_Screen_Home)
         self.uic.Learn_Button_Next.clicked.connect(self.Learn_Button_Next)
         self.uic.Learn_Button_ChooseFile.clicked.connect(self.getfile)
 
-        # self.Learn_convert_PDF_TO_IMAGE(self.Name_File_PDF)
-
         # Khối button của màn hình Test
         self.uic.screen_Test_Display_InputInfor_Button_Exit.clicked.connect(self.Show_Screen_Home) # nút quay lại(screen_Test)
         self.uic.screen_Test_Display_InputInfor_Button_Start.clicked.connect(self.screen_Test_Show_Display_Exam) # nút vào thi (screen_Test)
-
-        #self.uic.screen_Test_Display_Exam_Exit.clicked.connect(lambda:self.Show_Screen_Test(self.Sys_value_ChooseScreenTest)) # nút quay lại(screen_Test_Display_Exam)
         self.uic.screen_Test_Display_Exam_Submit.clicked.connect(self.screen_Test_Display_Choose_ButtonSubmit) # nút Nộp bài (screen_Test_Display_Exam)
 
         #--------------------------------------------(Cụm nút PAN_01 -> PAN_24 (screen_Test_Display_Exam))---------------------------------------#
@@ -134,11 +131,9 @@ class MainWindow:
 
         self.uic.screen_Test_Display_Choose_ButtonChoose.clicked.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked_and_Show_Display(self.ScreenTest_value_Qlabel_FlagButtonClick)) # nút Chọn (screen_Test_Display_Choose)
         self.uic.screen_Test_Display_Choose_radioButton_6.toggled.connect(lambda:self.screen_Test_Display_Choose_radio_onClicked(self.ScreenTest_value_Qlabel_FlagButtonClick)) #QRadioButton điện áp: đóng, Mở ô điền điện áp (screen_Test_Display_Choose)
-
         self.uic.screen_Test_Display_Answer_Exit.clicked.connect(self.screen_Test_SaveImageResult) # nút kết thúc (screen_Test_Display_Answer)
 
         # Khối button của màn hình Setting
-
         self.uic.screen_Setting_Home_ButtonCreatePractice.clicked.connect(self.screen_Setting_Show_Display_Practice) # Nút tạo bài thực hành (screen_Setting_Home)
         self.uic.screen_Setting_Home_ButtonCreateTest.clicked.connect(lambda:self.Show_Screen_Test(2)) # Nút tạo bài kiểm tra (screen_Setting_Home)
         self.uic.screen_Setting_Home_ButtonRamdom.clicked.connect(self.screen_Setting_RamdomExercise) # Nút tạo bài Ngẫu nhiên (screen_Setting_Home)
@@ -172,7 +167,6 @@ class MainWindow:
         self.uic.screen_setting_Home_ComboBox_24.activated.connect(self.screen_Setting_Check_selectVoltage_24)
 
         self.uic.screen_Setting_practice_ButtonExit.clicked.connect(self.Show_Screen_Home) # Nút Quay lại (screen_Setting_practice)
-
         self.uic.screen_Setting_SettingSys_Button_LoginSYS.clicked.connect(self.screen_Setting_Show_SettingSYS) # Nút Đăng nhập (screen_Setting_Login)
         self.uic.screen_Setting_SettingSys_Button_Exit.clicked.connect(self.Show_Screen_Home) # Nút Quay lại (screen_Setting_Login)
 
@@ -205,6 +199,18 @@ class MainWindow:
             min_sec_format = '{:02d}:{:02d}'.format(self.ScreenTest_value_TimeOut_M, self.ScreenTest_value_TimeOut_S)
             self.uic.screen_Test_Display_lcdNumber_TimeOut.display(min_sec_format)
 
+        if(self.ScreenTest_value_StatusStart_Stop == 1):
+            self.screen_Test_Show_Display_Exam()
+            self.ScreenTest_value_StatusStart_Stop = 0
+        elif(self.ScreenTest_value_StatusStart_Stop == 2):
+            self.screen_Test_ShowText_QlabelAnswer1(self.Sys_value_ChooseScreenTest)
+            self.screen_Test_ShowText_QlabelAnswer2()
+            self.screen_Test_ShowText_QlabelAnswer3(self.Sys_value_ChooseScreenTest)
+            self.screen_Test_Answer_Infor()
+            self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
+            self.ScreenTest_value_StatusStart_Stop = 0
+
+
 
     def show(self):
         self.main_win.show()
@@ -219,7 +225,7 @@ class MainWindow:
         try: # kiểm tra kết nối với server nếu không kết nối được tránh bị treo(cần xem lại)
             self.mqtt_client.on_connect = self.Mqtt_connect
             self.mqtt_client.on_message = self.Mqtt_message
-            self.mqtt_client.connect('Mqtt.mysignage.vn', self.Mqtt_Port, 60)
+            self.mqtt_client.connect(Mqtt_Host, self.Mqtt_Port, 60)
             #self.mqtt_client.connect('192.168.110.129', self.Mqtt_Port, 60)
             Flag = 1
         except Exception as e:
@@ -234,23 +240,52 @@ class MainWindow:
             hostname,IPAddr  = self.Mqtt_Get_IPAddr()
             self.mqtt_client.subscribe(self.TopicSub_PingMQTT)
             self.mqtt_client.subscribe(self.TopicSub_GetTest)
+            self.mqtt_client.subscribe(self.TopicSub_StartTest)
+
 
     def Mqtt_message(self, client, userdata, message):# hàm nhận bản tin từ máy giao viên
-        if(message.topic == self.TopicSub_PingMQTT):
-            print(message.topic + " " + str(message.payload))
-            if(len(self.ScreenTest_value_NameStudent) > 0 and len(self.ScreenTest_value_NameITStudent) > 0): # Kiểm tra xem sinh viên đã điền thông tin chưa
-                self.Mqtt_PingServer(self.ScreenTest_value_NameStudent, self.ScreenTest_value_NameITStudent)
-        if (message.topic == self.TopicSub_GetTest):
-            if (self.Sys_value_ChooseScreenTest == 1):  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
-                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
+        if (self.Sys_value_ChooseScreenTest == 1):
+            if(message.topic == self.TopicSub_PingMQTT):
                 print(message.topic + " " + str(message.payload))
+                if(len(self.ScreenTest_value_NameStudent) > 0 and len(self.ScreenTest_value_NameITStudent) > 0): # Kiểm tra xem sinh viên đã điền thông tin chưa
+                    self.Mqtt_PingServer(self.ScreenTest_value_NameStudent, self.ScreenTest_value_NameITStudent)
+
+            if (message.topic == self.TopicSub_GetTest):
+                print(message.topic + " " + str(message.payload))
+                self.ArrayGetTestJson[0], self.ArrayGetTestJson[1], self.ArrayGetTestJson[2] = self.MQTT_DetectMessageJsonTest(message.payload)
+                item = ["Hở mạch", "Chập chờn", "Chạm đất", "Nối dương", "Bình thường"]
+                for x in range(1, 25):
+                    if (self.ArrayGetTestJson[1][x - 1] >= 5):
+                        print(x, ': ', str(format((self.ArrayGetTestJson[1][x - 1] - 4) * 0.1, '0.1f')) + ' V')
+                    else:
+                        print(x, ': ', item[self.ArrayGetTestJson[1][x - 1]])
+                if(len(self.ArrayGetTestJson[1]) == 24):
+                    self.MQtt_SendReceivedCheck(1)
+
+            if (message.topic == self.TopicSub_StartTest):
+                print(message.topic + " " + str(message.payload))
+                tempJson = json.loads(message.payload)
+                if(tempJson["status"] == "start"):
+                    if(self.Sys_value_ChooseScreenTest == 1):  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
+                        self.ScreenTest_value_StatusStart_Stop = 1
+                elif(tempJson["status"] == "received"):
+                    self.ScreenTest_value_StatusStart_Stop = 2
+                elif (tempJson["status"] == "end"):
+                    print("Kết thuc")
+
+
+    def MQTT_DetectMessageJsonTest(self, Json):
+        tempJson = json.loads(Json)
+        return tempJson["id"], tempJson["question"], tempJson["time"]
 
     def Mqtt_PingServer(self, Name, IDStudent): # hàm ping kết nối khi máy giao viên gửi yêu cầu, truyền tham số name, IDIDStuden: tên sinh viên và Mã sinh viên
         id_device = 1
-        TempJson = { "id": id_device, "received":'false', "name":Name, "msv":IDStudent}
-        self.mqtt_client.publish(self.TopicPub_CkeckConnect, json.dumps(TempJson))
+        TempJson = {"ready" : True ,"id": id_device, "received":False, "name":Name, "msv":IDStudent}
+        print(TempJson)
+        if (self.Sys_value_ChooseScreenTest == 1):
+            self.mqtt_client.publish(self.TopicPub_CkeckConnect, json.dumps(TempJson))
 
-    def Mqtt_SendAnswer(self, Time_end): #Hàm gửi câu trả lời khi nhấn nộp bài hoặc hết thời gian, Tham số Time: thời gian làm bài
+    def Mqtt_SendAnswer(self, Time_end, stt): #Hàm gửi câu trả lời khi nhấn nộp bài hoặc hết thời gian, Tham số Time: thời gian làm bài
         id_device = 1
         arrAnswe = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt # Mảng của 24 câu trả lời
         arrJson = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -259,16 +294,25 @@ class MainWindow:
                 arrJson[x-1] = 250
             else:
                 arrJson[x - 1] = self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[x] - 1
-        TempJson = {"id": id_device, "received": 'true', "answer": arrJson, "Time_end": Time_end}
+        TempJson = {"id": id_device, "finished": stt, "answer": arrJson, "Time_end": Time_end}
         temp = json.dumps(TempJson)
         print(temp)
-        self.mqtt_client.publish(self.TopicPub_SendAnswer, temp)
+        if (self.Sys_value_ChooseScreenTest == 1):
+            self.mqtt_client.publish(self.TopicPub_SendAnswer, temp)
 
+    def MQtt_SendReceivedCheck(self, ID):
+        id_device =  ID
+        TempJson = {"id": id_device, "received": True}
+        print(TempJson)
+        if (self.Sys_value_ChooseScreenTest == 1):
+            self.mqtt_client.publish(self.TopicPub_CkeckConnect, json.dumps(TempJson))
 
-    # ---------------------------------------------------(END)-----------------------------------------------------------------------------#
+# ---------------------------------------------------(END)-----------------------------------------------------------------------------#
 
     # -----------------------------------------(Giao Diện HOME)-----------------------------------------------------------------------------#
     def Show_Screen_Home(self): # Hàm hiên thị giao diện đầu tiên
+        self.ArrayGetTestJson = [[1], [1], [1]]
+        self.ScreenTest_value_StatusStart_Stop = 0
         self.FlagStartTimeOut = 0  #đặt biến cờ Start về 0
         self.FlagStopTimeOut = 0 #đặt biến cờ Stop về 0
         self.ScreenTest_value_Time_first = 0
@@ -297,7 +341,7 @@ class MainWindow:
         self.screen_Setting_Get_Select_CreateExercise()
         self.screen_Test_Display_ClearChoose()
         if (self.Sys_value_ChooseScreenTest == 1):  # Nếu là kiểm tra online thì cho nhập mã lớp học
-            self.Mqtt_Run('Mqtt.mysignage.vn')  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
+            self.Mqtt_Run('remote.mysignage.vn')  # kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Test)
         self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_InputInfor)
 
@@ -309,8 +353,7 @@ class MainWindow:
     def Show_Screen_Information(self):
         self.uic.stackedWidget.setCurrentWidget(self.uic.screen_Information)
 
-
-#-----------------------------------------(Giao Diện học lý thuyết)-----------------------------------------------------------------------------#
+    #-----------------------------------------(Giao Diện học lý thuyết)-----------------------------------------------------------------------------#
     def Learn_Button_Next(self): # Hàm chuyển ảnh tiếp theo
         if (self.Count_next_image < self.Number_Image_Learn):
             self.Count_next_image = self.Count_next_image + 1
@@ -368,11 +411,18 @@ class MainWindow:
         self.Learn_Show_Imgae_Learn()
 #-----------------------------------------(END)-----------------------------------------------------------------------------#
 
-#-----------------------------------------(Giao Diện kiểm tra)-----------------------------------------------------------------------------#
+    #-----------------------------------------(Giao Diện kiểm tra)-----------------------------------------------------------------------------#
     def screen_Test_Show_Display_Exam(self): #hàm này để hiển thị giao diện chọn đáp án
         if (self.Sys_value_ChooseScreenTest == 2):
             if(self.FlagStartTimeOut == 0):
                 self.FlagStartTimeOut = 1
+        elif(self.Sys_value_ChooseScreenTest == 1 and len(self.ArrayGetTestJson[1]) == 24):
+            if (self.FlagStartTimeOut == 0):
+                self.ScreenTest_value_TimeOut_M = self.ArrayGetTestJson[2]
+                self.ScreenTest_value_TimeOut_S = 0
+                self.ScreenTest_value_Time_first = self.ArrayGetTestJson[2] - 1
+                self.FlagStartTimeOut = 1
+
         #----------------------------(Cụm lấy thông tin của sinh viên)----------------------------
         #self.ScreenTest_value_NameClassStudent = self.uic.screen_test_Qlineedit_IDclass_3.text()
 
@@ -388,14 +438,16 @@ class MainWindow:
             self.uic.screen_Test_Display_InputInfor_label_Remind.setStyleSheet(" background-color: transparent;")
             self.uic.screen_Test_Display_InputInfor_label_Remind.setText("")
             if(self.Sys_value_ChooseScreenTest == 1):
-                self.screen_Test_connectWait()
+                if(len(self.ArrayGetTestJson[1]) != 24):
+                    self.screen_Test_connectWait()
+                else:
+                    self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
             elif(self.Sys_value_ChooseScreenTest == 2): #kiểm tra xem thi online thì kết nối với server và hiển thị giao diện chọn câu trả lời
                 self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Exam)
 
         else:
             self.uic.screen_Test_Display_InputInfor_label_Remind.setStyleSheet("background-color: red;")
             self.uic.screen_Test_Display_InputInfor_label_Remind.setText("Chưa điền thông tin")
-
 
     def screen_Test_connectWait(self):
         self.movie = QMovie("Icon/loading-animation_sand-timer.gif")
@@ -406,6 +458,7 @@ class MainWindow:
     def screen_Test_Show_Display_Choose(self, Number): # Hiển hị giao diện chọn câu trả lời, hiển thị chọn câu trả lời cho Pan nào, Tham số Number: truyền PAN số mấy đang chọn
         self.uic.screen_Test_Display_Choose_Qlabel_PAN_Number.setText("PAN "+str(Number))
         self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Choose)
+
     #--------------------------(Cụm hàm sự kiện khi nhấn nút của PAN_01 -> PAN_24)--------------------------
     def Screen_Test_EvenButton_PAN_1(self):
         self.ScreenTest_value_Qlabel_FlagButtonClick = 1
@@ -526,7 +579,7 @@ class MainWindow:
             if((self.Screen_Test_CheckInputString(self.uic.screen_Test_Display_Choose_lineEdit.text()) == 1) and (len(self.uic.screen_Test_Display_Choose_lineEdit.text()) > 0)): # kiểm tra xem đã nhập đúng là số hay chưa , kiểm tra xem có điền giá trị điển áp không
                 Flag = 1
                 self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[Number_Button] = self.uic.screen_Test_Display_Choose_lineEdit.text() #mảng lấy giá trị điện áp học sinh điền
-                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = int((float(self.uic.screen_Test_Display_Choose_lineEdit.text()) * 10) + 4) # mảng kết quả đê gửi cho máy giáo viên
+                self.ScreenTest_value_Qlabel_ArrayAnswerMqtt[Number_Button] = int((float(self.uic.screen_Test_Display_Choose_lineEdit.text()) * 10) + 5) # mảng kết quả đê gửi cho máy giáo viên
             else: # nếu chưa điền hoặc điền sai thì sẽ xóa chuỗi đã điền
                 self.uic.screen_Test_Display_Choose_lineEdit.clear()
         else:
@@ -535,6 +588,9 @@ class MainWindow:
         if(Flag == 1): #nếu thoải mã hết các điểu kiện thì chuyển về giao diện chọn
             self.screen_Test_Show_Display_Exam()  # quay lại giao diện chọn PAN
             self.screen_Test_Display_Choose_radio_SelectChoose(Number_Button)
+            min_sec_format = '{:02d}:{:02d}'.format((self.ScreenTest_value_Time_first - self.ScreenTest_value_TimeOut_M),(59 - self.ScreenTest_value_TimeOut_S))
+            self.Mqtt_SendAnswer(min_sec_format, False)
+
         print(self.ScreenTest_value_Qlabel_ArrayNumberChoose[Number_Button])
 
     def screen_Test_Display_Choose_radio_SelectChoose(self, Number_Button): # hiển thị đáp án đã chọn ở bên dưới button PAN
@@ -712,16 +768,15 @@ class MainWindow:
         for x in range(1, 25):
             if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] == 0):
                 Flag = 1
+        Flag = 0
         if(Flag == 0):
             if(self.Sys_value_ChooseScreenTest == 1): #nếu là thi online thì gửi bài lên máy tính giáo viên
-                self.Mqtt_SendAnswer(20)
-                self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
+                min_sec_format = '{:02d}:{:02d}'.format((self.ScreenTest_value_Time_first - self.ScreenTest_value_TimeOut_M),(59 - self.ScreenTest_value_TimeOut_S))
+                self.Mqtt_SendAnswer(min_sec_format, True)
+
             elif (self.Sys_value_ChooseScreenTest == 2): #nếu là thi offline hiển thị giao diện kết quả
-                #print(self.ScreenSetting_value_ArrayGetCurrentText)
-                #print(self.ScreenSetting_value_ArrayGetCurrentIndex)
-                #print(self.ScreenTest_value_Qlabel_ArrayNumberChoose)
                 self.screen_Test_ShowText_QlabelAnswer1(self.Sys_value_ChooseScreenTest)
-                self.screen_Test_ShowText_QlabelAnswer2(self.Sys_value_ChooseScreenTest)
+                self.screen_Test_ShowText_QlabelAnswer2()
                 self.screen_Test_ShowText_QlabelAnswer3(self.Sys_value_ChooseScreenTest)
                 self.screen_Test_Answer_Infor()
                 self.uic.stackedWidget_2.setCurrentWidget(self.uic.screen_Test_Display_Answer)
@@ -741,12 +796,17 @@ class MainWindow:
         self.uic.screen_Test_Display_Answer_label_AnswerFalse.setText(str(self.ScreenTest_value_ArrayInforAnswer[3]))
         self.uic.screen_Test_Display_Answer_label_AnswerNot.setText(str(self.ScreenTest_value_ArrayInforAnswer[4]))
         self.FlagStartTimeOut == 0
-
         min_sec_format = '{:02d}:{:02d}'.format((self.ScreenTest_value_Time_first - self.ScreenTest_value_TimeOut_M), (59 - self.ScreenTest_value_TimeOut_S))
         self.uic.screen_Test_Display_Answer_label_TimeOut.setText(min_sec_format)
+
     def screen_Test_ShowText_QlabelAnswer1(self, stt): # hàm hiển thị đề bài, tham số stt: truyền vào là làm bài online hay offline
         if(stt == 1):
-            print("11")
+            item = ["Hở mạch", "Chập chờn", "Chạm đất", "Nối dương", "Bình thường"]
+            for x in range(1, 25):
+                if(self.ArrayGetTestJson[1][x-1] >= 5):
+                    self.ScreenTest_value_ArrayShowText[x][0] = str(format((self.ArrayGetTestJson[1][x-1] - 4)*0.1, '0.1f')) + ' V'
+                else:
+                    self.ScreenTest_value_ArrayShowText[x][0] = item[self.ArrayGetTestJson[1][x - 1]]
         else:
             for x in range(1, 25):
                 if(self.ScreenSetting_value_ArrayGetCurrentIndex[x] >= 5):
@@ -779,15 +839,12 @@ class MainWindow:
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_23.setText(self.ScreenTest_value_ArrayShowText[23][0])
         self.uic.screen_test_Display_Answer_Qlabel_Answer0_24.setText(self.ScreenTest_value_ArrayShowText[24][0])
 
-    def screen_Test_ShowText_QlabelAnswer2(self, stt): #hàm hiển thị bài làm đã chọn của Học sinh, tham số stt: truyền vào là làm bài online hay offline
-        if (stt == 1):
-            print("11")
-        else:
-            for x in range(1, 25):
-                if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
-                    self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x] + ' V'
-                else:
-                    self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[x]]
+    def screen_Test_ShowText_QlabelAnswer2(self): #hàm hiển thị bài làm đã chọn của Học sinh, tham số stt: truyền vào là làm bài online hay offline
+        for x in range(1, 25):
+            if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] >= 6):
+                self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x] + ' V'
+            else:
+                self.ScreenTest_value_ArrayShowText[x][1] = self.ScreenTest_value_Qlabel_ArrayNameChoose[self.ScreenTest_value_Qlabel_ArrayNumberChoose[x]]
         self.uic.screen_test_Display_Answer_Qlabel_Answer1_1.setText(self.ScreenTest_value_ArrayShowText[1][1])
         self.uic.screen_test_Display_Answer_Qlabel_Answer1_2.setText(self.ScreenTest_value_ArrayShowText[2][1])
         self.uic.screen_test_Display_Answer_Qlabel_Answer1_3.setText(self.ScreenTest_value_ArrayShowText[3][1])
@@ -818,7 +875,25 @@ class MainWindow:
         Count_False = 0
         Count_NotChoose = 0
         if (stt == 1):
-            print("11")
+            for x in range(1, 25):
+                if (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] != 0):
+                    if (self.ArrayGetTestJson[1][x-1] >= 5):
+                        if (str(self.ScreenTest_value_Qlabel_ArrayGetNumberChoose[x]) == str(format((self.ArrayGetTestJson[1][x-1] - 4)*0.1, '0.1f'))):
+                            self.ScreenTest_value_ArrayShowText[x][2] = "Đúng"
+                            Count_True = Count_True + 1
+                        else:
+                            self.ScreenTest_value_ArrayShowText[x][2] = "sai"
+                            Count_False = Count_False + 1
+                    else:
+                        if (self.ArrayGetTestJson[1][x - 1] == (self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] - 1)):
+                            self.ScreenTest_value_ArrayShowText[x][2] = "Đúng"
+                            Count_True = Count_True + 1
+                        else:
+                            self.ScreenTest_value_ArrayShowText[x][2] = "sai"
+                            Count_False = Count_False + 1
+                else:
+                    self.ScreenTest_value_ArrayShowText[x][2] = "Chưa chọn"
+                    Count_NotChoose = Count_NotChoose + 1
         else:
             for x in range(1, 25):
                 if(self.ScreenTest_value_Qlabel_ArrayNumberChoose[x] != 0):
@@ -869,17 +944,15 @@ class MainWindow:
         self.uic.screen_test_Display_Answer_Qlabel_Answer2_23.setText(self.ScreenTest_value_ArrayShowText[23][2])
         self.uic.screen_test_Display_Answer_Qlabel_Answer2_24.setText(self.ScreenTest_value_ArrayShowText[24][2])
 
-
     def screen_Test_SaveImageResult(self):
         #myScreenshot = pyautogui.screenshot(region=(0, 0, 300, 400))
         myScreenshot = pyautogui.screenshot()
         path = os.path.abspath('Icon') + "\\" + str(self.ScreenTest_value_NameStudent) + '_' + self.ScreenTest_value_NameITStudent + '.png'
         myScreenshot.save(path)
         self.Show_Screen_Home()
-
 #-----------------------------------------(END)-----------------------------------------------------------------------------#
 
-#-----------------------------------------(Giao Diện Setting)-----------------------------------------------------------------------------#
+    #-----------------------------------------(Giao Diện Setting)-----------------------------------------------------------------------------#
     def screen_Setting_Show_Display_Practice(self): #Hàm Hiển thị giao diện tao bài thực hành
         self.screen_Setting_Get_Select_CreateExercise()
         self.screen_Setting_Show_NameText_Practice()
@@ -1545,10 +1618,8 @@ class MainWindow:
                 self.uic.screen_Setting_SettingSys_Qlineedit_Password.clear()
                 self.uic.screen_Setting_SettingSys_label_Remind.setStyleSheet("background-color: red;")
                 self.uic.screen_Setting_SettingSys_label_Remind.setText("Sai mật khẩu")
-
-
-
 #-----------------------------------------(END)-----------------------------------------------------------------------------#
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     main_win =  MainWindow()
